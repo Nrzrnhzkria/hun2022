@@ -42,6 +42,18 @@
         </button>
     </div>
 
+    <div class="row">
+        <div class="col-md-6 bg-warning">
+
+        </div>
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-3">
+
+        </div>
+    </div>
+
     <div class="row py-5">
 		<div class="container">
             <section class="customer-logos slider" data-arrows="true">
