@@ -50,4 +50,9 @@ class HomeController extends Controller
     {
         return view('landingpage.contact');
     }
+
+    public function register()
+    {
+        return view('landingpage.register.check_ic');
+    }
 }
