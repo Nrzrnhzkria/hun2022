@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') | {{ config('app.name', 'HUN2022') }}</title>
+    <title>@yield('title') | HUN</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/template.js') }}" defer></script>
