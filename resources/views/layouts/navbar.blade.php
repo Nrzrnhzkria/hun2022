@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg sticky-top shadow" style="background-color: #ffffff;">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="{{ asset('assets/img/hun.jpg') }}" alt="" width="25%" height="25%">
+                <img class="img-fluid" src="{{ asset('assets/img/hun.jpg') }}" alt="" width="25%" height="25%">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars" aria-hidden="true"></i>
