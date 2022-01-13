@@ -1,14 +1,14 @@
+@extends('layouts.app')
+
 @section('title')
     Register
 @endsection
-
-@extends('layouts.app')
 
 @section('content')
 <div class="container py-4">
     <div class="row">
         <div class="col-md-12 px-2 pt-5 text-center">
-            <img src="{{ asset('assets/img/hun.jpg') }}" style="max-width:200px">
+            <img class="img-fluid" src="{{ asset('assets/img/hun.jpg') }}" style="max-width:200px">
             {{-- <h1 class="display-4 text-dark px-4 pt-3">{{ $product->name }}</h1> --}}
         </div>
     </div>

@@ -2,7 +2,7 @@
     <footer class="row row-cols-6 py-5 my-5 border-top">
         <div class="col">
             <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                <img src="{{ asset('assets/img/hun.jpg') }}" alt="" width="50%" height="50%">
+                <img class="img-fluid" src="{{ asset('assets/img/hun.jpg') }}" alt="" width="50%" height="50%">
             </a>
         </div>
   

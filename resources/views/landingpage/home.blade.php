@@ -1,10 +1,8 @@
+@extends('layouts.app')
+
 @section('title')
     Home
 @endsection
-
-@extends('layouts.app')
-
-@include('layouts.navbar')
 
 @section('content')
 
@@ -145,7 +143,7 @@
 
     <div class="row pt-4">
         <div class="col-md-6 text-center">
-            <img src="{{ asset('assets/img/phone.png') }}" width="60%">
+            <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="60%">
         </div>
         <div class="col-md-6 align-self-center">
             <h3>DOWNLOAD HUN22 OFFICIAL <br> MOBILE APP</h3>
@@ -179,8 +177,6 @@
     </div>
     
 </div>
-
-@include('layouts.footer')
 
 {{-- @if (Route::has('login'))
     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
