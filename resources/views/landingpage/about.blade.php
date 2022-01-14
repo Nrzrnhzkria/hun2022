@@ -17,7 +17,7 @@
 
             <div class="text-center fw-bold px-2 py-2" style="background-color: orange">PREAMBLE BY YBHG DATO' SERI ABU HASAN BIN MOHD NOR</div>
 
-            <p>Thank god I prayed to hadrat llāhi with the meal and kindness still again
+            <p class="text-justify">Thank god I prayed to hadrat llāhi with the meal and kindness still again
                 given the opportunity and the strength to lead the Board of Commerce Small Entrepreneur Malay-
                 sia (DPUKM), may be strengthened spirit to continue to strengthen the friendship between the business-
                 wan-entrepreneurs in DPUKM in particular and the whole of Malaysia.</p>
