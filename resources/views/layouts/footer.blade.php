@@ -2,7 +2,7 @@
     <footer class="row row-cols-6 py-5 my-5 border-top">
         <div class="col">
             <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                <img class="img-fluid" src="{{ asset('assets/img/hun.jpg') }}" alt="" width="50%" height="50%">
+                <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="50%">
             </a>
         </div>
   
@@ -19,11 +19,11 @@
             <h5>NAVIGATION</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
-                <li class="nav-item mb-2"><a href="about" class="nav-link p-0 text-muted">About</a></li>
-                <li class="nav-item mb-2"><a href="news" class="nav-link p-0 text-muted">News</a></li>
-                <li class="nav-item mb-2"><a href="media" class="nav-link p-0 text-muted">Media</a></li>
+                <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About</a></li>
+                <li class="nav-item mb-2"><a href="/news" class="nav-link p-0 text-muted">News</a></li>
+                <li class="nav-item mb-2"><a href="/media" class="nav-link p-0 text-muted">Media</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Works</a></li>
-                <li class="nav-item mb-2"><a href="contact" class="nav-link p-0 text-muted">Contact</a></li>
+                <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-muted">Contact</a></li>
             </ul>
         </div>
     

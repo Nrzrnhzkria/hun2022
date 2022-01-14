@@ -3,7 +3,7 @@
     <nav class="navbar navbar-expand-lg sticky-top shadow" style="background-color: #ffffff;">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img class="img-fluid" src="{{ asset('assets/img/hun.jpg') }}" alt="" width="25%" height="25%">
+                <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="20%">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa fa-bars" aria-hidden="true"></i>
@@ -14,22 +14,22 @@
                         <a class="nav-link text-dark active" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="about">About</a>
+                        <a class="nav-link text-dark" href="/about">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="events">Events</a>
+                        <a class="nav-link text-dark" href="/events">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="news">News</a>
+                        <a class="nav-link text-dark" href="/news">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="media">Media</a>
+                        <a class="nav-link text-dark" href="/media">Media</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="contact">Contact</a>
+                        <a class="nav-link text-dark" href="/contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-warning text-dark fw-bold" href="register">Register</a>
+                        <a class="btn btn-warning text-dark fw-bold" href="/register">Register</a>
                     </li>
                     {{-- </li><li class="nav-item">
                         <a class="nav-link text-dark" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
