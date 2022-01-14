@@ -15,6 +15,11 @@
 </div>
 
 <div class="container py-4">
+    {{-- <div class="row pb-4">
+        <div class="col-md-12 text-center">        
+            <img class="img-fluid" src="{{ asset('assets/img/white_slider.png') }}" alt="" style="width: 40%">
+        </div>
+    </div> --}}
     <div class="row pb-4">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -24,7 +29,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ asset('assets/img/carousel_1.png') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('assets/img/white_slider.jpeg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="{{ asset('assets/img/carousel_1.png') }}" class="d-block w-100" alt="...">
