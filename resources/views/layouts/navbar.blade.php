@@ -13,8 +13,16 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark active" href="/">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" href="/about">About</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="/preface">Preface</a></li>
+                          <li><a class="dropdown-item" href="#">Introduction</a></li>
+                          <li><a class="dropdown-item" href="#">Organizational Chart</a></li>
+                          <li><a class="dropdown-item" href="#">Vision & Mision</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" href="/events">Events</a>

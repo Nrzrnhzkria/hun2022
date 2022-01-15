@@ -19,7 +19,7 @@ Auth::routes();
 | Landing Page
 */
 Route::get('/', 'HomeController@home');
-Route::get('about', 'HomeController@about');
+Route::get('preface', 'HomeController@preface');
 Route::get('events', 'HomeController@events');
 Route::get('news', 'HomeController@news');
 Route::get('media', 'HomeController@media');
