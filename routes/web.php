@@ -37,3 +37,5 @@ Route::get('update-registration/{user_id}', 'VendorController@update_register');
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('dashboard', 'DashboardController@dashboard');
