@@ -66,15 +66,17 @@ class RegisterController extends Controller
     {
         $users = User::orderBy('id','desc')->first();
 
-        $auto_inc_user = $users->id + 1;
+        // $auto_inc_user = $users->id + 1;
         // $user_id = 'UID' . 0 . 0 . $auto_inc_user;
-        $user_id = 'UID' . 0 . 0 . 1;
+        // $user_id = 'UID' . 0 . 0 . 1;
 
-        return User::create([
-            'user_id' => $user_id,
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        // return User::create([
+        //     'user_id' => $user_id,
+        //     'name' => $data['name'],
+        //     'email' => $data['email'],
+        //     'password' => Hash::make($data['password']),
+        // ]);
+
+        dd($users);
     }
 }
