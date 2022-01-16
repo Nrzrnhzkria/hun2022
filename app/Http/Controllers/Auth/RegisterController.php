@@ -64,6 +64,8 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $users = User::orderBy('id','desc')->first();
+
         $auto_inc_user = $users->id + 1;
         // $user_id = 'UID' . 0 . 0 . $auto_inc_user;
         $user_id = 'UID' . 0 . 0 . 1;
