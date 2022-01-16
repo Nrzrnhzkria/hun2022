@@ -71,7 +71,7 @@ class RegisterController extends Controller
         $user_id = 'UID' . 0 . 0 . 1;
 
         return User::create([
-            'user_id' > $user_id,
+            'user_id' => $user_id,
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
