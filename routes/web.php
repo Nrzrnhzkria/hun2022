@@ -28,7 +28,7 @@ Route::get('contact', 'HomeController@contact');
 /*
 | Vendor Registration
 */
-Route::get('register', 'VendorController@register');
+Route::get('registration', 'VendorController@register');
 Route::get('verification', 'VendorController@check_ic');
 // New Vendor
 Route::get('new-registration/{get_ic}', 'VendorController@new_register');

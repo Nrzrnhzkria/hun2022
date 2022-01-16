@@ -16,10 +16,10 @@ class CreateCouponTable extends Migration
         Schema::create('coupon', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('vendor_id');
-            $table->foreign('vendor_id')->references('id')->on('vendors');
+            $table->foreign('vendor_id')->references('id')->on('users');
             $table->string('coupon_no');
-            $table->smallInteger('amount'); 
-            $table->smallInteger('quantity');
+            $table->string('img_name');
+            $table->string('category');
             $table->timestamps();
         });
     }
