@@ -49,10 +49,13 @@ class DashboardController extends Controller
     {
         $users = User::where('id', $user_id)->first();
 
+        $users->hun_id = $request->hun_id;
         $users->name = $request->name;
         $users->email = $request->email;
         $users->password = Hash::make($request['password']);
-        $users->ic_no = $value;
+        $users->phone_no = $request->phone_no;
+        $users->ic_no = $request->ic_no;
+        $users->role = $request->role;
         $users->save();
 
         return redirect('users')->with('updatesuccess','User has been updated successfully.'); 
