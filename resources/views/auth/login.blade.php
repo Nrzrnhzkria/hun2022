@@ -3,8 +3,10 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center py-5">
-        <div class="row py-3">
-            <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" style="max-width:200px">
+        <div class="row">
+            <div class="col-md-12 py-3 text-center">
+                <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" style="max-width:200px">
+            </div>
         </div>
         
         <div class="col-md-8">
