@@ -104,9 +104,10 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4">                            
+                            <label for="name">Role</label>
                             <select class="form-select" aria-label="Default select example">
-                                <option value="{{ $user->role }}" selected>{{ $user->role }}</option>
+                                <option class="text-capitalize" value="{{ $user->role }}" selected readonly>{{ $user->role }}</option>
                                 <option value="superadmin">Superadmin</option>
                                 <option value="admin">Admin</option>
                                 <option value="advisor">Advisor</option>
