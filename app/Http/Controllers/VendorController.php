@@ -44,7 +44,7 @@ class VendorController extends Controller
         //generate id
         // $vendor_id = 'UID'.uniqid();
   
-        return view('landingpage.register.new_vendor', compact('vendor', 'vendor_ic', 'vendor_id'));
+        return view('landingpage.register.new_vendor', compact('vendor', 'vendor_ic'));
     }
 
     public function store(Request $request)

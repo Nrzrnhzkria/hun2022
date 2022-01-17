@@ -26,7 +26,7 @@
     
                         <div class="row p-3">
     
-                            <input type="hidden" value="{{ $vendor_id ?? '' }}" class="form-control" name="user_id" readonly/>
+                            <input type="hidden" value="{{ $vendor->id ?? '' }}" class="form-control" name="user_id" readonly/>
     
                             <div class="col-md-12 pb-2">
                                 <label>Name of Company:</label>
