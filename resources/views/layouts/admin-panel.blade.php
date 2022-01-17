@@ -33,7 +33,7 @@
 
     <style>
         body {
-            background-color: lightgrey;
+            background-color: rgb(245, 245, 245);
         }
     </style>
 </head>
