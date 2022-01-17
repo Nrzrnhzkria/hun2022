@@ -45,3 +45,4 @@ Route::get('vendors', 'DashboardController@vendors');
 // User Management
 Route::get('users', 'DashboardController@users');
 Route::get('update/{user_id}', 'DashboardController@update_user');
+Route::post('edit/{user_id}', 'DashboardController@edit_user');

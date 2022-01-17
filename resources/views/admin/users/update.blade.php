@@ -16,13 +16,13 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <form class="row g-3 px-3" method="POST" action="{{ url('updateuser') }}/{{ $users->id }}">
+                    <form class="row g-3 px-3" method="POST" action="{{ url('edit') }}/{{ $user->id }}">
                         @csrf
 
                         <div class='col-md-12'>
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $users->name }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus>
             
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -35,7 +35,7 @@
                         <div class='col-md-12'>
                             <div class="form-group">
                                 <label for="email" >E-Mail</label>
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $users->email }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email">
             
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
                         <div class='col-md-12'>
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ $users->password }}" required autocomplete="new-password">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" value="{{ $user->password }}" required autocomplete="new-password">
             
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -61,13 +61,21 @@
                         <div class='col-md-12'>
                             <div class="form-group">
                                 <label for="password-confirm">Confirm Password</label>
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" value="{{ $users->password }}" required autocomplete="new-password">
+                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" value="{{ $user->password }}" required autocomplete="new-password">
                             </div>
                         </div>
             
                         <div class='col-md-12'>
-                            <label for="role">Change Role</label>
-                            <br>
+                            <div class="form-group">
+                                <label for="name">Role</label>
+                                <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ $user->role }}" required autocomplete="role">
+            
+                                @error('role')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
                         </div>
             
                         <div class='col-md-12 pt-3'>

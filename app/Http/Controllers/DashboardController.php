@@ -47,16 +47,16 @@ class DashboardController extends Controller
 
     public function edit_user($user_id)
     {
-        $users = User::where('id', $user_id)->first();
+        $user = User::where('id', $user_id)->first();
 
-        $users->hun_id = $request->hun_id;
-        $users->name = $request->name;
-        $users->email = $request->email;
-        $users->password = Hash::make($request['password']);
-        $users->phone_no = $request->phone_no;
-        $users->ic_no = $request->ic_no;
-        $users->role = $request->role;
-        $users->save();
+        $user->hun_id = $request->hun_id;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request['password']);
+        $user->phone_no = $request->phone_no;
+        $user->ic_no = $request->ic_no;
+        $user->role = $request->role;
+        $user->save();
 
         return redirect('users')->with('updatesuccess','User has been updated successfully.'); 
     }
