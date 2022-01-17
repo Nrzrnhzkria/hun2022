@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center py-5">
         <div class="row">
-            <div class="col-md-12 py-3 text-center">
+            <div class="col-md-12 pb-5 text-center">
                 <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" style="max-width:200px">
             </div>
         </div>
