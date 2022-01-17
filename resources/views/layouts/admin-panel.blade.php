@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title') | HUN</title>
+    <link rel="icon" href="{{ asset('assets/img/hun.png') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/template.js') }}" defer></script>
