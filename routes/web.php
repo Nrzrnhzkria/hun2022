@@ -42,4 +42,6 @@ Route::get('dashboard', 'DashboardController@dashboard');
 Route::get('admin-news', 'DashboardController@news');
 Route::get('seminars', 'DashboardController@seminars');
 Route::get('vendors', 'DashboardController@vendors');
+// User Management
 Route::get('users', 'DashboardController@users');
+Route::get('update/{user_id}', 'DashboardController@update');
