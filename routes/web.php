@@ -44,6 +44,7 @@ Route::get('seminars', 'DashboardController@seminars');
 Route::get('vendors', 'DashboardController@vendors');
 // User Management
 Route::get('users', 'DashboardController@users');
+Route::get('create-user', 'DashboardController@create_user');
 Route::get('update/{user_id}', 'DashboardController@update_user');
 Route::post('edit/{user_id}', 'DashboardController@edit_user');
 Route::get('delete-user/{user_id}', 'DashboardController@destroy_user');
