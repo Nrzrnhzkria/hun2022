@@ -14,7 +14,7 @@
                     <a class="nav-link text-dark" href="/dashboard"><i class="bi bi-house-door-fill"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark active" href="/news">News</a>
+                    <a class="nav-link text-dark active" href="/admin-news">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/seminars">Seminar</a>
