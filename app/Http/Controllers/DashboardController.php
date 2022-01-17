@@ -50,6 +50,9 @@ class DashboardController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'phone_no' => $request->phone_no,
+            'ic_no' => $request->ic_no,
+            'role' => $request->role,
         ]);
 
         return redirect('users')->with('addsuccess','User has been added successfully.');
