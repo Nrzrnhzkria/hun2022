@@ -105,17 +105,16 @@
                         </div>
 
                         <div class="col-md-4">
-                            <div class="btn-group">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                                    Default dropdown
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                                    <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                    <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                    <li><a class="dropdown-item" href="#">Menu item</a></li>
-                                </ul>
-                            </div>
-                            <div class="form-group">
+                            <select class="form-select" aria-label="Default select example">
+                                <option value="{{ $user->role }}" selected>{{ $user->role }}</option>
+                                <option value="superadmin">Superadmin</option>
+                                <option value="admin">Admin</option>
+                                <option value="advisor">Advisor</option>
+                                <option value="members">Members</option>
+                                <option value="vendor">Vendor</option>
+                                <option value="user">User</option>
+                            </select>
+                            {{-- <div class="form-group">
                                 <label for="name">Role</label>
                                 <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ $user->role }}" required autocomplete="role">
             
@@ -124,7 +123,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            </div> --}}
                         </div>
             
                         <div class="col-md-12 pt-3">
