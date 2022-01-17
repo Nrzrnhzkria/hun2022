@@ -11,6 +11,9 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto fw-bold">
                 <li class="nav-item">
+                    <a class="nav-link text-dark" href="/">Dashboard</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-dark" href="/">Seminar</a>
                 </li>
                 <li class="nav-item">
