@@ -2,13 +2,15 @@
 
 @section('content')
 <div class="container">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Add New User</h1>
+    </div>
+
     <div class="row justify-content-center py-5">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
+            <div class="card py-5">
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="store-user">
                         @csrf
 
                         <div class="row mb-3">

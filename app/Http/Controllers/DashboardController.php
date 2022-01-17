@@ -44,19 +44,12 @@ class DashboardController extends Controller
         return view('admin.users.create');
     }
 
-    public function store_user()
+    public function store_user(Request $request)
     {
-        $users = User::orderBy('id','desc')->first();
-
-        $auto_inc_user = $users->id + 1;
-        $user_id = 'UID' . 0 . 0 . $auto_inc_user;
-        $user_id = 'UID' . 0 . 0 . 1;
-
         return User::create([
-            'user_id' => $user_id,
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
         ]);
 
         return redirect('users')->with('addsuccess','User has been added successfully.');

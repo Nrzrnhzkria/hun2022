@@ -17,6 +17,12 @@
         </div>
     </div>
 
+    @if ($message = Session::get('addsuccess'))
+    <div class="alert alert-info alert-block">
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
+
     @if ($message = Session::get('updatesuccess'))
     <div class="alert alert-info alert-block">
         <strong>{{ $message }}</strong>
