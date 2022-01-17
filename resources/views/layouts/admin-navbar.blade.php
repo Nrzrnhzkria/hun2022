@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg sticky-top shadow" style="background-color: #ffffff;">
     <div class="container">
-        <a class="navbar-brand justify-content-end" href="#">
+        <a class="navbar-brand bg-dark">
             <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="20%">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
