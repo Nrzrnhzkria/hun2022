@@ -15,13 +15,15 @@ class CreateVendorDetailsTable extends Migration
     {
         Schema::create('vendor_details', function (Blueprint $table) {
             $table->id();
-            $table->string('details_id');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->string('phone_no');
-            $table->unsignedBigInteger('hun_id');
-            $table->foreign('hun_id')->references('hun_id')->on('users');
-            $table->string('ssm_no');
+            $table->string('company_name');
+            $table->string('designation');
+            $table->string('company_address');
+            $table->string('business_nature');
+            $table->string('product_details');
+            $table->string('ssm_cert');
+            $table->string('vaccine_cert');
             $table->timestamps();
         });
     }
