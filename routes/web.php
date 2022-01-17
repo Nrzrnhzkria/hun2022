@@ -39,4 +39,4 @@ Route::get('update-registration/{user_id}', 'VendorController@update_register');
 | Admin Panel
 */
 Route::get('dashboard', 'DashboardController@dashboard');
-Route::get('users', 'DashboardController@dashboard');
+Route::get('users', 'DashboardController@users');
