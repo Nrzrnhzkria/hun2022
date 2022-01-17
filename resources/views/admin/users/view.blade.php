@@ -13,8 +13,8 @@
     </div>
 
     <div class="row">
-        <div class="col-md-2">
-            <div class="card" style="width: 18rem;">
+        <div class="col-md-3">
+            <div class="card">
                 <ul class="list-group list-group-flush">
                     <a class="text-decoration-none text-dark" href="">
                       <li class="list-group-item" style="background-color: orange">An item</li>
@@ -29,8 +29,8 @@
             </div>
         </div>
 
-        <div class="col-md-10">
-            contentfdghdjklkjghfdghjklkjhgfdgd
+        <div class="col-md-9">
+            content
         </div>
     </div>
     
