@@ -45,7 +45,7 @@ class DashboardController extends Controller
         return view('admin.users.update', compact('user')); 
     }
 
-    public function edit_user($user_id)
+    public function edit_user($user_id, Request $request)
     {
         $user = User::where('id', $user_id)->first();
 
