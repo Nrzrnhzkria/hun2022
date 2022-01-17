@@ -74,7 +74,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <!-- Left Side Of Navbar -->
                 <ul class="navbar-nav me-auto">
-
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/">Seminar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/">Vendor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark active" href="/">User</a>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
