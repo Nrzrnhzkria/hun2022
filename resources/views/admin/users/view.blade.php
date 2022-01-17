@@ -16,8 +16,8 @@
         <div class="col-md-2">
             <div class="card" style="width: 18rem;">
                 <ul class="list-group list-group-flush">
-                    <a class="text-decoration-none text-dark" href="" style="background-color: orange">
-                      <li class="list-group-item">An item</li>
+                    <a class="text-decoration-none text-dark" href="">
+                      <li class="list-group-item" style="background-color: orange">An item</li>
                     </a>
                     <a class="text-decoration-none text-dark" href="">
                         <li class="list-group-item">A second item</li>
