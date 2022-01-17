@@ -1,3 +1,5 @@
+@if (Auth::guest())
+@else
 <nav class="navbar navbar-expand-lg sticky-top shadow" style="background-color: #ffffff;">
     <div class="container">
         <a class="navbar-brand">
@@ -65,3 +67,4 @@
         </div>
     </div>
 </nav> 
+@endif
