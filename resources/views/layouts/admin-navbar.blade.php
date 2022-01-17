@@ -11,16 +11,16 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto fw-bold">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="/"><i class="bi bi-house-door-fill"></i></a>
+                    <a class="nav-link text-dark" href="/dashboard"><i class="bi bi-house-door-fill"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="/">Seminar</a>
+                    <a class="nav-link text-dark" href="/seminar">Seminar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="/">Vendor</a>
+                    <a class="nav-link text-dark" href="/vendor">Vendor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-dark active" href="/">User</a>
+                    <a class="nav-link text-dark active" href="/user">User</a>
                 </li>
             </ul>
 
