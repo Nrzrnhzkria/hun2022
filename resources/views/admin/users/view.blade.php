@@ -12,6 +12,13 @@
         <h1 class="h2">Users</h1>
     </div>
 
+    @if ($message = Session::get('updatesuccess'))
+    <div class="alert alert-info alert-block">
+        <button type="button" class="close" data-bs-dismiss="alert">×</button>	
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
+    
     <div class="row">
         
         <div class="col-md-12">
