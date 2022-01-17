@@ -10,11 +10,21 @@
     
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Users</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group me-2">
+              <button type="button" class="btn btn-sm btn-outline-secondary"><i class="bi bi-person-plus"></i> New User</button>
+            </div>
+        </div>
     </div>
 
     @if ($message = Session::get('updatesuccess'))
     <div class="alert alert-info alert-block">
-        <button type="button" class="close" data-bs-dismiss="alert">×</button>	
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
+
+    @if ($message = Session::get('deleteuser'))
+    <div class="alert alert-info alert-block">
         <strong>{{ $message }}</strong>
     </div>
     @endif
@@ -22,7 +32,7 @@
     <div class="row">
         
         <div class="col-md-12">
-            <div class="float-right pt-3">{{$users->links()}}</div>
+            <div class="float-right pt-3">{{ $users->links() }}</div>
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">

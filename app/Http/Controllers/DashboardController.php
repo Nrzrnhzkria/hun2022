@@ -66,7 +66,7 @@ class DashboardController extends Controller
         $user = User::where('id', $user_id);
         
         $user->delete();
-        return redirect('users')->with('delete','User Successfully Deleted!');
+        return redirect('users')->with('deleteuser','User has been deleted successfully.');
     }
 
 }
