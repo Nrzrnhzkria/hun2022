@@ -24,8 +24,7 @@ class VendorController extends Controller
 
             // dd('Update Registration');
             $vendor = User::where('ic_no', $request->ic_no)->first();
-            dd($vendor);
-            // return redirect('update-registration/' . $vendor->user_id);
+            return redirect('update-registration/' . $vendor->id);
 
         }else{
 
