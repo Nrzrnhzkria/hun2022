@@ -20,6 +20,8 @@ class VendorController extends Controller
     // Check if ic exist
     public function check_ic(Request $request)
     {
+        $vendors = User::orderBy('id','desc')->get();
+
         if(User::where('ic_no', $request->ic_no)->exists()){
 
             dd('Update Registration');
@@ -28,7 +30,7 @@ class VendorController extends Controller
 
         }else{
 
-            dd('New Registration');
+            dd($vendors);
             // return redirect('new-registration/' . $request->ic_no);
 
         }
