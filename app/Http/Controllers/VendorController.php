@@ -120,7 +120,7 @@ class VendorController extends Controller
     //----------------------------------- Existing Vendor -----------------------------------//
     public function update_register($user_id, Request $request){
 
-        $vendor = User::where('user_id', $user_id)->first();
+        $vendor = User::where('id', $user_id)->first();
         $user = $request->session()->get('user');
 
         return view('landingpage.register.exist_vendor', compact('vendor', 'user' ));
