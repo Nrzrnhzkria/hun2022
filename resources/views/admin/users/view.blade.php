@@ -13,24 +13,33 @@
     </div>
 
     <div class="row">
-        <div class="col-md-3">
-            <div class="card">
-                <ul class="list-group list-group-flush">
-                    <a class="text-decoration-none text-dark" href="">
-                      <li class="list-group-item" style="background-color: orange">An item</li>
-                    </a>
-                    <a class="text-decoration-none text-dark" href="">
-                        <li class="list-group-item">A second item</li>
-                    </a>
-                    <a class="text-decoration-none text-dark" href="">
-                        <li class="list-group-item">A third item</li>
-                    </a>
-                </ul>
+        
+        <div class="col-md-12">
+            <div class="float-right pt-3">{{$users->links()}}</div>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Role</th>
+                            <th scope="col"><i class="bi bi-sliders"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($users as $key => $user)
+                        <tr>
+                            <th scope="row">{{ $users->firstItem() + $key }}</th>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->role }}</td>
+                            <td>button</td>
+                        </tr>                
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
-        </div>
-
-        <div class="col-md-9">
-            content
         </div>
     </div>
     

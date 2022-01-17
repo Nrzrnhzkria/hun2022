@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class DashboardController extends Controller
 {
@@ -33,7 +34,8 @@ class DashboardController extends Controller
 
     public function users()
     {
-        return view('admin.users.view');
+        $users = User::orderBy('id', 'asc')->paginate(15);
+        return view('admin.users.view', compact('users'));
     }
 
 }
