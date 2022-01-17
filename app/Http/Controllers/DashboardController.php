@@ -62,4 +62,11 @@ class DashboardController extends Controller
         return redirect('users')->with('updatesuccess','User has been updated successfully.'); 
     }
 
+    public function destroy_user($user_id){
+        $user = User::where('id', $user_id);
+        
+        $user->delete();
+        return redirect('users')->with('delete','User Successfully Deleted!');
+    }
+
 }

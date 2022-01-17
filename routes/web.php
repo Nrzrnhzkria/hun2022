@@ -46,3 +46,4 @@ Route::get('vendors', 'DashboardController@vendors');
 Route::get('users', 'DashboardController@users');
 Route::get('update/{user_id}', 'DashboardController@update_user');
 Route::post('edit/{user_id}', 'DashboardController@edit_user');
+Route::get('delete-user/{user_id}', 'DashboardController@destroy_user');
