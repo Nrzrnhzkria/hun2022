@@ -152,7 +152,6 @@
 <!-- Function to show bar chart ----------------------------------------------------->
 <script>
     var xValues = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-    // var yValues = [{{$mon}}, {{$tue}}, {{$wed}}, {{$thu}}, {{$fri}}, {{$sat}}, {{$sun}}];
     var yValues = [5, 9, 2, 4, 6, 4, 7];
     var barColors = ["#1B4F72", "#17A589", "#633974", "#F1948A", "#FDD74C", "#23B4B1", "#DA4414" ];
     
