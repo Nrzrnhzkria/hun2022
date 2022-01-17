@@ -7,7 +7,7 @@
 @section('content')
 <div class="container py-5">
     <div class="row">
-        <h1 class="border-bottom">Registration Form</h1>
+        <h1 class="border-bottom">New Registration Form</h1>
             {{-- <form action="{{ url('save') }}/{{ $product->product_id }}/{{ $package->package_id }}/{{ $student->stud_id }}" method="POST">
                 @csrf --}}
     
@@ -26,7 +26,7 @@
     
                         <div class="row p-3">
     
-                            <input type="hidden" value="{{ $vendor->id ?? '' }}" class="form-control" name="user_id" readonly/>
+                            <input type="text" value="{{ $vendor->id ?? '' }}" class="form-control" name="user_id" readonly/>
     
                             <div class="col-md-12 pb-2">
                                 <label>Name of Company:</label>

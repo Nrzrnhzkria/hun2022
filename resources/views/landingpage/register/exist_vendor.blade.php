@@ -7,7 +7,7 @@
 @section('content')
 <div class="container py-5">
     <div class="row">
-        <h1 class="border-bottom">Registration Form</h1>
+        <h1 class="border-bottom">Update Registration Form</h1>
             {{-- <form action="{{ url('save') }}/{{ $product->product_id }}/{{ $package->package_id }}/{{ $student->stud_id }}" method="POST">
                 @csrf --}}
     
