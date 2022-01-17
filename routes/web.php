@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-/*
+/* ------------------------------------------------------------------------------------ //
 | Landing Page
 */
 Route::get('/', 'HomeController@home');
@@ -25,7 +25,7 @@ Route::get('news', 'HomeController@news');
 Route::get('media', 'HomeController@media');
 Route::get('contact', 'HomeController@contact');
 
-/*
+/* ------------------------------------------------------------------------------------ //
 | Vendor Registration
 */
 Route::get('registration', 'VendorController@register');
@@ -35,7 +35,8 @@ Route::get('new-registration/{get_ic}', 'VendorController@new_register');
 // Existing Vendor
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
 
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+/* ------------------------------------------------------------------------------------ //
+| Admin Panel
+*/
 Route::get('dashboard', 'DashboardController@dashboard');
+Route::get('users', 'DashboardController@dashboard');
