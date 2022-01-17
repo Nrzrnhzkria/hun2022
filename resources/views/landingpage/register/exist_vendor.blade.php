@@ -35,7 +35,7 @@
     
                             <div class="col-md-6 pb-2">
                                 <label>Contact Person:</label>
-                                <input type="text" value="{{ $vendor->first_name ?? '' }}" class="form-control" placeholder="Mohammad"  name="first_name">
+                                <input type="text" value="{{ $vendor->name ?? '' }}" class="form-control" placeholder="Mohammad"  name="first_name">
                             </div>
                             <div class="col-md-6 pb-2">
                                 <label>Designation:</label>
