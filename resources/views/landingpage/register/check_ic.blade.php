@@ -21,7 +21,7 @@
                     <form action="verification" method="get">
                         @csrf
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="ic" placeholder="without '-'" maxlength="12" required="" >
+                            <input type="text" class="form-control" name="ic_no" placeholder="without '-'" maxlength="12" required="" >
                             <p style="font-size: 10pt; color:#202020; text-align: left;"><em>Ex.: 91042409**** / A********</em></p>
                         </div>
                         <div class="col-md-12 text-end">

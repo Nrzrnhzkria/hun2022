@@ -20,18 +20,16 @@ class VendorController extends Controller
     // Check if ic exist
     public function check_ic(Request $request)
     {
-        $vendors = User::orderBy('id','desc')->get();
-
         if(User::where('ic_no', $request->ic_no)->exists()){
 
-            dd('Update Registration');
-            // $vendor = User::where('ic_no', $request->ic_no)->first();
-            // return redirect('update-registration/' . $vendor->user_id);
+            // dd('Update Registration');
+            $vendor = User::where('ic_no', $request->ic_no)->first();
+            return redirect('update-registration/' . $vendor->user_id);
 
         }else{
 
-            dd($vendors);
-            // return redirect('new-registration/' . $request->ic_no);
+            // dd('New Registration');
+            return redirect('new-registration/' . $request->ic_no);
 
         }
     }
