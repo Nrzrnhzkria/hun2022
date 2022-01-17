@@ -4,31 +4,35 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Http\Request;
 
-class SeminarAttendance extends Model
+use Illuminate\Http\Request;
+use Illuminate\Database\QueryException;
+
+class Membership extends Model
 {
     use HasFactory;
-    protected $table = 'seminar_attendance';
+    protected $table = 'membership';
 
     protected $fillable = [
-        'user_id',
-        'seminar_id', 
+        'payer_id',  
+        'amount',
+        'senangpay_id', 
     ];
 
     public static function insertDB(Request $request){
         try{
-            SeminarAttendance::create([
-                'user_id' => $request['user_id'],
-                'seminar_id' => $request['seminar_id'], 
+            Membership::create([
+                'payer_id' => $request['payer_id'],
+                'amount' => $request['amount'],
+                'senangpay_id' => $request['senangpay_id'], 
             ]);
 
-            $data = ['status' => true, 'message' => "Joined a seminar."]; 
+            $data = ['status' => true, 'message' => "Payment success."]; 
             return $data;
-            
+
         } catch(QueryException $ex){ 
             $data = ['status' => false, 'message' => $ex]; 
             return $data;
-        } 
+        }  
     }
 }

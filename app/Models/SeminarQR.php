@@ -31,7 +31,7 @@ class SeminarQR extends Model
                 'time_end' => $request['time_end'], 
             ]);
 
-            $data = ['status' => true, 'message' => "Inserted."]; 
+            $data = ['status' => true, 'message' => "Inserted a seminar."]; 
             return $data;
             
         } catch(QueryException $ex){ 

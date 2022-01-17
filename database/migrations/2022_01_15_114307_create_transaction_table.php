@@ -13,12 +13,12 @@ class CreateTransactionTable extends Migration
      */
     public function up()
     {
-        Schema::create('transaction', function (Blueprint $table) {
+        Schema::create('membership', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('payer_id');
             $table->foreign('payer_id')->references('id')->on('users');  
             $table->smallInteger('amount'); 
-            $table->string('senangpay_id');
+            $table->string('senangpay_id'); 
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateTransactionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('transaction');
+        Schema::dropIfExists('membership');
     }
 }

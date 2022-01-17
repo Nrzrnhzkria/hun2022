@@ -44,7 +44,7 @@
 
                             <div class="col-md-12 pb-2">
                                 <label>IC/Passport No.:</label>
-                                <input type="text"  value="{{ $vendor_ic ?? '' }}" class="form-control" name="ic" readonly/>
+                                <input type="text"  value="{{ $vendor_ic ?? '' }}" class="form-control" name="ic_no" readonly/>
                             </div>
 
                             <div class="col-md-12 pb-2">

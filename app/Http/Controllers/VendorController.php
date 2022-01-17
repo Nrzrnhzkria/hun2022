@@ -20,15 +20,15 @@ class VendorController extends Controller
     // Check if ic exist
     public function check_ic(Request $request)
     {
-        if(User::where('ic', $request->ic)->exists()){
+        if(User::where('ic_no', $request->ic_no)->exists()){
 
-            $vendor = User::where('ic', $request->ic)->first();
+            $vendor = User::where('ic_no', $request->ic_no)->first();
             return redirect('update-registration/' . $vendor->user_id);
 
         }else{
 
             // dd('New Registration');
-            return redirect('new-registration/' . $request->ic);
+            return redirect('new-registration/' . $request->ic_no);
 
         }
     }
@@ -41,7 +41,7 @@ class VendorController extends Controller
         $vendor = $request->session()->get('user');
         
         //generate id
-        $vendor_id = 'UID'.uniqid();
+        // $vendor_id = 'UID'.uniqid();
   
         return view('landingpage.register.new_vendor', compact('vendor', 'vendor_ic', 'vendor_id'));
     }
@@ -98,7 +98,7 @@ class VendorController extends Controller
         
         $vendor->first_name = $request->first_name;
         $vendor->last_name = $request->last_name;
-        $vendor->ic = $request->ic;
+        $vendor->ic_no = $request->ic_no;
         $vendor->email = $request->email;
         $vendor->phone_no = $request->phone_no;
         $vendor->membership = $request->membership;
