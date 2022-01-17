@@ -8,11 +8,16 @@
 
 <div class="container">
     
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
     </div>
-    
-    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+
+    <!-- Show data in bar chart ----------------------------------------------->
+    <div class="col-md-4 pb-4">
+        <div class="card border-0 bg-white shadow px-4 py-4">      
+          <canvas id="barChart" style="width:100%; height: 401px"></canvas>
+        </div>
+      </div>
 
     <h2>Section title</h2>
       <div class="table-responsive">
@@ -143,5 +148,31 @@
         </table>
     </div>
 </div>
+
+<!-- Function to show bar chart ----------------------------------------------------->
+<script>
+    var xValues = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    // var yValues = [{{$mon}}, {{$tue}}, {{$wed}}, {{$thu}}, {{$fri}}, {{$sat}}, {{$sun}}];
+    var yValues = [5, 9, 2, 4, 6, 4, 7];
+    var barColors = ["#1B4F72", "#17A589", "#633974", "#F1948A", "#FDD74C", "#23B4B1", "#DA4414" ];
+    
+    new Chart("barChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        title: {
+          display: true,
+          text: "Total Registration per Day (From 8am)"
+        }
+      }
+    });
+</script>
 
 @endsection
