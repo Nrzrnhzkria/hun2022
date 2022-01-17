@@ -3,6 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center py-5">
+        <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
