@@ -12,6 +12,21 @@
         <h1 class="h2">Users</h1>
     </div>
 
+    <div class="row">
+        <div class="col-md-2">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">An item</li>
+                  <li class="list-group-item">A second item</li>
+                  <li class="list-group-item">A third item</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-10">
+            content
+        </div>
+    </div>
     
 </div>
 
