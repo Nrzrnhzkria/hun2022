@@ -105,6 +105,16 @@
                         </div>
 
                         <div class="col-md-4">
+                            <div class="btn-group">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                                    Default dropdown
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                                    <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                    <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                    <li><a class="dropdown-item" href="#">Menu item</a></li>
+                                </ul>
+                            </div>
                             <div class="form-group">
                                 <label for="name">Role</label>
                                 <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ $user->role }}" required autocomplete="role">
@@ -119,7 +129,7 @@
             
                         <div class="col-md-12 pt-3">
                             <button type="submit" class="btn btn-primary float-right">
-                                <i class="bi bi-save pr-2"></i>Save Changes
+                                <i class="bi bi-save"></i> Save Changes
                             </button>
                         </div>
 
