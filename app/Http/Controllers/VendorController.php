@@ -22,13 +22,14 @@ class VendorController extends Controller
     {
         if(User::where('ic_no', $request->ic_no)->exists()){
 
-            $vendor = User::where('ic_no', $request->ic_no)->first();
-            return redirect('update-registration/' . $vendor->user_id);
+            dd('Update Registration');
+            // $vendor = User::where('ic_no', $request->ic_no)->first();
+            // return redirect('update-registration/' . $vendor->user_id);
 
         }else{
 
-            // dd('New Registration');
-            return redirect('new-registration/' . $request->ic_no);
+            dd('New Registration');
+            // return redirect('new-registration/' . $request->ic_no);
 
         }
     }
