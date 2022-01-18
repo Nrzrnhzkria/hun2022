@@ -80,8 +80,8 @@
                             </div>
 
                             <div class="col-md-12 pb-2">
-                                <label>Details of Displayed Product:</label>
-                                <textarea type="text" value="{{ $vendor->last_name ?? '' }}" class="form-control" placeholder="Ali"  name="address"></textarea>
+                                <label for="formFileMultiple" class="form-label">Details of Displayed Product:</label>
+                                <input class="form-control" type="file" name="product_details" id="formFileMultiple" multiple>
                             </div>
                             
                         </div>
