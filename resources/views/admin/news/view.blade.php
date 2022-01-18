@@ -12,7 +12,7 @@
         <h1 class="h2">News</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-              <a href="/create-news" class="btn btn-outline-dark"><i class="bi bi-plus-square"></i> Add News</a>
+              <a href="/create-news" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add News</a>
             </div>
         </div>
     </div>
