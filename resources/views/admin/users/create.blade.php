@@ -67,7 +67,7 @@
                             <label for="phone_no" class="col-md-4 col-form-label text-md-end">Phone No</label>
 
                             <div class="col-md-6">
-                                <input id="phone_no" type="text" class="form-control @error('phone_no') is-invalid @enderror" name="phone_no" required autocomplete="phone_no">
+                                <input id="phone_no" type="text" class="form-control @error('phone_no') is-invalid @enderror" name="phone_no" value="+60" required autocomplete="phone_no">
 
                                 @error('phone_no')
                                     <span class="invalid-feedback" role="alert">
