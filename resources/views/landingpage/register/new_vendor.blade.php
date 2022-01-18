@@ -75,8 +75,24 @@
                             </div>
 
                             <div class="col-md-6 pb-2">
+                                Sole proprietorship.
+                                .
+                                Private limited company.
+                                .
+                                .
+                                .
+                                .
                                 <label>Nature of Business:</label>
-                                <input type="text"  value="" class="form-control" name="email" placeholder="example@gmail.com"/>
+                                <select class="form-select" aria-label="Default select example" name="business_nature">                                 
+                                    <option disabled selected>-- Please Select --</option>
+                                    <option value="Sole proprietorship">Sole proprietorship</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Private limited company">Private limited company</option>
+                                    <option value="Public limited company">Public limited company</option>
+                                    <option value="Unlimited companies">Unlimited companies</option>
+                                    <option value="Foreign company">Foreign company</option>
+                                    <option value="Limited liability partnership">Limited liability partnership</option>
+                                </select>
                             </div>
 
                             <div class="col-md-12 pb-2">
