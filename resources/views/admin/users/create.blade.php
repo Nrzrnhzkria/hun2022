@@ -95,8 +95,15 @@
                             <label for="role" class="col-md-4 col-form-label text-md-end">Role</label>
 
                             <div class="col-md-6">
-                                <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" required autocomplete="role">
-
+                                <select class="form-select" aria-label="Default select example">
+                                    <option disabled>-- Please Select --</option>
+                                    <option value="superadmin">Superadmin</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="advisor">Advisor</option>
+                                    <option value="members">Members</option>
+                                    <option value="vendor">Vendor</option>
+                                    <option value="user">User</option>
+                                </select>
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
