@@ -20,7 +20,7 @@
                     <form action="{{ url('store-news') }}" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
 
-
+                        <div class="col-md-12 mb-3">
                             <div class="col-md-6 mb-3">
                                 <label for="title">Title</label>                 
                                 <input name="title" type="text" class="form-control" required>
@@ -30,7 +30,7 @@
                                 <label for="img_name">Upload Image</label>
                                 <input class="form-control" name="img_name" type="file" id="formFile">
                             </div>
-
+                        </div>
                     
                         <div class="col-md-12 mb-3">
                             <label for="teaser">Teaser</label>
