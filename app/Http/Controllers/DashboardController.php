@@ -21,11 +21,6 @@ class DashboardController extends Controller
         return view('admin.dashboard', compact('totaluser', 'totalvendor'));
     }
 
-    public function news()
-    {
-        return view('admin.news.view');
-    }
-
     public function seminars()
     {
         return view('admin.seminars.view');
