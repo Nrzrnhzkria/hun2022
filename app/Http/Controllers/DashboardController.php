@@ -30,7 +30,8 @@ class DashboardController extends Controller
 
     public function vendors()
     {
-        return view('admin.vendors.view');
+        $vendors = User::orderBy('id', 'asc')->where('role', 'vendor')->paginate(15);
+        return view('admin.vendors.view', compact('vendors'));
     }
 
     public function users()
