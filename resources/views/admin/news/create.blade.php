@@ -14,7 +14,7 @@
 
     <div class="row justify-content-center py-5">
         <div class="col-md-8">
-            <div class="card py-5">
+            <div class="card p-3">
                 <div class="card-body">
                     
                     <form action="/emailtemplate/add" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
@@ -40,9 +40,11 @@
                         </div>
                             
                         <div class="row mb-0">
-                            <button type="submit" class="btn btn-primary">
-                                Create News
-                            </button>
+                            <div class="col-md-12 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Create News
+                                </button>
+                            </div>
                         </div>
                         
                     </form>
