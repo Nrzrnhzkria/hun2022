@@ -10,7 +10,7 @@
         <div class="col-md-8">
             <div class="card py-5">
                 <div class="card-body">
-                    <form method="POST" action="store-user">
+                    <form method="POST" action="{{ url('store-user') }}">
                         @csrf
 
                         <div class="row mb-3">
