@@ -12,7 +12,7 @@
         <h1 class="h2">Create News</h1>
     </div>
 
-    <div class="row justify-content-center py-5">
+    <div class="row justify-content-center py-3">
         <div class="col-md-8">
             <div class="card p-3">
                 <div class="card-body">
