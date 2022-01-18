@@ -20,39 +20,29 @@
                     <form action="/emailtemplate/add" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
                         <div class="row mb-3">
-                            <label for="title">Title</label>
-                            <div class="col-md-8">                                
-                                <input name="title" type="text" class="form-control" required>
-                            </div>
+                            <label for="title">Title</label>                 
+                            <input name="title" type="text" class="form-control" required>
                         </div>
                     
                         <div class="row mb-3">
                             <label for="teaser">Teaser</label>
-                            <div class="col-md-8">
-                                <textarea type="text" class="form-control" placeholder="This teaser will be shown in landing page"  name="teaser"></textarea>
-                            </div>
+                            <textarea type="text" class="form-control" placeholder="This teaser will be shown in landing page"  name="teaser"></textarea>
                         </div>
                         
                         <div class="row mb-3">
                             <label for="content">Content</label>
-                            <div class="col-md-8">
-                                <textarea name="content" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
+                            <textarea name="content" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
 
                         <div class="row mb-3">
                             <label for="img_name">Upload Image</label>
-                            <div class="col-md-8">
-                                <input class="form-control" name="img_name" type="file" id="formFile">
-                            </div>
+                            <input class="form-control" name="img_name" type="file" id="formFile">
                         </div>
                             
                         <div class="row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Create News
-                                </button>
-                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Create News
+                            </button>
                         </div>
                         
                     </form>
