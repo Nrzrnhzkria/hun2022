@@ -17,7 +17,7 @@
             <div class="card p-3">
                 <div class="card-body">
                     
-                    <form action="{{ url('edit-user') }}/{{ $user->id }}" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
+                    <form action="{{ url('edit-news') }}/{{ $news->id }}" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
 
                         <div class="row g-2 mb-3">
