@@ -21,12 +21,12 @@
                         @csrf
 
                         <div class="row g-2 mb-3">
-                            <div class="col-auto">
+                            <div class="col-md-6">
                                 <label for="title">Title</label>                 
                                 <input name="title" type="text" class="form-control" required>
                             </div>
 
-                            <div class="col-auto">
+                            <div class="col-md-6">
                                 <label for="img_name">Upload Image</label>
                                 <input class="form-control" name="img_name" type="file" id="formFile">
                             </div>
