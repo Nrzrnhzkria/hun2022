@@ -47,7 +47,7 @@
                             <td>{{ $vendor->email }}</td>
                             <td class="text-capitalize">{{ $vendor->role }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-vendor') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                
                         @endforeach

@@ -16,7 +16,7 @@
         <div class="col-md-8">
             <div class="card py-5">
                 <div class="card-body">
-                    <form class="row g-3 px-3" method="POST" action="{{ url('edit') }}/{{ $vendor->id }}">
+                    <form class="row g-3 px-3" method="POST" action="{{ url('edit-vendor') }}/{{ $vendor->id }}">
                         @csrf
 
                         <div class="row mb-3">

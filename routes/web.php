@@ -44,13 +44,13 @@ Route::get('seminars', 'DashboardController@seminars');
 Route::get('vendors', 'DashboardController@vendors');
 // Vendor Management
 Route::get('vendors', 'DashboardController@vendors');
-Route::get('update/{vendor_id}', 'DashboardController@update_vendor');
-Route::post('edit/{vendor_id}', 'DashboardController@edit_vendor');
-Route::get('delete-user/{vendor_id}', 'DashboardController@destroy_vendor');
+Route::get('update-vendor/{vendor_id}', 'DashboardController@update_vendor');
+Route::post('edit-vendor/{vendor_id}', 'DashboardController@edit_vendor');
+Route::get('delete-vendor/{vendor_id}', 'DashboardController@destroy_vendor');
 // User Management
 Route::get('users', 'DashboardController@users');
 Route::get('create-user', 'DashboardController@create_user');
 Route::post('store-user', 'DashboardController@store_user');
-Route::get('update/{user_id}', 'DashboardController@update_user');
-Route::post('edit/{user_id}', 'DashboardController@edit_user');
+Route::get('update-user/{user_id}', 'DashboardController@update_user');
+Route::post('edit-user/{user_id}', 'DashboardController@edit_user');
 Route::get('delete-user/{user_id}', 'DashboardController@destroy_user');
