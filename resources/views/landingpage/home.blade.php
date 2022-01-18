@@ -14,9 +14,9 @@
     </div>
 </div>
 
-<div class="embedsocial-hashtag" data-ref="734fec1fcac63e1d47693ea749e52165df49ae66"></div>
-
 <div class="container py-4">
+
+    <div class="embedsocial-hashtag" data-ref="734fec1fcac63e1d47693ea749e52165df49ae66"></div>
     {{-- <div class="row pb-4">
         <div class="col-md-12 text-center">        
             <img class="img-fluid" src="{{ asset('assets/img/white_slider.png') }}" alt="" style="width: 40%">
