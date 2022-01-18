@@ -58,7 +58,7 @@
                             <td>{{ $user->email }}</td>
                             <td class="text-capitalize">{{ $user->role }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update') }}/{{ $user->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-user') }}/{{ $user->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                
                         @endforeach
