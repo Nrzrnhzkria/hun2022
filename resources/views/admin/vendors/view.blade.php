@@ -28,6 +28,7 @@
         
         <div class="col-md-12">
             <div class="float-right pt-3">{{ $vendors->links() }}</div>
+            @if(count($vendors) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
@@ -54,6 +55,9 @@
                     </tbody>
                 </table>
             </div>
+            @else
+              <p>There are no vendor to display.</p>
+            @endif
         </div>
     </div>
     
