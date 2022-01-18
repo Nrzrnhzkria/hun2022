@@ -39,7 +39,24 @@
                             </div>
                             <div class="col-md-6 pb-2">
                                 <label>Designation:</label>
-                                <input type="text" value="{{ $vendor->last_name ?? '' }}" class="form-control" placeholder="Ali"  name="last_name">
+                                {{-- <input type="text" value="{{ $vendor->last_name ?? '' }}" class="form-control" placeholder="Ali"  name="last_name"> --}}
+                                <select class="form-select" aria-label="Default select example" name="designation">                                 
+                                    <option disabled selected>-- Please Select --</option>
+                                    <option value="CEO">CEO</option>
+                                    <option value="Proprietor">Proprietor</option>
+                                    <option value="Owner">Owner</option>
+                                    <option value="Founder">Founder</option>
+                                    <option value="Team Leader">Team Leader</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Assistant Manager">Assistant Manager</option>
+                                    <option value="Executive">Executive</option>
+                                    <option value="Director">Director</option>
+                                    <option value="Coordinator">Coordinator</option>
+                                    <option value="Administrator">Administrator</option>
+                                    <option value="Organizer">Organizer</option>
+                                    <option value="Administrator">Managing Partner</option>
+                                    <option value="Others">Others</option>
+                                </select>
                             </div>
 
                             <div class="col-md-12 pb-2">
@@ -59,7 +76,16 @@
 
                             <div class="col-md-6 pb-2">
                                 <label>Nature of Business:</label>
-                                <input type="text"  value="" class="form-control" name="email" placeholder="example@gmail.com"/>
+                                <select class="form-select" aria-label="Default select example" name="business_nature">                                 
+                                    <option disabled selected>-- Please Select --</option>
+                                    <option value="Sole proprietorship">Sole proprietorship</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Private limited company">Private limited company</option>
+                                    <option value="Public limited company">Public limited company</option>
+                                    <option value="Unlimited companies">Unlimited companies</option>
+                                    <option value="Foreign company">Foreign company</option>
+                                    <option value="Limited liability partnership">Limited liability partnership</option>
+                                </select>
                             </div>
 
                             <div class="col-md-12 pb-2">
