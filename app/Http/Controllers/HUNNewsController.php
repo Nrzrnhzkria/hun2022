@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\HUNNews;
-use App\Models\User;
+use Auth;
 
 class HUNNewsController extends Controller
 {
@@ -20,13 +20,15 @@ class HUNNewsController extends Controller
     }
 
     public function store_news(Request $request)
-    {
+    {        
+		$user_id = Auth::user()->id;
+
         $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
         $news_image = 'https://mims.momentuminternet.my/assets/img/news/' . $imagename;
         $request->img_name->move(public_path('assets/img/news'), $imagename);
 
         HUNNews::create([
-            'user_id' => $request->user_id,
+            'user_id' => $user_id,
             'title' => $request->title,
             'content' => $request->content,
             'teaser' => $request->teaser,
@@ -46,6 +48,7 @@ class HUNNewsController extends Controller
     public function edit_news($news_id, Request $request)
     {
         $news = HUNNews::where('id', $news_id)->first();
+        $user_id = Auth::user()->id;
 
         if($request->hasFile('img_name'))
         {
@@ -54,7 +57,7 @@ class HUNNewsController extends Controller
             $request->img_name->move(public_path('assets/img/news'), $imagename);
         }
 
-        $news->user_id = $request->user_id;
+        $news->user_id = $user_id;
         $news->title = $request->title;
         $news->content = $request->content;
         $news->teaser = $request->teaser;
