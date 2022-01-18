@@ -278,7 +278,7 @@
         } 
         
         js = d.createElement(s); 
-        js.id = id; js.src = ""; 
+        js.id = id; 
         d.getElementsByTagName("head")[0].appendChild(js);
     }
     (document, "script", "EmbedSocialHashtagScript"));
