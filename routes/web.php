@@ -42,6 +42,11 @@ Route::get('dashboard', 'DashboardController@dashboard');
 Route::get('admin-news', 'DashboardController@news');
 Route::get('seminars', 'DashboardController@seminars');
 Route::get('vendors', 'DashboardController@vendors');
+// Vendor Management
+Route::get('vendors', 'DashboardController@vendors');
+Route::get('update/{vendor_id}', 'DashboardController@update_vendor');
+Route::post('edit/{vendor_id}', 'DashboardController@edit_vendor');
+Route::get('delete-user/{vendor_id}', 'DashboardController@destroy_vendor');
 // User Management
 Route::get('users', 'DashboardController@users');
 Route::get('create-user', 'DashboardController@create_user');

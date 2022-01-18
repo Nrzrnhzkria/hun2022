@@ -10,18 +10,7 @@
     
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Vendors</h1>
-        <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group me-2">
-              <a href="/create-user" class="btn btn-outline-dark"><i class="bi bi-person-plus"></i> New Vendor</a>
-            </div>
-        </div>
     </div>
-
-    @if ($message = Session::get('addvendor'))
-    <div class="alert alert-info alert-block">
-        <strong>{{ $message }}</strong>
-    </div>
-    @endif
 
     @if ($message = Session::get('updatevendor'))
     <div class="alert alert-info alert-block">

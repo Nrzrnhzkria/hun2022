@@ -34,6 +34,36 @@ class DashboardController extends Controller
         return view('admin.vendors.view', compact('vendors'));
     }
 
+    public function update_vendor($vendor_id)
+    {
+        $vendor = User::where('id', $vendor_id)->first();
+
+        return view('admin.vendors.update', compact('vendor'));
+    }
+
+    public function edit_vendor($vendor_id, Request $request)
+    {
+        $vendor = User::where('id', $vendor_id)->first();
+
+        $vendor->hun_id = $request->hun_id;
+        $vendor->name = $request->name;
+        $vendor->email = $request->email;
+        $vendor->password = Hash::make($request['password']);
+        $vendor->phone_no = $request->phone_no;
+        $vendor->ic_no = $request->ic_no;
+        $vendor->role = $request->role;
+        $vendor->save();
+
+        return redirect('vendors')->with('updatevendor','Vendor has been updated successfully.'); 
+    }
+
+    public function destroy_vendor($vendor_id){
+        $vendor = User::where('id', $vendor_id);
+        
+        $vendor->delete();
+        return redirect('users')->with('deletevendor','Vendor has been deleted successfully.');
+    }
+
     public function users()
     {
         $users = User::orderBy('id', 'asc')->paginate(15);
