@@ -12,7 +12,7 @@
 
     <div class="row justify-content-center py-3">
         <div class="col-md-8">
-            <div class="card py-5">
+            <div class="card p-3">
                 <div class="card-body">
                     <form method="POST" action="{{ url('store-user') }}">
                         @csrf
