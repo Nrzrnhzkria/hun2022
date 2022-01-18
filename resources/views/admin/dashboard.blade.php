@@ -12,6 +12,22 @@
         <h1 class="h2">Dashboard</h1>
     </div>
 
+    <div class="row">
+      <div class="col-md-4 pb-4">
+        <div class="card border-0 shadow text-center" style="height: 125px">
+          <h6 class="pt-4">Total Vendor</h6>
+          <b class="display-6 pb-3">{{ number_format($totaluser) }}</b>
+        </div>
+      </div>
+
+      <div class="col-md-4 pb-4">
+        <div class="card border-0 shadow text-center" style="height: 125px">
+          <h6 class="pt-4">Total Vendor</h6>
+          <b class="display-6 pb-3">{{ number_format($totalvendor) }}</b>
+        </div>
+      </div>
+    </div>
+
     <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
     <h2>Section title</h2>

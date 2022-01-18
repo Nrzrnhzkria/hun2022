@@ -15,7 +15,10 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $totaluser = User::all()->count();
+        $totalvendor = User::where('role','vendor')->count();
+
+        return view('admin.dashboard', compact('totaluser', 'totalvendor'));
     }
 
     public function news()
