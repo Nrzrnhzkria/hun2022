@@ -57,7 +57,7 @@
                             <td>{{ $new->title }}</td>
                             <td>{{ $new->teaser }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update-new') }}/{{ $new->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-news') }}/{{ $new->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                
                         @endforeach
