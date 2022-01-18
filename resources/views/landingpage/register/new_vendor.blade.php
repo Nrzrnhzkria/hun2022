@@ -75,13 +75,6 @@
                             </div>
 
                             <div class="col-md-6 pb-2">
-                                Sole proprietorship.
-                                .
-                                Private limited company.
-                                .
-                                .
-                                .
-                                .
                                 <label>Nature of Business:</label>
                                 <select class="form-select" aria-label="Default select example" name="business_nature">                                 
                                     <option disabled selected>-- Please Select --</option>
