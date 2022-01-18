@@ -42,7 +42,7 @@
                             <textarea name="content" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                             
-                        <div class="col-md-12">
+                        <div class="col-md-12 text-end">
                             <button type="submit" class="btn btn-primary">
                                 Create News
                             </button>
