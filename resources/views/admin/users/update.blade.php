@@ -23,7 +23,7 @@
                             <label for="hun_id" class="col-md-4 col-form-label text-md-end">HUN ID</label>
 
                             <div class="col-md-6">
-                                <input id="hun_id" type="text" class="form-control @error('hun_id') is-invalid @enderror" name="hun_id" value="{{ $user->hun_id }}" required autocomplete="hun_id">
+                                <input id="hun_id" type="text" class="form-control @error('hun_id') is-invalid @enderror" name="hun_id" value="{{ $user->hun_id }}" required autocomplete="hun_id" autofocus>
             
                                 @error('hun_id')
                                     <span class="invalid-feedback" role="alert">
@@ -37,7 +37,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $user->name }}" required autocomplete="name">
             
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -112,16 +112,19 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="name">Role</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option class="text-capitalize" value="{{ $user->role }}" selected>{{ $user->role }}</option>
-                                <option value="superadmin">Superadmin</option>
-                                <option value="admin">Admin</option>
-                                <option value="advisor">Advisor</option>
-                                <option value="members">Members</option>
-                                <option value="vendor">Vendor</option>
-                                <option value="user">User</option>
-                            </select>
+                            <label for="role" class="col-md-4 col-form-label text-md-end">Role</label>
+
+                            <div class="col-md-6">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option class="text-capitalize" value="{{ $user->role }}" selected>{{ $user->role }}</option>
+                                    <option value="superadmin">Superadmin</option>
+                                    <option value="admin">Admin</option>
+                                    <option value="advisor">Advisor</option>
+                                    <option value="members">Members</option>
+                                    <option value="vendor">Vendor</option>
+                                    <option value="user">User</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="row mb-0">
