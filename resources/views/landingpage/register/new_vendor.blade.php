@@ -88,9 +88,24 @@
                                 </select>
                             </div>
 
-                            <div class="col-md-12 pb-2">
+                            <div class="col-md-3 pb-2">
                                 <label for="formFileMultiple" class="form-label">Details of Displayed Product:</label>
                                 <input class="form-control" type="file" name="product_details" id="formFileMultiple" multiple>
+                            </div>
+
+                            <div class="col-md-3 pb-2">
+                                <label for="formFileMultiple" class="form-label">SSM Certificate:</label>
+                                <input class="form-control" type="file" name="ssm_cert" id="formFileMultiple" multiple>
+                            </div>
+
+                            <div class="col-md-3 pb-2">
+                                <label for="formFileMultiple" class="form-label">Vaccine Certificate:</label>
+                                <input class="form-control" type="file" name="vaccine_cert" id="formFileMultiple" multiple>
+                            </div>
+
+                            <div class="col-md-3 pb-2">
+                                <label for="formFileMultiple" class="form-label">Coupon:</label>
+                                <input class="form-control" type="file" name="img_name" id="formFileMultiple" multiple>
                             </div>
                             
                         </div>
