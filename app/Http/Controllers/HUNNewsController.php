@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\HUNNews;
+use App\Models\User;
 
 class HUNNewsController extends Controller
 {
@@ -11,5 +12,51 @@ class HUNNewsController extends Controller
     {
         $news = HUNNews::orderBy('id', 'asc')->paginate(15);
         return view('admin.news.view', compact('news'));
+    }
+
+    public function create_news()
+    {
+        return view('admin.news.create');
+    }
+
+    public function store_news(Request $request)
+    {
+        HUNNews::create([
+            'user_id' => $request->user_id,
+            'title' => $request->title,
+            'content' => $request->content,
+            'teaser' => $request->teaser,
+            'img_name' => $request->img_name,
+        ]);
+
+        return redirect('admin-news')->with('addnews','News has been created successfully.');
+    }
+
+    public function update_news($news_id)
+    {
+        $news = HUNNews::where('id', $news_id)->first();
+
+        return view('admin.news.update', compact('news')); 
+    }
+
+    public function edit_news($news_id, Request $request)
+    {
+        $news = HUNNews::where('id', $news_id)->first();
+
+        $news->user_id = $request->user_id;
+        $news->title = $request->title;
+        $news->content = $request->content;
+        $news->teaser = $request->teaser;
+        $news->img_name = $request->img_name;
+        $news->save();
+
+        return redirect('admin-news')->with('updatenews','News has been updated successfully.'); 
+    }
+
+    public function destroy_news($news_id){
+        $news = HUNNews::where('id', $news_id);
+        
+        $news->delete();
+        return redirect('admin-news')->with('deletenews','News has been deleted successfully.');
     }
 }
