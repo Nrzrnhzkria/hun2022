@@ -17,8 +17,7 @@
       <div class="col-md-4 pb-4">
         <div class="card border-0 shadow text-center" style="height: 125px">
           <h6 class="pt-4">Total Coupon</h6>
-          {{-- <b class="display-6 pb-3">{{ number_format($totalcoupon) }}</b> --}}
-          <b class="display-6 pb-3">0</b>
+          <b class="display-6 pb-3">{{ number_format($totalcoupon) }}</b>
         </div>
       </div>
 

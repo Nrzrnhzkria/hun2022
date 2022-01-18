@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Coupon;
 use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
@@ -15,10 +16,11 @@ class DashboardController extends Controller
 
     public function dashboard()
     {
-        $totaluser = User::all()->count();
+        $totalcoupon = Coupon::all()->count();
         $totalvendor = User::where('role','vendor')->count();
+        $totaluser = User::all()->count();
 
-        return view('admin.dashboard', compact('totaluser', 'totalvendor'));
+        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser'));
     }
 
     public function seminars()
