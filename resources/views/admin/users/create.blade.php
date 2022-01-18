@@ -1,5 +1,9 @@
 @extends('layouts.admin-panel')
 
+@section('title')
+    Users
+@endsection
+
 @section('content')
 <div class="container">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
@@ -96,7 +100,7 @@
 
                             <div class="col-md-6">
                                 <select class="form-select" aria-label="Default select example">
-                                    <option disabled>-- Please Select --</option>
+                                    <option disabled selected>-- Please Select --</option>
                                     <option value="superadmin">Superadmin</option>
                                     <option value="admin">Admin</option>
                                     <option value="advisor">Advisor</option>
