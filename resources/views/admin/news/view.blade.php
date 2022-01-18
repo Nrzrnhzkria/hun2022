@@ -39,6 +39,7 @@
         
         <div class="col-md-12">
             <div class="float-right pt-3">{{ $news->links() }}</div>
+            @if(count($news) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
@@ -63,6 +64,9 @@
                     </tbody>
                 </table>
             </div>
+            @else
+              <p>There are no news to display.</p>
+            @endif
         </div>
     </div>
     
