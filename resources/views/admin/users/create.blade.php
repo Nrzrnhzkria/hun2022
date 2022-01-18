@@ -85,7 +85,7 @@
                             <label for="ic_no" class="col-md-4 col-form-label text-md-end">IC No</label>
 
                             <div class="col-md-6">
-                                <input id="ic_no" type="text" class="form-control @error('ic_no') is-invalid @enderror" name="ic_no" required autocomplete="ic_no">
+                                <input id="ic_no" type="text" class="form-control @error('ic_no') is-invalid @enderror" name="ic_no" required autocomplete="ic_no" maxlength="12">
 
                                 @error('ic_no')
                                     <span class="invalid-feedback" role="alert">
