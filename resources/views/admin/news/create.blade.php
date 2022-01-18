@@ -19,9 +19,19 @@
                     
                     <form action="/emailtemplate/add" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
+
                         <div class="row mb-3">
-                            <label for="title">Title</label>                 
-                            <input name="title" type="text" class="form-control" required>
+
+                            <div class="col-md-6">
+                                <label for="title">Title</label>                 
+                                <input name="title" type="text" class="form-control" required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="img_name">Upload Image</label>
+                                <input class="form-control" name="img_name" type="file" id="formFile">
+                            </div>
+
                         </div>
                     
                         <div class="row mb-3">
@@ -33,14 +43,9 @@
                             <label for="content">Content</label>
                             <textarea name="content" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-
-                        <div class="row mb-3">
-                            <label for="img_name">Upload Image</label>
-                            <input class="form-control" name="img_name" type="file" id="formFile">
-                        </div>
                             
                         <div class="row mb-0">
-                            <div class="col-md-12 offset-md-4">
+                            <div class="col-md-12">
                                 <button type="submit" class="btn btn-primary">
                                     Create News
                                 </button>
