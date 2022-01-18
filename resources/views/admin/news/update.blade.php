@@ -9,7 +9,7 @@
 <div class="container">
 
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Create News</h1>
+        <h1 class="h2">Update News</h1>
     </div>
 
     <div class="row justify-content-center py-3">
@@ -34,12 +34,12 @@
                     
                         <div class="col-md-12 mb-3">
                             <label for="teaser">Teaser</label>
-                            <textarea type="text" class="form-control" value="{{ $news->teaser }}" placeholder="This teaser will be shown in landing page"  name="teaser"></textarea>
+                            <textarea type="text" class="form-control" placeholder="This teaser will be shown in landing page"  name="teaser">{{ $news->teaser }}</textarea>
                         </div>
                         
                         <div class="col-md-12 mb-3">
                             <label for="content">Content</label>
-                            <textarea name="content" class="ckeditor form-control" value="{{ $news->content }}" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea name="content" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3">{{ $news->content }}</textarea>
                         </div>
                             
                         <div class="col-md-12 text-end">
