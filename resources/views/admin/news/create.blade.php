@@ -17,39 +17,35 @@
             <div class="card p-3">
                 <div class="card-body">
                     
-                    <form action="/emailtemplate/add" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
+                    <form action="{{ url('store-news') }}" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
 
-                        <div class="row mb-3">
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <label for="title">Title</label>                 
                                 <input name="title" type="text" class="form-control" required>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-3">
                                 <label for="img_name">Upload Image</label>
                                 <input class="form-control" name="img_name" type="file" id="formFile">
                             </div>
 
-                        </div>
                     
-                        <div class="row mb-3">
+                        <div class="col-md-12 mb-3">
                             <label for="teaser">Teaser</label>
                             <textarea type="text" class="form-control" placeholder="This teaser will be shown in landing page"  name="teaser"></textarea>
                         </div>
                         
-                        <div class="row mb-3">
+                        <div class="col-md-12 mb-3">
                             <label for="content">Content</label>
                             <textarea name="content" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                             
-                        <div class="row mb-0">
-                            <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary">
-                                    Create News
-                                </button>
-                            </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary">
+                                Create News
+                            </button>
                         </div>
                         
                     </form>
