@@ -12,7 +12,7 @@
         <h1 class="h2">Users</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-              <a href="/create-user" class="btn btn-outline-dark"><i class="bi bi-person-plus"></i> New User</a>
+              <a href="/create-user" class="btn btn-outline-dark"><i class="bi bi-person-plus"></i> Add User</a>
             </div>
         </div>
     </div>
