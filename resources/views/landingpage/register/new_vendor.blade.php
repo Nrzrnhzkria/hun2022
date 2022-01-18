@@ -35,11 +35,28 @@
     
                             <div class="col-md-6 pb-2">
                                 <label>Contact Person:</label>
-                                <input type="text" value="{{ $vendor->first_name ?? '' }}" class="form-control" placeholder="Mohammad"  name="first_name">
+                                <input type="text" value="{{ $vendor->name ?? '' }}" class="form-control" placeholder="Mohammad"  name="name">
                             </div>
                             <div class="col-md-6 pb-2">
                                 <label>Designation:</label>
-                                <input type="text" value="{{ $vendor->last_name ?? '' }}" class="form-control" placeholder="Ali"  name="last_name">
+                                {{-- <input type="text" value="{{ $vendor_detail->designation ?? '' }}" class="form-control" placeholder="Ali"  name="designation"> --}}
+                                <select class="form-select" aria-label="Default select example" name="designation">                                 
+                                    <option disabled selected>-- Please Select --</option>
+                                    <option value="CEO">CEO</option>
+                                    <option value="Proprietor">Proprietor</option>
+                                    <option value="Owner">Owner</option>
+                                    <option value="Founder">Founder</option>
+                                    <option value="Team Leader">Team Leader</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Assistant Manager">Assistant Manager</option>
+                                    <option value="Executive">Executive</option>
+                                    <option value="Director">Director</option>
+                                    <option value="Coordinator">Coordinator</option>
+                                    <option value="Administrator">Administrator</option>
+                                    <option value="Organizer">Organizer</option>
+                                    <option value="Administrator">Managing Partner</option>
+                                    <option value="Others">Others</option>
+                                </select>
                             </div>
 
                             <div class="col-md-12 pb-2">
