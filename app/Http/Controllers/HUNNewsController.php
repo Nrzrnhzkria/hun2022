@@ -21,12 +21,16 @@ class HUNNewsController extends Controller
 
     public function store_news(Request $request)
     {
+        $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+        $news_image = 'https://mims.momentuminternet.my/assets/img/news/' . $imagename;
+        $request->img_name->move(public_path('assets/img/news'), $imagename);
+
         HUNNews::create([
             'user_id' => $request->user_id,
             'title' => $request->title,
             'content' => $request->content,
             'teaser' => $request->teaser,
-            'img_name' => $request->img_name,
+            'img_name' => $news_image,
         ]);
 
         return redirect('admin-news')->with('addnews','News has been created successfully.');
@@ -43,11 +47,21 @@ class HUNNewsController extends Controller
     {
         $news = HUNNews::where('id', $news_id)->first();
 
+        if($request->hasFile('img_name'))
+        {
+            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+            $img_name = 'https://mims.momentuminternet.my/assets/img/news/' . $imagename;
+            $request->img_name->move(public_path('assets/img/news'), $imagename);
+        }
+
         $news->user_id = $request->user_id;
         $news->title = $request->title;
         $news->content = $request->content;
         $news->teaser = $request->teaser;
-        $news->img_name = $request->img_name;
+        if($request->hasFile('img_name'))
+        {
+            $news->img_name = $img_name;
+        }
         $news->save();
 
         return redirect('admin-news')->with('updatenews','News has been updated successfully.'); 
