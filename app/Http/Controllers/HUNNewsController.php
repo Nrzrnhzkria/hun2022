@@ -24,7 +24,7 @@ class HUNNewsController extends Controller
 		$user_id = Auth::user()->id;
 
         $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-        $news_image = 'https://mims.momentuminternet.my/assets/img/news/' . $imagename;
+        $news_image = 'https://hariusahawannegara.com.my/assets/img/news/' . $imagename;
         $request->img_name->move(public_path('assets/img/news'), $imagename);
 
         HUNNews::create([
@@ -53,7 +53,7 @@ class HUNNewsController extends Controller
         if($request->hasFile('img_name'))
         {
             $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $img_name = 'https://mims.momentuminternet.my/assets/img/news/' . $imagename;
+            $img_name = 'https://hariusahawannegara.com.my/assets/img/news/' . $imagename;
             $request->img_name->move(public_path('assets/img/news'), $imagename);
         }
 
