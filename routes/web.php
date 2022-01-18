@@ -39,9 +39,15 @@ Route::get('update-registration/{user_id}', 'VendorController@update_register');
 | Admin Panel
 */
 Route::get('dashboard', 'DashboardController@dashboard');
+// News Management
 Route::get('admin-news', 'HUNNewsController@news');
+Route::get('create-news', 'HUNNewsController@create_news');
+Route::post('store-news', 'HUNNewsController@store_news');
+Route::get('update-news/{news_id}', 'HUNNewsController@update_news');
+Route::post('edit-news/{news_id}', 'HUNNewsController@edit_news');
+Route::get('delete-news/{news_id}', 'HUNNewsController@destroy_news');
+// Seminar Management
 Route::get('seminars', 'DashboardController@seminars');
-Route::get('vendors', 'DashboardController@vendors');
 // Vendor Management
 Route::get('vendors', 'DashboardController@vendors');
 Route::get('update-vendor/{vendor_id}', 'DashboardController@update_vendor');
