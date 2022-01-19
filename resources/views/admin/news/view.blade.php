@@ -54,7 +54,7 @@
                         @foreach ($news as $key => $new)
                         <tr>
                             <th scope="row">{{ $news->firstItem() + $key }}</th>
-                            <td class="text-capitalize">{{ $new->title }}</td>
+                            <td>{{ $new->title }}</td>
                             <td><img src="{{ $new->img_name }}" width="80rem"></td>
                             <td class="text-center">
                                 <a href="{{ url('update-news') }}/{{ $new->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
