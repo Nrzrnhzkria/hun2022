@@ -56,9 +56,9 @@
                 <div class="image-container">
                     <img src="{{ $news[0]->img_name }}" />
                     <div class="after p-2">
-                        <p class="fw-bold">{{ $news->title }}</p>
+                        <p class="fw-bold">{{ $news[0]->title }}</p>
                         <p>
-                            {{ $news->teaser}}
+                            {{ $news[0]->teaser}}
                         </p>
                     </div>
                 </div>
