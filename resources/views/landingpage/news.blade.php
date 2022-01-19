@@ -22,7 +22,6 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $new->title }}</h5>
                             <p class="card-text">{{ $new->teaser}}</p>
-                            <a href="/news" class="btn btn-warning">See More >></a>
                         </div>
                     </div>
                 </div>
