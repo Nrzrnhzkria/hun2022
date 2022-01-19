@@ -111,16 +111,20 @@
 
     <div class="row py-4">        
         @foreach ($news->take(4) as $new)
-        <div class="col-md-3">
-            <div class="card">
-                <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">{{ $new->title }}</h5>
-                  <p class="card-text">{{ $new->teaser}}</p>
-                  <a href="#" class="btn btn-warning">See More >></a>
+        <div class="table-responsive">
+        <table class="borderless">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ $new->title }}</h5>
+                    <p class="card-text">{{ $new->teaser}}</p>
+                    <a href="#" class="btn btn-warning">See More >></a>
+                    </div>
                 </div>
-            </div>
-        </div>                
+            </div> 
+        </table>       
+        </div>        
         @endforeach
     </div>
 
