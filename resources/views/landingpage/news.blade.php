@@ -9,7 +9,7 @@
 <style>
 .card:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);    
-    transform: scale(0.5);
+    transform: scale(1.03);
 }
 </style>
 
