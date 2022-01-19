@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Coupon;
 use Illuminate\Support\Facades\Hash;
-use Auth;
 
 class DashboardController extends Controller
 {
@@ -21,8 +20,7 @@ class DashboardController extends Controller
         $totalvendor = User::where('role','vendor')->count();
         $totaluser = User::all()->count();
 
-        dd(Auth::user()->role);
-        // return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser'));
+        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser'));
     }
 
     public function seminars()
