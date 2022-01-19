@@ -10,7 +10,7 @@
 <style>
     .timer {
         margin: 0 0 45px;
-        color: #fff;
+        color: rgb(209, 50, 50);
         display: inline-block;
         font-weight: 100;
         text-align: center;
@@ -19,7 +19,7 @@
     .timer div {
         padding: 30px;
         border-radius: 3px;
-        background: orange;
+        background: orangered;
         display: inline-block;
         font-size: 40px;
         font-weight: 400;
