@@ -45,9 +45,7 @@
     }
 </style>
 
-
-<div class="row pt-4">
-{{-- <div class="row-fluid"> --}}
+<div class="row-fluid">
     {{-- <div class="col-md-12 py-4" style="background-image: url('{{ asset('assets/img/Banner.jpg') }}'); width:100%; height:100%;"> --}}
     <div class="col-md-12 text-center pb-2" style="background-color: rgba(255, 166, 0, 0.678); width:100%; height:38%;">
         
@@ -78,131 +76,130 @@
             </div>
         </div>
     </div>
-{{-- </div> --}}
+</div>
 
-    <div class="container py-4">
+<div class="container py-4">
 
-        <div class="row pb-4">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="{{ asset('assets/img/white_slider.jpeg') }}" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('assets/img/carousel_1.png') }}" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{{ asset('assets/img/carousel_1.png') }}" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+    <div class="row pb-4">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset('assets/img/white_slider.jpeg') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('assets/img/carousel_1.png') }}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset('assets/img/carousel_1.png') }}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-
-        <div class="row py-4">        
-            @foreach ($news->take(4) as $new)
-            <div style="width: 25%">
-                <a href="">
-                    <div class="image-container">
-                        <img src="{{ $new->img_name }}" style="width: 100%"/>
-                        <div class="after p-2">
-                            <p class="fw-bold">{{ $new->title }}</p>
-                            <p>
-                                {{ $new->teaser}}
-                            </p>
-                        </div>
-                    </div>
-                </a> 
-            </div>                
-            @endforeach
-        </div>
-
-        <div class="row py-4">
-            <div class="col-md-5">
-                <a href="http://" class="btn btn-warning text-start p-4"> 
-                    <h3>CLICK HERE TO KNOW MORE ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-                        consequat.
-                    </p>
-                </a>
-            </div>
-            <div class="col-md-3">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <h5 class="card-title">BECOME A VENDOR</h5>
-                        <p class="card-text">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                        </p>
-                        <a href="registration" class="btn btn-warning fw-bold">Register</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-0">
-                    <div class="card-body">
-                        <h5 class="card-title">THE EXHIBITIONS</h5>
-                        <p class="card-text">
-                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque 
-                            corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa 
-                            qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita 
-                            distinctio.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row pt-4">
-            <div class="col-md-6 text-center">
-                <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="60%">
-            </div>
-            <div class="col-md-6 align-self-center">
-                <h3>DOWNLOAD HUN22 OFFICIAL <br> MOBILE APP</h3>
-                <p>Available in Apple App Store and Google Playstore</p>
-                <a href="#"><img src="{{ asset('assets/img/appstore.png') }}" width="23.5%"></a>
-                <a href="#"><img src="{{ asset('assets/img/playstore.png') }}" width="28%"></a>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="brand-carousel owl-carousel">
-                <div class="single-logo">
-                    <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" alt="">
-                </div>
-                <div class="single-logo">
-                    <img src="https://i.postimg.cc/pdMQjC5Q/brand-2.png" alt="">
-                </div>
-                <div class="single-logo">
-                    <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
-                </div>
-                <div class="single-logo">
-                    <img src="https://i.postimg.cc/d14GzKHn/brand-4.png" alt="">
-                    </div>
-                <div class="single-logo">
-                    <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" alt="">
-                </div>
-                <div class="single-logo">
-                    <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
-                </div>
-            </div>
-        </div>
-        
     </div>
+
+    <div class="row py-4">        
+        @foreach ($news->take(4) as $new)
+        <div style="width: 25%">
+            <a href="">
+                <div class="image-container">
+                    <img src="{{ $new->img_name }}" style="width: 100%"/>
+                    <div class="after p-2">
+                        <p class="fw-bold">{{ $new->title }}</p>
+                        <p>
+                            {{ $new->teaser}}
+                        </p>
+                    </div>
+                </div>
+            </a> 
+        </div>                
+        @endforeach
+    </div>
+
+    <div class="row py-4">
+        <div class="col-md-5">
+            <a href="http://" class="btn btn-warning text-start p-4"> 
+                <h3>CLICK HERE TO KNOW MORE ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                    consequat.
+                </p>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h5 class="card-title">BECOME A VENDOR</h5>
+                    <p class="card-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                    <a href="registration" class="btn btn-warning fw-bold">Register</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-0">
+                <div class="card-body">
+                    <h5 class="card-title">THE EXHIBITIONS</h5>
+                    <p class="card-text">
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque 
+                        corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa 
+                        qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita 
+                        distinctio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt-4">
+        <div class="col-md-6 text-center">
+            <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="60%">
+        </div>
+        <div class="col-md-6 align-self-center">
+            <h3>DOWNLOAD HUN22 OFFICIAL <br> MOBILE APP</h3>
+            <p>Available in Apple App Store and Google Playstore</p>
+            <a href="#"><img src="{{ asset('assets/img/appstore.png') }}" width="23.5%"></a>
+            <a href="#"><img src="{{ asset('assets/img/playstore.png') }}" width="28%"></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="brand-carousel owl-carousel">
+            <div class="single-logo">
+                <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" alt="">
+            </div>
+            <div class="single-logo">
+                <img src="https://i.postimg.cc/pdMQjC5Q/brand-2.png" alt="">
+            </div>
+            <div class="single-logo">
+                <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
+            </div>
+            <div class="single-logo">
+                <img src="https://i.postimg.cc/d14GzKHn/brand-4.png" alt="">
+                </div>
+            <div class="single-logo">
+                <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" alt="">
+            </div>
+            <div class="single-logo">
+                <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
+            </div>
+        </div>
+    </div>
+    
 </div>
 
 {{-- @if (Route::has('login'))

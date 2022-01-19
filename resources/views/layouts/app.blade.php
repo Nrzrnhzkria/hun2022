@@ -32,11 +32,9 @@
 
 
 </head>
-<body>
-    <div class="container-fluid mb-3">
-        @include('layouts.navbar')
-        @yield('content')
-        @include('layouts.footer')
-    </div>
+<body class="m-0 p-0">
+    @include('layouts.navbar')
+    @yield('content')
+    @include('layouts.footer')
 </body>
 </html>
