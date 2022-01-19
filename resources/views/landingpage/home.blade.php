@@ -43,6 +43,30 @@
         font-weight: 500;
         letter-spacing: 1px;
     }
+
+    #module {
+    font-size: 1rem;
+    line-height: 1.5;
+    }
+
+
+    #module #collapseExample.collapse:not(.show) {
+    display: block;
+    height: 3rem;
+    overflow: hidden;
+    }
+
+    #module #collapseExample.collapsing {
+    height: 3rem;
+    }
+
+    #module a.collapsed::after {
+    content: '+ Show More';
+    }
+
+    #module a:not(.collapsed)::after {
+    content: '- Show Less';
+    }
 </style>
 
 <div class="row-fluid">
@@ -118,11 +142,12 @@
                     <td>
                         <div class="col-md-3">
                             <a href="/news" class="text-dark text-decoration-none">
-                                <div class="card" style="width: 16.5rem; height: 23rem;">
+                                <div class="card" id="module" style="width: 16.5rem; height: 23rem;">
                                     <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                     <h5 class="card-title">{{ $new->title }}</h5>
-                                    <p class="card-text">{{ $new->teaser}}</p>
+                                    <p class="card-text collapse" id="collapseExample" aria-expanded="false">{{ $new->teaser}}</p>
+                                    <a role="button" class="collapsed" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></a>
                                     {{-- <a href="#" class="btn btn-warning">See More >></a> --}}
                                     </div>
                                 </div>
