@@ -1,4 +1,4 @@
-<div class="container">
+{{-- <div class="container"> --}}
     <footer class="row row-cols-6 py-5 my-5 border-top">
         <div class="col">
             <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
@@ -63,4 +63,4 @@
 
     <p class="text-center pb-4">All rights reserved &copy; 2022 Hari Usahawan Negara</p>
 
-</div>
+{{-- </div> --}}
