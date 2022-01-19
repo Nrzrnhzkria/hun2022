@@ -20,7 +20,7 @@
                     <form action="{{ url('edit-news') }}/{{ $news->id }}" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
                         <div class="col-md-12 text-center">
-                            <img src="{{ $new->img_name }}" width="500rem">
+                            <img src="{{ $news->img_name }}" width="500rem">
                         </div>
 
                         <div class="row g-2 mb-3">
