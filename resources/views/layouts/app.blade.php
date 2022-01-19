@@ -33,10 +33,8 @@
 
 </head>
 <body>
-    <div class="row p-4">
-        @include('layouts.navbar')
-        @yield('content')
-        @include('layouts.footer')
-    </div>
+    @include('layouts.navbar')
+    @yield('content')
+    @include('layouts.footer')
 </body>
 </html>
