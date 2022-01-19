@@ -14,10 +14,10 @@
         display: inline-block;
         font-weight: 100;
         text-align: center;
-        font-size: 40px;
+        font-size: 60px;
     }
     .timer div {
-        padding: 10px;
+        padding: 30px;
         border-radius: 3px;
         background: #000000;
         display: inline-block;
