@@ -176,13 +176,13 @@
 
     <div class="row pt-4">
         <div class="col-md-6 text-center">
-            <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="60%">
+            <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="18rem">
         </div>
         <div class="col-md-6 align-self-center">
             <h3>DOWNLOAD HUN22 OFFICIAL <br> MOBILE APP</h3>
             <p>Available in Apple App Store and Google Playstore</p>
-            <a href="#"><img src="{{ asset('assets/img/appstore.png') }}" width="23.5%"></a>
-            <a href="#"><img src="{{ asset('assets/img/playstore.png') }}" width="28%"></a>
+            <a href="#"><img class="img-fluid" src="{{ asset('assets/img/appstore.png') }}" width="23.5%"></a>
+            <a href="#"><img class="img-fluid" src="{{ asset('assets/img/playstore.png') }}" width="28%"></a>
         </div>
     </div>
 
