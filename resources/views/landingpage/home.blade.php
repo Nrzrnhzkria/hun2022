@@ -117,7 +117,7 @@
                 @foreach ($news->take(4) as $new)
                     <td>
                         <div class="col-md-3">
-                            <div class="card" style="width: 17rem; height: 23rem;">
+                            <div class="card" style="width: 16.5rem; height: 23rem;">
                                 <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                 <h5 class="card-title">{{ $new->title }}</h5>
