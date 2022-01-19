@@ -21,7 +21,7 @@
         border-radius: 3px;
         background: #000000;
         display: inline-block;
-        font-size: 60px;
+        font-size: 40px;
         font-weight: 400;
         width: 110px;
     }
