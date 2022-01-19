@@ -44,6 +44,12 @@ class HomeController extends Controller
         return view('landingpage.news.news', compact('news'));
     }
 
+    public function readmore($news_id)
+    {
+        $news = HUNNews::where('id', $news_id)->first();
+        return view('landingpage.news.readmore', compact('news'));
+    }
+
     public function media()
     {
         return view('landingpage.media');

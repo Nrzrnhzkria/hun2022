@@ -22,6 +22,7 @@ Route::get('/', 'HomeController@home');
 Route::get('preface', 'HomeController@preface');
 Route::get('events', 'HomeController@events');
 Route::get('news', 'HomeController@news');
+Route::get('news/{news_id}', 'HomeController@readmore');
 Route::get('media', 'HomeController@media');
 Route::get('contact', 'HomeController@contact');
 
