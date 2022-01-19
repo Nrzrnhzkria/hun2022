@@ -1,12 +1,12 @@
 <div class="container">
     <footer class="row py-5 my-5 border-top">
-        <div class="col-md-2">
+        <div class="col-md-2 pb-2">
             <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
                 <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="50rem">
             </a>
         </div>
   
-        <div class="col-md-2">
+        <div class="col-md-2 pb-2">
             <h5>SECRETARIAT</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">No 42B, Jalan Eko Botani 3/2, Taman Eko Botani, 79100 Iskandar Puteri, Johor</p></li>
@@ -15,7 +15,7 @@
             </ul>
         </div>
   
-        <div class="col-md-2">
+        <div class="col-md-2 pb-2">
             <h5>NAVIGATION</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
@@ -27,7 +27,7 @@
             </ul>
         </div>
     
-        <div class="col-md-2">
+        <div class="col-md-2 pb-2">
             <h5>LEGAL</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms Of Use</a></li>
@@ -36,7 +36,7 @@
             </ul>
         </div>
 
-        <div class="col-md-2">
+        <div class="col-md-2 pb-2">
             <h5>SOCIAL MEDIA</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
