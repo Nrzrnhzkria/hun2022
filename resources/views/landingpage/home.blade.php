@@ -51,7 +51,7 @@
     </div>
 
     <div class="row py-4">        
-        @foreach ($news => $new)
+        @foreach ($news as $new)
         <div class="col-md-3">
             <a href="">
                 <div class="image-container">
