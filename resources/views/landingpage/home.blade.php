@@ -21,7 +21,7 @@
         border-radius: 3px;
         background: #000000;
         display: inline-block;
-        font-size: 26px;
+        font-size: 60px;
         font-weight: 400;
         width: 110px;
     }
@@ -70,7 +70,7 @@
                         </div>
                         <p id="time-up"></p>
                     </div>
-                    <h3>To go for HARI USAHAWAN NEGARA launching</h3>
+                    <p class="fw-bold">To go for HARI USAHAWAN NEGARA launching</p>
                 </div>
             </div>
          </div>
