@@ -178,7 +178,7 @@
         <div class="col-md-6 text-center">
             <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="250rem">
         </div>
-        <div class="col-md-6 align-self-center text-center py-3">
+        <div class="col-md-6 text-center py-3">
             <h3>DOWNLOAD HUN22 OFFICIAL <br> MOBILE APP</h3>
             <p>Available in Apple App Store and Google Playstore</p>
             <a href="#"><img class="img-fluid" src="{{ asset('assets/img/appstore.png') }}" width="23.5%"></a>
