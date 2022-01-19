@@ -30,7 +30,7 @@ class DashboardController extends Controller
 
     public function vendors()
     {
-        $vendors = User::orderBy('id', 'asc')->where('role', 'vendor')->paginate(15);
+        $vendors = User::orderBy('id', 'desc')->where('role', 'vendor')->paginate(15);
         return view('admin.vendors.view', compact('vendors'));
     }
 
@@ -66,7 +66,7 @@ class DashboardController extends Controller
 
     public function users()
     {
-        $users = User::orderBy('id', 'asc')->paginate(15);
+        $users = User::orderBy('id', 'desc')->paginate(15);
         return view('admin.users.view', compact('users'));
     }
 

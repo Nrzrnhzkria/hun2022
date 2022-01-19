@@ -10,7 +10,7 @@ class HUNNewsController extends Controller
 {
     public function news()
     {
-        $news = HUNNews::orderBy('id', 'asc')->paginate(15);
+        $news = HUNNews::orderBy('id', 'desc')->paginate(15);
         return view('admin.news.view', compact('news'));
     }
 
