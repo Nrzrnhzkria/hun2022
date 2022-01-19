@@ -39,7 +39,7 @@
                         
                         <div class="col-md-12 mb-3">
                             <label for="content">Content</label>
-                            <textarea id="editor1" name="content" onfocus="this.value='';" class="form-control" rows="3"></textarea>
+                            <textarea name="content" class="form-control" rows="3"></textarea>
                         </div>
                             
                         <div class="col-md-12 text-end">
@@ -57,11 +57,8 @@
  
 </div>
 
-<script type="text/javascript">  
-    CKEDITOR.replace( 'editor1', { 
-    enterMode: CKEDITOR.ENTER_BR, 
-    on: {'instanceReady': function (evt) { evt.editor.execCommand('');}},
-    }); 
-</script>   
+<script>
+    CKEDITOR.replace( 'content' );
+</script>  
 
 @endsection
