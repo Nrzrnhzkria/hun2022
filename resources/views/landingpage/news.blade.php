@@ -12,8 +12,8 @@
             <h1>News</h1>
         </div>
         @foreach ($news as $new)
-        <a href="/news" class="text-dark text-decoration-none">
-            <div class="card mb-3">
+        <div class="card mb-3">
+            <a href="/news" class="text-dark text-decoration-none">
                 <div class="row g-0">
                     <div class="col-md-4">
                         <img src="{{ $new->img_name }}" class="img-fluid rounded-start" alt="...">
@@ -25,8 +25,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
         @endforeach
     </div>
 </div>
