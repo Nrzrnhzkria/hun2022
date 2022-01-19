@@ -33,8 +33,10 @@
 
 </head>
 <body>
-    @include('layouts.navbar')
-    @yield('content')
-    @include('layouts.footer')
+    <div class="container-fluid mb-3">
+        @include('layouts.navbar')
+        @yield('content')
+        @include('layouts.footer')
+    </div>
 </body>
 </html>
