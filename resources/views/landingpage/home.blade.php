@@ -54,7 +54,7 @@
         <div class="col-md-3">
             <a href="">
                 <div class="image-container">
-                    <img src="{{ $news->img_name }}" />
+                    <img src="{{ $news[0]->img_name }}" />
                     <div class="after p-2">
                         <p class="fw-bold">{{ $news->title }}</p>
                         <p>

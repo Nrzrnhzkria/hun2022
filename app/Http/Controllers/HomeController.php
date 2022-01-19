@@ -25,8 +25,7 @@ class HomeController extends Controller
     public function home()
     {
         $news = HUNNews::orderBy('id', 'asc')->get();
-        dd($news);
-        // return view('landingpage.home', compact('news'));
+        return view('landingpage.home', compact('news'));
     }
 
     public function preface()
