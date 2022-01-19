@@ -51,7 +51,7 @@
         
         <div class="container p-5">
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="timer">
                         <div class="shadow py-2">
                             <span class="days" id="day"></span> 
