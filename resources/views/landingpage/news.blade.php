@@ -8,7 +8,7 @@
 
 <div class="container py-4">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-8 text-center">
             @foreach ($news as $new)
             <a href="/news" class="text-dark text-decoration-none">
                 <div class="card mb-3">
