@@ -42,6 +42,7 @@
     @yield('content')
 </body>
 
-<script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
+{{-- <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script> --}}
+<script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
 
 </html>
