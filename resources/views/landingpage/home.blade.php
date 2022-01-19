@@ -20,7 +20,6 @@
         padding: 30px;
         border-radius: 3px;
         background: orange;
-        box-shadow: #000000;
         display: inline-block;
         font-size: 40px;
         font-weight: 400;
@@ -54,19 +53,19 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="timer">
-                        <div class="py-2">
+                        <div class="shadow py-2">
                             <span class="days" id="day"></span> 
                             <div class="smalltext">Days</div>
                         </div>
-                        <div class="py-2">
+                        <div class="shadow py-2">
                             <span class="hours" id="hour"></span> 
                             <div class="smalltext">Hours</div>
                         </div>
-                        <div class="py-2">
+                        <div class="shadow py-2">
                             <span class="minutes" id="minute"></span> 
                             <div class="smalltext">Minutes</div>
                         </div>
-                        <div class="py-2">
+                        <div class="shadow py-2">
                             <span class="seconds" id="second"></span> 
                             <div class="smalltext">Seconds</div>
                         </div>
