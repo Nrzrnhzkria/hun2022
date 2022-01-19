@@ -43,6 +43,10 @@
         font-weight: 500;
         letter-spacing: 1px;
     }
+
+    #more {
+        display: none;
+    }
 </style>
 
 <div class="row-fluid">
@@ -122,7 +126,8 @@
                                     <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
                                     <div class="card-body">
                                     <h5 class="card-title">{{ $new->title }}</h5>
-                                    <p class="card-text">{{ $new->teaser}}</p>
+                                    <p class="card-text"><span id="dots">...</span><span id="more">{{ $new->teaser}}</span></p>
+                                    <button class="btn btn-light" onclick="myFunction()" id="myBtn">Read more</button>
                                     {{-- <a href="#" class="btn btn-warning">See More >></a> --}}
                                     </div>
                                 </div>
@@ -258,4 +263,23 @@
     }) 
 
 </script>
+
+{{-- Read More function --}}
+<script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
 @endsection
