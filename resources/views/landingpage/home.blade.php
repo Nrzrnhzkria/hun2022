@@ -54,12 +54,11 @@
         <div class="col-md-3">
             <a href="">
                 <div class="image-container">
-                    <img src="{{ asset('assets/img/1.png') }}" />
+                    <img src="{{ $news->img_name }}" />
                     <div class="after p-2">
-                        <p class="fw-bold">OPENING CEREMONY OF HARI USAHAWAN NEGARA BY YABHG DATO' SERI ABU HASAN BIN MOHD NOR</p>
+                        <p class="fw-bold">{{ $news->title }}</p>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud.
+                            {{ $news->teaser}}
                         </p>
                     </div>
                 </div>

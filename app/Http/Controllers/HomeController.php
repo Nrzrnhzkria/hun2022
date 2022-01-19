@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\HUNNews;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,8 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return view('landingpage.home');
+        $news = HUNNews::orderBy('id', 'asc')->get();
+        return view('landingpage.home', compact('news'));
     }
 
     public function preface()
