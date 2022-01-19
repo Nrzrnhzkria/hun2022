@@ -111,7 +111,7 @@
 
     <div class="row py-4">        
         @foreach ($news->take(4) as $new)
-        <div style="width: 25%">
+        <div class="col-md-3">
             <div class="card">
                 <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
                 <div class="card-body">
