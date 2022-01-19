@@ -19,7 +19,7 @@
                     </div>
                 </div>
 
-                {{ $news->content }}
+                <p class="text-justify">{{ $news->content }}</p>
             </div>
         </div>
     </div>
