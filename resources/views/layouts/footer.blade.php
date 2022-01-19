@@ -14,7 +14,10 @@
                 <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">Email: <br> jivan@shekhinah.my <br> chris@shekhinah.my</p></li>
             </ul>
         </div>
-  
+
+        <div class="col-md-1">
+        </div>
+
         <div class="col-md-2 pb-3">
             <h5>NAVIGATION</h5>
             <ul class="nav flex-column">
@@ -27,6 +30,9 @@
             </ul>
         </div>
     
+        <div class="col-md-1">
+        </div>
+        
         <div class="col-md-2 pb-3">
             <h5>LEGAL</h5>
             <ul class="nav flex-column">
