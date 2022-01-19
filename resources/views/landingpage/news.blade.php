@@ -8,8 +8,8 @@
 
 <div class="container">
     <div class="row px-5">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
-            <h2>News</h2>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
+            <h1>News</h1>
         </div>
         @foreach ($news as $new)
         <a href="/news" class="text-dark text-decoration-none">
