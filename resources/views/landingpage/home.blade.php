@@ -179,7 +179,7 @@
         
         // Output the result in an element with id="demo"
         document.getElementById("countdown").innerHTML = 
-        "<div class='row justify-content-center px-4'>"  
+        "<div class='row justify-content-center px-4' style='width: 80%'>"  
             +"<div style='width: 25%'>"  
                 + "<p class='fw-bold' style='font-size: 4rem'>" + days + "</p> <p> Days </p>" 
             + "</div>"
