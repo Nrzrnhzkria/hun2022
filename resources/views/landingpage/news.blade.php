@@ -13,7 +13,7 @@
         </div>
         @foreach ($news as $new)
         <div class="col-md-12">
-            <a href="/news" class="btn text-dark">
+            <a href="/news" class="text-dark text-decoration-none">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
