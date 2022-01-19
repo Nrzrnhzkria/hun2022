@@ -20,7 +20,7 @@
         </div>
         @foreach ($news as $new)
         <div class="col-md-12">
-            <a href="/news" class="text-dark text-decoration-none">
+            <a href="{{ url('news') }}/{{ $new->id }}" class="text-dark text-decoration-none">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
