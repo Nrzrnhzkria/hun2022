@@ -30,6 +30,7 @@
         font-size: 12px;
         font-weight: 500;
         display: block;
+        padding: 0;
         padding-bottom: 20px;
         width: auto;
     }
