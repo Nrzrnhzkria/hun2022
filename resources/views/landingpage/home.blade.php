@@ -179,12 +179,12 @@
 
     <div class="row">
         <div class="brand-carousel owl-carousel">
-            <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" style="width: 80rem">
-            <img src="https://i.postimg.cc/pdMQjC5Q/brand-2.png" style="width: 80rem">
-            <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" style="width: 80rem">
-            <img src="https://i.postimg.cc/d14GzKHn/brand-4.png" style="width: 80rem">
-            <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" style="width: 80rem">
-            <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" style="width: 80rem">
+            <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" style="width: 10rem">
+            <img src="https://i.postimg.cc/pdMQjC5Q/brand-2.png" style="width: 10rem">
+            <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" style="width: 10rem">
+            <img src="https://i.postimg.cc/d14GzKHn/brand-4.png" style="width: 10rem">
+            <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" style="width: 10rem">
+            <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" style="width: 10rem">
         </div>
     </div>
     
