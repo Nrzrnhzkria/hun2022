@@ -46,7 +46,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Title</th>
-                            <th scope="col">Image Name</th>
+                            <th scope="col">Image</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
@@ -55,7 +55,7 @@
                         <tr>
                             <th scope="row">{{ $news->firstItem() + $key }}</th>
                             <td>{{ $new->title }}</td>
-                            <td><img src="{{ $new->img_name }}" alt=""></td>
+                            <td><img src="{{ $new->img_name }}" width="20rem"></td>
                             <td class="text-center">
                                 <a href="{{ url('update-news') }}/{{ $new->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
