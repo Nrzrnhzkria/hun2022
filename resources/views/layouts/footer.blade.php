@@ -1,5 +1,5 @@
 <div class="container">
-    <footer class="row-fluid py-5 my-5 border-top">
+    <footer class="row py-5 my-5 border-top">
         <div class="col-md-2">
             <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
                 <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="50%">
@@ -39,11 +39,11 @@
         <div class="col-md-2">
             <h5>SOCIAL MEDIA</h5>
             <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Youtube</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Linkedin</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Youtube</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Linkedin</a></li>
             </ul>
         </div>
 
