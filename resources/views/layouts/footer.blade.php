@@ -1,5 +1,5 @@
 <div class="container">
-    <footer class="row-fluid row-cols-6 py-5 my-5 border-top">
+    <footer class="row-fluid py-5 my-5 border-top">
         <div class="col">
             <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
                 <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="50%">
@@ -24,18 +24,6 @@
                 <li class="nav-item mb-2"><a href="/media" class="nav-link p-0 text-muted">Media</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Works</a></li>
                 <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-muted">Contact</a></li>
-            </ul>
-        </div>
-    
-        <div class="col">
-            <h5>NEWSROOM</h5>
-            <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Malaysian Sports</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">International Sports</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">News</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Events</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Reports</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Reviews</a></li>
             </ul>
         </div>
     
