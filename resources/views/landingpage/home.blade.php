@@ -19,7 +19,7 @@
     .timer div {
         padding: 30px;
         border-radius: 3px;
-        background: orangered;
+        background: #252525;
         display: inline-block;
         font-size: 40px;
         font-weight: 400;
