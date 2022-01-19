@@ -8,7 +8,7 @@
 
 <div class="row-fluid">
     {{-- <div class="col-md-12 py-4" style="background-image: url('{{ asset('assets/img/Banner.jpg') }}'); width:100%; height:100%;"> --}}
-    <div class="col-md-12 pb-2" style="background-color: orange; width:100%; height:38%;">
+    <div class="col-md-12 text-center pb-2" style="background-color: orange; width:100%; height:38%;">
         <br>
         <p class="text-white text-center px-4" id="countdown"></p> 
     </div>
