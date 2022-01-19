@@ -23,7 +23,7 @@
         display: inline-block;
         font-size: 26px;
         font-weight: 400;
-        width: 80px;
+        width: 100px;
     }
     .timer .smalltext {
         color: #888888;
