@@ -85,7 +85,7 @@
             <img class="img-fluid" src="{{ asset('assets/img/white_slider.png') }}" alt="" style="width: 40%">
         </div>
     </div> --}}
-    <div class="row pb-4">
+    <div class="row-fluid pb-4">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -114,7 +114,7 @@
         </div>
     </div>
 
-    <div class="row py-4">        
+    <div class="row-fluid py-4">        
         @foreach ($news->take(4) as $new)
         <div style="width: 25%">
             <a href="">
@@ -132,7 +132,7 @@
         @endforeach
     </div>
 
-    <div class="row py-4">
+    <div class="row-fluid py-4">
         <div class="col-md-5">
             <a href="http://" class="btn btn-warning text-start p-4"> 
                 <h3>CLICK HERE TO KNOW MORE ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
@@ -170,7 +170,7 @@
         </div>
     </div>
 
-    <div class="row pt-4">
+    <div class="row-fluid pt-4">
         <div class="col-md-6 text-center">
             <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="60%">
         </div>
@@ -182,7 +182,7 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row-fluid">
         <div class="brand-carousel owl-carousel">
             <div class="single-logo">
                 <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" alt="">
