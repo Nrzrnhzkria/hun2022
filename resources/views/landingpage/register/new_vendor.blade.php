@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row px-5">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
-            <h1>New Registration Form</h1>
+            <h2>New Registration Form</h2>
         </div>
             {{-- <form action="{{ url('save') }}/{{ $product->product_id }}/{{ $package->package_id }}/{{ $student->stud_id }}" method="POST">
                 @csrf --}}
