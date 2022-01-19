@@ -20,6 +20,7 @@
         padding: 30px;
         border-radius: 3px;
         background: orange;
+        box-shadow: #000000;
         display: inline-block;
         font-size: 40px;
         font-weight: 400;
