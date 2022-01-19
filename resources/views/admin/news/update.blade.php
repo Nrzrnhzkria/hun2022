@@ -42,7 +42,7 @@
                         
                         <div class="col-md-12 mb-3">
                             <label for="content">Content</label>
-                            <textarea name="content" id="content" class="form-control" rows="3">{{ $news->content }}</textarea>
+                            <textarea name="content" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3">{{ $news->content }}</textarea>
                         </div>
                             
                         <div class="col-md-12 text-end">
@@ -79,8 +79,10 @@
  
 </div>
 
-<script>
-    CKEDITOR.replace( 'content' );
-</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.ckeditor').ckeditor();
+    });
+</script>   
 
 @endsection
