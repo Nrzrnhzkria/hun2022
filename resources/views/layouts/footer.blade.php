@@ -1,6 +1,6 @@
 <div class="container">
     <footer class="row py-5 my-5 border-top">
-        <div class="col-md-2 pb-3">
+        <div class="col-md-1 pb-3">
             <a href="/" class="d-flex align-items-center link-dark text-decoration-none">
                 <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="60rem">
             </a>
@@ -32,7 +32,7 @@
     
         <div class="col-md-1">
         </div>
-        
+
         <div class="col-md-2 pb-3">
             <h5>LEGAL</h5>
             <ul class="nav flex-column">
@@ -40,6 +40,9 @@
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cookies</a></li>
             </ul>
+        </div>
+        
+        <div class="col-md-1">
         </div>
 
         <div class="col-md-2 pb-3">
