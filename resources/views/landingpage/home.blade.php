@@ -52,19 +52,19 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="timer">
-                        <div>
+                        <div class="py-2">
                             <span class="days" id="day"></span> 
                             <div class="smalltext">Days</div>
                         </div>
-                        <div>
+                        <div class="py-2">
                             <span class="hours" id="hour"></span> 
                             <div class="smalltext">Hours</div>
                         </div>
-                        <div>
+                        <div class="py-2">
                             <span class="minutes" id="minute"></span> 
                             <div class="smalltext">Minutes</div>
                         </div>
-                        <div>
+                        <div class="py-2">
                             <span class="seconds" id="second"></span> 
                             <div class="smalltext">Seconds</div>
                         </div>
