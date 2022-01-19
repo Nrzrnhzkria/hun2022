@@ -24,7 +24,7 @@
         font-size: 40px;
         font-weight: 400;
         width: 110px;
-        margin-bottom: 60px;
+        margin-bottom: 10px;
     }
     .timer .smalltext {
         color: #888888;
@@ -32,7 +32,6 @@
         font-weight: 500;
         display: block;
         padding: 0;
-        padding-bottom: 10px;
         width: auto;
     }
     .timer #time-up {
