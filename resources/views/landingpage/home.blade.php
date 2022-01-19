@@ -55,7 +55,7 @@
         <div style="width: 25%">
             <a href="">
                 <div class="image-container">
-                    <img src="{{ $new->img_name }}" style="width: 25%"/>
+                    <img src="{{ $new->img_name }}" style="width: 70%"/>
                     <div class="after p-2">
                         <p class="fw-bold">{{ $new->title }}</p>
                         <p>
