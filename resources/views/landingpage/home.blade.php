@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div class="row py-4">        
+    <div class="row-fluid py-4">        
         @foreach ($news->take(4) as $new)
         <div class="col-md-3">
             <a href="">
