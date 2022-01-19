@@ -46,11 +46,11 @@
 
 <div class="row-fluid">
     {{-- <div class="col-md-12 py-4" style="background-image: url('{{ asset('assets/img/Banner.jpg') }}'); width:100%; height:100%;"> --}}
-    <div class="col-md-12 text-center pb-2 my-4" style="background-color: orange; width:100%; height:38%;">
+    <div class="col-md-12 text-center pb-2" style="background-color: orange; width:100%; height:38%;">
         
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 text-center">
+        <div class="container p-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
                     <div class="timer">
                         <div>
                             <span class="days" id="day"></span> 
