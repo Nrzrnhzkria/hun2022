@@ -46,8 +46,8 @@
 </style>
 
 <div class="row-fluid">
-    {{-- <div class="col-md-12 py-4" style="background-image: url('{{ asset('assets/img/Banner.jpg') }}'); width:100%; height:100%;"> --}}
-    <div class="col-md-12 text-center pb-2" style="background-color: rgba(255, 166, 0, 0.678); width:100%; height:38%;">
+    <div class="col-md-12 py-4" style="background-image: url('{{ asset('assets/img/Banner.jpg') }}'); width:100%; height:38%;">
+    {{-- <div class="col-md-12 text-center pb-2" style="background-color: rgba(255, 166, 0, 0.678); width:100%; height:38%;"> --}}
         
         <div class="container p-5">
             <div class="row justify-content-center">
