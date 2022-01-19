@@ -50,62 +50,22 @@
         </div>
     </div>
 
-    <div class="row py-4">
+    <div class="row py-4">        
+        @foreach ($news => $new)
         <div class="col-md-3">
             <a href="">
                 <div class="image-container">
-                    <img src="{{ $news[0]->img_name }}" />
+                    <img src="{{ $new->img_name }}" />
                     <div class="after p-2">
-                        <p class="fw-bold">{{ $news[0]->title }}</p>
+                        <p class="fw-bold">{{ $new->title }}</p>
                         <p>
-                            {{ $news[0]->teaser}}
+                            {{ $new->teaser}}
                         </p>
                     </div>
                 </div>
             </a> 
-        </div>
-        <div class="col-md-3">
-            <a href="">
-                <div class="image-container">
-                    <img src="{{ asset('assets/img/1.png') }}" />
-                    <div class="after p-2">
-                        <p class="fw-bold">OPENING CEREMONY OF HARI USAHAWAN NEGARA BY YABHG DATO' SERI ABU HASAN BIN MOHD NOR</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                        </p>
-                    </div>
-                </div>   
-            </a> 
-        </div>
-        <div class="col-md-3">
-            <a href="">
-                <div class="image-container">
-                    <img src="{{ asset('assets/img/2.png') }}" />
-                    <div class="after p-2">
-                        <p class="fw-bold">OPENING CEREMONY OF HARI USAHAWAN NEGARA BY YABHG DATO' SERI ABU HASAN BIN MOHD NOR</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                        </p>
-                    </div>
-                </div>  
-            </a>  
-        </div>
-        <div class="col-md-3">
-            <div class="image-container">
-                <a href="">
-                    <img src="{{ asset('assets/img/3.png') }}" />
-                    <div class="after p-2">
-                        <p class="fw-bold">OPENING CEREMONY OF HARI USAHAWAN NEGARA BY YABHG DATO' SERI ABU HASAN BIN MOHD NOR</p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud.
-                        </p>
-                    </div>
-                </a>
-            </div>    
-        </div>
+        </div>                
+        @endforeach
     </div>
 
     <div class="row py-4">
