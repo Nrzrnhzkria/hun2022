@@ -6,11 +6,75 @@
 
 @section('content')
 
+{{-- Style for countdown --}}
+<style>
+    .timer {
+        margin: 0 0 45px;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+    }
+    .timer div {
+        padding: 10px;
+        border-radius: 3px;
+        background: #000000;
+        display: inline-block;
+        font-size: 26px;
+        font-weight: 400;
+        width: 80px;
+    }
+    .timer .smalltext {
+        color: #888888;
+        font-size: 12px;
+        font-weight: 500;
+        display: block;
+        padding: 0;
+        width: auto;
+    }
+    .timer #time-up {
+        margin: 8px 0 0;
+        text-align: left;
+        font-size: 14px;
+        font-style: normal;
+        color: #000000;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+</style>
+
 <div class="row-fluid">
     {{-- <div class="col-md-12 py-4" style="background-image: url('{{ asset('assets/img/Banner.jpg') }}'); width:100%; height:100%;"> --}}
     <div class="col-md-12 text-center pb-2" style="background-color: orange; width:100%; height:38%;">
         <br>
-        <p class="text-white text-center px-4" id="countdown"></p> 
+        {{-- <p class="text-white text-center px-4" id="countdown"></p>  --}}
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-3">
+                    <div class="timer">
+                        <div>
+                            <span class="days" id="day"></span> 
+                            <div class="smalltext">Days</div>
+                        </div>
+                        <div>
+                            <span class="hours" id="hour"></span> 
+                            <div class="smalltext">Hours</div>
+                        </div>
+                        <div>
+                            <span class="minutes" id="minute"></span> 
+                            <div class="smalltext">Minutes</div>
+                        </div>
+                        <div>
+                            <span class="seconds" id="second"></span> 
+                            <div class="smalltext">Seconds</div>
+                        </div>
+                        <p id="time-up"></p>
+                    </div>
+                    <h2>To go for HARI USAHAWAN NEGARA launching</h2>
+                </div>
+            </div>
+         </div>
     </div>
 </div>
 
@@ -159,51 +223,76 @@
 
 {{-- Countdown --}}
 <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("Mar 24, 2022 00:00:00").getTime();
-    
-    // Update the count down every 1 second
+    var deadline = new Date("mar 24, 2050 00:00:00").getTime();             
     var x = setInterval(function() {
+    var currentTime = new Date().getTime();                
+    var t = deadline - currentTime; 
+    var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+    var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+    document.getElementById("day").innerHTML = days ; 
+    document.getElementById("hour").innerHTML = hours; 
+    document.getElementById("minute").innerHTML = minutes; 
+    document.getElementById("second").innerHTML = seconds; 
+    if (t < 0) {
+        clearInterval(x); 
+        document.getElementById("time-up").innerHTML = "TIME UP"; 
+        document.getElementById("day").innerHTML ='0'; 
+        document.getElementById("hour").innerHTML ='0'; 
+        document.getElementById("minute").innerHTML ='0' ; 
+        document.getElementById("second").innerHTML = '0'; 
+    } 
+    }, 1000);  
+
+
+
+
+    // // Set the date we're counting down to
+    // var countDownDate = new Date("Mar 24, 2022 00:00:00").getTime();
     
-        // Get today's date and time
-        var now = new Date().getTime();
+    // // Update the count down every 1 second
+    // var x = setInterval(function() {
+    
+    //     // Get today's date and time
+    //     var now = new Date().getTime();
         
-        // Find the distance between now and the count down date
-        var distance = countDownDate - now;
+    //     // Find the distance between now and the count down date
+    //     var distance = countDownDate - now;
         
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //     // Time calculations for days, hours, minutes and seconds
+    //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-        // Output the result in an element with id="demo"
-        document.getElementById("countdown").innerHTML = 
-        "<div class='row justify-content-center px-4' style='width: 80%'>"  
-            +"<div style='width: 25%'>"  
-                + "<p class='fw-bold' style='font-size: 4rem'>" + days + "</p> <p> Days </p>" 
-            + "</div>"
-            +"<div style='width: 25%'>" 
-                + "<p class='fw-bold' style='font-size: 4rem'>" + hours + "</p> <p> Hours </p>"
-            + "</div>"
-            +"<div style='width: 25%'>" 
-                + "<p class='fw-bold' style='font-size: 4rem'>" + minutes + "</p> <p> Minutes </p>"
-            + "</div>" 
-            +"<div style='width: 25%'>" 
-                + "<p class='fw-bold' style='font-size: 4rem'>" + seconds + "</p> <p> Seconds </p>"
-            + "</div>"
-            +"<div class='col-md-12'>"  
-                + "<p> To go for HARI USAHAWAN NEGARA launching </p>" 
-            + "</div>"
-        + "</div>";
+    //     // Output the result in an element with id="demo"
+    //     document.getElementById("countdown").innerHTML = 
+    //     "<div class='row justify-content-center px-4' style='width: 80%'>"  
+    //         +"<div style='width: 25%'>"  
+    //             + "<p class='fw-bold' style='font-size: 4rem'>" + days + "</p> <p> Days </p>" 
+    //         + "</div>"
+    //         +"<div style='width: 25%'>" 
+    //             + "<p class='fw-bold' style='font-size: 4rem'>" + hours + "</p> <p> Hours </p>"
+    //         + "</div>"
+    //         +"<div style='width: 25%'>" 
+    //             + "<p class='fw-bold' style='font-size: 4rem'>" + minutes + "</p> <p> Minutes </p>"
+    //         + "</div>" 
+    //         +"<div style='width: 25%'>" 
+    //             + "<p class='fw-bold' style='font-size: 4rem'>" + seconds + "</p> <p> Seconds </p>"
+    //         + "</div>"
+    //         +"<div class='col-md-12'>"  
+    //             + "<p> To go for HARI USAHAWAN NEGARA launching </p>" 
+    //         + "</div>"
+    //     + "</div>";
         
-        // If the count down is over, write some text 
-        if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = 
-            "<div class='row'><div class='col-md-12 text-center'> <h1 style='font-size: 4rem'>EXPIRED</h1> </div></div>";
-        }
-    }, 1000);
+    //     // If the count down is over, write some text 
+    //     if (distance < 0) {
+    //     clearInterval(x);
+    //     document.getElementById("countdown").innerHTML = 
+    //         "<div class='row'><div class='col-md-12 text-center'> <h1 style='font-size: 4rem'>EXPIRED</h1> </div></div>";
+    //     }
+    // }, 1000);
 </script>
 
 {{-- Slick Slider --}}
