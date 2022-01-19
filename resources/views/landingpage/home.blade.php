@@ -48,9 +48,9 @@
     {{-- <div class="col-md-12 py-4" style="background-image: url('{{ asset('assets/img/Banner.jpg') }}'); width:100%; height:100%;"> --}}
     <div class="col-md-12 text-center pb-2" style="background-color: orange; width:100%; height:38%;">
         
-        <div class="container p-4">
+        <div class="container p-5">
             <div class="row justify-content-center">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="timer">
                         <div class="py-2">
                             <span class="days" id="day"></span> 
@@ -73,7 +73,7 @@
                     <p class="fw-bold">To go for HARI USAHAWAN NEGARA launching</p>
                 </div>
             </div>
-         </div>
+        </div>
     </div>
 </div>
 
@@ -243,55 +243,6 @@
         document.getElementById("second").innerHTML = '0'; 
     } 
     }, 1000);  
-
-
-
-
-    // // Set the date we're counting down to
-    // var countDownDate = new Date("Mar 24, 2022 00:00:00").getTime();
-    
-    // // Update the count down every 1 second
-    // var x = setInterval(function() {
-    
-    //     // Get today's date and time
-    //     var now = new Date().getTime();
-        
-    //     // Find the distance between now and the count down date
-    //     var distance = countDownDate - now;
-        
-    //     // Time calculations for days, hours, minutes and seconds
-    //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-    //     // Output the result in an element with id="demo"
-    //     document.getElementById("countdown").innerHTML = 
-    //     "<div class='row justify-content-center px-4' style='width: 80%'>"  
-    //         +"<div style='width: 25%'>"  
-    //             + "<p class='fw-bold' style='font-size: 4rem'>" + days + "</p> <p> Days </p>" 
-    //         + "</div>"
-    //         +"<div style='width: 25%'>" 
-    //             + "<p class='fw-bold' style='font-size: 4rem'>" + hours + "</p> <p> Hours </p>"
-    //         + "</div>"
-    //         +"<div style='width: 25%'>" 
-    //             + "<p class='fw-bold' style='font-size: 4rem'>" + minutes + "</p> <p> Minutes </p>"
-    //         + "</div>" 
-    //         +"<div style='width: 25%'>" 
-    //             + "<p class='fw-bold' style='font-size: 4rem'>" + seconds + "</p> <p> Seconds </p>"
-    //         + "</div>"
-    //         +"<div class='col-md-12'>"  
-    //             + "<p> To go for HARI USAHAWAN NEGARA launching </p>" 
-    //         + "</div>"
-    //     + "</div>";
-        
-    //     // If the count down is over, write some text 
-    //     if (distance < 0) {
-    //     clearInterval(x);
-    //     document.getElementById("countdown").innerHTML = 
-    //         "<div class='row'><div class='col-md-12 text-center'> <h1 style='font-size: 4rem'>EXPIRED</h1> </div></div>";
-    //     }
-    // }, 1000);
 </script>
 
 {{-- Slick Slider --}}
