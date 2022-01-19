@@ -24,7 +24,6 @@
         font-size: 26px;
         font-weight: 400;
         width: 110px;
-        height: 110px;
     }
     .timer .smalltext {
         color: #888888;
