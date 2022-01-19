@@ -7,8 +7,8 @@
 @section('content')
 
 <div class="container py-4">
-    <div class="row">
-        <div class="col-md-8 text-center">
+    <div class="row px-5">
+        <div class="col-md-12">
             @foreach ($news as $new)
             <a href="/news" class="text-dark text-decoration-none">
                 <div class="card mb-3">
