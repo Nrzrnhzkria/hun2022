@@ -223,7 +223,7 @@
 
 {{-- Countdown --}}
 <script>
-    var deadline = new Date("mar 24, 2050 00:00:00").getTime();             
+    var deadline = new Date("mar 24, 2022 00:00:00").getTime();             
     var x = setInterval(function() {
     var currentTime = new Date().getTime();                
     var t = deadline - currentTime; 
