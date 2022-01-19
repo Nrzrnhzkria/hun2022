@@ -6,6 +6,13 @@
 
 @section('content')
 
+<style>
+.card:hover{
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.4);    
+    transform: scale(1.1);
+}
+</style>
+
 <div class="container">
     <div class="row px-5">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
