@@ -179,24 +179,12 @@
 
     <div class="row">
         <div class="brand-carousel owl-carousel">
-            {{-- <div class="single-logo"> --}}
-                <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" alt="">
-            {{-- </div>
-            <div class="single-logo"> --}}
-                <img src="https://i.postimg.cc/pdMQjC5Q/brand-2.png" alt="">
-            {{-- </div>
-            <div class="single-logo"> --}}
-                <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
-            {{-- </div>
-            <div class="single-logo"> --}}
-                <img src="https://i.postimg.cc/d14GzKHn/brand-4.png" alt="">
-                {{-- </div>
-            <div class="single-logo"> --}}
-                <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" alt="">
-            {{-- </div>
-            <div class="single-logo"> --}}
-                <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
-            {{-- </div> --}}
+            <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" width="80rem">
+            <img src="https://i.postimg.cc/pdMQjC5Q/brand-2.png" width="80rem">
+            <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" width="80rem">
+            <img src="https://i.postimg.cc/d14GzKHn/brand-4.png" width="80rem">
+            <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" width="80rem">
+            <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" width="80rem">
         </div>
     </div>
     
