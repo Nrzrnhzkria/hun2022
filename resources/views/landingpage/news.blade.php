@@ -11,7 +11,7 @@
         <div class="col-md-12">
             @foreach ($news as $new)
             <a href="/news" class="text-dark text-decoration-none">
-                <div class="card mb-3" style="max-width: 540px;">
+                <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ $new->img_name }}" class="img-fluid rounded-start" alt="...">
