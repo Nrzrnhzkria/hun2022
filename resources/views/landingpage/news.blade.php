@@ -7,8 +7,8 @@
 @section('content')
 
 <div class="container py-4">
+    @foreach ($news as $new)
     <div class="card mb-3" style="max-width: 540px;">
-        @foreach ($news as $new)
         <div class="row g-0">
             <div class="col-md-4">
                 <img src="{{ $new->img_name }}" class="img-fluid rounded-start" alt="...">
@@ -20,8 +20,8 @@
                 </div>
             </div>
         </div>
-        @endforeach
     </div>
+    @endforeach
 </div>
 
 @endsection
