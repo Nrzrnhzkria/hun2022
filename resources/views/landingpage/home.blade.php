@@ -52,7 +52,7 @@
 
     <div class="row py-4">        
         @foreach ($news->take(4) as $new)
-        <div class="col-md-3">
+        <div style="width: 25%">
             <a href="">
                 <div class="image-container">
                     <img src="{{ $new->img_name }}" />
