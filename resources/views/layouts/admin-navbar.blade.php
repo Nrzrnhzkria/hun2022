@@ -17,31 +17,31 @@
                 </li>
 
                 @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin')
-                @else
                 <li class="nav-item">
                     <a class="nav-link text-dark active" href="/admin-news">News</a>
                 </li>
+                @else
                 @endif
 
                 @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin' || Auth::user()->role == 'advisor')
-                @else
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/seminars">Seminar</a>
                 </li>
+                @else
                 @endif
 
                 @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin')
-                @else
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/vendors">Vendor</a>
                 </li>
+                @else
                 @endif
 
                 @if(Auth::user()->role == 'superadmin')
-                @else
                 <li class="nav-item">
                     <a class="nav-link text-dark active" href="/users">User</a>
                 </li>
+                @else
                 @endif
             </ul>
 
