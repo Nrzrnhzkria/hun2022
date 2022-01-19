@@ -33,7 +33,7 @@
 
 </head>
 <body>
-    <div class="row m-4">
+    <div class="row p-4">
         @include('layouts.navbar')
         @yield('content')
         @include('layouts.footer')
