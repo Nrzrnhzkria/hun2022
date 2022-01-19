@@ -10,7 +10,7 @@
 <style>
     .timer {
         margin: 0 0 45px;
-        color: rgb(209, 50, 50);
+        color: white;
         display: inline-block;
         font-weight: 100;
         text-align: center;
@@ -27,7 +27,7 @@
         margin-bottom: 10px;
     }
     .timer .smalltext {
-        color: #888888;
+        color: lightgrey;
         font-size: 12px;
         font-weight: 500;
         display: block;
