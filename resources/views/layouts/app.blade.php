@@ -33,7 +33,7 @@
 
 </head>
 <body>
-    <div class="container-fluid mb-3">
+    <div class="container mb-3">
         @include('layouts.navbar')
         @yield('content')
         @include('layouts.footer')
