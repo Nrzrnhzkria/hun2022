@@ -16,7 +16,6 @@
 
 <div class="container py-4">
 
-    <div class="embedsocial-hashtag" data-ref="734fec1fcac63e1d47693ea749e52165df49ae66"></div>
     {{-- <div class="row pb-4">
         <div class="col-md-12 text-center">        
             <img class="img-fluid" src="{{ asset('assets/img/white_slider.png') }}" alt="" style="width: 40%">
@@ -267,21 +266,5 @@
         }
     }) 
 
-</script>
-
-<script>
-    (function(d, s, id)
-    {
-        var js; if (d.getElementById(id)) 
-        {
-            return;
-        } 
-        
-        js = d.createElement(s); 
-        js.id = id; 
-        js.src = "https://embedsocial.com/cdn/ht.js"; 
-        d.getElementsByTagName("head")[0].appendChild(js);
-    }
-    (document, "script", "EmbedSocialHashtagScript"));
 </script>
 @endsection
