@@ -24,6 +24,7 @@
         font-size: 40px;
         font-weight: 400;
         width: 110px;
+        padding-bottom: 10px;
     }
     .timer .smalltext {
         color: #888888;
@@ -51,7 +52,7 @@
         
         <div class="container p-5">
             <div class="row justify-content-center">
-                <div style="width: 80rem">
+                <div class="col-md-6">
                     <div class="timer">
                         <div class="shadow py-2">
                             <span class="days" id="day"></span> 
