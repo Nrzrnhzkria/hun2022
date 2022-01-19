@@ -71,7 +71,7 @@
                         </div>
                         <p id="time-up"></p>
                     </div>
-                    <h2>To go for HARI USAHAWAN NEGARA launching</h2>
+                    <h3>To go for HARI USAHAWAN NEGARA launching</h3>
                 </div>
             </div>
          </div>
