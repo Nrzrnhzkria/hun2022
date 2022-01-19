@@ -14,7 +14,7 @@
         display: inline-block;
         font-weight: 100;
         text-align: center;
-        font-size: 30px;
+        font-size: 40px;
     }
     .timer div {
         padding: 10px;
@@ -24,6 +24,7 @@
         font-size: 26px;
         font-weight: 400;
         width: 110px;
+        height: 110px;
     }
     .timer .smalltext {
         color: #888888;
