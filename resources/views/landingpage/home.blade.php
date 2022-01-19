@@ -78,13 +78,8 @@
     </div>
 </div>
 
-<div class="container py-4">
+<div class="container-fluid py-4">
 
-    {{-- <div class="row pb-4">
-        <div class="col-md-12 text-center">        
-            <img class="img-fluid" src="{{ asset('assets/img/white_slider.png') }}" alt="" style="width: 40%">
-        </div>
-    </div> --}}
     <div class="row-fluid pb-4">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -114,7 +109,7 @@
         </div>
     </div>
 
-    <div class="row-fluid py-4">        
+    <div class="row py-4">        
         @foreach ($news->take(4) as $new)
         <div style="width: 25%">
             <a href="">
