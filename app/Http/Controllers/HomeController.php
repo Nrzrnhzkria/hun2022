@@ -41,7 +41,7 @@ class HomeController extends Controller
     public function news()
     {
         $news = HUNNews::orderBy('id', 'desc')->get();
-        return view('landingpage.news', compact('news'));
+        return view('landingpage.news.news', compact('news'));
     }
 
     public function media()
