@@ -39,7 +39,7 @@
                         
                         <div class="col-md-12 mb-3">
                             <label for="content">Content</label>
-                            <textarea name="content" class="ckeditor form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea id="editor1" name="content" onfocus="this.value='';" class="form-control" rows="3"></textarea>
                         </div>
                             
                         <div class="col-md-12 text-end">
@@ -57,14 +57,11 @@
  
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.ckeditor').ckeditor({
-            toolbar: 'Full',
-            enterMode : CKEDITOR.ENTER_BR,
-            shiftEnterMode: CKEDITOR.ENTER_P
-        });
-    });
+<script type="text/javascript">  
+    CKEDITOR.replace( 'editor1', { 
+    enterMode: CKEDITOR.ENTER_BR, 
+    on: {'instanceReady': function (evt) { evt.editor.execCommand('');}},
+    }); 
 </script>   
 
 @endsection
