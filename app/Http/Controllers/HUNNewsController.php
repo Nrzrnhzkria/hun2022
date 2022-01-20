@@ -4,10 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\HUNNews;
-use Auth;
 
 class HUNNewsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function news()
     {
         $news = HUNNews::orderBy('id', 'desc')->paginate(15);
