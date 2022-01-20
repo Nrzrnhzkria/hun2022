@@ -53,7 +53,7 @@
                     <tbody>
                         @foreach ($seminarsqr as $key => $seminarqr)
                         <tr>
-                            <th scope="row">{{ $seminarqr->firstItem() + $key }}</th>
+                            <th scope="row">{{ $seminarsqr->firstItem() + $key }}</th>
                             <td>{{ $seminarqr->location_name }}</td>
                             <td>{{ $seminarqr->seminar_date }}</td>
                             <td class="text-center">
