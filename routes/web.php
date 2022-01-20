@@ -48,7 +48,8 @@ Route::get('update-news/{news_id}', 'HUNNewsController@update_news');
 Route::post('edit-news/{news_id}', 'HUNNewsController@edit_news');
 Route::get('delete-news/{news_id}', 'HUNNewsController@destroy_news');
 // Seminar Management
-Route::get('seminars', 'SeminarAttendanceController@seminars');
+Route::get('attendance', 'SeminarAttendanceController@attendance');
+Route::get('qrcode', 'SeminarAttendanceController@qrcode');
 // Vendor Management
 Route::get('vendors', 'DashboardController@vendors');
 Route::get('update-vendor/{vendor_id}', 'DashboardController@update_vendor');

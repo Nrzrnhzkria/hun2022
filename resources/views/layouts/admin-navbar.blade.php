@@ -29,7 +29,7 @@
                         Seminar
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/seminars"><i class="bi bi-card-checklist"></i> Attendance</a></li>
+                        <li><a class="dropdown-item" href="/attendance"><i class="bi bi-card-checklist"></i> Attendance</a></li>
                         <li><a class="dropdown-item" href="/qrcode"><i class="bi bi-qr-code"></i> QR Code</a></li>
                     </ul>
                 </li>
