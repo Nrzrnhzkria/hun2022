@@ -1,15 +1,3 @@
-<style>
-    .dropdown-submenu {
-      position: relative;
-    }
-    
-    .dropdown-submenu .dropdown-menu {
-      top: 0;
-      left: 100%;
-      margin-top: -1px;
-    }
-</style>
-
 @if (Auth::guest())
 @else
 <nav class="navbar navbar-expand-lg sticky-top shadow" style="background-color: #ffffff;">
@@ -57,41 +45,14 @@
 
                 @if(Auth::user()->role == 'superadmin')
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-dark dropdown-toggle" role="button" data-bs-toggle="dropdown">User
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><a tabindex="-1" href="#">Administrator</a></li>
-                      <li class="dropdown-submenu">
-                        <a class="test" tabindex="-1" href="#">Apps User <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                          <li><a tabindex="-1" href="#">Member</a></li>
-                          <li><a tabindex="-1" href="#">Non-Member</a></li>
-                          
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link text-dark active" href="/users">User</a>
-                </li>
-                <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/seminars">Administrator</a></li>
-                        <li class="nav-item dropright">
-                            <a class="nav-link fw-normal text-dark dropdown-toggle ml-5" href="#" id="subDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Apps User
-                            </a>
-                            <ul class="dropdown-menu ml-5" aria-labelledby="subDropdown">
-                                <li><a class="dropdown-item" href="">Member</a></li>
-                                <li><a class="dropdown-item" href="">Non-Member</a></li>
-                            </ul>
-                        </li>
+                        <li><a class="dropdown-item" href="/admins">Administrator</a></li>
+                        <li><a class="dropdown-item" href="/users">Apps User</a></li>
                     </ul>
-                </li> --}}
+                </li>
                 @else
                 @endif
             </ul>
@@ -169,14 +130,5 @@
     }
     // end if innerWidth
     }); 
-</script>
-<script>
-    $(document).ready(function(){
-      $('.dropdown-submenu a.test').on("click", function(e){
-        $(this).next('ul').toggle();
-        e.stopPropagation();
-        e.preventDefault();
-      });
-    });
 </script>
 @endif
