@@ -17,19 +17,19 @@
         </div>
     </div>
 
-    @if ($message = Session::get('addseminar'))
+    @if ($message = Session::get('addqr'))
     <div class="alert alert-info alert-block">
         <strong>{{ $message }}</strong>
     </div>
     @endif
 
-    @if ($message = Session::get('updateseminar'))
+    @if ($message = Session::get('updateqr'))
     <div class="alert alert-info alert-block">
         <strong>{{ $message }}</strong>
     </div>
     @endif
 
-    @if ($message = Session::get('deleteseminar'))
+    @if ($message = Session::get('deleteqr'))
     <div class="alert alert-info alert-block">
         <strong>{{ $message }}</strong>
     </div>

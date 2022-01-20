@@ -49,7 +49,12 @@ Route::post('edit-news/{news_id}', 'HUNNewsController@edit_news');
 Route::get('delete-news/{news_id}', 'HUNNewsController@destroy_news');
 // Seminar Management
 Route::get('attendance', 'SeminarAttendanceController@attendance');
-Route::get('qrcode', 'SeminarAttendanceController@qrcode');
+Route::get('qrcode', 'SeminarQRController@qrcode');
+Route::get('create-qr', 'SeminarQRController@create_qr');
+Route::post('store-qr', 'SeminarQRController@store_qr');
+Route::get('update-qr/{qr_id}', 'SeminarQRController@update_qr');
+Route::post('edit-qr/{qr_id}', 'SeminarQRController@edit_qr');
+Route::get('delete-qr/{qr_id}', 'SeminarQRController@destroy_qr');
 // Vendor Management
 Route::get('vendors', 'DashboardController@vendors');
 Route::get('update-vendor/{vendor_id}', 'DashboardController@update_vendor');
