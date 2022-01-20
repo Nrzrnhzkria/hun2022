@@ -44,9 +44,22 @@
                 @endif
 
                 @if(Auth::user()->role == 'superadmin')
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">User</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">System Administrator</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">Mobile Apps User</span><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Member</a></li>
+                                <li><a href="#">Non-Member</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link text-dark active" href="/users">User</a>
-                </li> --}}
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User
@@ -63,7 +76,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 @else
                 @endif
             </ul>
