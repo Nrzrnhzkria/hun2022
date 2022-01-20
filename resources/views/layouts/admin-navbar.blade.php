@@ -54,8 +54,8 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/seminars">Administrator</a></li>
                         <li class="nav-item dropend">
-                            <a class="nav-link fw-normal text-dark dropdown-toggle pl-1" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Mobile Apps User
+                            <a class="nav-link fw-normal text-dark dropdown-toggle pl-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Apps User
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="">Member</a></li>
