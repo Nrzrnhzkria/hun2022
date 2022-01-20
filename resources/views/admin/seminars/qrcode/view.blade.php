@@ -57,7 +57,7 @@
                             <td>{{ $seminarqr->location_name }}</td>
                             <td>{{ $seminarqr->seminar_date }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update-seminar') }}/{{ $seminarqr->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-qr') }}/{{ $seminarqr->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                
                         @endforeach
