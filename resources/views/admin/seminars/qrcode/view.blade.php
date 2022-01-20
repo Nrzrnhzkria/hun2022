@@ -45,8 +45,8 @@
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Seminar ID</th>
-                            <th scope="col">User ID</th>
+                            <th scope="col">Location Name</th>
+                            <th scope="col">Date</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
