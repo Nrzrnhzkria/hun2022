@@ -38,7 +38,7 @@
     <div class="row pb-3">
         
         <div class="col-md-9">
-            <div  class="pagination float-right pt-3">{{ $users->links() }}</div>
+            <div  class="float-right pt-3">{{ $users->links() }}</div>
             @if(count($users) > 0)
             <div class="table-responsive">
                 <table class="table">
