@@ -38,7 +38,6 @@
     <div class="row pb-3">
         
         <div class="col-md-9">
-            <div  class="float-right pt-3">{{ $users->links() }}</div>
             @if(count($users) > 0)
             <div class="table-responsive">
                 <table class="table">
@@ -69,6 +68,7 @@
             @else
               <p>There are no user to display.</p>
             @endif
+            <div  class="text-end pt-3">{{ $users->links() }}</div>
         </div>
 
         <div class="col-md-3">
