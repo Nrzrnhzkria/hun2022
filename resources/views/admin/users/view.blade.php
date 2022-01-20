@@ -35,9 +35,9 @@
     </div>
     @endif
     
-    <div class="row">
+    <div class="row pb-3">
         
-        <div class="col-md-12">
+        <div class="col-md-8">
             <div class="float-right pt-3">{{ $users->links() }}</div>
             @if(count($users) > 0)
             <div class="table-responsive">
@@ -70,6 +70,22 @@
               <p>There are no user to display.</p>
             @endif
         </div>
+
+        <div class="col-md-8">
+            <div class="row pb-2">
+                <div class="card border-0 shadow text-center" style="height: 125px">
+                  <h6 class="pt-4">Member</h6>
+                  {{-- <b class="display-6 pb-3">{{ number_format($member) }}</b> --}}
+                </div>
+            </div>
+            <div class="row pb-2">
+                <div class="card border-0 shadow text-center" style="height: 125px">
+                  <h6 class="pt-4">Non-Member</h6>
+                  <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
+                </div>
+            </div>
+        </div>
+
     </div>
     
 </div>

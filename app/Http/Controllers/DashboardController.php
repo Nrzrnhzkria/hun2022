@@ -67,7 +67,8 @@ class DashboardController extends Controller
     public function users()
     {
         $users = User::orderBy('id', 'desc')->where('role', 'user')->paginate(15);
-        return view('admin.users.view', compact('users'));
+        $nonmember = User::where('hun_id', NULL)->count();
+        return view('admin.users.view', compact('users', 'nonmember'));
     }
 
     public function create_user()
