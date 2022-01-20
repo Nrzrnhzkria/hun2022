@@ -65,7 +65,7 @@
                 </table>
             </div>
             @else
-              <p>There are no attendee to display.</p>
+              <p>There are no seminar to display.</p>
             @endif
         </div>
     </div>
