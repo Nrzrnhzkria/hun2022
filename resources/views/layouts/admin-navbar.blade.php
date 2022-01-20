@@ -1,28 +1,13 @@
 <style>
-    .dropdown-submenu{
+    .dropdown-submenu {
         position: relative;
     }
-    .dropdown-submenu a::after{
-        transform: rotate(-90deg);
-        position: absolute;
-        right: 3px;
-        top: 40%;
-    }
-    .dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
-        display: flex;
-        flex-direction: column;
-        position: absolute !important;
-        margin-top: -30px;
+
+    .dropdown-submenu .dropdown-menu {
+        top: 0;
         left: 100%;
-    }
-    @media (max-width: 992px) {
-        .dropdown-menu{
-            width: 50%;
-        }
-        .dropdown-menu .dropdown-submenu{
-            width: auto;
-        }
-    }
+        margin-top: -1px;
+    }    
 </style>
 
 @if (Auth::guest())
@@ -72,18 +57,22 @@
 
                 @if(Auth::user()->role == 'superadmin')
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle" data-display="static">
                         User
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <li><a class="dropdown-item" href="#">System Admin</a></li>
-                      <li class="dropdown-submenu">
-                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Mobile Apps User</a>
-                        <ul class="dropdown-menu">
-                          <a class="dropdown-item" href="#">Member</a>
-                          <a class="dropdown-item" href="#">Non-Member</a>
-                        </ul>
-                      </li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="">System Administrator</a></li>
+                        <li class="dropdown-item dropdown-submenu">
+                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Mobile Apps User</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item">
+                                    <a href="#">Member</a>
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="#">Non-Member</a>
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 {{-- <li class="nav-item">
@@ -183,5 +172,18 @@
     }
     // end if innerWidth
     }); 
+</script>
+<script>
+    $('.dropdown-submenu > a').on("click", function(e) {
+        var submenu = $(this);
+        $('.dropdown-submenu .dropdown-menu').removeClass('show');
+        submenu.next('.dropdown-menu').addClass('show');
+        e.stopPropagation();
+    });
+
+    $('.dropdown').on("hidden.bs.dropdown", function() {
+        // hide any open menus when parent closes
+        $('.dropdown-menu.show').removeClass('show');
+    });
 </script>
 @endif
