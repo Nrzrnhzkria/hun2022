@@ -1,15 +1,3 @@
-<style>
-    .dropdown-submenu {
-        position: relative;
-    }
-
-    .dropdown-submenu .dropdown-menu {
-        top: 0;
-        left: 100%;
-        margin-top: -1px;
-    }    
-</style>
-
 @if (Auth::guest())
 @else
 <nav class="navbar navbar-expand-lg sticky-top shadow" style="background-color: #ffffff;">
@@ -56,21 +44,15 @@
                 @endif
 
                 @if(Auth::user()->role == 'superadmin')
-                <li class="nav-item dropdown">
-                    <a href="#" id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle" data-display="static">
-                        User
-                    </a>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">User</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="">System Administrator</a></li>
-                        <li class="dropdown-item dropdown-submenu">
-                            <a href="#" data-toggle="dropdown" class="dropdown-toggle">Mobile Apps User</a>
+                        <li><a href="#">System Administrator</a></li>
+                        <li class="dropdown-submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="nav-label">Mobile Apps User</span><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-item">
-                                    <a href="#">Member</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="#">Non-Member</a>
-                                </li>
+                                <li><a href="#">Member</a></li>
+                                <li><a href="#">Non-Member</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -172,18 +154,5 @@
     }
     // end if innerWidth
     }); 
-</script>
-<script>
-    $('.dropdown-submenu > a').on("click", function(e) {
-        var submenu = $(this);
-        $('.dropdown-submenu .dropdown-menu').removeClass('show');
-        submenu.next('.dropdown-menu').addClass('show');
-        e.stopPropagation();
-    });
-
-    $('.dropdown').on("hidden.bs.dropdown", function() {
-        // hide any open menus when parent closes
-        $('.dropdown-menu.show').removeClass('show');
-    });
 </script>
 @endif
