@@ -12,7 +12,7 @@
         <h1 class="h2">Seminar QR</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <div class="btn-group me-2">
-              <a href="/create-seminar" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Seminar</a>
+              <a href="/create-qr" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Seminar</a>
             </div>
         </div>
     </div>
