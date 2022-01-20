@@ -1,3 +1,30 @@
+<style>
+    .dropdown-submenu{
+        position: relative;
+    }
+    .dropdown-submenu a::after{
+        transform: rotate(-90deg);
+        position: absolute;
+        right: 3px;
+        top: 40%;
+    }
+    .dropdown-submenu:hover .dropdown-menu, .dropdown-submenu:focus .dropdown-menu{
+        display: flex;
+        flex-direction: column;
+        position: absolute !important;
+        margin-top: -30px;
+        left: 100%;
+    }
+    @media (max-width: 992px) {
+        .dropdown-menu{
+            width: 50%;
+        }
+        .dropdown-menu .dropdown-submenu{
+            width: auto;
+        }
+    }
+</style>
+
 @if (Auth::guest())
 @else
 <nav class="navbar navbar-expand-lg sticky-top shadow" style="background-color: #ffffff;">
@@ -44,7 +71,22 @@
                 @endif
 
                 @if(Auth::user()->role == 'superadmin')
-                <li class="nav-item">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#">System Admin</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" data-toggle="dropdown" href="#">Mobile Apps User</a>
+                        <ul class="dropdown-menu">
+                          <a class="dropdown-item" href="#">Member</a>
+                          <a class="dropdown-item" href="#">Non-Member</a>
+                        </ul>
+                      </li>
+                    </ul>
+                </li>
+                {{-- <li class="nav-item">
                     <a class="nav-link text-dark active" href="/users">User</a>
                 </li>
                 <li class="nav-item dropdown">
@@ -63,7 +105,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 @else
                 @endif
             </ul>
