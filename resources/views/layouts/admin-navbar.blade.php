@@ -54,10 +54,10 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/seminars">Administrator</a></li>
                         <li class="nav-item dropright">
-                            <a class="nav-link fw-normal text-dark dropdown-toggle ml-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link fw-normal text-dark dropdown-toggle ml-5" href="#" id="subDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Apps User
                             </a>
-                            <ul class="dropdown-menu offset-md-3" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu ml-5" aria-labelledby="subDropdown">
                                 <li><a class="dropdown-item" href="">Member</a></li>
                                 <li><a class="dropdown-item" href="">Non-Member</a></li>
                             </ul>
