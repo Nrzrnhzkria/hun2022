@@ -123,7 +123,9 @@
                                 <div class="card-body">
                                 <h5 class="card-title">{{ $new->title }}</h5>
                                 {{-- <p class="card-text">{{ $new->teaser}}</p> --}}
-                                <a href="{{ url('news') }}/{{ $new->id }}" class="btn btn-warning btn-sm">See More >></a>
+                                <div class="text-end">
+                                    <a href="{{ url('news') }}/{{ $new->id }}" class="btn btn-warning btn-sm">See More >></a>
+                                </div>
                                 </div>
                             </div>
                             {{-- </a> --}}
