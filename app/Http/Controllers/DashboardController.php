@@ -23,11 +23,6 @@ class DashboardController extends Controller
         return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser'));
     }
 
-    public function seminars()
-    {
-        return view('admin.seminars.view');
-    }
-
     public function vendors()
     {
         $vendors = User::orderBy('id', 'desc')->where('role', 'vendor')->paginate(15);
