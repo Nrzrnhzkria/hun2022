@@ -49,8 +49,8 @@
                             <label for="seminar_date" class="col-md-4 col-form-label text-md-end">seminar_date</label>
 
                             <div class="col-md-6">
-                                <input id="seminar_date" type="text" class="form-control @error('seminar_date') is-invalid @enderror" name="seminar_date" required>
-
+                                <input id="seminar_date" type="date" class="form-control @error('seminar_date') is-invalid @enderror" name="seminar_date" required>
+                                
                                 @error('seminar_date')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -63,7 +63,7 @@
                             <label for="time_start" class="col-md-4 col-form-label text-md-end">time_start</label>
 
                             <div class="col-md-6">
-                                <input id="time_start" type="text" class="form-control @error('time_start') is-invalid @enderror" name="time_start" required>
+                                <input id="time_start" type="time" class="form-control @error('time_start') is-invalid @enderror" name="time_start" required>
 
                                 @error('time_start')
                                     <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
                             <label for="time_end" class="col-md-4 col-form-label text-md-end">time_end</label>
 
                             <div class="col-md-6">
-                                <input id="time_end" type="text" class="form-control @error('time_end') is-invalid @enderror" name="time_end" required>
+                                <input id="time_end" type="time" class="form-control @error('time_end') is-invalid @enderror" name="time_end" required>
 
                                 @error('time_end')
                                     <span class="invalid-feedback" role="alert">
