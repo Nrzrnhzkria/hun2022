@@ -78,7 +78,7 @@
                   <b class="display-6 pb-3">{{ number_format($member) }}</b>
                 </div>
             </div>
-            <div class="row pb-2">
+            <div class="row-fluid pb-2">
                 <div class="card border-0 shadow text-center" style="height: 125px">
                   <h6 class="pt-4">Non-Member</h6>
                   <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
