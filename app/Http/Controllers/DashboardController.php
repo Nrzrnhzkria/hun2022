@@ -66,7 +66,7 @@ class DashboardController extends Controller
 
     public function users()
     {
-        $users = User::orderBy('id', 'desc')->paginate(15);
+        $users = User::orderBy('id', 'desc')->where('role', 'user')->paginate(15);
         return view('admin.users.view', compact('users'));
     }
 
