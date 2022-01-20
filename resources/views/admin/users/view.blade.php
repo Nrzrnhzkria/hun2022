@@ -68,7 +68,7 @@
             @else
               <p>There are no user to display.</p>
             @endif
-            <div  class="text-end pt-3">{{ $users->links() }}</div>
+            <div  class="self-align-end pt-3">{{ $users->links() }}</div>
         </div>
 
         <div class="col-md-3">
