@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\SeminarQR;
+use QrCode;
 
 class SeminarQRController extends Controller
 {
@@ -19,6 +20,10 @@ class SeminarQRController extends Controller
 
     public function create_qr()
     {
+        \QrCode::size(500)
+            ->format('png')
+            ->generate('codingdriver.com', public_path('images/qrcode.png'));
+
         return view('admin.seminars.qrcode.create');
     }
 

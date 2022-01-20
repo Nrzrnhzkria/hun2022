@@ -42,6 +42,8 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
+
+                                {!! QrCode::size(250)->generate('codingdriver.com'); !!}
                             </div>
                         </div>
 
