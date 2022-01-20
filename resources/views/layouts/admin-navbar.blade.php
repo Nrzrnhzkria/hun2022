@@ -57,9 +57,9 @@
 
                 @if(Auth::user()->role == 'superadmin')
                 <li class="nav-item dropdown">
-                    <a class="nav-link text-dark dropdown-toggle" role="button" data-bs-toggle="dropdown">User
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
+                    <a class="nav-link text-dark dropdown-toggle" id="subDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">User
+                    
+                    <ul class="dropdown-menu" aria-labelledby="subDropdown">
                       <li><a tabindex="-1" href="#">Administrator</a></li>
                       <li class="dropdown-submenu">
                         <a class="test" tabindex="-1" href="#">Apps User <span class="caret"></span></a>
@@ -74,7 +74,7 @@
                 </li>
                 {{-- <li class="nav-item">
                     <a class="nav-link text-dark active" href="/users">User</a>
-                </li> --}}
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User
@@ -91,7 +91,7 @@
                             </ul>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
                 @else
                 @endif
             </ul>
