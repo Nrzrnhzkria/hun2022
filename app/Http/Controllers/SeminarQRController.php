@@ -39,7 +39,7 @@ class SeminarQRController extends Controller
     {
         $qr = SeminarQR::where('id', $qr_id)->first();
 
-        return view('admin.seminars.qrcode.update', compact('user')); 
+        return view('admin.seminars.qrcode.update', compact('qr')); 
     }
 
     public function edit_qr($qr_id, Request $request)
