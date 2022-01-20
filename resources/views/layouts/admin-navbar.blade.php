@@ -60,12 +60,12 @@
                     <a class="nav-link text-dark dropdown-toggle" id="subDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">User
                     
                     <ul class="dropdown-menu" aria-labelledby="subDropdown">
-                      <li><a tabindex="-1" href="#">Administrator</a></li>
+                      <li><a class="dropdown-item" tabindex="-1" href="#">Administrator</a></li>
                       <li class="dropdown-submenu">
                         <a class="test" tabindex="-1" href="#">Apps User <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a tabindex="-1" href="#">Member</a></li>
-                          <li><a tabindex="-1" href="#">Non-Member</a></li>
+                          <li><a class="dropdown-item" tabindex="-1" href="#">Member</a></li>
+                          <li><a class="dropdown-item" tabindex="-1" href="#">Non-Member</a></li>
                           
                         </ul>
                       </li>
