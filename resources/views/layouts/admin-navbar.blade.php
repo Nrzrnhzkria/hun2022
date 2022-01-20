@@ -24,8 +24,14 @@
                 @endif
 
                 @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin' || Auth::user()->role == 'advisor')
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="/seminars">Seminar</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Seminar
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/seminars">Attendance</a></li>
+                        <li><a class="dropdown-item" href="/qrcode">QR Code</a></li>
+                    </ul>
                 </li>
                 @else
                 @endif
@@ -40,6 +46,23 @@
                 @if(Auth::user()->role == 'superadmin')
                 <li class="nav-item">
                     <a class="nav-link text-dark active" href="/users">User</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        User
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="/seminars">Admin</a></li>
+                        <li class="nav-item dropend">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Apps User
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="">Member</a></li>
+                                <li><a class="dropdown-item" href="">Non-Member</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
                 @else
                 @endif
