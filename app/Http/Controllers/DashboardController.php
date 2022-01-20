@@ -68,7 +68,7 @@ class DashboardController extends Controller
     {
         $users = User::orderBy('id', 'desc')->where('role', 'user')->paginate(10);
         $totaluser = User::where('role', 'user')->count();
-        $nonmember = User::where('hun_id', NULL)->count();
+        $nonmember = User::where('role', 'user')->where('hun_id', NULL)->count();
         $member = $totaluser - $nonmember;
 
         return view('admin.users.view', compact('users', 'member','nonmember'));
