@@ -39,7 +39,7 @@
         
         <div class="col-md-9">
             <div class="d-flex justify-content-center">
-                {!! $users->links() !!}
+                {!! $users->render() !!}
             </div>
             @if(count($users) > 0)
             <div class="table-responsive">
