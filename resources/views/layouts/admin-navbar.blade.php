@@ -53,7 +53,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/seminars">Administrator</a></li>
-                        <li class="nav-item dropend">
+                        <li class="nav-item dropright">
                             <a class="nav-link fw-normal text-dark dropdown-toggle ml-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Apps User
                             </a>
