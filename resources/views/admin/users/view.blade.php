@@ -37,7 +37,7 @@
     
     <div class="row pb-3">
         
-        <div class="col-md-8">
+        <div class="col-md-9">
             <div class="float-right pt-3">{{ $users->links() }}</div>
             @if(count($users) > 0)
             <div class="table-responsive">
@@ -45,8 +45,8 @@
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
+                            <th scope="col">HUN ID</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Email</th>
                             <th scope="col">Role</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
@@ -55,8 +55,8 @@
                         @foreach ($users as $key => $user)
                         <tr>
                             <th scope="row">{{ $users->firstItem() + $key }}</th>
+                            <td>{{ $user->hun_id }}</td>
                             <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
                             <td class="text-capitalize">{{ $user->role }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-user') }}/{{ $user->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
@@ -71,8 +71,8 @@
             @endif
         </div>
 
-        <div class="col-md-4">
-            <div class="row pb-2">
+        <div class="col-md-3">
+            <div class="row-fluid pb-2">
                 <div class="card border-0 shadow text-center" style="height: 125px">
                   <h6 class="pt-4">Member</h6>
                   <b class="display-6 pb-3">{{ number_format($member) }}</b>
