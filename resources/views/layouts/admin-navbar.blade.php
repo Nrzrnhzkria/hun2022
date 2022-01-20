@@ -29,8 +29,8 @@
                         Seminar
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/seminars">Attendance</a></li>
-                        <li><a class="dropdown-item" href="/qrcode">QR Code</a></li>
+                        <li><a class="dropdown-item" href="/seminars"><i class="bi bi-card-checklist"></i> Attendance</a></li>
+                        <li><a class="dropdown-item" href="/qrcode"><i class="bi bi-qr-code"></i> QR Code</a></li>
                     </ul>
                 </li>
                 @else
@@ -49,8 +49,8 @@
                         User
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/admins">Administrator</a></li>
-                        <li><a class="dropdown-item" href="/users">Apps User</a></li>
+                        <li><a class="dropdown-item" href="/admins"><i class="bi bi-person-workspace"></i> Administrator</a></li>
+                        <li><a class="dropdown-item" href="/users"><i class="bi bi-person-badge"></i> Apps User</a></li>
                     </ul>
                 </li>
                 @else
