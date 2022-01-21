@@ -58,16 +58,16 @@
                             <td>{{ $seminarqr->location_name }}</td>
                             <td>{{ $seminarqr->seminar_date }}</td>
                             <td>
-                                <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->errorCorrection('H')->size(50)->generate('codingdriver.com')) !!}" />
+                                {{-- <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->errorCorrection('H')->size(50)->generate('codingdriver.com')) !!}" /> --}}
+                                <form class="form-horizontal" action="{{ route('qrcode.download', [ 'type' => 'png' ])}}" method="post">
+                                    @csrf
+                                    <button type="submit" class="align-middle btn btn-outline-dark">
+                                        <i class="bi bi-download"></i> Download PNG
+                                    </button>
+                                </form>
                             </td>
                             <td class="text-center">
                                 <a href="{{ url('update-qr') }}/{{ $seminarqr->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
-                                <form class="form-horizontal" action="{{ route('qrcode.download', [ 'type' => 'png' ])}}" method="post">
-                                    @csrf
-                                    <button type="submit" class="align-middle btn btn-outline-dark btn-sm">
-                                        <i class="bi bi-download"></i> QR Code
-                                    </button>
-                                </form>
                             </td>
                         </tr>                
                         @endforeach
