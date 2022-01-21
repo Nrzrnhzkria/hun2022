@@ -57,7 +57,7 @@
       </div>
       <div class="col-md-4">
         <div class="card border-0 shadow text-center" style="height: 22rem">
-          <canvas id="memberChart" style="width:100%; max-width:600px; height:100%; max-height:800px; padding-top: 2rem"></canvas>
+          <canvas id="memberChart" style="width:100%; max-width:600px; height:90%; max-height:800px; padding-top: 2rem"></canvas>
         </div>
       </div>
     </div>
