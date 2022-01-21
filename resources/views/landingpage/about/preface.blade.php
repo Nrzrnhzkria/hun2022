@@ -17,7 +17,7 @@
 
             <div class="text-center fw-bold px-2 py-2" style="background-color: orange">OPENING REMARKS BY YBHG DATO' SERI ABU HASAN BIN MOHD NOR</div>
 
-            <p class="text-justify">&nbsp;&nbsp;&nbsp;Alhamdulillah, All praises are to Allah, the Merciful, the All Beneficient, by
+            <p class="text-justify py-4">&nbsp;&nbsp;&nbsp;Alhamdulillah, All praises are to Allah, the Merciful, the All Beneficient, by
                 Grace and Blessings who has favoured us and of His believing servants and still giving me an 
                 opportunity and strength to lead the DEWAN PERNIAGAAN USAHAWAN KECIL MALAYSIA (DPUKM), and for those 
                 desiring entrepreneurs a long way in winning over their trust and building a strong connection between 
