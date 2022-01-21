@@ -24,7 +24,7 @@ class DashboardController extends Controller
         $nonmember = User::where('role', 'user')->where('hun_id', NULL)->count();
         $member = $totalappsuser - $nonmember;
 
-        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser'));
+        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser', 'member','nonmember'));
     }
 
     public function vendors()
