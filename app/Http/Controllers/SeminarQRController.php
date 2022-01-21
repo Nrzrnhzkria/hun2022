@@ -76,15 +76,8 @@ class SeminarQRController extends Controller
         $qr = SeminarQR::where('id', $qr_id)->first();
 
         $register->user_id = $user_id;
+        $register->seminar_id = $qr_id;
         $register->save();
-
-        $qr->location_name = $request->location_name;
-        $qr->qr_value = $request->qr_value;
-        $qr->seminar_date = $request->seminar_date;
-        $qr->time_start = $request->time_start;
-        $qr->time_end = $request->time_end;
-        $qr->save();
-
 
         return redirect('register-success');
     }
