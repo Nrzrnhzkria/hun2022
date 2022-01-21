@@ -59,17 +59,17 @@
         <div class="card border-0 shadow text-center" style="height: 22rem">
           <h6 class="pt-4">HUN Membership</h6>
           <canvas id="memberChart" style="width:100%; max-width:600px; height:55%; max-height:800px;"></canvas>
-          <div class="table-responsive p-3">
+          <div class="table-responsive p-2">
             <table class="table table-borderless table-sm">
               <tr>
                 <td class="text-end">Members</td>
                 <td style="width: 1rem">:</td>
-                <td class="text-start w-50">{{ $member }}</td>
+                <td class="text-start"style="width: 5rem">{{ $member }}</td>
               </tr>
               <tr>
                 <td class="text-end">Non-members</td>
                 <td style="width: 1rem">:</td>
-                <td class="text-start w-50">{{ $nonmember }}</td>
+                <td class="text-start" style="width: 5rem">{{ $nonmember }}</td>
               </tr>
             </table>
           </div>
