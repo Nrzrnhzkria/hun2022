@@ -58,7 +58,7 @@
       <div class="col-md-4">
         <div class="card border-0 shadow text-center" style="height: 22rem">
           <canvas id="memberChart" style="width:100%; max-width:600px; height:80%; max-height:800px; padding-top: 1.5rem"></canvas>
-          <table class="table table-borderless table-sm">
+          <table class="table table-sm">
             <tr>
               <td class="text-left">Members</td>
               <td class="text-left">:</td>
