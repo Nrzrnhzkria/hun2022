@@ -51,7 +51,14 @@
       
     </div>
 
-    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+    <div class="row">
+      <div class="col-md-8">
+        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+      </div>
+      <div class="col-md-4">
+        <div id="myPlot" style="width:100%;max-width:700px"></div>
+      </div>
+    </div>
 
     <h2>Section title</h2>
       <div class="table-responsive">
@@ -206,6 +213,18 @@
         }
       }
     });
+</script>
+
+{{-- Members chart --}}
+<script>
+  var xArray = ["Members", "Non-members"];
+  var yArray = [55, 49];
+  
+  var layout = {title:"HUN Membership"};
+  
+  var data = [{labels:xArray, values:yArray, hole:.4, type:"pie"}];
+  
+  Plotly.newPlot("myPlot", data, layout);
 </script>
 
 @endsection
