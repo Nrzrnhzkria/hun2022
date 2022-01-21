@@ -71,26 +71,13 @@ class SeminarQRController extends Controller
         return redirect('qrcode')->with('deleteqr','Seminar has been deleted successfully.');
     }
 
-    public function registeruser($qr_id){
-		$user_id = Auth::user()->id;
-        $get_user = User::where('id', $user_id);
-        $register = SeminarAttendance::where('seminar_id', $qr_id)->first();
-        $qr = SeminarQR::where('id', $qr_id)->first();
-
-        $register->user_id = $user_id;
-        $register->seminar_id = $qr_id;
-        $register->save();
-
-        return redirect('register-success');
-    }
-
-    public function downloadQRCode(Request $request, $type)
+    public function downloadQRCode(Request $request, $type, $qr_id)
     {
         $headers    = array('Content-Type' => ['png']);
         $type       = $type == 'jpg' ? 'png' : $type;
         $image      = \QrCode::format($type)
                     ->size(200)->errorCorrection('H')
-                    ->generate('codingdriver');
+                    ->generate('https://hariusahawannegara.com.my/register-seminar/' . $qr_id);
 
         $imageName = 'qr-code';
         // if ($type == 'svg') {
@@ -103,5 +90,21 @@ class SeminarQRController extends Controller
         \Storage::disk('public')->put($imageName, $image);
 
         return response()->download('storage/'.$imageName, $imageName.'.'.$type, $headers);
+    }
+    
+    public function registeruser($qr_id){
+		$user_id = Auth::user()->id;
+        $get_user = User::where('id', $user_id)->first();
+        $register = SeminarAttendance::where('seminar_id', $qr_id)->first();
+
+        $register->user_id = $user_id;
+        $register->seminar_id = $qr_id;
+        $register->save();
+
+        return redirect('register-success/' . $qr_id . '/' . $user_id);
+    }
+
+    public function registersuccess($qr_id, $user_id){
+        return view('admin.seminars.register_success');
     }
 }
