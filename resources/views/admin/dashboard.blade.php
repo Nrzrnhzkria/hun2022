@@ -59,7 +59,7 @@
         <div class="card border-0 shadow text-center" style="height: 22rem">
           <h6 class="pt-4">HUN Membership</h6>
           <canvas id="memberChart" style="width:100%; max-width:600px; height:75%; max-height:800px;"></canvas>
-          <div class="table-responsive p-3">
+          <div class="table-responsive">
             <table class="table table-borderless table-sm">
               <tr>
                 <td class="text-end">Members</td>
