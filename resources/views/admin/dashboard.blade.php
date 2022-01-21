@@ -56,18 +56,18 @@
         <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
       </div>
       <div class="col-md-4">
-        <div class="card border-0 shadow text-center" style="height: 24rem">
+        <div class="card border-0 shadow text-center" style="height: 22rem">
           <h6 class="pt-4">HUN Membership</h6>
-          <canvas id="memberChart" style="width:100%; max-width:600px; height:80%; max-height:800px;"></canvas>
+          <canvas id="memberChart" style="width:100%; max-width:600px; height:75%; max-height:800px;"></canvas>
           <div class="table-responsive p-3">
             <table class="table table-borderless table-sm">
               <tr>
-                <td class="text-end w-75">Members</td>
+                <td class="text-end">Members</td>
                 <td style="width: 1rem">:</td>
                 <td class="text-start">{{ $member }}</td>
               </tr>
               <tr>
-                <td class="text-end w-75">Non-members</td>
+                <td class="text-end">Non-members</td>
                 <td style="width: 1rem">:</td>
                 <td class="text-start">{{ $nonmember }}</td>
               </tr>
