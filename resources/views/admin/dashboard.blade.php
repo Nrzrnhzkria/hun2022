@@ -58,16 +58,16 @@
       <div class="col-md-4">
         <div class="card border-0 shadow text-center" style="height: 22rem">
           <canvas id="memberChart" style="width:100%; max-width:600px; height:80%; max-height:800px; padding-top: 1.5rem"></canvas>
-          <div class="table-responsive px-2">
+          <div class="table-responsive px-3">
             <table class="table table-bordered table-sm">
               <tr>
-                <td class="text-start">Members</td>
-                <td class="text-start">:</td>
+                <td class="text-end w-50">Members</td>
+                <td>:</td>
                 <td class="text-start">{{ $member }}</td>
               </tr>
               <tr>
-                <td class="text-start">Non-members</td>
-                <td class="text-start">:</td>
+                <td class="text-end w-50">Non-members</td>
+                <td>:</td>
                 <td class="text-start">{{ $nonmember }}</td>
               </tr>
             </table>
