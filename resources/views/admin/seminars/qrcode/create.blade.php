@@ -18,7 +18,7 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="location_name" class="col-md-4 col-form-label text-md-end">location_name</label>
+                            <label for="location_name" class="col-md-4 col-form-label text-md-end">Location Name</label>
 
                             <div class="col-md-6">
                                 <input id="location_name" type="text" class="form-control @error('location_name') is-invalid @enderror" name="location_name" required autofocus>
@@ -32,7 +32,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="qr_value" class="col-md-4 col-form-label text-md-end">qr_value</label>
+                            <label for="qr_value" class="col-md-4 col-form-label text-md-end">QR Value</label>
 
                             <div class="col-md-6">
                                 <input id="qr_value" type="text" class="form-control @error('qr_value') is-invalid @enderror" name="qr_value" value="{{ $qr_value }}" readonly>
@@ -43,12 +43,12 @@
                                     </span>
                                 @enderror
 
-                                {!! QrCode::size(250)->generate('codingdriver.com'); !!}
+                                {{-- {!! QrCode::size(250)->generate('codingdriver.com'); !!} --}}
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label for="seminar_date" class="col-md-4 col-form-label text-md-end">seminar_date</label>
+                            <label for="seminar_date" class="col-md-4 col-form-label text-md-end">Seminar Date</label>
 
                             <div class="col-md-6">
                                 <input id="seminar_date" type="date" class="form-control @error('seminar_date') is-invalid @enderror" name="seminar_date" required>
@@ -62,7 +62,7 @@
                         </div>
                         
                         <div class="row mb-3">
-                            <label for="time_start" class="col-md-4 col-form-label text-md-end">time_start</label>
+                            <label for="time_start" class="col-md-4 col-form-label text-md-end">Time Start</label>
 
                             <div class="col-md-6">
                                 <input id="time_start" type="time" class="form-control @error('time_start') is-invalid @enderror" name="time_start" required>
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="time_end" class="col-md-4 col-form-label text-md-end">time_end</label>
+                            <label for="time_end" class="col-md-4 col-form-label text-md-end">Time End</label>
 
                             <div class="col-md-6">
                                 <input id="time_end" type="time" class="form-control @error('time_end') is-invalid @enderror" name="time_end" required>

@@ -21,12 +21,11 @@ class SeminarQRController extends Controller
 
     public function create_qr()
     {
-        \QrCode::size(500)
-            ->format('png')
-            ->generate('https://hariusahawannegara.com.my/register-seminar/', public_path('images/qrcode.png'));
+        // \QrCode::size(500)
+        //     ->format('png')
+        //     ->generate('https://hariusahawannegara.com.my/register-seminar/', public_path('images/qrcode.png'));
 
-        $value = uniqid();
-        $qr_value = 'https://hariusahawannegara.com.my/seminar-qr/' . $value;
+        $qr_value = uniqid();
 
         return view('admin.seminars.qrcode.create', compact('qr_value'));
     }
