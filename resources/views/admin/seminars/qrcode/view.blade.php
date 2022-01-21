@@ -64,7 +64,7 @@
                                 <a href="{{ url('update-qr') }}/{{ $seminarqr->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                                 <form class="form-horizontal" action="{{ route('qrcode.download', [ 'type' => 'png' ])}}" method="post">
                                     @csrf
-                                    <button type="submit" class="align-middle btn btn-outline-primary btn-sm">
+                                    <button type="submit" class="align-middle btn btn-outline-dark btn-sm">
                                         <i class="bi bi-download"></i> QR Code
                                     </button>
                                 </form>
