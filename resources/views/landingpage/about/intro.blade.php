@@ -21,8 +21,8 @@
                 <p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEWAN PERNIAGAAN USAHAWAN KECIL MALAYSIA,
                     abbreviated  (DPUKM) was formed on Mac 2013 is a platform for entrepreneurs that handle by 100% Bumiputera 
                     in collaboration with Ministries, Departments, Agencies, Cooperatives and the Private Sector. 
-                </p> 
-                <p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dato 'Seri Abu Hasan Bin Mohd Nor as the 
+                
+                    Dato 'Seri Abu Hasan Bin Mohd Nor as the 
                     founder and President and fully assisted by Datin Sri Norliah Che Mohamad as the Secretary General and several 
                     Members of the Supreme Council (SC) in the management of the association. 
                 </p> 
