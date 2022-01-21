@@ -92,10 +92,7 @@
                     <img src="{{ asset('assets/img/white_slider.jpeg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('assets/img/carousel_1.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="{{ asset('assets/img/carousel_1.png') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('assets/img/bonanza.jpeg') }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

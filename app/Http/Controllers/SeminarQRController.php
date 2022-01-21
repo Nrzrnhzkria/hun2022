@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SeminarQR;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use Auth;
 
 class SeminarQRController extends Controller
 {
@@ -66,6 +67,26 @@ class SeminarQRController extends Controller
         
         $qr->delete();
         return redirect('qrcode')->with('deleteqr','Seminar has been deleted successfully.');
+    }
+
+    public function registeruser($qr_id){
+		$user_id = Auth::user()->id;
+        $get_user = User::where('id', $user_id);
+        $register = SeminarAttendance::where('seminar_id', $qr_id)->first();
+        $qr = SeminarQR::where('id', $qr_id)->first();
+
+        $register->user_id = $user_id;
+        $register->save();
+
+        $qr->location_name = $request->location_name;
+        $qr->qr_value = $request->qr_value;
+        $qr->seminar_date = $request->seminar_date;
+        $qr->time_start = $request->time_start;
+        $qr->time_end = $request->time_end;
+        $qr->save();
+
+
+        return redirect('register-success');
     }
 
     public function downloadQRCode(Request $request, $type)
