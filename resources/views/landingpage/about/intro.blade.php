@@ -27,7 +27,7 @@
                     Members of the Supreme Council (SC) in the management of the association. 
                 </p> 
                 <p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With the existing capabilities and experience, 
-                    DPUKM capable to be a main platform and intended for helping small and medium- sized industry entrepreneurs move 
+                    DPUKM capable to be a main platform and intended for helping small and medium-sized industry entrepreneurs move 
                     in line with the relevant Ministries and Agencies to succeed in the field of business ventured and launching a business.
                 </p>
             </div>
