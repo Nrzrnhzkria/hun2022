@@ -58,8 +58,8 @@
                             <td>{{ $seminarqr->location_name }}</td>
                             <td>{{ $seminarqr->seminar_date }}</td>
                             <td>
-                                {{-- <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->errorCorrection('H')->size(50)->generate('codingdriver.com')) !!}" /> --}}
-                                <form class="form-horizontal" action="{{ route('qrcode.download', [ 'type' => 'png' ])}}" method="post">
+                                {{-- {{ route('qrcode.download', [ 'type' => 'png' ])}} <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->errorCorrection('H')->size(50)->generate('codingdriver.com')) !!}" /> --}}
+                                <form class="form-horizontal" action="{{ url('download-qr/png') }}/{{ $qr->id }}" method="post">
                                     @csrf
                                     <button type="submit" class="align-middle btn btn-outline-dark">
                                         <i class="bi bi-download"></i> Download PNG
