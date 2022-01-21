@@ -79,7 +79,9 @@ class SeminarQRController extends Controller
                     ->size(200)->errorCorrection('H')
                     ->generate('https://hariusahawannegara.com.my/register-seminar/' . $qr_id);
 
-        $imageName = 'qr-code';
+        $qr = SeminarQR::where('id', $qr_id)->first();
+
+        $imageName = 'qr-' . $qr->location_name;
         // if ($type == 'svg') {
         //     $svgTemplate = new \SimpleXMLElement($image);
         //     $svgTemplate->registerXPathNamespace('svg', 'http://www.w3.org/2000/svg');
