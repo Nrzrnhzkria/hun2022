@@ -35,7 +35,7 @@
         </div>
       </div>
       
-      <div class="col-md-4 pb-4">
+      {{-- <div class="col-md-4 pb-4">
         <div class="card border-0 shadow text-center" style="height: 125px">
           <h6 class="pt-4">Member</h6>
           <b class="display-6 pb-3">{{ number_format($member) }}</b>
@@ -47,7 +47,7 @@
           <h6 class="pt-4">Non-Member</h6>
           <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
         </div>
-      </div>
+      </div> --}}
       
     </div>
 
@@ -56,7 +56,7 @@
         <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
       </div>
       <div class="col-md-4">
-        <div id="myPlot" style="width:100%;max-width:700px"></div>
+        <canvas id="memberChart" style="width:100%; max-width:600px; height:70%; max-height:600px"></canvas>
       </div>
     </div>
 
@@ -217,14 +217,29 @@
 
 {{-- Members chart --}}
 <script>
-  var xArray = ["Members", "Non-members"];
-  var yArray = [55, 49];
+  var xValues = ["Members", "Non-members"];
+  var yValues = [55, 49];
+  var barColors = [
+    "#b91d47",
+    "#00aba9"
+  ];
   
-  var layout = {title:"HUN Membership"};
-  
-  var data = [{labels:xArray, values:yArray, hole:.4, type:"pie"}];
-  
-  Plotly.newPlot("myPlot", data, layout);
+  new Chart("memberChart", {
+    type: "doughnut",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: "HUN Membership"
+      }
+    }
+  });
 </script>
 
 @endsection
