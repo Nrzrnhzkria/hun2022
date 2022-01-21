@@ -55,6 +55,7 @@ Route::post('store-qr', 'SeminarQRController@store_qr');
 Route::get('update-qr/{qr_id}', 'SeminarQRController@update_qr');
 Route::post('edit-qr/{qr_id}', 'SeminarQRController@edit_qr');
 Route::get('delete-qr/{qr_id}', 'SeminarQRController@destroy_qr');
+Route::post('download-qr-code/{type}', 'SeminarQRController@downloadQRCode')->name('qrcode.download');
 // Vendor Management
 Route::get('vendors', 'DashboardController@vendors');
 Route::get('update-vendor/{vendor_id}', 'DashboardController@update_vendor');

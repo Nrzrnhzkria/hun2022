@@ -47,6 +47,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Location Name</th>
                             <th scope="col">Date</th>
+                            <th> scope="col" </th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
@@ -56,6 +57,16 @@
                             <th scope="row">{{ $seminarsqr->firstItem() + $key }}</th>
                             <td>{{ $seminarqr->location_name }}</td>
                             <td>{{ $seminarqr->seminar_date }}</td>
+                            <td>
+                                <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->errorCorrection('H')->size(200)->generate('codingdriver.com')) !!}" /><br>
+                                <form class="form-horizontal" action="{{ route('qrcode.download', [ 'type' => 'png' ])}}" method="post">
+                                    @csrf
+                                    <button type="submit" class="align-middle btn btn-outline-primary btn-sm">
+                                        <i class="fas fa-fw fa-download"></i>
+                                        PNG
+                                    </button>
+                                </form>
+                            </td>
                             <td class="text-center">
                                 <a href="{{ url('update-qr') }}/{{ $seminarqr->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>

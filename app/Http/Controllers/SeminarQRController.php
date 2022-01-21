@@ -67,4 +67,25 @@ class SeminarQRController extends Controller
         $qr->delete();
         return redirect('qrcode')->with('deleteqr','Seminar has been deleted successfully.');
     }
+
+    public function downloadQRCode(Request $request, $type)
+    {
+        $headers    = array('Content-Type' => ['png']);
+        $type       = $type == 'jpg' ? 'png' : $type;
+        $image      = \QrCode::format($type)
+                    ->size(200)->errorCorrection('H')
+                    ->generate('codingdriver');
+
+        $imageName = 'qr-code';
+        // if ($type == 'svg') {
+        //     $svgTemplate = new \SimpleXMLElement($image);
+        //     $svgTemplate->registerXPathNamespace('svg', 'http://www.w3.org/2000/svg');
+        //     $svgTemplate->rect->addAttribute('fill-opacity', 0);
+        //     $image = $svgTemplate->asXML();
+        // }
+
+        \Storage::disk('public')->put($imageName, $image);
+
+        return response()->download('storage/'.$imageName, $imageName.'.'.$type, $headers);
+    }
 }
