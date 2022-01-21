@@ -35,6 +35,20 @@
         </div>
       </div>
       
+      <div class="col-md-4 pb-4">
+        <div class="card border-0 shadow text-center" style="height: 125px">
+          <h6 class="pt-4">Member</h6>
+          <b class="display-6 pb-3">{{ number_format($member) }}</b>
+        </div>
+      </div>
+      
+      <div class="col-md-4 pb-4">
+        <div class="card border-0 shadow text-center" style="height: 125px">
+          <h6 class="pt-4">Non-Member</h6>
+          <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
+        </div>
+      </div>
+      
     </div>
 
     <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>

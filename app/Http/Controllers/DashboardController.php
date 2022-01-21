@@ -20,6 +20,10 @@ class DashboardController extends Controller
         $totalvendor = User::where('role','vendor')->count();
         $totaluser = User::all()->count();
 
+        $totalappsuser = User::where('role', 'user')->count();
+        $nonmember = User::where('role', 'user')->where('hun_id', NULL)->count();
+        $member = $totalappsuser - $nonmember;
+
         return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser'));
     }
 
