@@ -35,7 +35,7 @@
                             <label for="qr_value" class="col-md-4 col-form-label text-md-end">qr_value</label>
 
                             <div class="col-md-6">
-                                <input id="qr_value" type="text" class="form-control @error('qr_value') is-invalid @enderror" name="qr_value" required>
+                                <input id="qr_value" type="text" class="form-control @error('qr_value') is-invalid @enderror" name="qr_value" value="{{ $qr_value }}" readonly>
 
                                 @error('qr_value')
                                     <span class="invalid-feedback" role="alert">

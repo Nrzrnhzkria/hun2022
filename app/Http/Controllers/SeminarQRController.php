@@ -23,9 +23,12 @@ class SeminarQRController extends Controller
     {
         \QrCode::size(500)
             ->format('png')
-            ->generate('codingdriver.com', public_path('images/qrcode.png'));
+            ->generate('https://hariusahawannegara.com.my/register-seminar/', public_path('images/qrcode.png'));
 
-        return view('admin.seminars.qrcode.create');
+        $value = uniqid();
+        $qr_value = 'https://hariusahawannegara.com.my/seminar-qr/' . $value;
+
+        return view('admin.seminars.qrcode.create', compact('qr_value'));
     }
 
     public function store_qr(Request $request)
@@ -62,7 +65,7 @@ class SeminarQRController extends Controller
         return redirect('qrcode')->with('updateqr','Seminar has been updated successfully.'); 
     }
 
-    public function destroy_user($qr_id){
+    public function destroy_qr($qr_id){
         $qr = SeminarQR::where('id', $qr_id);
         
         $qr->delete();
