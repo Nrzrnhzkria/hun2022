@@ -64,12 +64,12 @@
               <tr>
                 <td class="text-end">Members</td>
                 <td style="width: 1rem">:</td>
-                <td class="text-start"style="width: 7rem">{{ $member }}</td>
+                <td class="text-start"style="width: 6.5rem">{{ $member }}</td>
               </tr>
               <tr>
                 <td class="text-end">Non-members</td>
                 <td style="width: 1rem">:</td>
-                <td class="text-start" style="width: 7rem">{{ $nonmember }}</td>
+                <td class="text-start" style="width: 6.5rem">{{ $nonmember }}</td>
               </tr>
             </table>
           </div>
