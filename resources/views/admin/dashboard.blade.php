@@ -57,7 +57,7 @@
       </div>
       <div class="col-md-4">
         <div class="card border-0 shadow text-center" style="height: 22rem">
-          <canvas id="memberChart" style="width:100%; max-width:600px; height:70%; max-height:600px; padding-top: 2rem"></canvas>
+          <canvas id="memberChart" style="width:100%; max-width:600px; padding-top: 2rem"></canvas>
         </div>
       </div>
     </div>
@@ -220,7 +220,7 @@
 {{-- Members chart --}}
 <script>
   var xValues = ["Members", "Non-members"];
-  var yValues = [55, 49];
+  var yValues = [{{ $member }}, {{ $nonmember }}];
   var barColors = [
     "#00aba9",
     "#b91d47"
