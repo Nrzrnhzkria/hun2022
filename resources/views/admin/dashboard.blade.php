@@ -58,6 +58,16 @@
       <div class="col-md-4">
         <div class="card border-0 shadow text-center" style="height: 22rem">
           <canvas id="memberChart" style="width:100%; max-width:600px; height:80%; max-height:800px; padding-top: 1.5rem"></canvas>
+          <table class="table table-borderless">
+            <tr>
+              <td>Members :</td>
+              <td>{{ $member }}</td>
+            </tr>
+            <tr>
+              <td>Non-members :</td>
+              <td>{{ $nonmember }}</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>
