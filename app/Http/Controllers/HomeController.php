@@ -33,6 +33,11 @@ class HomeController extends Controller
         return view('landingpage.about.preface');
     }
 
+    public function intro()
+    {
+        return view('landingpage.about.intro');
+    }
+
     public function events()
     {
         return view('landingpage.events');

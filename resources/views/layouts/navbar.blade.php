@@ -16,8 +16,8 @@
                         About
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/preface">Preface</a></li>
-                        <li><a class="dropdown-item" href="#">Introduction</a></li>
+                        <li><a class="dropdown-item" href="/preface">Opening Remarks</a></li>
+                        <li><a class="dropdown-item" href="/introduction">Introduction</a></li>
                         <li><a class="dropdown-item" href="#">Organizational Chart</a></li>
                         <li><a class="dropdown-item" href="#">Vision & Mision</a></li>
                     </ul>
