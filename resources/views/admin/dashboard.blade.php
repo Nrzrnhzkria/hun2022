@@ -56,7 +56,7 @@
         <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
       </div>
       <div class="col-md-4">
-        <canvas id="memberChart" style="width:100%; max-width:600px; height:70%; max-height:600px; padding-top: 10rem"></canvas>
+        <canvas id="memberChart" style="width:100%; max-width:600px; height:70%; max-height:600px; padding-top: 3rem"></canvas>
       </div>
     </div>
 
