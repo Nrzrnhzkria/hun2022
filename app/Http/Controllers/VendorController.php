@@ -130,16 +130,16 @@ class VendorController extends Controller
     }
 
     public function create_bill(){
-        // $vendor = $request->session()->get('users');
+        $vendor = $request->session()->get('users');
         $bill_id = 'ID'.uniqid();
 
-        // $paymentData = array(
-        //     'senangpay_id' => $bill_id,
-        // );       
+        $paymentData = array(
+            'senangpay_id' => $bill_id,
+        );       
         
-        // $payment = $request->session()->get('payment');
-        // $payment->fill($paymentData);
-        // $request->session()->put('payment', $payment);
+        $payment = $request->session()->get('payment');
+        $payment->fill($paymentData);
+        $request->session()->put('payment', $payment);
 
         $data = array(
             'userSecretKey' => config('toyyibpay.key'),
@@ -152,9 +152,9 @@ class VendorController extends Controller
             'billReturnUrl'=>'https://hariusahawannegara.com.my/payment-status',
             'billCallbackUrl'=>'https://hariusahawannegara.com.my/payment-callback',
             'billExternalReferenceNo' => $bill_id,
-            'billTo'=>'Nama Pembeli',
-            'billEmail'=>'zarina4.11@gmail.com',
-            'billPhone'=>'0123456789',
+            'billTo'=>$vendor->name,
+            'billEmail'=>$vendor->email,
+            'billPhone'=>'0123456789', // cannot null or 0
             'billSplitPayment'=>0,
             'billSplitPaymentArgs'=>'',
             'billPaymentChannel'=>2,
