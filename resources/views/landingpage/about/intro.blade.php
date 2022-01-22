@@ -31,6 +31,12 @@
                     in line with the relevant Ministries and Agencies to succeed in the field of business ventured and launching a business.
                 </p>
             </div>
+
+            <div class="row pb-4">
+                <div class="col-md-12 text-center">        
+                    <img class="img-fluid" src="{{ asset('assets/img/about/introbg.png') }}" alt="" style="width: 100%">
+                </div>
+            </div>
         </div>
     </div>
 </div>
