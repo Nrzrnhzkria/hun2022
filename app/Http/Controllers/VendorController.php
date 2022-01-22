@@ -135,8 +135,7 @@ class VendorController extends Controller
         $details = $request->session()->get('vendor_details');
         $coupon = $request->session()->get('coupon');
   
-        dd($coupon);
-        // return view('landingpage.register.new_booth',compact('vendor', 'details', 'coupon'));
+        return view('landingpage.register.new_booth',compact('vendor', 'details', 'coupon'));
     }
 
     public function edit($vendor_id)

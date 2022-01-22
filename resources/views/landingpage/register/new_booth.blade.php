@@ -10,8 +10,8 @@
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
             <h1>New Registration Form</h1>
         </div>
-            {{-- <form action="{{ url('save') }}/{{ $product->product_id }}/{{ $package->package_id }}/{{ $student->stud_id }}" method="POST">
-                @csrf --}}
+            <form action="" method="POST">
+                @csrf
     
                 <div class="card px-4 py-4">
                     <ul class="nav nav-tabs px-2 py-2">
@@ -33,10 +33,19 @@
     
                         <div class="row p-3">
 
-                            <div class="col-md-6 pb-2">
-                                <label for="formFileMultiple" class="form-label">Coupon:</label>
-                                <input class="form-control" type="file" name="img_name" id="formFileMultiple" multiple>
-                            </div>
+                            @if($details->nationality == 'local')
+                                <div class="col-md-6 pb-2">
+                                    <label for="formFileMultiple" class="form-label">Local:</label>
+                                    <input class="form-control" type="file" name="img_name" id="formFileMultiple" multiple>
+                                </div>
+                            @elseif($details->nationality == 'international')
+                                <div class="col-md-6 pb-2">
+                                    <label for="formFileMultiple" class="form-label">Local:</label>
+                                    <input class="form-control" type="file" name="img_name" id="formFileMultiple" multiple>
+                                </div>
+                            @else
+                                <p>Please select your nationality</p>
+                            @endif
                             
                         </div>
 
@@ -46,7 +55,7 @@
                         </div>
                     </div>
                 </div>
-            {{-- </form> --}}
+            </form>
     </div>
 </div>
 @endsection
