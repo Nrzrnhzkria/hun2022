@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\VendorDetails;
 use App\Models\Coupon;
 use App\Models\Membership;
+use Illuminate\Support\Facades\Http;
 
 class VendorController extends Controller
 {
@@ -125,31 +126,58 @@ class VendorController extends Controller
         $payment->fill($paymentData);
         $request->session()->put('payment', $payment);
 
-        dd($payment);
-        // return redirect('payment');
+        return redirect('payment');
     }
 
-    public function update($vendor_id, Request $request)
-    {
-        $vendor = Vendor::where('vendor_id', $vendor_id)->first();    
+    public function create_bill(){
+        $vendor = $request->session()->get('users');
+        $bill_id = 'ID'.uniqid();
+
+        $data = array(
+            'userSecretKey' => config('toyyibpay.key'),
+            'categoryCode' => config('toyyibpay.category'),
+            'billName' => 'HUN Registration',
+            'billDescription'=>'Hari Usahawan Negara 2022',
+            'billPriceSetting'=>0,
+            'billPayorInfo'=>1,
+            'billAmount'=>100,
+            'billReturnUrl'=>'https://hariusahawannegara.com.my/toyyibpay-status',
+            'billCallbackUrl'=>'https://hariusahawannegara.com.my/toyyibpay-callback',
+            'billExternalReferenceNo' => $bill_id,
+            'billTo'=>$vendor->name,
+            'billEmail'=>$vendor->email,
+            'billPhone'=>'',
+            'billSplitPayment'=>0,
+            'billSplitPaymentArgs'=>'',
+            'billPaymentChannel'=>2,
+            'billContentEmail'=>'Thank you for registering to HUN!',
+            'billChargeToCustomer'=>2
+        );
+
+        $url = 'https://toyyibpay.com/index.php/api/createBill';
+        $response = Http::asForm()->post($url, $data);
+        $bill_code = $response[0]['BillCode'];
+
+        $paymentData = array(
+            'senangpay_id' => $bill_id,
+        );       
         
-        $vendor->first_name = $request->first_name;
-        $vendor->last_name = $request->last_name;
-        $vendor->ic_no = $request->ic_no;
-        $vendor->email = $request->email;
-        $vendor->phone_no = $request->phone_no;
-        $vendor->membership = $request->membership;
-        $vendor->save();
+        $payment = $request->session()->get('payment');
+        $payment->fill($paymentData);
+        $request->session()->put('payment', $payment);
 
-        return redirect('view-vendor')->with('update', 'Vendor has been updated successfully.');
+        dd($payment);
+        // return redirect('https://toyyibpay.com/' . $bill_code);
     }
 
-    public function destroy($vendor_id)
-    {
-        $vendor = Vendor::where('vendor_id', $vendor_id);
-        $vendor->delete();
+    public function payment_status(){
+        $response = request()->all(['status_id', 'billcode', 'order_id']);
+        return $response;
+    }
 
-        return back()->with('delete', 'Vendor has been updated successfully.');
+    public function callback(){
+        $response = request()->all(['refno', 'status', 'reason', 'billcode', 'order_id', 'amount']);
+        Log::info($response);
     }
 
     
