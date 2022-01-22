@@ -216,10 +216,68 @@
                                     </div>
                                 </div>
                             @elseif($details->nationality == 'international')
-                                <div class="col-md-6 pb-2">
-                                    <label for="formFileMultiple" class="form-label">Local:</label>
-                                    <input class="form-control" type="file" name="img_name" id="formFileMultiple" multiple>
+                            <div class="col-md-12 pb-2">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-sm">
+                                        <thead class="bg-dark text-white">
+                                            <tr>
+                                              <th scope="col">#</th>
+                                              <th scope="col">Hall Booth</th>
+                                              <th scope="col">Lot Placement</th>
+                                              <th scope="col">Price (USD)</th>
+                                              <th scope="col" class="text-center">Please Choose One</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>PREMIUM</td>
+                                                <td>Island</td>
+                                                <td>125,000</td>
+                                                <td class="text-center">
+                                                    <input type="radio" name="amount" value="125000">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>36M x 24M</td>
+                                                <td>Island</td>
+                                                <td>62,500</td>
+                                                <td class="text-center">
+                                                    <input type="radio" name="amount" value="62500">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>24M x 12M</td>
+                                                <td>Island</td>
+                                                <td>45,000</td>
+                                                <td class="text-center">
+                                                    <input type="radio" name="amount" value="45000">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>24M x 24M</td>
+                                                <td>Island</td>
+                                                <td>25,000</td>
+                                                <td class="text-center">
+                                                    <input type="radio" name="amount" value="25000">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>12M x 12M</td>
+                                                <td>Island</td>
+                                                <td>12,500</td>
+                                                <td class="text-center">
+                                                    <input type="radio" name="amount" value="12500">
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
+                            </div>
                             @else
                                 <p>Please select your nationality</p>
                             @endif
