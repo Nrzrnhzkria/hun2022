@@ -14,6 +14,21 @@
                 @csrf --}}
     
                 <div class="card px-4 py-4">
+                    <ul class="nav nav-tabs px-2 py-2">
+                        <li class="nav-item">
+                          <a class="nav-link active" aria-current="page" href="#">Step 1</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled">Disabled</a>
+                        </li>
+                    </ul>
+
                     <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
         
                         @if ($errors->any())
@@ -28,11 +43,12 @@
     
                         <div class="row p-3">
     
-                            {{-- <input type="hidden" value="{{ $vendor->id ?? '' }}" class="form-control" name="user_id" readonly/> --}}
+                            <input type="text" value="{{ $vendor->id ?? '' }}" class="form-control" name="user_id" readonly/>
+                            <input type="text" value="{{ $details->id ?? '' }}" class="form-control" name="details_id" readonly/>
     
                             <div class="col-md-12 pb-2">
                                 <label>Name of Company:</label>
-                                <input type="text" value="" class="form-control" placeholder="Company Sdn Bhd"  name="company_name">
+                                <input type="text" value="{{ $details->company_name ?? '' }}" class="form-control" placeholder="Company Sdn Bhd"  name="company_name">
                             </div>
     
                             <div class="col-md-6 pb-2">
@@ -61,8 +77,13 @@
                                 </select>
                             </div>
 
-                            <div class="col-md-12 pb-2">
+                            <div class="col-md-6 pb-2">
                                 <label>IC/Passport No.:</label>
+                                <input type="text"  value="{{ $vendor_ic ?? '' }}" class="form-control" name="ic_no" readonly/>
+                            </div>
+
+                            <div class="col-md-6 pb-2">
+                                <label>Nationality:</label>
                                 <input type="text"  value="{{ $vendor_ic ?? '' }}" class="form-control" name="ic_no" readonly/>
                             </div>
 
@@ -112,7 +133,7 @@
                             
                         </div>
                             
-                    <div class="fw-bold px-2 py-2" style="background-color: orange">Booth Requirement</div>
+                    {{-- <div class="fw-bold px-2 py-2" style="background-color: orange">Booth Requirement</div>
                     
                     <div class="row p-3">
                         <p>We would like to confirm our booth space requirement as follows:</p>
@@ -175,7 +196,7 @@
                             </div>
                         </div>
                         
-                    </div>
+                    </div> --}}
 
                     <div class="col-md-12">
                         <div class="pull-right">
