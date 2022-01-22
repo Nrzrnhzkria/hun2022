@@ -35,7 +35,7 @@ class TransactionController extends Controller
         $response = Http::asForm()->post($url, $data);
         // $bill_code = $response[0]['BillCode'];
 
-        dd($response);
+        dd($response[0]);
 
         // return redirect('https://dev.toyyibpay.com/' . $bill_code);
     }
