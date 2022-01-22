@@ -17,7 +17,7 @@
 
             <div class="text-center fw-bold px-2 py-2" style="background-color: orange">INTRODUCTION</div>
 
-            <div class="row p-4">
+            <div class="row p-4" style="background-image: url('{{ asset('assets/img/about/introbg.png') }}'); width:100%;">
                 <p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEWAN PERNIAGAAN USAHAWAN KECIL MALAYSIA,
                     abbreviated  (DPUKM) was formed on Mac 2013 is a platform for entrepreneurs that handle by 100% Bumiputera 
                     in collaboration with Ministries, Departments, Agencies, Cooperatives and the Private Sector. 
@@ -30,12 +30,6 @@
                     DPUKM capable to be a main platform and intended for helping small and medium-sized industry entrepreneurs move 
                     in line with the relevant Ministries and Agencies to succeed in the field of business ventured and launching a business.
                 </p>
-            </div>
-
-            <div class="row pb-4">
-                <div class="col-md-12 text-center">        
-                    <img class="img-fluid" src="{{ asset('assets/img/about/introbg.png') }}" alt="" style="width: 100%">
-                </div>
             </div>
         </div>
     </div>
