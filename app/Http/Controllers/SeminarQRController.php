@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\SeminarQR;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use App\User;
 use Auth;
 
 class SeminarQRController extends Controller
