@@ -164,9 +164,9 @@ class VendorController extends Controller
 
         $url = 'https://toyyibpay.com/index.php/api/createBill';
         $response = Http::asForm()->post($url, $data);
-        $bill_code = $response[0]['BillCode'];
+        // $bill_code = $response[0]['BillCode'];
 
-        dd($bill_code);
+        dd($data);
         // return redirect('https://toyyibpay.com/' . $bill_code);
     }
 
