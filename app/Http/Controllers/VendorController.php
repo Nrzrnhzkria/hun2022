@@ -130,16 +130,16 @@ class VendorController extends Controller
     }
 
     public function create_bill(Request $request){
-        $vendor = $request->session()->get('users');
+        // $vendor = $request->session()->get('users');
         $bill_id = 'ID'.uniqid();
 
-        $paymentData = array(
-            'senangpay_id' => $bill_id,
-        );       
+        // $paymentData = array(
+        //     'senangpay_id' => $bill_id,
+        // );       
         
-        $payment = $request->session()->get('payment');
-        $payment->fill($paymentData);
-        $request->session()->put('payment', $payment);
+        // $payment = $request->session()->get('payment');
+        // $payment->fill($paymentData);
+        // $request->session()->put('payment', $payment);
 
         $data = array(
             'userSecretKey' => config('toyyibpay.key'),
