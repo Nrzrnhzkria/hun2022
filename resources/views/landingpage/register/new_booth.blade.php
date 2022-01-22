@@ -46,7 +46,7 @@
                                 <div class="col-md-12 pb-2">
                                     <div class="table-responsive">
                                         <table class="table table-sm">
-                                            <thead class="bg-dark">
+                                            <thead class="bg-dark text-white">
                                                 <tr>
                                                   <th scope="col">#</th>
                                                   <th scope="col">Hall Booth</th>
