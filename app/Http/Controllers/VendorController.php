@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\VendorDetails;
+use App\Models\Coupon;
 
 class VendorController extends Controller
 {
