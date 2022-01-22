@@ -11,7 +11,7 @@
         <div class="card px-4 py-4">
             <div class="row pb-4">
                 <div class="col-md-12 text-center">        
-                    <img class="img-fluid" src="{{ asset('assets/img/about/dpukm.png') }}" alt="" style="width: 20%">
+                    <img class="img-fluid" src="{{ asset('assets/img/about/dpukm.png') }}" alt="" style="width: 20rem">
                 </div>
             </div>
 
