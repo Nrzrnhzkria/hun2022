@@ -154,7 +154,7 @@ class VendorController extends Controller
             'billExternalReferenceNo' => $bill_id,
             'billTo'=>'Nama Pembeli',
             'billEmail'=>'zarina4.11@gmail.com',
-            'billPhone'=>'0',
+            'billPhone'=>'0123456789',
             'billSplitPayment'=>0,
             'billSplitPaymentArgs'=>'',
             'billPaymentChannel'=>2,
