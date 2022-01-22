@@ -39,12 +39,13 @@ class VendorController extends Controller
     public function new_register($get_ic, Request $request)
     {
         $vendor_ic = $get_ic;
-        $vendor = $request->session()->get('user');
-        
-        //generate id
-        // $vendor_id = 'UID'.uniqid();
+        $vendor = $request->session()->get('User');
+        $details = $request->session()->get('VendorDetails');
+        dd($vendor);
+        // generate id
+        // $vendor_id = 'VND'.uniqid();
   
-        return view('landingpage.register.new_vendor', compact('vendor', 'vendor_ic'));
+        // return view('landingpage.register.new_vendor', compact('vendor', 'details', 'vendor_ic'));
     }
 
     public function store(Request $request)
@@ -58,7 +59,7 @@ class VendorController extends Controller
 
         User::create([
             'user_id' => $vendor_id,
-            'first_name' => $request->first_name,
+            'name' => $request->name,
             'last_name' => $request->last_name,
             'email' => $request->email
         ]);
@@ -68,6 +69,8 @@ class VendorController extends Controller
         $details_id = 'VN' . 0 . 0 . 1;
         VendorDetails::create([
             'details_id' => $details_id,
+            'company_name' => $request->company_name,
+            'designation' => $request->designation,
             'user_id' => $vendor_id,
             'phone_no' => $request->phone_no,
             'membership_id' => $request->membership_id,
