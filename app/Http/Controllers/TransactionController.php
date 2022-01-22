@@ -31,7 +31,7 @@ class TransactionController extends Controller
             'billChargeToCustomer'=>2
         );
 
-        $url = 'https://dev.toyyibpay.com/index.php/api/createBill';
+        $url = 'https://toyyibpay.com/index.php/api/createBill';
         $response = Http::asForm()->post($url, $data);
         // $bill_code = $response[0]['BillCode'];
 
