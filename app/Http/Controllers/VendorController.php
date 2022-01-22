@@ -173,22 +173,22 @@ class VendorController extends Controller
     }
 
     public function payment_status(Request $request){
-        $vendor = $request->session()->get('users');
-        $details = $request->session()->get('vendor_details');
-        $coupon = $request->session()->get('coupon');
-        $payment = $request->session()->get('payment');
-        // $response = request()->all(['status_id', 'billcode', 'order_id']);
-        // return $response;
+        // $vendor = $request->session()->get('users');
+        // $details = $request->session()->get('vendor_details');
+        // $coupon = $request->session()->get('coupon');
+        // $payment = $request->session()->get('payment');
+        // // $response = request()->all(['status_id', 'billcode', 'order_id']);
+        // // return $response;
 
-        $vendor->save();
-        $details->save();
-        $coupon->save();
-        $payment->save();
+        // $vendor->save();
+        // $details->save();
+        // $coupon->save();
+        // $payment->save();
 
-        $request->session()->forget('vendor');
-        $request->session()->forget('details');
-        $request->session()->forget('coupon');
-        $request->session()->forget('payment');
+        // $request->session()->forget('vendor');
+        // $request->session()->forget('details');
+        // $request->session()->forget('coupon');
+        // $request->session()->forget('payment');
 
         return view('landingpage.register.success');
     }
