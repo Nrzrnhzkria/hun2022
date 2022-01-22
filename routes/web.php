@@ -37,6 +37,11 @@ Route::get('new-registration/{get_ic}', 'VendorController@new_register');
 // Existing Vendor
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
 
+
+Route::get('toyyibpay', 'TransactionController@create_bill');
+Route::get('toyyibpay-status', 'TransactionController@payment_status');
+Route::post('toyyibpay-callback', 'TransactionController@callback');
+
 /* ------------------------------------------------------------------------------------ //
 | Admin Panel
 */
