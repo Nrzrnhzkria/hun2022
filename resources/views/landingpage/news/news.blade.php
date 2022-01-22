@@ -10,6 +10,7 @@
 .card:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);    
     transform: scale(1.03);
+    background-color: orange;
 }
 </style>
 
