@@ -154,7 +154,7 @@ class VendorController extends Controller
             'billExternalReferenceNo' => $bill_id,
             'billTo'=>$vendor->name,
             'billEmail'=>$vendor->email,
-            'billPhone'=>0, // cannot null or 0
+            'billPhone'=>'0123456789', // cannot null or 0
             'billSplitPayment'=>0,
             'billSplitPaymentArgs'=>'',
             'billPaymentChannel'=>2,
@@ -164,10 +164,10 @@ class VendorController extends Controller
 
         $url = 'https://toyyibpay.com/index.php/api/createBill';
         $response = Http::asForm()->post($url, $data);
-        // $bill_code = $response->json()[0]['BillCode'];
+        $bill_code = $response->json()[0]['BillCode'];
 
-        dd($response->json());
-        // return redirect('https://toyyibpay.com/' . $bill_code);
+        // dd($response->json());
+        return redirect('https://toyyibpay.com/' . $bill_code);
     }
 
     public function payment_status(){
