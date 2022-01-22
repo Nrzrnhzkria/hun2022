@@ -4,31 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Auth;
 
 class TransactionController extends Controller
 {
     public function create_bill(){
+        $user_id = Auth::user()->id;
+        $user = User::where('id', $user_id)->first;
+
         $bill_id = 'ID'.uniqid();
 
         $data = array(
             'userSecretKey' => config('toyyibpay.key'),
             'categoryCode' => config('toyyibpay.category'),
-            'billName' => 'HUN Registration',
-            'billDescription'=>'Hari Usahawan Negara 2022',
-            'billPriceSetting'=>0,
-            'billPayorInfo'=>1,
-            'billAmount'=>100,
-            'billReturnUrl'=>'https://hariusahawannegara.com.my/toyyibpay-status',
-            'billCallbackUrl'=>'https://hariusahawannegara.com.my/toyyibpay-callback',
+            'billName' => 'HUN Membership',
+            'billDescription' => 'Hari Usahawan Negara 2022',
+            'billPriceSetting' => 1,
+            'billPayorInfo' => 1,
+            'billAmount' => 5000,
+            'billReturnUrl' => 'https://hariusahawannegara.com.my/membership-status',
+            'billCallbackUrl' => 'https://hariusahawannegara.com.my/membership-callback',
             'billExternalReferenceNo' => $bill_id,
-            'billTo'=>'Nama Pembeli',
-            'billEmail'=>'zarina4.11@gmail.com',
-            'billPhone'=>'0194342411',
-            'billSplitPayment'=>0,
-            'billSplitPaymentArgs'=>'',
-            'billPaymentChannel'=>2,
-            'billContentEmail'=>'Thank you for registering to HUN!',
-            'billChargeToCustomer'=>2
+            'billTo' => $user->name,
+            'billEmail' => $user->email,
+            'billPhone' => $user->phone_no, // cannot null or 0
+            'billSplitPayment' => 0,
+            'billSplitPaymentArgs' => '',
+            'billPaymentChannel' => 2,
+            'billContentEmail' => 'Thank you for joining our to Membership!',
+            'billChargeToCustomer' => 2
         );
 
         $url = 'https://toyyibpay.com/index.php/api/createBill';
@@ -39,8 +43,9 @@ class TransactionController extends Controller
     }
 
     public function payment_status(){
-        $response = request()->all(['status_id', 'billcode', 'order_id']);
-        return $response;
+        // $response = request()->all(['status_id', 'billcode', 'order_id']);
+        // return $response;
+        return view('landingpage.register.membership');
     }
 
     public function callback(){
