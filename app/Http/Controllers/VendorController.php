@@ -42,51 +42,102 @@ class VendorController extends Controller
         $vendor_ic = $get_ic;
         $vendor = $request->session()->get('users');
         $details = $request->session()->get('vendor_details');
+        $coupon = $request->session()->get('coupon');
+
         // generate id
         $vendor_id = 'VND'.uniqid();
         $details_id = 'DID'.uniqid();
+        $coupon_id = 'CID'.uniqid();
   
-        return view('landingpage.register.new_vendor', compact('vendor', 'details', 'vendor_ic', 'vendor_id', 'details_id'));
+        return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic', 'vendor_id', 'details_id', 'coupon_id'));
     }
 
     public function store(Request $request)
     {
-        $vendors = User::orderBy('id','desc')->first();
-        $details = VendorDetails::orderBy('id','desc')->first();
-
-        $auto_inc_vendor = $vendors->id + 1;
-        $vendor_id = 'UID' . 0 . 0 . $auto_inc_vendor;
-        // $vendor_id = 'VN' . 0 . 0 . 1;
-
-        User::create([
-            'user_id' => $vendor_id,
-            'name' => $request->name,
-            'last_name' => $request->last_name,
-            'email' => $request->email
+        $validatedVendor = $request->validate([
+            'name' => 'required',
+            'email'=> 'required',
+            'ic_no' => 'required',
+            'role'=> 'required'
         ]);
 
-        // $auto_inc_details = $details->id + 1;
-        // $details_id = 'DID' . 0 . 0 . $auto_inc_details;
-        $details_id = 'VN' . 0 . 0 . 1;
-        VendorDetails::create([
-            'details_id' => $details_id,
-            'company_name' => $request->company_name,
-            'designation' => $request->designation,
-            'user_id' => $vendor_id,
-            'phone_no' => $request->phone_no,
-            'membership_id' => $request->membership_id,
-            'ssm_no' => $request->ssm_no
+        $validatedDetails = $request->validate([
+            'user_id' => 'required',
+            'company_name'=> 'required',
+            'designation' => 'required',
+            'nationality'=> 'required',
+            'company_address'=> 'required',
+            'business_nature' => 'required',
+            'product_details' => 'required',
+            'ssm_cert' => 'required',
+            'vaccine_cert' => 'required'
         ]);
+        
+        $optionCoupon = array(
+            'vendor_id' => $request->user_id,
+            'coupon_no' => $request->coupon_no,
+            'img_name' => $request->img_name,
+            'category' => $request->category
+        );
 
-        return redirect('view-vendor')->with('create', 'Your account has been registered successfully.');
+        $request->session()->get('users');
+        $vendor = new User();
+        $vendor->fill($validatedVendor);
+        $request->session()->put('users', $vendor);
+
+        $request->session()->get('vendor_details');
+        $details = new VendorDetails();
+        $details->fill($validatedDetails);
+        $request->session()->put('vendor_details', $details);
+        
+        $request->session()->get('coupon');
+        $coupon = new Coupon();
+        $coupon->fill($optionCoupon);
+        $request->session()->put('coupon', $coupon);
+    
+        return redirect('choose-booth');
+
+
+        // $vendors = User::orderBy('id','desc')->first();
+        // $details = VendorDetails::orderBy('id','desc')->first();
+
+        // $auto_inc_vendor = $vendors->id + 1;
+        // $vendor_id = 'UID' . 0 . 0 . $auto_inc_vendor;
+        // // $vendor_id = 'VN' . 0 . 0 . 1;
+
+        // User::create([
+        //     'user_id' => $vendor_id,
+        //     'name' => $request->name,
+        //     'last_name' => $request->last_name,
+        //     'email' => $request->email
+        // ]);
+
+        // // $auto_inc_details = $details->id + 1;
+        // // $details_id = 'DID' . 0 . 0 . $auto_inc_details;
+        // $details_id = 'VN' . 0 . 0 . 1;
+        // VendorDetails::create([
+        //     'details_id' => $details_id,
+        //     'company_name' => $request->company_name,
+        //     'designation' => $request->designation,
+        //     'user_id' => $vendor_id,
+        //     'phone_no' => $request->phone_no,
+        //     'membership_id' => $request->membership_id,
+        //     'ssm_no' => $request->ssm_no
+        // ]);
+
+        // return redirect('view-vendor')->with('create', 'Your account has been registered successfully.');
     }
     
-    public function view()
+    public function nationality(Request $request)
     {
-        $vendors = Vendor::orderBy('id','asc')->get();
-        $count = 1;
+        $vendor = $request->session()->get('users');
+        $details = $request->session()->get('vendor_details');
+        $coupon = $request->session()->get('coupon');
 
-        return view('vendors.view', compact('vendors', 'count'));
+        $local = 'Local';
+        $international = 'International';
+  
+        return view('landingpage.register.new_nationality',compact('vendor', 'details', 'coupon', 'local', 'international'));
     }
 
     public function edit($vendor_id)

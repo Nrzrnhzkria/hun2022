@@ -11,6 +11,6 @@ class VendorDetails extends Model
     protected $table = 'vendor_details';
 
     protected $fillable = [
-        'user_id', 'company_name', 'designation', 'company_address', 'business_nature', 'product_details', 'ssm_cert', 'vaccine_cert'
+        'user_id', 'company_name', 'designation', 'nationality', 'company_address', 'business_nature', 'product_details', 'ssm_cert', 'vaccine_cert'
     ];
 }

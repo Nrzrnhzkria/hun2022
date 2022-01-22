@@ -19,6 +19,7 @@ class CreateVendorDetailsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('company_name');
             $table->string('designation');
+            $table->string('nationality');
             $table->string('company_address');
             $table->string('business_nature');
             $table->string('product_details');
