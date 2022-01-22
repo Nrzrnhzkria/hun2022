@@ -79,7 +79,7 @@ class SeminarQRController extends Controller
         $type       = $type == 'jpg' ? 'png' : $type;
         $image      = \QrCode::format($type)
                     ->size(200)->errorCorrection('H')
-                    ->generate('https://hariusahawannegara.com.my/register-seminar/' . $qr_id);
+                    ->generate($qr_id);
 
         $qr = SeminarQR::where('id', $qr_id)->first();
 
