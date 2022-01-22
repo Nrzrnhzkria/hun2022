@@ -113,10 +113,10 @@ class VendorController extends Controller
 
     public function store_booth(Request $request)
     {
-        $vendor = $request->session()->get('users');
+        $details = $request->session()->get('vendor_details');
 
         $paymentData = array(
-            'payer_id' => $vendor->id,
+            'payer_id' => $details->user_id,
             'amount' => $request->amount
         );       
         
