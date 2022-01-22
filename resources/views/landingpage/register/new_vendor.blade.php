@@ -45,6 +45,7 @@
 
                         <input type="hidden" value="{{ $vendor_id ?? '' }}" class="form-control" name="user_id" readonly/>
                         <input type="hidden" value="{{ $details_id ?? '' }}" class="form-control" name="details_id" readonly/>
+                        <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
 
                         <div class="col-md-12 pb-2">
                             <label>Name of Company:</label>
