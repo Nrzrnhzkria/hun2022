@@ -149,8 +149,8 @@ class VendorController extends Controller
             'billPriceSetting'=>0,
             'billPayorInfo'=>1,
             'billAmount'=>100,
-            'billReturnUrl'=>'https://hariusahawannegara.com.my/toyyibpay-status',
-            'billCallbackUrl'=>'https://hariusahawannegara.com.my/toyyibpay-callback',
+            'billReturnUrl'=>'https://hariusahawannegara.com.my/payment-status',
+            'billCallbackUrl'=>'https://hariusahawannegara.com.my/payment-callback',
             'billExternalReferenceNo' => $bill_id,
             'billTo'=>'Nama Pembeli',
             'billEmail'=>'zarina4.11@gmail.com',
@@ -164,7 +164,7 @@ class VendorController extends Controller
 
         $url = 'https://toyyibpay.com/index.php/api/createBill';
         $response = Http::asForm()->post($url, $data);
-        $bill_code = $response->json()[0]['BillCode'];
+        $bill_code = $response[0]['BillCode'];
 
         // dd($data);
         return redirect('https://toyyibpay.com/' . $bill_code);

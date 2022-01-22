@@ -38,6 +38,8 @@ Route::post('new-registration/store', 'VendorController@store');
 Route::get('choose-booth', 'VendorController@booth');
 Route::post('choose-booth/store', 'VendorController@store_booth');
 Route::get('payment', 'VendorController@create_bill');
+Route::get('payment-status', 'VendorController@payment_status');
+Route::post('payment-callback', 'VendorController@callback');
 // Existing Vendor
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
 
