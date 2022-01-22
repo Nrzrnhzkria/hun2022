@@ -129,7 +129,7 @@ class VendorController extends Controller
         return redirect('payment');
     }
 
-    public function create_bill(){
+    public function create_bill(Request $request){
         $vendor = $request->session()->get('users');
         $bill_id = 'ID'.uniqid();
 
