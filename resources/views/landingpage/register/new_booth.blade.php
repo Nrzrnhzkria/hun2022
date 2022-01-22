@@ -45,7 +45,7 @@
                             @if($details->nationality == 'local')
                                 <div class="col-md-12 pb-2">
                                     <div class="table-responsive">
-                                        <table class="table table-sm">
+                                        <table class="table table-bordered table-sm">
                                             <thead class="bg-dark text-white">
                                                 <tr>
                                                   <th scope="col">#</th>
