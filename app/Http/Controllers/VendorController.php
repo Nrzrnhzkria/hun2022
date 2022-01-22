@@ -133,6 +133,14 @@ class VendorController extends Controller
         $vendor = $request->session()->get('users');
         $bill_id = 'ID'.uniqid();
 
+        $paymentData = array(
+            'senangpay_id' => $bill_id,
+        );       
+        
+        $payment = $request->session()->get('payment');
+        $payment->fill($paymentData);
+        $request->session()->put('payment', $payment);
+
         $data = array(
             'userSecretKey' => config('toyyibpay.key'),
             'categoryCode' => config('toyyibpay.category'),
@@ -146,7 +154,7 @@ class VendorController extends Controller
             'billExternalReferenceNo' => $bill_id,
             'billTo'=>$vendor->name,
             'billEmail'=>$vendor->email,
-            'billPhone'=>'',
+            'billPhone'=>'0',
             'billSplitPayment'=>0,
             'billSplitPaymentArgs'=>'',
             'billPaymentChannel'=>2,
@@ -156,17 +164,9 @@ class VendorController extends Controller
 
         $url = 'https://toyyibpay.com/index.php/api/createBill';
         $response = Http::asForm()->post($url, $data);
-        $bill_code = $response[0]['BillCode'];
+        // $bill_code = $response[0]['BillCode'];
 
-        $paymentData = array(
-            'senangpay_id' => $bill_id,
-        );       
-        
-        $payment = $request->session()->get('payment');
-        $payment->fill($paymentData);
-        $request->session()->put('payment', $payment);
-
-        dd($payment);
+        dd($response);
         // return redirect('https://toyyibpay.com/' . $bill_code);
     }
 
