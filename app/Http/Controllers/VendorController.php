@@ -172,7 +172,7 @@ class VendorController extends Controller
         return redirect('https://toyyibpay.com/' . $bill_code);
     }
 
-    public function payment_status(){
+    public function payment_status(Request $request){
         $vendor = $request->session()->get('users');
         $details = $request->session()->get('vendor_details');
         $coupon = $request->session()->get('coupon');
