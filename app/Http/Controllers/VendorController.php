@@ -125,7 +125,7 @@ class VendorController extends Controller
         $payment->fill($paymentData);
         $request->session()->put('payment', $payment);
 
-        dd($payment);
+        dd($vendor);
         // return redirect('payment');
     }
 
