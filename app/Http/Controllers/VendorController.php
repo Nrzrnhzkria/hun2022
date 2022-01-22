@@ -175,7 +175,7 @@ class VendorController extends Controller
     public function payment_status(){
         // $response = request()->all(['status_id', 'billcode', 'order_id']);
         // return $response;
-        return view('landingpage.register.new_booth');
+        return view('landingpage.register.success');
     }
 
     public function callback(){
