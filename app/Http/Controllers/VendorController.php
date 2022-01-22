@@ -96,8 +96,7 @@ class VendorController extends Controller
         $coupon->fill($optionCoupon);
         $request->session()->put('coupon', $coupon);
     
-        dd($vendor);
-        // return redirect('choose-booth');
+        return redirect('choose-booth');
 
 
         // $vendors = User::orderBy('id','desc')->first();
@@ -135,11 +134,9 @@ class VendorController extends Controller
         $vendor = $request->session()->get('users');
         $details = $request->session()->get('vendor_details');
         $coupon = $request->session()->get('coupon');
-
-        $local = 'Local';
-        $international = 'International';
   
-        return view('landingpage.register.new_nationality',compact('vendor', 'details', 'coupon', 'local', 'international'));
+        dd($details);
+        // return view('landingpage.register.new_booth',compact('vendor', 'details', 'coupon'));
     }
 
     public function edit($vendor_id)
