@@ -130,7 +130,7 @@ class VendorController extends Controller
     }
 
     public function create_bill(Request $request){
-        $vendor = $request->session()->get('users');
+        // $vendor = $request->session()->get('users');
         $bill_id = 'ID'.uniqid();
 
         // $paymentData = array(
@@ -152,8 +152,8 @@ class VendorController extends Controller
             'billReturnUrl'=>'https://hariusahawannegara.com.my/toyyibpay-status',
             'billCallbackUrl'=>'https://hariusahawannegara.com.my/toyyibpay-callback',
             'billExternalReferenceNo' => $bill_id,
-            'billTo'=>$vendor->name,
-            'billEmail'=>$vendor->email,
+            'billTo'=>'Nama Pembeli',
+            'billEmail'=>'zarina4.11@gmail.com',
             'billPhone'=>'0',
             'billSplitPayment'=>0,
             'billSplitPaymentArgs'=>'',
