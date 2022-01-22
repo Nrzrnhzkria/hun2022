@@ -24,9 +24,6 @@
                     <li class="nav-item">
                         <a class="nav-link disabled">Step 3</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
                 </ul>
 
                 <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
