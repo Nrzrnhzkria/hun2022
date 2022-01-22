@@ -137,7 +137,7 @@
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
                                                 </tr>
-                                                <tr class="bg-secondary">
+                                                <tr class="table-active">
                                                     <th scope="row"></th>
                                                     <td>FOYER BOOTH</td>
                                                     <td></td>
@@ -162,7 +162,7 @@
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
                                                 </tr>
-                                                <tr class="bg-secondary">
+                                                <tr class="table-active">
                                                     <th scope="row"></th>
                                                     <td>FOOD COURT</td>
                                                     <td>RIVERSIDE</td>
