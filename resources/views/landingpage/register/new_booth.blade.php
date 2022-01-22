@@ -10,7 +10,7 @@
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
             <h1>New Registration Form</h1>
         </div>
-            <form action="" method="POST">
+            <form action="{{ url('choose-booth/store') }}" method="POST">
                 @csrf
     
                 <div class="card px-4 py-4">

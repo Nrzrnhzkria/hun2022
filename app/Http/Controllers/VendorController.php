@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\VendorDetails;
 use App\Models\Coupon;
+use App\Models\Membership;
 
 class VendorController extends Controller
 {
@@ -98,35 +99,6 @@ class VendorController extends Controller
     
         return redirect('choose-booth');
 
-
-        // $vendors = User::orderBy('id','desc')->first();
-        // $details = VendorDetails::orderBy('id','desc')->first();
-
-        // $auto_inc_vendor = $vendors->id + 1;
-        // $vendor_id = 'UID' . 0 . 0 . $auto_inc_vendor;
-        // // $vendor_id = 'VN' . 0 . 0 . 1;
-
-        // User::create([
-        //     'user_id' => $vendor_id,
-        //     'name' => $request->name,
-        //     'last_name' => $request->last_name,
-        //     'email' => $request->email
-        // ]);
-
-        // // $auto_inc_details = $details->id + 1;
-        // // $details_id = 'DID' . 0 . 0 . $auto_inc_details;
-        // $details_id = 'VN' . 0 . 0 . 1;
-        // VendorDetails::create([
-        //     'details_id' => $details_id,
-        //     'company_name' => $request->company_name,
-        //     'designation' => $request->designation,
-        //     'user_id' => $vendor_id,
-        //     'phone_no' => $request->phone_no,
-        //     'membership_id' => $request->membership_id,
-        //     'ssm_no' => $request->ssm_no
-        // ]);
-
-        // return redirect('view-vendor')->with('create', 'Your account has been registered successfully.');
     }
     
     public function booth(Request $request)
@@ -134,16 +106,27 @@ class VendorController extends Controller
         $vendor = $request->session()->get('users');
         $details = $request->session()->get('vendor_details');
         $coupon = $request->session()->get('coupon');
+        $payment = $request->session()->get('payment');
   
         return view('landingpage.register.new_booth',compact('vendor', 'details', 'coupon'));
     }
 
-    public function edit($vendor_id)
+    public function store_booth(Request $request)
     {
-        $vendor = Vendor::where('vendor_id', $vendor_id)->first();
-        $count = 1;
+        $vendor = $request->session()->get('users');
 
-        return view('vendors.edit', compact('vendor', 'count'));        
+        $paymentData = array(
+            'payer_id' => $vendor->id,
+            'amount' => $request->category
+        );       
+        
+        $request->session()->get('payment');
+        $payment = new Membership();
+        $payment->fill($paymentData);
+        $request->session()->put('payment', $payment);
+
+        dd($payment);
+        // return redirect('payment');
     }
 
     public function update($vendor_id, Request $request)
