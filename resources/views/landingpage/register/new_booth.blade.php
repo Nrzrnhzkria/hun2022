@@ -52,7 +52,7 @@
                                                   <th scope="col">Hall Booth</th>
                                                   <th scope="col">Lot Placement</th>
                                                   <th scope="col">Price (RM)</th>
-                                                  <th scope="col">Please Choose One</th>
+                                                  <th scope="col" class="text-center">Please Choose One</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -61,7 +61,7 @@
                                                     <td>PREMIUM</td>
                                                     <td>Island</td>
                                                     <td>500,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="500000">
                                                     </td>
                                                 </tr>
@@ -70,7 +70,7 @@
                                                     <td>36M x 24M</td>
                                                     <td>Island</td>
                                                     <td>250,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="250000">
                                                     </td>
                                                 </tr>
@@ -79,7 +79,7 @@
                                                     <td>24M x 12M</td>
                                                     <td>Island</td>
                                                     <td>180,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="180000">
                                                     </td>
                                                 </tr>
@@ -88,7 +88,7 @@
                                                     <td>24M x 24M</td>
                                                     <td>Island</td>
                                                     <td>100,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="100000">
                                                     </td>
                                                 </tr>
@@ -97,7 +97,7 @@
                                                     <td>12M x 12M</td>
                                                     <td>Island</td>
                                                     <td>50,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="50000">
                                                     </td>
                                                 </tr>
@@ -106,7 +106,7 @@
                                                     <td>6M x 12M</td>
                                                     <td>Island</td>
                                                     <td>25,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="25000">
                                                     </td>
                                                 </tr>
@@ -115,7 +115,7 @@
                                                     <td>6M x 6M</td>
                                                     <td>Island</td>
                                                     <td>6,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="6000">
                                                     </td>
                                                 </tr>
@@ -124,7 +124,7 @@
                                                     <td>6M x 3M</td>
                                                     <td>Terrace</td>
                                                     <td>5,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="5000">
                                                     </td>
                                                 </tr>
@@ -133,7 +133,7 @@
                                                     <td>3M x 3M</td>
                                                     <td>Terrace</td>
                                                     <td>3,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
                                                 </tr>
@@ -149,7 +149,7 @@
                                                     <td>6M x 6M</td>
                                                     <td>Island</td>
                                                     <td>6,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="6000">
                                                     </td>
                                                 </tr>
@@ -158,7 +158,7 @@
                                                     <td>3M x 3M</td>
                                                     <td>Terrace</td>
                                                     <td>3,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
                                                 </tr>
@@ -174,7 +174,7 @@
                                                     <td>6M x 3M</td>
                                                     <td></td>
                                                     <td>1,500</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="6000">
                                                     </td>
                                                 </tr>
@@ -183,7 +183,7 @@
                                                     <td>6M x 6M</td>
                                                     <td></td>
                                                     <td>3,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
                                                 </tr>
@@ -192,7 +192,7 @@
                                                     <td>Food-Truck Space</td>
                                                     <td></td>
                                                     <td>1,000</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="1000">
                                                     </td>
                                                 </tr>
@@ -201,7 +201,7 @@
                                                     <td>Car-Boot Park Spot</td>
                                                     <td></td>
                                                     <td>250 (5 days)</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="250">
                                                     </td>
                                                 </tr>
@@ -210,7 +210,7 @@
                                                     <td>Food Ride</td>
                                                     <td></td>
                                                     <td>250 (5 days)</td>
-                                                    <td>
+                                                    <td class="text-center">
                                                         <input type="radio" name="amount" value="250">
                                                     </td>
                                                 </tr>
