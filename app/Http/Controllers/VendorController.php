@@ -68,9 +68,9 @@ class VendorController extends Controller
             'nationality'=> 'required',
             'company_address'=> 'required',
             'business_nature' => 'required',
-            'product_details' => 'required',
-            'ssm_cert' => 'required',
-            'vaccine_cert' => 'required'
+            // 'product_details' => 'required',
+            // 'ssm_cert' => 'required',
+            // 'vaccine_cert' => 'required'
         ]);
         
         $optionCoupon = array(
