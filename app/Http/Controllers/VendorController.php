@@ -44,7 +44,7 @@ class VendorController extends Controller
         $details = $request->session()->get('vendor_details');
         // generate id
         $vendor_id = 'VND'.uniqid();
-        $details_id = 'VND'.uniqid();
+        $details_id = 'DID'.uniqid();
   
         return view('landingpage.register.new_vendor', compact('vendor', 'details', 'vendor_ic', 'vendor_id', 'details_id'));
     }
