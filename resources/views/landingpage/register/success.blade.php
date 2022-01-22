@@ -4,18 +4,12 @@
     Register
 @endsection
 
-<style>
-  body {
-    background-color:rgb(233, 233, 233)!important ; 
-  }
-</style>
-
 @section('content')
 <div class="container">
-    <div class="row px-5">
+    <div class="row p-5">
         <div class="text-center">
         <h3>You have been registered successfully!</h3>
-        <div class="py-3" style="font-size: 24px; color: green;">
+        <div class="py-3" style="font-size: 24rem; color: green;">
             <i class="bi bi-check-circle-fill"></i>
         </div>
         <hr>
