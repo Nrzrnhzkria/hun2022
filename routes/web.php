@@ -35,7 +35,7 @@ Route::get('verification', 'VendorController@check_ic');
 // New Vendor
 Route::get('new-registration/{get_ic}', 'VendorController@new_register');
 Route::post('new-registration/store', 'VendorController@store');
-Route::get('choose-booth', 'VendorController@nationality');
+Route::get('choose-booth', 'VendorController@booth');
 // Existing Vendor
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
 

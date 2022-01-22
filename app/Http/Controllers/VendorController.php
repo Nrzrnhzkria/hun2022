@@ -95,7 +95,8 @@ class VendorController extends Controller
         $coupon->fill($optionCoupon);
         $request->session()->put('coupon', $coupon);
     
-        return redirect('choose-booth');
+        dd($vendor);
+        // return redirect('choose-booth');
 
 
         // $vendors = User::orderBy('id','desc')->first();
@@ -128,7 +129,7 @@ class VendorController extends Controller
         // return redirect('view-vendor')->with('create', 'Your account has been registered successfully.');
     }
     
-    public function nationality(Request $request)
+    public function booth(Request $request)
     {
         $vendor = $request->session()->get('users');
         $details = $request->session()->get('vendor_details');
