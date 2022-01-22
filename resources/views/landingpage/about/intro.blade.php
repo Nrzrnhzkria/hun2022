@@ -6,8 +6,8 @@
 
 @section('content')
 
-<div class="container mx-1 py-4">
-    <div class="row">
+<div class="container py-4">
+    <div class="row px-1">
         <div class="card px-4 py-4" style="background-image: url('{{ asset('assets/img/about/introbg.png') }}');">
             <div class="row pb-4">
                 <div class="col-md-12 text-center">        
