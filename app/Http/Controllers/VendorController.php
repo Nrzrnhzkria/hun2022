@@ -180,7 +180,7 @@ class VendorController extends Controller
         // $response = request()->all(['status_id', 'billcode', 'order_id']);
         // return $response;
 
-        dd($coupon);
+        dd($payment);
         // return view('landingpage.register.success');
     }
 
