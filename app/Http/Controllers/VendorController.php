@@ -142,34 +142,34 @@ class VendorController extends Controller
         $request->session()->put('payment', $payment);
 
         $amount = ($payment->amount)*100;
-        dd($amount);
-        // $data = array(
-        //     'userSecretKey' => config('toyyibpay.key'),
-        //     'categoryCode' => config('toyyibpay.category'),
-        //     'billName' => 'HUN Registration',
-        //     'billDescription'=>'Hari Usahawan Negara 2022',
-        //     'billPriceSetting'=>1,
-        //     'billPayorInfo'=>1,
-        //     'billAmount'=>$amount,
-        //     'billReturnUrl'=>'https://hariusahawannegara.com.my/payment-status',
-        //     'billCallbackUrl'=>'https://hariusahawannegara.com.my/payment-callback',
-        //     'billExternalReferenceNo' => $bill_id,
-        //     'billTo'=>$vendor->name,
-        //     'billEmail'=>$vendor->email,
-        //     'billPhone'=>'0123456789', // cannot null or 0
-        //     'billSplitPayment'=>0,
-        //     'billSplitPaymentArgs'=>'',
-        //     'billPaymentChannel'=>2,
-        //     'billContentEmail'=>'Thank you for registering to HUN!',
-        //     'billChargeToCustomer'=>2
-        // );
 
-        // $url = 'https://toyyibpay.com/index.php/api/createBill';
-        // $response = Http::asForm()->post($url, $data);
-        // $bill_code = $response->json()[0]['BillCode'];
+        $data = array(
+            'userSecretKey' => config('toyyibpay.key'),
+            'categoryCode' => config('toyyibpay.category'),
+            'billName' => 'HUN Registration',
+            'billDescription'=>'Hari Usahawan Negara 2022',
+            'billPriceSetting'=>1,
+            'billPayorInfo'=>1,
+            'billAmount'=>$amount,
+            'billReturnUrl'=>'https://hariusahawannegara.com.my/payment-status',
+            'billCallbackUrl'=>'https://hariusahawannegara.com.my/payment-callback',
+            'billExternalReferenceNo' => $bill_id,
+            'billTo'=>$vendor->name,
+            'billEmail'=>$vendor->email,
+            'billPhone'=>'0123456789', // cannot null or 0
+            'billSplitPayment'=>0,
+            'billSplitPaymentArgs'=>'',
+            'billPaymentChannel'=>2,
+            'billContentEmail'=>'Thank you for registering to HUN!',
+            'billChargeToCustomer'=>2
+        );
 
-        // // dd($response->json());
-        // return redirect('https://toyyibpay.com/' . $bill_code);
+        $url = 'https://toyyibpay.com/index.php/api/createBill';
+        $response = Http::asForm()->post($url, $data);
+        $bill_code = $response->json()[0]['BillCode'];
+
+        // dd($response->json());
+        return redirect('https://toyyibpay.com/' . $bill_code);
     }
 
     public function payment_status(){
