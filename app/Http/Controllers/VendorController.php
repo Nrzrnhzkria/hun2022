@@ -168,7 +168,8 @@ class VendorController extends Controller
         $response = Http::asForm()->post($url, $data);
         // $bill_code = $response->json()[0]['BillCode'];
 
-        dd($response->json());
+        dd($amount);
+        // dd($response->json()); // to know error
         // return redirect('https://toyyibpay.com/' . $bill_code);
     }
 
