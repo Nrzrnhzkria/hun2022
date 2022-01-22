@@ -173,9 +173,15 @@ class VendorController extends Controller
     }
 
     public function payment_status(){
+        $vendor = $request->session()->get('users');
+        $details = $request->session()->get('vendor_details');
+        $coupon = $request->session()->get('coupon');
+        $payment = $request->session()->get('payment');
         // $response = request()->all(['status_id', 'billcode', 'order_id']);
         // return $response;
-        return view('landingpage.register.success');
+
+        dd($vendor);
+        // return view('landingpage.register.success');
     }
 
     public function callback(){
