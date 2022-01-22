@@ -11,7 +11,7 @@ class TransactionController extends Controller
 {
     public function create_bill(){
         $user_id = Auth::user()->id;
-        $user = User::where('id', $user_id)->first;
+        $user = User::where('id', $user_id)->first();
 
         $bill_id = 'ID'.uniqid();
 
