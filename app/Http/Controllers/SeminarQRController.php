@@ -99,14 +99,17 @@ class SeminarQRController extends Controller
     public function registeruser($qr_id){
 		$user_id = Auth::user()->id;
         $get_user = User::where('id', $user_id)->first();
-        $register = SeminarAttendance::where('seminar_id', $qr_id)->first();
-        dd($register);
+
+        SeminarAttendance::create([
+            'user_id' => $user_id,
+            'seminar_id' => $qr_id,
+        ]);
 
         // $register->user_id = $user_id;
         // $register->seminar_id = $qr_id;
         // $register->save();
 
-        // return redirect('register-success/' . $qr_id . '/' . $user_id);
+        return redirect('register-success/' . $qr_id . '/' . $user_id);
     }
 
     public function registersuccess($qr_id, $user_id){
