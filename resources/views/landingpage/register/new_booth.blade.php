@@ -46,7 +46,7 @@
                                 <div class="col-md-12 pb-2">
                                     <div class="table-responsive">
                                         <table class="table table-sm">
-                                            <thead>
+                                            <thead class="bg-dark">
                                                 <tr>
                                                   <th scope="col">#</th>
                                                   <th scope="col">Hall Booth</th>
@@ -137,7 +137,7 @@
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <tr class="bg-secondary">
                                                     <th scope="row"></th>
                                                     <td>FOYER BOOTH</td>
                                                     <td></td>
@@ -162,7 +162,7 @@
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
                                                 </tr>
-                                                <tr>
+                                                <tr class="bg-secondary">
                                                     <th scope="row"></th>
                                                     <td>FOOD COURT</td>
                                                     <td>RIVERSIDE</td>
