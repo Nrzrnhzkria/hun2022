@@ -117,7 +117,7 @@ class VendorController extends Controller
 
         $paymentData = array(
             'payer_id' => $vendor->id,
-            'amount' => $request->category
+            'amount' => $request->amount
         );       
         
         $request->session()->get('payment');
