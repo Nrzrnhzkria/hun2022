@@ -157,7 +157,7 @@
                 <div class="row p-3">
                     <div class="col-md-6 pb-2">
                         <label for="phoneno" class="form-label">Amount:</label>
-                        <input type="text" value="{{ $payment->amount ?? '' }}" class="form-control form-control-sm" name="amount" readonly/>
+                        <input type="text" value="RM {{ $payment->amount ?? '' }}" class="form-control form-control-sm" name="amount" readonly/>
                     </div>
 
                     <div class="col-md-6 pb-2">
