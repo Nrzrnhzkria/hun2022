@@ -114,7 +114,7 @@
 
                         <div class="col-md-6 pb-2">
                             <label for="phoneno" class="form-label">Phone No.:</label>
-                            <input type="text" value="{{ $vendor->phone_no ?? '' }}" class="form-control form-control-sm" name="phone_no" required/>
+                            <input type="text" value="+60{{ $vendor->phone_no ?? '' }}" class="form-control form-control-sm" name="phone_no" required/>
                         </div>
 
                         <div class="col-md-6 pb-2">
