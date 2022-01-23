@@ -37,7 +37,7 @@ class CouponController extends Controller
 
         $coupons->vendor_id = $request->vendor_id;
         $coupons->coupon_no = $request->coupon_no;
-        $coupons->content = $request->category;
+        $coupons->category = $request->category;
         if($request->hasFile('img_name'))
         {
             $coupons->img_name = $img_name;
