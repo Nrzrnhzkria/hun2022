@@ -81,6 +81,7 @@ class DashboardController extends Controller
     public function store_user(Request $request)
     {
         User::create([
+            'hun_id' => 'HUN001',
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
