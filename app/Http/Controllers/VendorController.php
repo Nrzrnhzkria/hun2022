@@ -64,15 +64,20 @@ class VendorController extends Controller
             'phone_no' => 'required',
             'role'=> 'required'
         ]);
-        
-        // $product_details = uniqid() . $request->file('product_details')->getClientOriginalName();
-        // $product_details_path = $request->file('product_details')->store('public/assets/files');
-        // $ssm_cert = uniqid() . $request->file('ssm_cert')->getClientOriginalName();
-        // $ssm_cert_path = $request->file('ssm_cert')->store('public/assets/files');
-        // $vaccine_cert = uniqid() . $request->file('vaccine_cert')->getClientOriginalName();
-        // $vaccine_cert_path = $request->file('vaccine_cert')->store('public/assets/files');
 
-        $product_details = uniqid() . $request->file('product_details')->getClientOriginalName();
+        $validatedDetails = $request->validate([
+            'user_id' => 'required',
+            'company_name'=> 'required',
+            'designation' => 'required',
+            'nationality'=> 'required',
+            'company_address'=> 'required',
+            'business_nature' => 'required',
+            'product_details' => 'required|csv,txt,xlx,xls,pdf|max:2048',
+            'ssm_cert' => 'required',
+            'vaccine_cert' => 'required'
+        ]);
+
+        $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
         $details_path = 'https://hariusahawannegara.com.my/assets/files/product_details/' . $product_details;
         $request->file('product_details')->move(public_path('assets/files/product_details') . $product_details);
 
@@ -95,18 +100,6 @@ class VendorController extends Controller
             'ssm_cert' => $ssm_cert,
             'vaccine_cert' => $vaccine_cert
         );
-
-        // $validatedDetails = $request->validate([
-        //     'user_id' => 'required',
-        //     'company_name'=> 'required',
-        //     'designation' => 'required',
-        //     'nationality'=> 'required',
-        //     'company_address'=> 'required',
-        //     'business_nature' => 'required',
-        //     'product_details' => 'required|csv,txt,xlx,xls,pdf|max:2048',
-        //     'ssm_cert' => 'required|csv,txt,xlx,xls,pdf|max:2048',
-        //     'vaccine_cert' => 'required|csv,txt,xlx,xls,pdf|max:2048'
-        // ]);
 
         $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
         $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
@@ -134,9 +127,7 @@ class VendorController extends Controller
         $coupon->fill($optionCoupon);
         $request->session()->put('coupon', $coupon);
     
-        dd($detailsData);
-        // return redirect('choose-booth');
-
+        return redirect('choose-booth');
     }
     
     public function booth(Request $request)
