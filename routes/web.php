@@ -44,7 +44,6 @@ Route::post('payment-callback', 'VendorController@callback');
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
 Route::post('exist-registration/store/{user_id}', 'VendorController@store_update');
 
-
 Route::get('membership', 'TransactionController@create_bill');
 Route::get('membership-status', 'TransactionController@payment_status');
 Route::post('membership-callback', 'TransactionController@callback');
@@ -53,6 +52,8 @@ Route::post('membership-callback', 'TransactionController@callback');
 | Admin Panel
 */
 Route::get('dashboard', 'DashboardController@dashboard');
+// Coupon Management
+Route::get('coupon', 'CouponController@coupon');
 // News Management
 Route::get('admin-news', 'HUNNewsController@news');
 Route::get('create-news', 'HUNNewsController@create_news');
