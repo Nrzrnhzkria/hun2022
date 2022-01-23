@@ -83,3 +83,4 @@ Route::post('store-user', 'DashboardController@store_user');
 Route::get('update-user/{user_id}', 'DashboardController@update_user');
 Route::post('edit-user/{user_id}', 'DashboardController@edit_user');
 Route::get('delete-user/{user_id}', 'DashboardController@destroy_user');
+Route::get('admins', 'DashboardController@admins');

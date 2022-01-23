@@ -104,7 +104,7 @@
                                     <option value="superadmin">Superadmin</option>
                                     <option value="admin">Admin</option>
                                     <option value="advisor">Advisor</option>
-                                    <option value="members">Members</option>
+                                    <option value="member">Members</option>
                                     <option value="vendor">Vendor</option>
                                     <option value="user">User</option>
                                 </select>
