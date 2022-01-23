@@ -64,42 +64,72 @@ class VendorController extends Controller
             'phone_no' => 'required',
             'role'=> 'required'
         ]);
-
-        $validatedDetails = $request->validate([
-            'user_id' => 'required',
-            'company_name'=> 'required',
-            'designation' => 'required',
-            'nationality'=> 'required',
-            'company_address'=> 'required',
-            'business_nature' => 'required',
-            // 'product_details' => 'required',
-            // 'ssm_cert' => 'required',
-            // 'vaccine_cert' => 'required'
-        ]);
         
-        $optionCoupon = array(
-            'vendor_id' => $request->user_id,
-            'coupon_no' => $request->coupon_no,
-            'img_name' => $request->img_name,
-            'category' => $request->category
+        $product_details = $request->file('product_details')->getClientOriginalName();
+        $product_details_path = $request->file('product_details')->store('public/assets/files');
+        $ssm_cert = $request->file('ssm_cert')->getClientOriginalName();
+        $ssm_cert_path = $request->file('ssm_cert')->store('public/assets/files');
+        $vaccine_cert = $request->file('vaccine_cert')->getClientOriginalName();
+        $vaccine_cert_path = $request->file('vaccine_cert')->store('public/assets/files');
+        
+        // $save = new VendorDetails;
+        // $save->product_details = $product_details;
+        // $save->ssm_cert = $ssm_cert;
+        // $save->vaccine_cert = $vaccine_cert;
+
+        $detailsData = array(
+            'user_id' => $request->user_id,
+            'company_name' => $request->company_name,
+            'designation' => $request->designation,
+            'nationality' => $request->nationality,
+            'company_address' => $request->company_address,
+            'business_nature' => $request->business_nature,
+            'product_details' => $product_details,
+            'ssm_cert' => $ssm_cert,
+            'vaccine_cert' => $vaccine_cert
         );
 
-        $request->session()->get('users');
-        $vendor = new User();
-        $vendor->fill($validatedVendor);
-        $request->session()->put('users', $vendor);
+        dd($detailsData);
 
-        $request->session()->get('vendor_details');
-        $details = new VendorDetails();
-        $details->fill($validatedDetails);
-        $request->session()->put('vendor_details', $details);
+        // // $validatedDetails = $request->validate([
+        // //     'user_id' => 'required',
+        // //     'company_name'=> 'required',
+        // //     'designation' => 'required',
+        // //     'nationality'=> 'required',
+        // //     'company_address'=> 'required',
+        // //     'business_nature' => 'required',
+        // //     'product_details' => 'required|csv,txt,xlx,xls,pdf|max:2048',
+        // //     'ssm_cert' => 'required|csv,txt,xlx,xls,pdf|max:2048',
+        // //     'vaccine_cert' => 'required|csv,txt,xlx,xls,pdf|max:2048'
+        // // ]);
+
+        // $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+        // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+        // $request->img_name->move(public_path('assets/files/coupons'), $imagename);
+
+        // $optionCoupon = array(
+        //     'vendor_id' => $request->user_id,
+        //     'coupon_no' => $request->coupon_no,
+        //     'img_name' => $request->coupon_image,
+        //     'category' => $request->category
+        // );
+
+        // $request->session()->get('users');
+        // $vendor = new User();
+        // $vendor->fill($validatedVendor);
+        // $request->session()->put('users', $vendor);
+
+        // $request->session()->get('vendor_details');
+        // $details = new VendorDetails();
+        // $details->fill($detailsData);
+        // $request->session()->put('vendor_details', $details);
         
-        $request->session()->get('coupon');
-        $coupon = new Coupon();
-        $coupon->fill($optionCoupon);
-        $request->session()->put('coupon', $coupon);
+        // $request->session()->get('coupon');
+        // $coupon = new Coupon();
+        // $coupon->fill($optionCoupon);
+        // $request->session()->put('coupon', $coupon);
     
-        return redirect('choose-booth');
+        // return redirect('choose-booth');
 
     }
     
