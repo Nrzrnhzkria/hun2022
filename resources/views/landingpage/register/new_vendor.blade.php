@@ -118,29 +118,29 @@
                         </div>
 
                         <div class="col-md-6 pb-2">
-                            <label for="formFileMultiple" class="form-label">Details of Displayed Product:</label>
-                            <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details ?? '' }}" id="formFileMultiple" multiple>
+                            <label for="formFile" class="form-label">Details of Displayed Product:</label>
+                            <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details ?? '' }}" id="formFile">
                         </div>
 
                         <div class="col-md-6 pb-2">
-                            <label for="formFileMultiple" class="form-label">SSM Certificate:</label>
-                            <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert ?? '' }}" id="formFileMultiple" multiple>
+                            <label for="formFile" class="form-label">SSM Certificate:</label>
+                            <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert ?? '' }}" id="formFile">
                         </div>
 
                         <div class="col-md-6 pb-2">
-                            <label for="formFileMultiple" class="form-label">Vaccine Certificate:</label>
-                            <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert ?? '' }}" id="formFileMultiple" multiple>
+                            <label for="formFile" class="form-label">Vaccine Certificate:</label>
+                            <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert ?? '' }}" id="formFile">
                         </div>
 
                         <div class="col-md-6 pb-2">
-                            <label for="formFileMultiple" class="form-label">Coupon Category:</label>
+                            <label for="formFile" class="form-label">Coupon Category:</label>
                             <input class="form-control form-control-sm" type="text" name="category" value="{{ $coupon->category ?? '' }}"/>                            
                             <input type="hidden" value="{{ $coupon_id ?? '' }}" class="form-control form-control-sm" name="coupon_no" readonly/>
                         </div>
 
                         <div class="col-md-6 pb-2">
                             <label for="formFileMultiple" class="form-label">Coupon:</label>
-                            <input class="form-control form-control-sm" type="file" name="img_name" value="{{ $coupon->img_name ?? '' }}" id="formFileMultiple" multiple>
+                            <input class="form-control form-control-sm" type="file" name="img_name" value="{{ $coupon->img_name ?? '' }}" id="formFile">
                         </div>
                         
                     </div>
