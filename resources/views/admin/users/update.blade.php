@@ -115,7 +115,7 @@
                             <label for="role" class="col-md-4 col-form-label text-md-end">Role</label>
 
                             <div class="col-md-6">
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" name="role" aria-label="Default select example">
                                     <option class="text-capitalize" value="{{ $user->role }}" selected>{{ $user->role }}</option>
                                     <option value="superadmin">Superadmin</option>
                                     <option value="admin">Admin</option>
