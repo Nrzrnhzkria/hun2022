@@ -75,70 +75,69 @@ class VendorController extends Controller
         $product_details = uniqid() . $request->file('product_details')->getClientOriginalName() . '.' . $request->file('product_details')->getClientOriginalExtension();
         $request->file('product_details')->move(public_path('assets/files') . $product_details);
 
-        $ssm_image = 'img_' . uniqid().'.'.$request->ssm_cert->extension();
-        $ssm_cert = 'https://hariusahawannegara.com.my/assets/files/ssm/' . $ssm_image;
-        $request->ssm_cert->move(public_path('assets/files/ssm'), $ssm_image);
+        dd($product_details);
+        // $ssm_image = 'img_' . uniqid().'.'.$request->ssm_cert->extension();
+        // $ssm_cert = 'https://hariusahawannegara.com.my/assets/files/ssm/' . $ssm_image;
+        // $request->ssm_cert->move(public_path('assets/files/ssm'), $ssm_image);
         
-        $vaccine_image = 'img_' . uniqid().'.'.$request->vaccine_cert->extension();
-        $vaccine_cert = 'https://hariusahawannegara.com.my/assets/files/vaccine/' . $vaccine_image;
-        $request->vaccine_cert->move(public_path('assets/files/vaccine'), $vaccine_image);
+        // $vaccine_image = 'img_' . uniqid().'.'.$request->vaccine_cert->extension();
+        // $vaccine_cert = 'https://hariusahawannegara.com.my/assets/files/vaccine/' . $vaccine_image;
+        // $request->vaccine_cert->move(public_path('assets/files/vaccine'), $vaccine_image);
         // $save = new VendorDetails;
         // $save->product_details = $product_details;
         // $save->ssm_cert = $ssm_cert;
         // $save->vaccine_cert = $vaccine_cert;
 
-        $detailsData = array(
-            'user_id' => $request->user_id,
-            'company_name' => $request->company_name,
-            'designation' => $request->designation,
-            'nationality' => $request->nationality,
-            'company_address' => $request->company_address,
-            'business_nature' => $request->business_nature,
-            'product_details' => $product_details,
-            'ssm_cert' => $ssm_cert,
-            'vaccine_cert' => $vaccine_cert
-        );
+        // $detailsData = array(
+        //     'user_id' => $request->user_id,
+        //     'company_name' => $request->company_name,
+        //     'designation' => $request->designation,
+        //     'nationality' => $request->nationality,
+        //     'company_address' => $request->company_address,
+        //     'business_nature' => $request->business_nature,
+        //     'product_details' => $product_details,
+        //     'ssm_cert' => $ssm_cert,
+        //     'vaccine_cert' => $vaccine_cert
+        // );
 
-        // $validatedDetails = $request->validate([
-        //     'user_id' => 'required',
-        //     'company_name'=> 'required',
-        //     'designation' => 'required',
-        //     'nationality'=> 'required',
-        //     'company_address'=> 'required',
-        //     'business_nature' => 'required',
-        //     'product_details' => 'required|csv,txt,xlx,xls,pdf|max:2048',
-        //     'ssm_cert' => 'required|csv,txt,xlx,xls,pdf|max:2048',
-        //     'vaccine_cert' => 'required|csv,txt,xlx,xls,pdf|max:2048'
-        // ]);
+        // // $validatedDetails = $request->validate([
+        // //     'user_id' => 'required',
+        // //     'company_name'=> 'required',
+        // //     'designation' => 'required',
+        // //     'nationality'=> 'required',
+        // //     'company_address'=> 'required',
+        // //     'business_nature' => 'required',
+        // //     'product_details' => 'required|csv,txt,xlx,xls,pdf|max:2048',
+        // //     'ssm_cert' => 'required|csv,txt,xlx,xls,pdf|max:2048',
+        // //     'vaccine_cert' => 'required|csv,txt,xlx,xls,pdf|max:2048'
+        // // ]);
 
-        $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-        $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-        $request->img_name->move(public_path('assets/files/coupons'), $imagename);
+        // $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+        // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+        // $request->img_name->move(public_path('assets/files/coupons'), $imagename);
 
-        $optionCoupon = array(
-            'vendor_id' => $request->user_id,
-            'coupon_no' => $request->coupon_no,
-            'img_name' => $request->coupon_image,
-            'category' => $request->category
-        );
+        // $optionCoupon = array(
+        //     'vendor_id' => $request->user_id,
+        //     'coupon_no' => $request->coupon_no,
+        //     'img_name' => $request->coupon_image,
+        //     'category' => $request->category
+        // );
 
-        $request->session()->get('users');
-        $vendor = new User();
-        $vendor->fill($validatedVendor);
-        $request->session()->put('users', $vendor);
+        // $request->session()->get('users');
+        // $vendor = new User();
+        // $vendor->fill($validatedVendor);
+        // $request->session()->put('users', $vendor);
 
-        $request->session()->get('vendor_details');
-        $details = new VendorDetails();
-        $details->fill($detailsData);
-        $request->session()->put('vendor_details', $details);
+        // $request->session()->get('vendor_details');
+        // $details = new VendorDetails();
+        // $details->fill($detailsData);
+        // $request->session()->put('vendor_details', $details);
         
-        $request->session()->get('coupon');
-        $coupon = new Coupon();
-        $coupon->fill($optionCoupon);
-        $request->session()->put('coupon', $coupon);
+        // $request->session()->get('coupon');
+        // $coupon = new Coupon();
+        // $coupon->fill($optionCoupon);
+        // $request->session()->put('coupon', $coupon);
     
-        
-        dd($detailsData);
         // return redirect('choose-booth');
 
     }
