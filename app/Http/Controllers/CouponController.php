@@ -31,14 +31,13 @@ class CouponController extends Controller
         if($request->hasFile('img_name'))
         {
             $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $img_name = 'https://hariusahawannegara.com.my/assets/img/news/' . $imagename;
-            $request->img_name->move(public_path('assets/img/news'), $imagename);
+            $img_name = 'https://hariusahawannegara.com.my/assets/img/coupon/' . $imagename;
+            $request->img_name->move(public_path('assets/img/coupon'), $imagename);
         }
 
         $coupons->vendor_id = $request->vendor_id;
         $coupons->coupon_no = $request->coupon_no;
-        $coupons->content = $request->content;
-        $coupons->teaser = $request->teaser;
+        $coupons->content = $request->category;
         if($request->hasFile('img_name'))
         {
             $coupons->img_name = $img_name;
