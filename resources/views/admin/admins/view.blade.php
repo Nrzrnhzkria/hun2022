@@ -37,7 +37,7 @@
     
     <div class="row pb-3">
         
-        @if(count($users) > 0)
+        @if(count($admins) > 0)
         <div class="table-responsive">
             <table class="table">
                 <thead class="table-dark">
