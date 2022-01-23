@@ -47,8 +47,8 @@
 
                 <div class="row p-3">
 
-                    <input type="hidden" value="{{ $vendor_id ?? '' }}" class="form-control form-control-sm" name="user_id" readonly/>
-                    <input type="hidden" value="{{ $details_id ?? '' }}" class="form-control form-control-sm" name="details_id" readonly/>
+                    <input type="hidden" value="{{ $vend->id ?? '' }}" class="form-control form-control-sm" name="user_id" readonly/>
+                    <input type="hidden" value="{{ $details->id ?? '' }}" class="form-control form-control-sm" name="details_id" readonly/>
                     <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
 
                     <div class="col-md-12 pb-2">
