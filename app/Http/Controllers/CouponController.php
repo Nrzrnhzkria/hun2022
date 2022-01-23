@@ -27,7 +27,6 @@ class CouponController extends Controller
     public function edit_coupon($coupon_id, Request $request)
     {
         $coupons = Coupon::where('id', $coupon_id)->first();
-        $user_id = Auth::user()->id;
 
         if($request->hasFile('img_name'))
         {
