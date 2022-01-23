@@ -124,7 +124,7 @@ class DashboardController extends Controller
 
     public function admins()
     {
-        $admins = User::orderBy('id', 'desc')->where('role', 'superadmin')->where('role', 'admin')->where('role', 'advisor')->paginate(10);
+        $admins = User::orderBy('id', 'desc')->where('role', 'superadmin')->orWhere('role', 'admin')->orWhere('role', 'advisor')->paginate(10);
         // $totaladmin = User::where('role', 'superadmin')->where('role', 'admin')->where('role', 'advisor')->count();
 
         return view('admin.admins.view', compact('admins'));
