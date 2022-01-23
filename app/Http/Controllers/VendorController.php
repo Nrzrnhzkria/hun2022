@@ -91,7 +91,7 @@ class VendorController extends Controller
             'nationality' => $request->nationality,
             'company_address' => $request->company_address,
             'business_nature' => $request->business_nature,
-            'product_details' => $product_details,
+            'product_details' => $details_path,
             'ssm_cert' => $ssm_cert,
             'vaccine_cert' => $vaccine_cert
         );
