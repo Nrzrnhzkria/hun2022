@@ -168,7 +168,7 @@
 
                 <div class="col-md-12">
                     <div class="pull-right">
-                        <button type="submit" class="btn btn-warning fw-bold">Next <i class="bi bi-chevron-double-right"></i></button>
+                        <button type="submit" class="btn btn-warning fw-bold"><i class="bi bi-save2"></i> Save</button>
                     </div>
                 </div>
                 
