@@ -232,11 +232,12 @@ class VendorController extends Controller
     public function update_register($user_id, Request $request){
 
         $vend = User::where('id', $user_id)->first();
+        $payment = Membership::where('payer_id', $user_id)->first();
         $vendor = $request->session()->get('users');
         $details = $request->session()->get('vendor_details');
         $coupon = $request->session()->get('coupon');
   
-        return view('landingpage.register.exist_vendor', compact('vend', 'vendor', 'details', 'coupon'));
+        return view('landingpage.register.exist_vendor', compact('vend', 'payment', 'vendor', 'details', 'coupon'));
     }
 
     public function store_update($user_id, Request $request)
