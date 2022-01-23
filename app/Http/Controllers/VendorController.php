@@ -73,7 +73,7 @@ class VendorController extends Controller
         // $vaccine_cert_path = $request->file('vaccine_cert')->store('public/assets/files');
 
         $product_details = uniqid() . $request->file('product_details')->getClientOriginalName();
-        $request->file('product_details')->move(public_path('assets/files') . $product_details);
+        $details_path = 'https://hariusahawannegara.com.my/assets/files/product_details/' . $request->file('product_details')->move(public_path('assets/files/product_details') . $product_details);
 
         $ssm_image = 'img_' . uniqid().'.'.$request->ssm_cert->extension();
         $ssm_cert = 'https://hariusahawannegara.com.my/assets/files/ssm/' . $ssm_image;
@@ -90,7 +90,7 @@ class VendorController extends Controller
             'nationality' => $request->nationality,
             'company_address' => $request->company_address,
             'business_nature' => $request->business_nature,
-            'product_details' => $product_details,
+            'product_details' => $details_path,
             'ssm_cert' => $ssm_cert,
             'vaccine_cert' => $vaccine_cert
         );
