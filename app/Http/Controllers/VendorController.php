@@ -65,12 +65,21 @@ class VendorController extends Controller
             'role'=> 'required'
         ]);
         
-        $product_details = uniqid() . $request->file('product_details')->getClientOriginalName();
-        $product_details_path = $request->file('product_details')->store('public/assets/files');
-        $ssm_cert = uniqid() . $request->file('ssm_cert')->getClientOriginalName();
-        $ssm_cert_path = $request->file('ssm_cert')->store('public/assets/files');
-        $vaccine_cert = uniqid() . $request->file('vaccine_cert')->getClientOriginalName();
-        $vaccine_cert_path = $request->file('vaccine_cert')->store('public/assets/files');
+        // $product_details = uniqid() . $request->file('product_details')->getClientOriginalName();
+        // $product_details_path = $request->file('product_details')->store('public/assets/files');
+        // $ssm_cert = uniqid() . $request->file('ssm_cert')->getClientOriginalName();
+        // $ssm_cert_path = $request->file('ssm_cert')->store('public/assets/files');
+        // $vaccine_cert = uniqid() . $request->file('vaccine_cert')->getClientOriginalName();
+        // $vaccine_cert_path = $request->file('vaccine_cert')->store('public/assets/files');
+
+        $product_details = uniqid() . $request->file('product_details')->getClientOriginalName() . '.' . $request->file('product_details')->getClientOriginalExtension();
+        $request->file('product_details')->move(public_path('assets/files') . $product_details);
+
+        $ssm_cert = uniqid() . $request->file('ssm_cert')->getClientOriginalName() . '.' . $request->file('ssm_cert')->getClientOriginalExtension();
+        $request->file('ssm_cert')->move(public_path('assets/files') . $ssm_cert);
+        
+        $vaccine_cert = uniqid() . $request->file('vaccine_cert')->getClientOriginalName() . '.' . $request->file('vaccine_cert')->getClientOriginalExtension();
+        $request->file('vaccine_cert')->move(public_path('assets/files') . $vaccine_cert);
         
         // $save = new VendorDetails;
         // $save->product_details = $product_details;
