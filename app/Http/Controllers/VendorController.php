@@ -133,6 +133,7 @@ class VendorController extends Controller
         $coupon->fill($optionCoupon);
         $request->session()->put('coupon', $coupon);
     
+        dd($detailsData);
         // return redirect('choose-booth');
 
     }
