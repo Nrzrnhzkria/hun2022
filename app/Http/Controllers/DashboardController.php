@@ -9,10 +9,10 @@ use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function dashboard()
     {

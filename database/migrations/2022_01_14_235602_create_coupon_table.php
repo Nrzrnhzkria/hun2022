@@ -19,7 +19,7 @@ class CreateCouponTable extends Migration
             $table->foreign('vendor_id')->references('id')->on('users');
             $table->string('coupon_no');
             $table->string('img_name');
-            $table->string('category');
+            $table->string('category'); 
             $table->timestamps();
         });
     }

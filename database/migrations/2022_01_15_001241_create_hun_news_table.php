@@ -19,7 +19,7 @@ class CreateHunNewsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');  
             $table->longText('content'); 
-            $table->longText('teaser'); 
+            $table->longText('teaser')->nullable(); 
             $table->string('img_name'); 
             $table->timestamps();
         });
