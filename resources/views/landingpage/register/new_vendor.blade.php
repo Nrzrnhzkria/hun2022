@@ -55,7 +55,7 @@
                         </div>
                         <div class="col-md-6 pb-2">
                             <label>Designation:</label>
-                            <select class="form-select form-control-sm" aria-label="Default select example" name="designation" value="{{ $details->designation ?? '' }}">                                 
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation ?? '' }}">                                 
                                 <option disabled selected>-- Please Select --</option>
                                 <option value="CEO">CEO</option>
                                 <option value="Proprietor">Proprietor</option>
@@ -81,7 +81,7 @@
 
                         <div class="col-md-6 pb-2">
                             <label>Nationality:</label>
-                            <select class="form-select form-control-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality ?? '' }}">                                 
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality ?? '' }}">                                 
                                 <option disabled selected>-- Please Select --</option>
                                 <option value="local">Citizens</option>
                                 <option value="international">Non-citizens</option>
@@ -100,7 +100,7 @@
 
                         <div class="col-md-6 pb-2">
                             <label>Nature of Business:</label>
-                            <select class="form-select form-control-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature ?? '' }}">                                 
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature ?? '' }}">                                 
                                 <option disabled selected>-- Please Select --</option>
                                 <option value="Sole proprietorship">Sole proprietorship</option>
                                 <option value="Partnership">Partnership</option>
