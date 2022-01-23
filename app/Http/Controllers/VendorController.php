@@ -65,11 +65,11 @@ class VendorController extends Controller
             'role'=> 'required'
         ]);
         
-        $product_details = $request->file('product_details')->getClientOriginalName();
+        $product_details = uniqid() . $request->file('product_details')->getClientOriginalName();
         $product_details_path = $request->file('product_details')->store('public/assets/files');
-        $ssm_cert = $request->file('ssm_cert')->getClientOriginalName();
+        $ssm_cert = uniqid() . $request->file('ssm_cert')->getClientOriginalName();
         $ssm_cert_path = $request->file('ssm_cert')->store('public/assets/files');
-        $vaccine_cert = $request->file('vaccine_cert')->getClientOriginalName();
+        $vaccine_cert = uniqid() . $request->file('vaccine_cert')->getClientOriginalName();
         $vaccine_cert_path = $request->file('vaccine_cert')->store('public/assets/files');
         
         // $save = new VendorDetails;
