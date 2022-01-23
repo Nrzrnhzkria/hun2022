@@ -42,7 +42,7 @@ Route::get('payment-status', 'VendorController@payment_status');
 Route::post('payment-callback', 'VendorController@callback');
 // Existing Vendor
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
-Route::post('exist-registration/store', 'VendorController@store_update');
+Route::post('exist-registration/store/{user_id}', 'VendorController@store_update');
 
 
 Route::get('membership', 'TransactionController@create_bill');
