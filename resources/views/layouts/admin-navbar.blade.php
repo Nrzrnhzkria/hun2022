@@ -15,10 +15,17 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/dashboard"><i class="bi bi-house-door-fill"></i></a>
                 </li>
+                
+                @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin' || Auth::user()->role == 'advisor')
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/coupon">Coupon</a>
+                </li>
+                @else
+                @endif
 
                 @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin')
                 <li class="nav-item">
-                    <a class="nav-link text-dark active" href="/admin-news">News</a>
+                    <a class="nav-link text-dark" href="/admin-news">News</a>
                 </li>
                 @else
                 @endif
@@ -43,18 +50,21 @@
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'superadmin')
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="/admins"><i class="bi bi-person-workspace"></i> Administrator</a></li>
-                        <li><a class="dropdown-item" href="/users"><i class="bi bi-person-badge"></i> Apps User</a></li>
+                        @if(Auth::user()->role == 'superadmin')
+                            <li><a class="dropdown-item" href="/admins"><i class="bi bi-person-workspace"></i> Administrator</a></li>
+                        @else
+                        @endif
+                        @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin')
+                            <li><a class="dropdown-item" href="/users"><i class="bi bi-person-badge"></i> Apps User</a></li>
+                        @else
+                        @endif
                     </ul>
                 </li>
-                @else
-                @endif
             </ul>
 
             <!-- Right Side Of Navbar -->

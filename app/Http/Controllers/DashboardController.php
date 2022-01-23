@@ -128,7 +128,7 @@ class DashboardController extends Controller
             'role' => $request->role,
         ]);
 
-        return redirect('users')->with('addsuccess','User has been added successfully.');
+        return redirect('admins')->with('addsuccess','User has been added successfully.');
     }
 
     public function update_admin($user_id)
