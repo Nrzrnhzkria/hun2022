@@ -73,25 +73,6 @@ class DashboardController extends Controller
         return view('admin.users.view', compact('users', 'member','nonmember'));
     }
 
-    public function create_user()
-    {
-        return view('admin.users.create');
-    }
-
-    public function store_user(Request $request)
-    {
-        User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'phone_no' => $request->phone_no,
-            'ic_no' => $request->ic_no,
-            'role' => $request->role,
-        ]);
-
-        return redirect('users')->with('addsuccess','User has been added successfully.');
-    }
-
     public function update_user($user_id)
     {
         $user = User::where('id', $user_id)->first();
@@ -128,5 +109,54 @@ class DashboardController extends Controller
         // $totaladmin = User::where('role', 'superadmin')->where('role', 'admin')->where('role', 'advisor')->count();
 
         return view('admin.admins.view', compact('admins'));
+    }
+    
+    public function create_admin()
+    {
+        return view('admin.users.create');
+    }
+
+    public function store_admin(Request $request)
+    {
+        User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'phone_no' => $request->phone_no,
+            'ic_no' => $request->ic_no,
+            'role' => $request->role,
+        ]);
+
+        return redirect('users')->with('addsuccess','User has been added successfully.');
+    }
+
+    public function update_admin($user_id)
+    {
+        $user = User::where('id', $user_id)->first();
+
+        return view('admin.admins.update', compact('user')); 
+    }
+
+    public function edit_admin($user_id, Request $request)
+    {
+        $user = User::where('id', $user_id)->first();
+
+        $user->hun_id = $request->hun_id;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request['password']);
+        $user->phone_no = $request->phone_no;
+        $user->ic_no = $request->ic_no;
+        $user->role = $request->role;
+        $user->save();
+
+        return redirect('users')->with('updatesuccess','User has been updated successfully.'); 
+    }
+
+    public function destroy_admin($user_id){
+        $user = User::where('id', $user_id);
+        
+        $user->delete();
+        return redirect('users')->with('deleteuser','User has been deleted successfully.');
     }
 }
