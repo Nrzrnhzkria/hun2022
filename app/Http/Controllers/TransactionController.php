@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\User;
+use App\Models\Membership;
 use Auth;
 
 class TransactionController extends Controller
@@ -14,6 +15,12 @@ class TransactionController extends Controller
         $user = User::where('id', $user_id)->first();
 
         $bill_id = 'ID'.uniqid();
+
+        Membership::create([
+            'payer_id' => $user_id,
+            'amount' => '51',
+            'senangpay_id' => $bill_id,
+        ]);
 
         $data = array(
             'userSecretKey' => config('toyyibpay.key'),
