@@ -16,12 +16,12 @@
             <strong>{{ $message }}</strong>
         </div>
         @endif
-        
+
         <form action="{{ url('exist-registration/store') }}" method="POST" enctype="multipart/form-data">
         @csrf
     
             <div class="card px-4 py-4">
-                <ul class="nav nav-tabs px-2 py-2">
+                {{-- <ul class="nav nav-tabs px-2 py-2">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Step 1</a>
                     </li>
@@ -31,7 +31,7 @@
                     <li class="nav-item">
                         <a class="nav-link disabled">Step 3</a>
                     </li>
-                </ul>
+                </ul> --}}
 
                 <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
     
@@ -83,7 +83,7 @@
 
                         <div class="col-md-6 pb-2">
                             <label>IC/Passport No.:</label>
-                            <input type="text" value="{{ $vendor_ic ?? '' }}" class="form-control form-control-sm" name="ic_no" readonly/>
+                            <input type="text" value="{{ $vendor->ic_no ?? '' }}" class="form-control form-control-sm" name="ic_no" readonly/>
                         </div>
 
                         <div class="col-md-6 pb-2">
