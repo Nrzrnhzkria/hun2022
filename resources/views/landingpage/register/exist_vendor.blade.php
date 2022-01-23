@@ -156,12 +156,12 @@
 
                 <div class="col-md-6 pb-2">
                     <label for="phoneno" class="form-label">Amount:</label>
-                    <span>{{ $payment->amount ?? '' }}</span>
+                    <input type="text" value="{{ $payment->amount ?? '' }}" class="form-control form-control-sm" name="amount" readonly/>
                 </div>
 
                 <div class="col-md-6 pb-2">
                     <label for="phoneno" class="form-label">Bill ID:</label>
-                    <span>{{ $payment->senangpay_id ?? '' }}</span>
+                    <input type="text" value="{{ $payment->senangpay_id ?? '' }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
                 </div>
 
                 <div class="col-md-12">
