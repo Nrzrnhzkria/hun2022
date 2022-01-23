@@ -72,7 +72,7 @@ class VendorController extends Controller
         // $vaccine_cert = uniqid() . $request->file('vaccine_cert')->getClientOriginalName();
         // $vaccine_cert_path = $request->file('vaccine_cert')->store('public/assets/files');
 
-        $product_details = uniqid() . $request->file('product_details')->getClientOriginalName() . '.' . $request->file('product_details')->getClientOriginalExtension();
+        $product_details = uniqid() . $request->file('product_details')->getClientOriginalName();
         $request->file('product_details')->move(public_path('assets/files') . $product_details);
 
         dd($product_details);
