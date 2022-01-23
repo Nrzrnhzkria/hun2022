@@ -12,11 +12,17 @@
         <h1 class="h2">Coupon</h1>
     </div>
 
-    {{-- @if ($message = Session::get('deletenews'))
+    @if ($message = Session::get('updatecoupon'))
     <div class="alert alert-info alert-block">
         <strong>{{ $message }}</strong>
     </div>
-    @endif --}}
+    @endif
+
+    @if ($message = Session::get('deletecoupon'))
+    <div class="alert alert-info alert-block">
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
     
     <div class="row">
         
