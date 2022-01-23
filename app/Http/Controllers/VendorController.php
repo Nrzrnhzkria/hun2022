@@ -61,6 +61,7 @@ class VendorController extends Controller
             'name' => 'required',
             'email'=> 'required',
             'ic_no' => 'required',
+            'phone_no' => 'required',
             'role'=> 'required'
         ]);
 
@@ -156,7 +157,7 @@ class VendorController extends Controller
             'billExternalReferenceNo' => $bill_id,
             'billTo' => $vendor->name,
             'billEmail' => $vendor->email,
-            'billPhone' => '0123456789', // cannot null or 0
+            'billPhone' => $vendor->phone_no, // cannot null or 0
             'billSplitPayment' => 0,
             'billSplitPaymentArgs' => '',
             'billPaymentChannel' => 2,
