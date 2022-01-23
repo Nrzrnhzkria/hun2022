@@ -54,6 +54,9 @@ Route::post('membership-callback', 'TransactionController@callback');
 Route::get('dashboard', 'DashboardController@dashboard');
 // Coupon Management
 Route::get('coupon', 'CouponController@coupon');
+Route::get('update-coupon/{coupon_id}', 'CouponController@update_coupon');
+Route::post('edit-coupon/{coupon_id}', 'CouponController@edit_coupon');
+Route::get('delete-coupon/{coupon_id}', 'CouponController@destroy_coupon');
 // News Management
 Route::get('admin-news', 'HUNNewsController@news');
 Route::get('create-news', 'HUNNewsController@create_news');
