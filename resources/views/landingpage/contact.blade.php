@@ -7,7 +7,7 @@
 @section('content')
 
 <div class="container py-4">
-    <div class="row">
+    <div class="row px-2">
         <div class="col-md-6">
             
             <p>No 30-2, Jalan 9/23A, 
