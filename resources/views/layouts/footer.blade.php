@@ -1,6 +1,6 @@
 <div class="container">
     <footer class="row py-5 my-5 border-top">
-        <table class="table table-bordered text-center" width="50rem">
+        <table class="table table-bordered text-center" style="width: 500rem">
             <tr>
                 <td>
                     <a href="/" class="d-flex align-items-center link-dark text-decoration-none">
