@@ -60,7 +60,7 @@
                                                     <td>Island</td>
                                                     <td>500,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="30000">
+                                                        <input type="radio" name="amount" value="30000">
                                                     </td>
                                                     <td rowspan="5" class="text-danger w-25">Please note that this selected booth will have RM30,000 of deposit. You will be contacted by us to pay the balance.</td>
                                                 </tr>
@@ -70,7 +70,7 @@
                                                     <td>Island</td>
                                                     <td>250,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="30000">
+                                                        <input type="radio" name="amount" value="30000">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -79,7 +79,7 @@
                                                     <td>Island</td>
                                                     <td>180,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="30000">
+                                                        <input type="radio" name="amount" value="30000">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -88,7 +88,7 @@
                                                     <td>Island</td>
                                                     <td>100,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="30000">
+                                                        <input type="radio" name="amount" value="30000">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -97,7 +97,7 @@
                                                     <td>Island</td>
                                                     <td>50,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="30000">
+                                                        <input type="radio" name="amount" value="30000">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -106,7 +106,7 @@
                                                     <td>Island</td>
                                                     <td>25,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="25000">
+                                                        <input type="radio" name="amount" value="25000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -116,7 +116,7 @@
                                                     <td>Island</td>
                                                     <td>6,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="6000">
+                                                        <input type="radio" name="amount" value="6000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -126,7 +126,7 @@
                                                     <td>Terrace</td>
                                                     <td>5,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="5000">
+                                                        <input type="radio" name="amount" value="5000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -136,7 +136,7 @@
                                                     <td>Terrace</td>
                                                     <td>3,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="3000">
+                                                        <input type="radio" name="amount" value="3000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -154,7 +154,7 @@
                                                     <td>Island</td>
                                                     <td>6,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="6000">
+                                                        <input type="radio" name="amount" value="6000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -164,7 +164,7 @@
                                                     <td>Terrace</td>
                                                     <td>3,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="3000">
+                                                        <input type="radio" name="amount" value="3000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -182,7 +182,7 @@
                                                     <td></td>
                                                     <td>1,500</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="6000">
+                                                        <input type="radio" name="amount" value="6000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -192,7 +192,7 @@
                                                     <td></td>
                                                     <td>3,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="3000">
+                                                        <input type="radio" name="amount" value="3000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -202,7 +202,7 @@
                                                     <td></td>
                                                     <td>1,000</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="1000">
+                                                        <input type="radio" name="amount" value="1000">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -212,7 +212,7 @@
                                                     <td></td>
                                                     <td>250 (5 days)</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="250">
+                                                        <input type="radio" name="amount" value="250">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -222,7 +222,7 @@
                                                     <td></td>
                                                     <td>250 (5 days)</td>
                                                     <td class="text-center">
-                                                        <input type="checkbox" name="amount" value="250">
+                                                        <input type="radio" name="amount" value="250">
                                                     </td>
                                                     <td></td>
                                                 </tr>
@@ -251,7 +251,7 @@
                                                 <td>Island</td>
                                                 <td>125,000</td>
                                                 <td class="text-center">
-                                                    <input type="checkbox" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                                 <td rowspan="5" class="text-danger w-25">Please note that this selected booth will have USD7,500 of deposit. You will be contacted by us to pay the balance.</td>
                                             </tr>
@@ -261,7 +261,7 @@
                                                 <td>Island</td>
                                                 <td>62,500</td>
                                                 <td class="text-center">
-                                                    <input type="checkbox" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -270,7 +270,7 @@
                                                 <td>Island</td>
                                                 <td>45,000</td>
                                                 <td class="text-center">
-                                                    <input type="checkbox" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -279,7 +279,7 @@
                                                 <td>Island</td>
                                                 <td>25,000</td>
                                                 <td class="text-center">
-                                                    <input type="checkbox" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -288,7 +288,7 @@
                                                 <td>Island</td>
                                                 <td>12,500</td>
                                                 <td class="text-center">
-                                                    <input type="checkbox" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                             </tr>
                                         </tbody>
