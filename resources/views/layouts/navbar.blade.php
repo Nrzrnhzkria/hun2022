@@ -22,9 +22,9 @@
                         <li><a class="dropdown-item" href="#">Vision & Mision</a></li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link text-dark" href="/events">Events</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/news">News</a>
                 </li>
