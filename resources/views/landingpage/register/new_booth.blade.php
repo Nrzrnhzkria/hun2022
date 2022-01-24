@@ -72,7 +72,6 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="30000">
                                                     </td>
-                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">3</th>
@@ -82,7 +81,6 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="30000">
                                                     </td>
-                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">4</th>
@@ -92,7 +90,6 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="30000">
                                                     </td>
-                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">5</th>
@@ -102,7 +99,6 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="30000">
                                                     </td>
-                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">6</th>
@@ -112,7 +108,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="25000">
                                                     </td>
-                                                    <td rowspan="13"></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">7</th>
@@ -122,6 +118,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="6000">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">8</th>
@@ -131,6 +128,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="5000">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">9</th>
@@ -140,6 +138,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr class="table-dark">
                                                     <th scope="row"></th>
@@ -157,6 +156,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="6000">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">11</th>
@@ -166,6 +166,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr class="table-dark">
                                                     <th scope="row"></th>
@@ -183,6 +184,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="6000">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">13</th>
@@ -192,6 +194,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="3000">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">14</th>
@@ -201,6 +204,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="1000">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">15</th>
@@ -210,6 +214,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="250">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">16</th>
@@ -219,6 +224,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="250">
                                                     </td>
+                                                    <td></td>
                                                 </tr>
                                             </tbody>
                                         </table>
