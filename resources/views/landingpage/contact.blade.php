@@ -33,17 +33,13 @@
                         .mapouter{
                             position:relative;
                             text-align:left;
-                            height:500rem;
-                            width:600rem;
                         }
                     </style>
-                    <a href="https://www.embedgooglemap.net">embed custom google map</a>
+                    <a href="https://www.embedgooglemap.net"></a>
                     <style>
                         .gmap_canvas {
                             overflow:hidden;
                             background:none!important;
-                            height:500rem;
-                            width:600rem;
                         }
                     </style>
                 </div>
