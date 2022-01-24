@@ -240,7 +240,8 @@
                                               <th scope="col">Hall Booth</th>
                                               <th scope="col">Lot Placement</th>
                                               <th scope="col">Price (USD)</th>
-                                              <th scope="col" class="text-center">Please Choose One</th>
+                                              <th scope="col" class="text-center">Check</th>
+                                              <th scope="col" class="text-center">Remarks</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -250,7 +251,7 @@
                                                 <td>Island</td>
                                                 <td>125,000</td>
                                                 <td class="text-center">
-                                                    <input type="check" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                                 <td rowspan="5" class="text-danger w-25">Please note that this selected booth will have USD7,500 of deposit. You will be contacted by us to pay the balance.</td>
                                             </tr>
@@ -260,7 +261,7 @@
                                                 <td>Island</td>
                                                 <td>62,500</td>
                                                 <td class="text-center">
-                                                    <input type="check" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -269,7 +270,7 @@
                                                 <td>Island</td>
                                                 <td>45,000</td>
                                                 <td class="text-center">
-                                                    <input type="check" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -278,7 +279,7 @@
                                                 <td>Island</td>
                                                 <td>25,000</td>
                                                 <td class="text-center">
-                                                    <input type="check" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -287,7 +288,7 @@
                                                 <td>Island</td>
                                                 <td>12,500</td>
                                                 <td class="text-center">
-                                                    <input type="check" name="amount" value="7500">
+                                                    <input type="radio" name="amount" value="7500">
                                                 </td>
                                             </tr>
                                         </tbody>
