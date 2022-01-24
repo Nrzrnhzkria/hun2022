@@ -115,7 +115,7 @@ class VendorController extends Controller
         $request->img_name->move(public_path('assets/files/coupons'), $imagename);
 
         $optionCoupon = array(
-            'vendor_id' => $request->user_id,
+            'coupon_no' => 0,
             'img_name' => $coupon_image,
             'category' => $request->category
         );
