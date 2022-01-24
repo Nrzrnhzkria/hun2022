@@ -50,21 +50,31 @@
                 @else
                 @endif
 
+                @if(Auth::user()->role == 'superadmin')
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        @if(Auth::user()->role == 'superadmin')
                             <li><a class="dropdown-item" href="/admins"><i class="bi bi-person-workspace"></i> Administrator</a></li>
-                        @else
-                        @endif
-                        @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin')
+                       
                             <li><a class="dropdown-item" href="/users"><i class="bi bi-person-badge"></i> Apps User</a></li>
-                        @else
-                        @endif
+                        
                     </ul>
                 </li>
+                @else
+                @endif 
+                @if(Auth::user()->role == 'admin')
+                <li class="nav-item dropdown">
+                    <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        User
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">                       
+                        <li><a class="dropdown-item" href="/users"><i class="bi bi-person-badge"></i> Apps User</a></li> 
+                    </ul>
+                </li>
+                @else
+                @endif
             </ul>
 
             <!-- Right Side Of Navbar -->
