@@ -62,7 +62,7 @@
                                                     <td class="text-center">
                                                         <input type="radio" name="amount" value="30000">
                                                     </td>
-                                                    <td rowspan="5" class="text-danger w-10">Please note that this selected booth will have RM30,000 of deposit. You will be contacted by us to pay the balance.</td>
+                                                    <td rowspan="5" class="text-danger w-25">Please note that this selected booth will have RM30,000 of deposit. You will be contacted by us to pay the balance.</td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">2</th>
@@ -142,6 +142,7 @@
                                                     <td></td>
                                                     <td></td>
                                                     <td></td>
+                                                    <td></td>
                                                 </tr>
                                                 <tr>
                                                     <th scope="row">10</th>
@@ -165,6 +166,7 @@
                                                     <th scope="row"></th>
                                                     <td>FOOD COURT</td>
                                                     <td>RIVERSIDE</td>
+                                                    <td></td>
                                                     <td></td>
                                                     <td></td>
                                                 </tr>
