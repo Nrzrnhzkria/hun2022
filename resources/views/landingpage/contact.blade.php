@@ -8,7 +8,7 @@
 
 <div class="container py-4">
     <div class="row px-2">
-        <div class="col-md-5 pt-5">
+        <div class="col-md-5 pt-5 pb-3">
             
             <h3>No 30-2, Jalan 9/23A, 
             <br>Off Jalan Usahawan, 
