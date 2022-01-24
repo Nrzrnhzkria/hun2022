@@ -1,13 +1,13 @@
 <div class="container">
     <footer class="row py-5 my-5 border-top">
-        <div class="container">
+        <div class="col-md-2 pb-3">
+            <a href="/" class="d-flex align-items-center link-dark text-decoration-none">
+                <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="60rem">
+            </a>
+        </div>
+        <div class="col-md-10 pb-3">
             <table class="table table-bordered text-center">
                 <tr>
-                    <td>
-                        <a href="/" class="d-flex align-items-center link-dark text-decoration-none">
-                            <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="60rem">
-                        </a>
-                    </td>
                     <td>
                         <h5>NAVIGATION</h5>
                         <ul class="nav flex-column">
