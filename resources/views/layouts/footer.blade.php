@@ -6,7 +6,7 @@
             </a>
         </div>
 
-        <div class="col-md-3 pb-3">
+        <div class="col-md-4 text-center pb-3">
             <h5>NAVIGATION</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
@@ -18,7 +18,7 @@
             </ul>
         </div>
 
-        <div class="col-md-4 pb-3">
+        <div class="col-md-4 text-center pb-3">
             <h5>LEGAL</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms Of Use</a></li>
@@ -27,7 +27,7 @@
             </ul>
         </div>
         
-        <div class="col-md-4 pb-3">
+        <div class="col-md-3 text-center pb-3">
             <h5>SOCIAL MEDIA</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
