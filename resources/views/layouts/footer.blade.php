@@ -1,12 +1,10 @@
 <div class="container">
     <footer class="row py-5 my-5 border-top">
-        <div class="col-md-2 pb-3">
-            <a href="/" class="d-flex align-items-center link-dark text-decoration-none">
-                <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="60rem">
-            </a>
+        <div class="col-md-2 text-center pb-3">
+            <a href="/"><img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="60rem"></a>
         </div>
         <div class="col-md-10 pb-3">
-            <table class="table table-bordered text-center">
+            <table class="table table-borderless text-center">
                 <tr>
                     <td>
                         <h5>NAVIGATION</h5>
