@@ -60,10 +60,20 @@ class VendorController extends Controller
         $validatedVendor = $request->validate([
             'name' => 'required',
             'email'=> 'required',
+            'password'=> 'required',
             'ic_no' => 'required',
             'phone_no' => 'required',
             'role'=> 'required'
         ]);
+
+        $vendorData = array(
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'ic_no' => $request->ic_no,
+            'phone_no' => $request->phone_no,
+            'role' => $request->role
+        );
 
         $validatedDetails = $request->validate([
             'user_id' => 'required',
@@ -73,8 +83,8 @@ class VendorController extends Controller
             'company_address'=> 'required',
             'business_nature' => 'required',
             'product_details' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
-            'ssm_cert' => 'required',
-            'vaccine_cert' => 'required'
+            'ssm_cert' => 'required|mimes:png,jpg|max:2048',
+            'vaccine_cert' => 'required|mimes:png,jpg|max:2048'
         ]);
 
         $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
@@ -107,14 +117,13 @@ class VendorController extends Controller
 
         $optionCoupon = array(
             'vendor_id' => $request->user_id,
-            'coupon_no' => $request->coupon_no,
             'img_name' => $coupon_image,
             'category' => $request->category
         );
 
         $request->session()->get('users');
         $vendor = new User();
-        $vendor->fill($validatedVendor);
+        $vendor->fill($vendorData);
         $request->session()->put('users', $vendor);
 
         $request->session()->get('vendor_details');
