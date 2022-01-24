@@ -215,36 +215,42 @@ class VendorController extends Controller
         $payment = $request->session()->get('payment');
         // $response = request()->all(['status_id', 'billcode', 'order_id']);
         // return $response;
+        $response = request()->status_id;
 
-        $vendor->save();
+        if($response == 1){
+            echo 'success';
+        }else{
+            echo 'failed';
+        }
+        // $vendor->save();
 
-        $detailsData = array(
-            'user_id' => $vendor->id
-        );
-        $details->fill($detailsData);
-        $request->session()->put('vendor_details', $details);
-        $details->save();
+        // $detailsData = array(
+        //     'user_id' => $vendor->id
+        // );
+        // $details->fill($detailsData);
+        // $request->session()->put('vendor_details', $details);
+        // $details->save();
 
-        $optionCoupon = array(
-            'vendor_id' => $vendor->id
-        );
-        $coupon->fill($optionCoupon);
-        $request->session()->put('coupon', $coupon);
-        $coupon->save();
+        // $optionCoupon = array(
+        //     'vendor_id' => $vendor->id
+        // );
+        // $coupon->fill($optionCoupon);
+        // $request->session()->put('coupon', $coupon);
+        // $coupon->save();
 
-        $paymentData = array(
-            'payer_id' => $vendor->id
-        );       
-        $payment->fill($paymentData);
-        $request->session()->put('payment', $payment);
-        $payment->save();
+        // $paymentData = array(
+        //     'payer_id' => $vendor->id
+        // );       
+        // $payment->fill($paymentData);
+        // $request->session()->put('payment', $payment);
+        // $payment->save();
 
-        $request->session()->forget('vendor');
-        $request->session()->forget('details');
-        $request->session()->forget('coupon');
-        $request->session()->forget('payment');
+        // $request->session()->forget('vendor');
+        // $request->session()->forget('details');
+        // $request->session()->forget('coupon');
+        // $request->session()->forget('payment');
 
-        return view('landingpage.register.success');
+        // return view('landingpage.register.success');
     }
 
     public function callback(){
