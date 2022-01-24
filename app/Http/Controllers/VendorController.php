@@ -49,11 +49,11 @@ class VendorController extends Controller
         $coupon = $request->session()->get('coupon');
 
         // generate id
-        $vendor_id = 'VND'.uniqid();
+        // $vendor_id = 'VND'.uniqid();
         $details_id = 'DID'.uniqid();
         $coupon_id = 'CID'.uniqid();
   
-        return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic', 'vendor_id', 'details_id', 'coupon_id'));
+        return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic', 'details_id', 'coupon_id'));
     }
 
     public function store(Request $request)
