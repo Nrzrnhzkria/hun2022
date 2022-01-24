@@ -1,6 +1,6 @@
 <div class="container">
-    <footer class="row py-5 my-5 border-top">
-        <div class="container">
+    <div class="container">
+        <footer class="row py-5 my-5 border-top">
             <div class="col-md-1 pb-3">
                 <a href="/" class="d-flex align-items-center link-dark text-decoration-none">
                     <img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="60rem">
@@ -38,9 +38,9 @@
                     <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Linkedin</a></li>
                 </ul>
             </div>
-        </div>
 
-    </footer>
+        </footer>
+    </div>
 
     <p class="text-center pb-4">All rights reserved &copy; 2022 Hari Usahawan Negara</p>
 
