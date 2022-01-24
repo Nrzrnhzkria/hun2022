@@ -8,17 +8,17 @@
 
 <div class="container py-4">
     <div class="row px-2">
-        <div class="col-md-5 pt-4">
+        <div class="col-md-5 pt-5">
             
             <h3>No 30-2, Jalan 9/23A, 
             <br>Off Jalan Usahawan, 
             <br>53200 Setapak, 
             <br>Kuala Lumpur.</h3>
             <br>
-            <h4>Tel : 03 - 4141 8311</h4>
-            <h4>Mobile : 019 - 716 9628 / 013 - 292 2950</h4>
-            <h4>Email : dahniaga@gmail.com</h4>
-            <h4>Website : www.hun22.com.my</h4>
+            <h5>Tel : 03 - 4141 8311</h5>
+            <h5>Mobile : 019 - 716 9628 / 013 - 292 2950</h5>
+            <h5>Email : dahniaga@gmail.com</h5>
+            <h5>Website : www.hun22.com.my</h5>
 
         </div>
         
