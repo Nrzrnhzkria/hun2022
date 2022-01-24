@@ -88,10 +88,10 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ asset('assets/img/white_slider.jpeg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('assets/img/bonanza.jpeg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('assets/img/bonanza.jpeg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('assets/img/white_slider.jpeg') }}" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -174,7 +174,7 @@
 
     <div class="row pt-4">
         <div class="col-md-6 text-center">
-            <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="250rem">
+            <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="350rem">
         </div>
         <div class="col-md-6 text-center py-3">
             <h3>DOWNLOAD HUN22 OFFICIAL <br> MOBILE APP</h3>
