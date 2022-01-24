@@ -53,7 +53,7 @@ class VendorController extends Controller
         $details_id = 'DID'.uniqid();
         $coupon_id = 'CID'.uniqid();
   
-        dd($vendor->id);
+        dd($vendor);
         // return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic', 'details_id', 'coupon_id'));
     }
 
