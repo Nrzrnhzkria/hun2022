@@ -9,6 +9,7 @@ use App\Models\VendorDetails;
 use App\Models\Coupon;
 use App\Models\Membership;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Hash;
 
 class VendorController extends Controller
 {
