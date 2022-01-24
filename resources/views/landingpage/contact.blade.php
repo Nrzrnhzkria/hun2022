@@ -8,6 +8,9 @@
 
 <div class="container py-4">
     <div class="row px-2">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
+            <h1>Contact</h1>
+        </div>
         <div class="col-md-5 pt-5 pb-3">
             
             <h3>No 30-2, Jalan 9/23A, 
