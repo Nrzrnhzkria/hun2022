@@ -8,7 +8,7 @@
 
 <div class="container py-4">
     <div class="row px-2">
-        <div class="col-md-6">
+        <div class="col-md-4">
             
             <p>No 30-2, Jalan 9/23A, 
             <br>Off Jalan Usahawan, 
@@ -22,7 +22,7 @@
 
         </div>
         
-        <div class="col-md-6">
+        <div class="col-md-8">
 
             <div class="mapouter">
                 <div class="gmap_canvas">
