@@ -176,7 +176,7 @@
         <div class="col-md-6 text-center">
             <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="300rem">
         </div>
-        <div class="col-md-6 text-center pt-4">
+        <div class="col-md-6 text-center pt-5">
             <h3>DOWNLOAD HUN22 OFFICIAL <br> MOBILE APP</h3>
             <p>Available in Apple App Store and Google Playstore</p>
             <a href="#"><img class="img-fluid" src="{{ asset('assets/img/appstore.png') }}" width="23.5%"></a>
@@ -240,7 +240,6 @@
 <script type="text/javascript">
     $('.brand-carousel').owlCarousel({
         loop:true,
-        margin:5,
         autoplay:true,
         responsive:{
             0:{
