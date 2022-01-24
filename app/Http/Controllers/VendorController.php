@@ -53,9 +53,7 @@ class VendorController extends Controller
         $details_id = 'DID'.uniqid();
         $coupon_id = 'CID'.uniqid();
   
-        $session_id = session()->getId($vendor);
-        dd($session_id);
-        // return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic', 'details_id', 'coupon_id'));
+        return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic', 'details_id', 'coupon_id'));
     }
 
     public function store(Request $request)
@@ -79,7 +77,6 @@ class VendorController extends Controller
         );
 
         $validatedDetails = $request->validate([
-            'user_id' => 'required',
             'company_name'=> 'required',
             'designation' => 'required',
             'nationality'=> 'required',
@@ -103,7 +100,6 @@ class VendorController extends Controller
         $request->vaccine_cert->move(public_path('assets/files/vaccine'), $vaccine_image);
 
         $detailsData = array(
-            'user_id' => $request->user_id,
             'company_name' => $request->company_name,
             'designation' => $request->designation,
             'nationality' => $request->nationality,
@@ -157,7 +153,6 @@ class VendorController extends Controller
         $details = $request->session()->get('vendor_details');
 
         $paymentData = array(
-            'payer_id' => $details->user_id,
             'amount' => $request->amount
         );       
         
@@ -222,8 +217,26 @@ class VendorController extends Controller
         // return $response;
 
         $vendor->save();
+
+        $detailsData = array(
+            'user_id' => $vendor->id
+        );
+        $details->fill($detailsData);
+        $request->session()->put('vendor_details', $details);
         $details->save();
+
+        $optionCoupon = array(
+            'vendor_id' => $vendor->id
+        );
+        $coupon->fill($optionCoupon);
+        $request->session()->put('coupon', $coupon);
         $coupon->save();
+
+        $paymentData = array(
+            'payer_id' => $vendor->id
+        );       
+        $payment->fill($paymentData);
+        $request->session()->put('payment', $payment);
         $payment->save();
 
         $request->session()->forget('vendor');
