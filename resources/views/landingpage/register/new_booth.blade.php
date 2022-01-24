@@ -50,7 +50,7 @@
                                                   <th scope="col">Lot Placement</th>
                                                   <th scope="col">Price (RM)</th>
                                                   <th scope="col" class="text-center">Check</th>
-                                                  <th scope="col" class="text-center">Remarks</th>
+                                                  <th scope="col" class="text-center w-10">Remarks</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
