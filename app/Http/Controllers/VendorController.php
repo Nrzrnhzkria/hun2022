@@ -110,16 +110,6 @@ class VendorController extends Controller
             'vaccine_cert' => $vaccine_cert
         );
 
-        $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-        $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-        $request->img_name->move(public_path('assets/files/coupons'), $imagename);
-
-        $optionCoupon = array(
-            'coupon_no' => 0,
-            'img_name' => $coupon_image,
-            'category' => $request->category
-        );
-
         $request->session()->get('users');
         $vendor = new User();
         $vendor->fill($vendorData);
@@ -129,11 +119,39 @@ class VendorController extends Controller
         $details = new VendorDetails();
         $details->fill($detailsData);
         $request->session()->put('vendor_details', $details);
+
+        $check_image = $request->img_name;
         
-        $request->session()->get('coupon');
-        $coupon = new Coupon();
-        $coupon->fill($optionCoupon);
-        $request->session()->put('coupon', $coupon);
+        if($check_image == null){
+
+            $optionCoupon = array(
+                'coupon_no' => 0,
+                'category' => $request->category
+            );
+            
+            $request->session()->get('coupon');
+            $coupon = new Coupon();
+            $coupon->fill($optionCoupon);
+            $request->session()->put('coupon', $coupon);
+
+        }else{
+
+            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+            $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+            $request->img_name->move(public_path('assets/files/coupons'), $imagename);
+
+            $optionCoupon = array(
+                'coupon_no' => 0,
+                'img_name' => $coupon_image,
+                'category' => $request->category
+            );
+            
+            $request->session()->get('coupon');
+            $coupon = new Coupon();
+            $coupon->fill($optionCoupon);
+            $request->session()->put('coupon', $coupon);
+
+        }
     
         return redirect('choose-booth');
     }
