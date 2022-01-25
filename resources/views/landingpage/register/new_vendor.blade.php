@@ -173,7 +173,7 @@
                             <em style="font-size: 10pt;">File format: png, jpeg</em>
                         </div>
                         <div id="newRow"></div>
-                        <button id="addRow" type='button' class='btn'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
+                        <button id="addRow" type='button' class='btn-sm'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
                     </div>
                 </div>
 
@@ -199,8 +199,8 @@
         html += '<div class="input-group-append">';
         html += '<button id="removeRow" type="button" class="btn btn-danger btn-sm"><i class="bi bi-x-lg"></i></button>';
         html += '</div>';
-        html += '<em style="font-size: 10pt;">File format: png, jpeg</em>';
         html += '</div>';
+        html += '<em style="font-size: 10pt;">File format: png, jpeg</em>';
         html += '</div>';
 
         $('#newRow').append(html);
