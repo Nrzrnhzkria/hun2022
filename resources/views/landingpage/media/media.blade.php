@@ -22,7 +22,7 @@
         @foreach ($medias as $media)
         <div class="col-md-12">
             <a href="{{ url('media') }}/{{ $media->id }}" class="text-dark text-decoration-none">
-                <div class="card mb-3">
+                <div class="card shadow mb-3">
                     <div class="row g-0">
                         <div class="col-md-4">
                             <img src="{{ $media->img_name }}" class="img-fluid rounded-start" style="width:6rem; height:6rem" alt="...">
