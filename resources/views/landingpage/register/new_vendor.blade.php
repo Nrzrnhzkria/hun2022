@@ -13,7 +13,7 @@
         <form action="{{ url('new-registration/store') }}" method="POST" enctype="multipart/form-data">
         @csrf
     
-            <div class="card py-4">
+            <div class="card px-4 py-4">
                 <ul class="nav nav-tabs px-2 py-2">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Step 1</a>
