@@ -169,7 +169,7 @@
                     <div class="col-md-6 pb-2">
                         <label for="formFileMultiple" class="form-label">Coupon:</label>
                         <div id="inputFormRow">
-                            <input class="form-control form-control-sm" type="file" name="img_name[]" value="{{ $coupon->img_name ?? '' }}" id="formFile">
+                            <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile">
                             <em style="font-size: 10pt;">File format: png, jpeg</em>
                         </div>
                         <div id="newRow"></div>

@@ -144,13 +144,21 @@ class VendorController extends Controller
 
         }else{
 
-            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-            $request->img_name->move(public_path('assets/files/coupons'), $imagename);
+            $files = [];
+            if($request->hasfile('img_name'))
+            {
+                foreach($request->file('img_name') as $file)
+                {
+                    $imagename = 'img_' . uniqid().'.'.$file->extension();
+                    $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+                    $file->move(public_path('assets/files/coupons'), $imagename);
+                    $files[] = $coupon_image;
+                }            
+            }
 
             $optionCoupon = array(
                 'coupon_no' => 0,
-                'img_name' => $coupon_image,
+                'img_name' => $files,
                 'category' => $request->category
             );
             
@@ -161,7 +169,8 @@ class VendorController extends Controller
 
         }
     
-        return redirect('choose-booth');
+        dd($coupon);
+        // return redirect('choose-booth');
     }
     
     public function booth(Request $request)
