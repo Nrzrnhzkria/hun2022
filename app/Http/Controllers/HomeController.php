@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\HUNNews;
+use App\Models\Media;
 
 class HomeController extends Controller
 {
@@ -57,7 +58,14 @@ class HomeController extends Controller
 
     public function media()
     {
-        return view('landingpage.media');
+        $medias = Media::orderBy('id', 'desc')->get();
+        return view('landingpage.media.media', compact('medias'));
+    }
+
+    public function readmedia($media_id)
+    {
+        $media_id = Media::where('id', $media_id)->first();
+        return view('landingpage.media.readmedia', compact('media'));
     }
     
     public function contact()
