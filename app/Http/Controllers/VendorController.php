@@ -153,23 +153,24 @@ class VendorController extends Controller
                     $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
                     $file->move(public_path('assets/files/coupons'), $imagename);
                     $files[] = $coupon_image;
+
+                    $optionCoupon = array(
+                        'coupon_no' => 0,
+                        'img_name' => $files,
+                        'category' => $request->category
+                    );
+                    
+                    $request->session()->get('coupon');
+                    $coupon = new Coupon();
+                    $coupon->fill($optionCoupon);
+                    $request->session()->put('coupon', $coupon);
                 }            
             }
 
-            $optionCoupon = array(
-                'coupon_no' => 0,
-                'img_name' => $files,
-                'category' => $request->category
-            );
-            
-            $request->session()->get('coupon');
-            $coupon = new Coupon();
-            $coupon->fill($optionCoupon);
-            $request->session()->put('coupon', $coupon);
-
         }
     
-        return redirect('choose-booth');
+        dd($coupon);
+        // return redirect('choose-booth');
     }
     
     public function booth(Request $request)
