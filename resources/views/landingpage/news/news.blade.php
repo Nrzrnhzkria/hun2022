@@ -9,7 +9,7 @@
 <style>
 .card:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);    
-    transform: scale(1.03);
+    transform: scale(1.01);
     background-color: orange;
 }
 </style>
@@ -22,12 +22,12 @@
         @foreach ($news as $new)
         <div class="col-md-12">
             <a href="{{ url('news') }}/{{ $new->id }}" class="text-dark text-decoration-none">
-                <div class="card mb-3">
+                <div class="card shadow mb-3">
                     <div class="row g-0">
-                        <div class="col-md-4">
+                        <div class="col-md-1">
                             <img src="{{ $new->img_name }}" class="img-fluid rounded-start" alt="...">
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-11">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $new->title }}</h5>
                                 <p class="card-text">{{ $new->teaser}}</p>
