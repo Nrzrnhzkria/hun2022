@@ -15,11 +15,14 @@ class CreateSeminarQrTable extends Migration
     {
         Schema::create('seminar_qr', function (Blueprint $table) {
             $table->id();
+            $table->string('seminar_name'); 
             $table->string('location_name'); 
             $table->string('qr_value')->nullable(); 
             $table->date('seminar_date');
             $table->time('time_start');
             $table->time('time_end');
+            $table->smallInteger('max_participant'); 
+            $table->smallInteger('registered_participant')->default('0'); 
             $table->timestamps();
         });
     }
