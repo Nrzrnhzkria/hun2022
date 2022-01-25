@@ -160,8 +160,6 @@ class VendorController extends Controller
                     $coupon = new Coupon();
                     $coupon->fill($optionCoupon);
                     $request->session()->put('coupon', $coupon);
-       
-                    dd($coupon);
 
                     // Image::create([
                     //     'name' => $name,
@@ -187,7 +185,7 @@ class VendorController extends Controller
 
         }
     
-        // return redirect('choose-booth');
+        return redirect('choose-booth');
     }
     
     public function booth(Request $request)
@@ -197,7 +195,8 @@ class VendorController extends Controller
         $coupon = $request->session()->get('coupon');
         $payment = $request->session()->get('payment');
   
-        return view('landingpage.register.new_booth',compact('vendor', 'details', 'coupon'));
+        dd($coupon);
+        // return view('landingpage.register.new_booth',compact('vendor', 'details', 'coupon'));
     }
 
     public function store_booth(Request $request)
