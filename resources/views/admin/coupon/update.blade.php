@@ -20,7 +20,9 @@
                     <form action="{{ url('edit-coupon') }}/{{ $coupons->id }}" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
                         <div class="col-md-12 text-center mb-3">
-                            <img src="{{ $coupons->img_name }}" width="300rem">
+                            @foreach ($coupons as $value)
+                                <img src="{{ $value->img_name }}" width="300rem">
+                            @endforeach
                         </div>
 
                         <div class="row g-2 mb-3">
