@@ -62,7 +62,7 @@ class DashboardController extends Controller
         $vendor = User::where('id', $vendor_id);
         
         $vendor->delete();
-        return redirect('users')->with('deletevendor','Vendor has been deleted successfully.');
+        return redirect('vendors')->with('deletevendor','Vendor has been deleted successfully.');
     }
 
     public function users()
