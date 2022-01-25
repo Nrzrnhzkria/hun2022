@@ -20,8 +20,7 @@
             <br>
             <h5>Tel : 03 - 4141 8311</h5>
             <h5>Mobile : 019 - 716 9628 / 013 - 292 2950</h5>
-            <h5>Email : dahniaga@gmail.com</h5>
-            <h5>Website : www.hun22.com.my</h5>
+            <h5>Email : info.hun22@gmail.com</h5>
 
         </div>
         
