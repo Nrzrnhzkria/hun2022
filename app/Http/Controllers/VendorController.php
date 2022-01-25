@@ -143,30 +143,20 @@ class VendorController extends Controller
             $request->session()->put('coupon', $coupon);
 
         }else{
-            if ($request->hasfile('img_name')) {
-                $images = $request->file('img_name');
-    
-                foreach($images as $image) {
-                    $name = 'img_' . uniqid().'.'.$image->getClientOriginalName();
-                    $path = $image->storeAs('uploads/coupon', $name, 'public');
-    
-                    $optionCoupon = array(
-                        'coupon_no' => 0,
-                        'img_name' => '/storage/'.$path,
-                        'category' => $request->category
-                    );
-                    
-                    $request->session()->get('coupon');
-                    $coupon = new Coupon();
-                    $coupon->fill($optionCoupon);
-                    $request->session()->put('coupon', $coupon);
-
-                    // Image::create([
-                    //     'name' => $name,
-                    //     'path' => '/storage/'.$path
-                    //   ]);
+            
+            if($request->hasfile('images'))
+            {
+                foreach($request->file('img_name') as $key => $file)
+                {
+                    $path = $file->store('public/img/coupon');
+                    $name = $file->getClientOriginalName();
+                    $insert[$key]['coupon_no'] = 0;
+                    $insert[$key]['img_name'] = $path;
+                    $insert[$key]['category'] = $request->category;
                 }
             }
+
+            // Image::insert($insert);
 
             // $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
             // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
@@ -178,14 +168,15 @@ class VendorController extends Controller
             //     'category' => $request->category
             // );
             
-            // $request->session()->get('coupon');
-            // $coupon = new Coupon();
-            // $coupon->fill($optionCoupon);
-            // $request->session()->put('coupon', $coupon);
+            $request->session()->get('coupon');
+            $coupon = new Coupon();
+            $coupon->fill($insert);
+            $request->session()->put('coupon', $coupon);
 
         }
     
-        return redirect('choose-booth');
+        dd($coupon);
+        // return redirect('choose-booth');
     }
     
     public function booth(Request $request)
@@ -195,8 +186,7 @@ class VendorController extends Controller
         $coupon = $request->session()->get('coupon');
         $payment = $request->session()->get('payment');
   
-        dd($coupon);
-        // return view('landingpage.register.new_booth',compact('vendor', 'details', 'coupon'));
+        return view('landingpage.register.new_booth',compact('vendor', 'details', 'coupon'));
     }
 
     public function store_booth(Request $request)
