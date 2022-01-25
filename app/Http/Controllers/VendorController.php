@@ -156,17 +156,18 @@ class VendorController extends Controller
                         'category' => $request->category
                     );
                     
-                    $request->session()->get('coupon');
-                    $coupon = new Coupon();
-                    $coupon->fill($optionCoupon);
-                    $request->session()->put('coupon', $coupon);
 
                     // Image::create([
                     //     'name' => $name,
                     //     'path' => '/storage/'.$path
                     //   ]);
                 }
-             }
+            }
+            
+            $request->session()->get('coupon');
+            $coupon = new Coupon();
+            $coupon->fill($optionCoupon);
+            $request->session()->put('coupon', $coupon);
 
             // $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
             // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
