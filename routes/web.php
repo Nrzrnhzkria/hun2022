@@ -57,6 +57,13 @@ Route::get('coupon', 'CouponController@coupon');
 Route::get('update-coupon/{coupon_id}', 'CouponController@update_coupon');
 Route::post('edit-coupon/{coupon_id}', 'CouponController@edit_coupon');
 Route::get('delete-coupon/{coupon_id}', 'CouponController@destroy_coupon');
+// Media Management
+Route::get('admin-media', 'MediaController@media');
+Route::get('create-media', 'MediaController@create_media');
+Route::post('store-media', 'MediaController@store_media');
+Route::get('update-media/{media_id}', 'MediaController@update_media');
+Route::post('edit-media/{media_id}', 'MediaController@edit_media');
+Route::get('delete-media/{media_id}', 'MediaController@destroy_media');
 // News Management
 Route::get('admin-news', 'HUNNewsController@news');
 Route::get('create-news', 'HUNNewsController@create_news');
