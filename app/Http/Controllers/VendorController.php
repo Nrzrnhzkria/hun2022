@@ -145,31 +145,27 @@ class VendorController extends Controller
         }else{
 
             $files = [];
-            if($request->hasfile('img_name'))
+        if($request->hasfile('filenames'))
+         {
+            foreach($request->file('filenames') as $file)
             {
-                foreach($request->file('img_name') as $file)
-                {
-                    $imagename = 'img_' . uniqid().'.'.$file->extension();
-                    $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-                    $file->move(public_path('assets/files/coupons'), $imagename);
-                    $files[] = $coupon_image;
+            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+            $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+            $request->img_name->move(public_path('assets/files/coupons'), $imagename);
 
-                    $optionCoupon = array(
-                        'coupon_no' => 0,
-                        'img_name' => $files,
-                        'category' => $request->category
-                    );
-                    
-                    $request->session()->get('coupon');
-                    $coupon = new Coupon();
-                    $coupon->fill($optionCoupon);
-                    $request->session()->put('coupon', $coupon);
-                }            
-            }
+            $optionCoupon = array(
+                'coupon_no' => 0,
+                'img_name' => $coupon_image,
+                'category' => $request->category
+            );
+            
+            $request->session()->get('coupon');
+            $coupon = new Coupon();
+            $coupon->fill($optionCoupon);
+            $request->session()->put('coupon', $coupon);
 
         }
     
-        // dd($coupon);
         return redirect('choose-booth');
     }
     
