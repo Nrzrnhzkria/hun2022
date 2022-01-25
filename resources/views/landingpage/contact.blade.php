@@ -13,14 +13,16 @@
         </div>
         <div class="col-md-5 pt-5 pb-3">
             
-            <h3>No 30-2, Jalan 9/23A, 
-            <br>Off Jalan Usahawan, 
-            <br>53200 Setapak, 
-            <br>Kuala Lumpur.</h3>
-            <br>
-            <h5>Tel : 03 - 4141 8311</h5>
-            <h5>Mobile : 019 - 716 9628 / 013 - 292 2950</h5>
-            <h5>Email : info.hun22@gmail.com</h5>
+            <div class="card shadow p-4" style="background-color: orange">
+                <h3>No 30-2, Jalan 9/23A, 
+                <br>Off Jalan Usahawan, 
+                <br>53200 Setapak, 
+                <br>Kuala Lumpur.</h3>
+                <br>
+                <h5>Tel : 03 - 4141 8311</h5>
+                <h5>Mobile : 019 - 716 9628 / 013 - 292 2950</h5>
+                <h5>Email : info.hun22@gmail.com</h5>
+            </div>
 
         </div>
         
