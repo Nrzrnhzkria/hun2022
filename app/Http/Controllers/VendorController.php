@@ -58,13 +58,21 @@ class VendorController extends Controller
 
     public function store(Request $request)
     {
-        $validatedVendor = $request->validate([
+        $datavalidation = $request->validate([
             'name' => 'required',
             'email'=> 'required|unique:users,email',
             'password'=> 'required',
             'ic_no' => 'required',
             'phone_no' => 'required',
-            'role'=> 'required'
+            'role'=> 'required',
+            'company_name'=> 'required',
+            'designation' => 'required',
+            'nationality'=> 'required',
+            'company_address'=> 'required',
+            'business_nature' => 'required',
+            'product_details' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
+            'ssm_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
+            'vaccine_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048'
         ]);
 
         $vendorData = array(
@@ -76,16 +84,8 @@ class VendorController extends Controller
             'role' => $request->role
         );
 
-        $validatedDetails = $request->validate([
-            'company_name'=> 'required',
-            'designation' => 'required',
-            'nationality'=> 'required',
-            'company_address'=> 'required',
-            'business_nature' => 'required',
-            'product_details' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
-            'ssm_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
-            'vaccine_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048'
-        ]);
+        // $validatedDetails = $request->validate([
+        // ]);
 
         $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
         $details_path = 'https://hariusahawannegara.com.my/assets/files/product_details/' . $product_details;
