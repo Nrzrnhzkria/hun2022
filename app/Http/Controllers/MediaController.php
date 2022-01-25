@@ -42,7 +42,7 @@ class MediaController extends Controller
             'title' => $request->title,
             'content' => $request->content,
             'teaser' => $request->teaser,
-            'img_name' => $news_image,
+            'img_name' => $media_image,
         ]);
 
         return redirect('admin-media')->with('addmedia','Media has been created successfully.');
