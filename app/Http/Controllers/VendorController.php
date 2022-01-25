@@ -144,11 +144,6 @@ class VendorController extends Controller
 
         }else{
 
-            $files = [];
-        if($request->hasfile('filenames'))
-         {
-            foreach($request->file('filenames') as $file)
-            {
             $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
             $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
             $request->img_name->move(public_path('assets/files/coupons'), $imagename);
