@@ -28,7 +28,7 @@
         
         <div class="col-md-12">
             <div class="float-right pt-3">{{ $coupons->links() }}</div>
-            {{-- @if(count($coupons) > 0) --}}
+            @if(count($coupons) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
@@ -57,9 +57,9 @@
                     </tbody>
                 </table>
             </div>
-            {{-- @else
+            @else
               <p>There are no coupon to display.</p>
-            @endif --}}
+            @endif
         </div>
     </div>
     
