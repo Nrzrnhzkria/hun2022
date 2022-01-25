@@ -16,21 +16,21 @@
                     <a class="nav-link text-dark" href="/dashboard"><i class="bi bi-house-door-fill"></i></a>
                 </li>
                 
-                @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin' || Auth::user()->role == 'advisor')
+                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin' || Auth::user()->role == 'Advisor')
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/coupon">Coupon</a>
                 </li>
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin')
+                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin')
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/admin-news">News</a>
                 </li>
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin' || Auth::user()->role == 'advisor')
+                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin' || Auth::user()->role == 'Advisor')
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Seminar
@@ -43,14 +43,14 @@
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'superadmin' || Auth::user()->role == 'admin')
+                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin')
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/vendors">Vendor</a>
                 </li>
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'superadmin')
+                @if(Auth::user()->role == 'Superadmin')
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User
@@ -64,7 +64,7 @@
                 </li>
                 @else
                 @endif 
-                @if(Auth::user()->role == 'admin')
+                @if(Auth::user()->role == 'Admin')
                 <li class="nav-item dropdown">
                     <a class="nav-link text-dark dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         User
