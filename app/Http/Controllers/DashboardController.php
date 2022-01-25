@@ -65,46 +65,6 @@ class DashboardController extends Controller
         return redirect('vendors')->with('deletevendor','Vendor has been deleted successfully.');
     }
 
-    public function users()
-    {
-        $users = User::orderBy('id', 'desc')->where('role', 'User')->orwhere('role', 'Member')->paginate(10);
-        $totaluser = User::where('role', 'User')->count();
-        $member = User::where('role', 'Member')->count();
-        $nonmember = User::where('role', 'User')->count();
-
-        return view('admin.users.view', compact('users', 'member','nonmember'));
-    }
-
-    public function update_user($user_id)
-    {
-        $user = User::where('id', $user_id)->first();
-
-        return view('admin.users.update', compact('user')); 
-    }
-
-    public function edit_user($user_id, Request $request)
-    {
-        $user = User::where('id', $user_id)->first();
-
-        $user->hun_id = $request->hun_id;
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = Hash::make($request['password']);
-        $user->phone_no = $request->phone_no;
-        $user->ic_no = $request->ic_no;
-        $user->role = $request->role;
-        $user->save();
-
-        return redirect('users')->with('updatesuccess','User has been updated successfully.'); 
-    }
-
-    public function destroy_user($user_id){
-        $user = User::where('id', $user_id);
-        
-        $user->delete();
-        return redirect('users')->with('deleteuser','User has been deleted successfully.');
-    }
-
     public function admins()
     {
         $admins = User::orderBy('id', 'desc')->where('role', 'superadmin')->orWhere('role', 'admin')->orWhere('role', 'advisor')->paginate(10);
@@ -157,6 +117,46 @@ class DashboardController extends Controller
     }
 
     public function destroy_admin($user_id){
+        $user = User::where('id', $user_id);
+        
+        $user->delete();
+        return redirect('users')->with('deleteuser','User has been deleted successfully.');
+    }
+
+    public function users()
+    {
+        $users = User::orderBy('id', 'desc')->where('role', 'User')->orwhere('role', 'Member')->paginate(10);
+        $totaluser = User::where('role', 'User')->count();
+        $member = User::where('role', 'Member')->count();
+        $nonmember = User::where('role', 'User')->count();
+
+        return view('admin.users.view', compact('users', 'member','nonmember'));
+    }
+
+    public function update_user($user_id)
+    {
+        $user = User::where('id', $user_id)->first();
+
+        return view('admin.users.update', compact('user')); 
+    }
+
+    public function edit_user($user_id, Request $request)
+    {
+        $user = User::where('id', $user_id)->first();
+
+        $user->hun_id = $request->hun_id;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request['password']);
+        $user->phone_no = $request->phone_no;
+        $user->ic_no = $request->ic_no;
+        $user->role = $request->role;
+        $user->save();
+
+        return redirect('users')->with('updatesuccess','User has been updated successfully.'); 
+    }
+
+    public function destroy_user($user_id){
         $user = User::where('id', $user_id);
         
         $user->delete();
