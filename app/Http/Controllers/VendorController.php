@@ -143,39 +143,28 @@ class VendorController extends Controller
             $request->session()->put('coupon', $coupon);
 
         }else{
-            
-            if($request->hasfile('images'))
-            {
-                foreach($request->file('img_name') as $key => $file)
-                {
-                    $path = $file->store('public/img/coupon');
-                    $name = $file->getClientOriginalName();
-                    $insert[$key]['coupon_no'] = 0;
-                    $insert[$key]['img_name'] = $path;
-                    $insert[$key]['category'] = $request->category;
-            
-            $request->session()->get('coupon');
-            $coupon = new Coupon();
-            $coupon->fill($insert);
-            $request->session()->put('coupon', $coupon);
-        dd($coupon);
-                }
+
+            foreach($request->img_name as $keys => $values) {
+
+                $imagename = 'img_' . uniqid().'.'.$values->extension();
+                $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+                $values->move(public_path('assets/files/coupons'), $imagename);
+
+                $optionCoupon = array(
+                    'coupon_no' => 0,
+                    'img_name' => $coupon_image,
+                    'category' => $request->category
+                );
+                
+                $request->session()->get('coupon');
+                $coupon = new Coupon();
+                $coupon->fill($optionCoupon);
+                $request->session()->put('coupon', $coupon);
             }
-
-            // Image::insert($insert);
-
-            // $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-            // $request->img_name->move(public_path('assets/files/coupons'), $imagename);
-
-            // $optionCoupon = array(
-            //     'coupon_no' => 0,
-            //     'img_name' => $coupon_image,
-            //     'category' => $request->category
-            // );
 
         }
     
+        dd($coupon);
         // return redirect('choose-booth');
     }
     
