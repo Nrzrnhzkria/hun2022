@@ -32,6 +32,11 @@ class HUNNewsController extends Controller
         $news_image = 'https://hariusahawannegara.com.my/assets/img/news/' . $imagename;
         $request->img_name->move(public_path('assets/img/news'), $imagename);
 
+        $this->validate($request, [
+            'title' => 'required|string|max:100',
+            'teaser' => 'required|string|max:250',
+        ]);
+
         HUNNews::create([
             'user_id' => $user_id,
             'title' => $request->title,
