@@ -35,7 +35,9 @@ class SeminarQRController extends Controller
     public function store_qr(Request $request)
     {
         SeminarQR::create([
+            'seminar_name' => $request->seminar_name,
             'location_name' => $request->location_name,
+            'max_participant' => $request->max_participant,
             'qr_value' => $request->qr_value,
             'seminar_date' => $request->seminar_date,
             'time_start' => $request->time_start,
@@ -56,7 +58,9 @@ class SeminarQRController extends Controller
     {
         $qr = SeminarQR::where('id', $qr_id)->first();
 
+        $qr->seminar_name = $request->seminar_name;
         $qr->location_name = $request->location_name;
+        $qr->max_participant = $request->max_participant;
         $qr->qr_value = $request->qr_value;
         $qr->seminar_date = $request->seminar_date;
         $qr->time_start = $request->time_start;

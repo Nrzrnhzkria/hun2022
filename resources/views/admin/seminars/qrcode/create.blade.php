@@ -16,14 +16,42 @@
                 <div class="card-body">
                     <form method="POST" action="{{ url('store-qr') }}">
                         @csrf
+                        
+                        <div class="row mb-3">
+                            <label for="seminar_name" class="col-md-4 col-form-label text-md-end">Seminar Name</label>
+
+                            <div class="col-md-6">
+                                <input id="seminar_name" type="text" class="form-control @error('seminar_name') is-invalid @enderror" name="seminar_name" required autofocus>
+
+                                @error('seminar_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <label for="location_name" class="col-md-4 col-form-label text-md-end">Location Name</label>
 
                             <div class="col-md-6">
-                                <input id="location_name" type="text" class="form-control @error('location_name') is-invalid @enderror" name="location_name" required autofocus>
+                                <input id="location_name" type="text" class="form-control @error('location_name') is-invalid @enderror" name="location_name" required>
 
                                 @error('location_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="max_participant" class="col-md-4 col-form-label text-md-end">Maximum participant</label>
+
+                            <div class="col-md-6">
+                                <input id="max_participant" type="text" class="form-control @error('max_participant') is-invalid @enderror" name="max_participant" required>
+
+                                @error('max_participant')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
