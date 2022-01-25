@@ -143,21 +143,45 @@ class VendorController extends Controller
             $request->session()->put('coupon', $coupon);
 
         }else{
+            if ($request->hasfile('img_name')) {
+                $images = $request->file('img_name');
+    
+                foreach($images as $image) {
+                    $name = 'img_' . uniqid().'.'.$image->getClientOriginalName();
+                    $path = $image->storeAs('uploads/coupon', $name, 'public');
+    
+                    $optionCoupon = array(
+                        'coupon_no' => 0,
+                        'img_name' => '/storage/'.$path,
+                        'category' => $request->category
+                    );
+                    
+                    $request->session()->get('coupon');
+                    $coupon = new Coupon();
+                    $coupon->fill($optionCoupon);
+                    $request->session()->put('coupon', $coupon);
 
-            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-            $request->img_name->move(public_path('assets/files/coupons'), $imagename);
+                    // Image::create([
+                    //     'name' => $name,
+                    //     'path' => '/storage/'.$path
+                    //   ]);
+                }
+             }
 
-            $optionCoupon = array(
-                'coupon_no' => 0,
-                'img_name' => $coupon_image,
-                'category' => $request->category
-            );
+            // $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+            // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+            // $request->img_name->move(public_path('assets/files/coupons'), $imagename);
+
+            // $optionCoupon = array(
+            //     'coupon_no' => 0,
+            //     'img_name' => $coupon_image,
+            //     'category' => $request->category
+            // );
             
-            $request->session()->get('coupon');
-            $coupon = new Coupon();
-            $coupon->fill($optionCoupon);
-            $request->session()->put('coupon', $coupon);
+            // $request->session()->get('coupon');
+            // $coupon = new Coupon();
+            // $coupon->fill($optionCoupon);
+            // $request->session()->put('coupon', $coupon);
 
         }
     
