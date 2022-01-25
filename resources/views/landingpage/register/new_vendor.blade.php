@@ -171,9 +171,6 @@
                         <div id="inputFormRow">
                             <input class="form-control form-control-sm" type="file" name="img_name[]" value="{{ $coupon->img_name ?? '' }}" id="formFile">
                             <em style="font-size: 10pt;">File format: png, jpeg</em>
-                            <div class="input-group-append">                
-                                <button id="removeRow" type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>
-                            </div>
                         </div>
                         <div id="newRow"></div>
                         <button id="addRow" type='button' class='btn'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
@@ -200,7 +197,7 @@
         html += '<div class="input-group mb-3">';
         html += '<input type="file" name="img_name[]" class="form-control form-control-sm" id="formFile">';
         html += '<div class="input-group-append">';
-        html += '<button id="removeRow" type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>';
+        html += '<button id="removeRow" type="button" class="btn btn-danger btn-sm"><i class="bi bi-x-lg"></i></button>';
         html += '</div>';
         html += '</div>';
         html += '</div>';
