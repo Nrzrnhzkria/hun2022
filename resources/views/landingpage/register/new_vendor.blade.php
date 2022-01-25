@@ -41,7 +41,7 @@
                     <div class="row p-3">
 
                         {{-- <input type="hidden" value="{{ $vendor_id ?? '' }}" class="form-control form-control-sm" name="user_id" readonly/> --}}
-                        <input type="hidden" value="{{ $details_id ?? '' }}" class="form-control form-control-sm" name="details_id" readonly/>
+                        {{-- <input type="hidden" value="{{ $details_id ?? '' }}" class="form-control form-control-sm" name="details_id" readonly/> --}}
                         <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
 
                         <div class="col-md-12 pb-2">
@@ -121,19 +121,19 @@
                         <div class="col-md-6 pb-2">
                             <label for="formFile" class="form-label">Details of Displayed Product:<span class="text-danger">*</span></label>
                             <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details ?? '' }}" id="formFile">
-                            <em>File format: docx, csv, txt, xlx, xls, pdf</em>
+                            <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
                         </div>
 
                         <div class="col-md-6 pb-2">
                             <label for="formFile" class="form-label">SSM Certificate:<span class="text-danger">*</span></label>
                             <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert ?? '' }}" id="formFile">
-                            <em>File format: png, jpeg</em>
+                            <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
                         </div>
 
                         <div class="col-md-6 pb-2">
                             <label for="formFile" class="form-label">Vaccine Certificate:<span class="text-danger">*</span></label>
                             <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert ?? '' }}" id="formFile">
-                            <em>File format: png, jpeg</em>
+                            <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
                         </div>
 
                         <div class="col-md-6 pb-2">
@@ -164,7 +164,7 @@
                         <div class="col-md-6 pb-2">
                             <label for="formFileMultiple" class="form-label">Coupon:</label>
                             <input class="form-control form-control-sm" type="file" name="img_name" value="{{ $coupon->img_name ?? '' }}" id="formFile" multiple>
-                            <em>File format: png, jpeg</em>
+                            <em style="font-size: 10pt;">File format: png, jpeg</em>
                         </div>
                         
                     </div>

@@ -50,10 +50,10 @@ class VendorController extends Controller
 
         // generate id
         // $vendor_id = 'VND'.uniqid();
-        $details_id = 'DID'.uniqid();
-        $coupon_id = 'CID'.uniqid();
+        // $details_id = 'DID'.uniqid();
+        // $coupon_id = 'CID'.uniqid();
   
-        return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic', 'details_id', 'coupon_id'));
+        return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic'));
     }
 
     public function store(Request $request)
@@ -83,21 +83,29 @@ class VendorController extends Controller
             'company_address'=> 'required',
             'business_nature' => 'required',
             'product_details' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
-            'ssm_cert' => 'required|mimes:png,jpg|max:2048',
-            'vaccine_cert' => 'required|mimes:png,jpg|max:2048'
+            'ssm_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
+            'vaccine_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048'
         ]);
 
         $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
         $details_path = 'https://hariusahawannegara.com.my/assets/files/product_details/' . $product_details;
         $request->file('product_details')->move(public_path('assets/files/product_details') . $product_details);
 
-        $ssm_image = 'img_' . uniqid().'.'.$request->ssm_cert->extension();
-        $ssm_cert = 'https://hariusahawannegara.com.my/assets/files/ssm/' . $ssm_image;
-        $request->ssm_cert->move(public_path('assets/files/ssm'), $ssm_image);
+        $ssm_image = 'file_' . uniqid() . $request->file('ssm_cert')->getClientOriginalName();
+        $ssm_cert = 'https://hariusahawannegara.com.my/assets/files/ssm_cert/' . $ssm_image;
+        $request->file('ssm_cert')->move(public_path('assets/files/ssm_cert') . $ssm_image);
+
+        $vaccine_image = 'file_' . uniqid() . $request->file('vaccine_cert')->getClientOriginalName();
+        $vaccine_cert = 'https://hariusahawannegara.com.my/assets/files/vaccine_cert/' . $vaccine_image;
+        $request->file('vaccine_cert')->move(public_path('assets/files/vaccine_cert') . $vaccine_image);
+
+        // $ssm_image = 'img_' . uniqid().'.'.$request->ssm_cert->extension();
+        // $ssm_cert = 'https://hariusahawannegara.com.my/assets/files/ssm/' . $ssm_image;
+        // $request->ssm_cert->move(public_path('assets/files/ssm'), $ssm_image);
         
-        $vaccine_image = 'img_' . uniqid().'.'.$request->vaccine_cert->extension();
-        $vaccine_cert = 'https://hariusahawannegara.com.my/assets/files/vaccine/' . $vaccine_image;
-        $request->vaccine_cert->move(public_path('assets/files/vaccine'), $vaccine_image);
+        // $vaccine_image = 'img_' . uniqid().'.'.$request->vaccine_cert->extension();
+        // $vaccine_cert = 'https://hariusahawannegara.com.my/assets/files/vaccine/' . $vaccine_image;
+        // $request->vaccine_cert->move(public_path('assets/files/vaccine'), $vaccine_image);
 
         $detailsData = array(
             'company_name' => $request->company_name,
