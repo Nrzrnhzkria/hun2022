@@ -144,20 +144,23 @@ class VendorController extends Controller
 
         }else{
 
-            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-            $request->img_name->move(public_path('assets/files/coupons'), $imagename);
-
-            $optionCoupon = array(
-                'coupon_no' => 0,
-                'img_name' => $coupon_image,
-                'category' => $request->category
-            );
+            foreach($request->img_name as $keys => $values) {
+                $imagename = 'img_' . uniqid().'.'.$values->extension();
+                $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+                $values->move(public_path('assets/files/coupons'), $imagename);
             
-            $request->session()->get('coupon');
-            $coupon = new Coupon();
-            $coupon->fill($optionCoupon);
-            $request->session()->put('coupon', $coupon);
+                $optionCoupon = array(
+                    'coupon_no' => 0,
+                    'img_name' => $coupon_image,
+                    'category' => $request->category
+                );
+                
+                $request->session()->get('coupon');
+                $coupon = new Coupon();
+                $coupon->fill($optionCoupon);
+                $request->session()->put('coupon', $coupon);
+
+            }
 
         }
     
