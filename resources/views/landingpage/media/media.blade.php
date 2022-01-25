@@ -24,10 +24,10 @@
             <a href="{{ url('media') }}/{{ $media->id }}" class="text-dark text-decoration-none">
                 <div class="card shadow mb-3">
                     <div class="row g-0">
-                        <div class="col-md-2">
+                        <div class="col-md-1">
                             <img src="{{ $media->img_name }}" class="img-fluid rounded-start" alt="...">
                         </div>
-                        <div class="col-md-10">
+                        <div class="col-md-11">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $media->title }}</h5>
                                 <p class="card-text">{{ $media->teaser}}</p>
