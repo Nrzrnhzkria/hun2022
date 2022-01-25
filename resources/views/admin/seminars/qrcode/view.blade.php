@@ -45,7 +45,7 @@
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Location Name</th>
+                            <th scope="col">Seminar Name</th>
                             <th scope="col">Date</th>
                             <th scope="col">QR Code</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
@@ -55,7 +55,7 @@
                         @foreach ($seminarsqr as $key => $seminarqr)
                         <tr>
                             <th scope="row">{{ $seminarsqr->firstItem() + $key }}</th>
-                            <td>{{ $seminarqr->location_name }}</td>
+                            <td>{{ $seminarqr->seminar_name }}</td>
                             <td>{{ $seminarqr->seminar_date }}</td>
                             <td>
                                 {{-- {{ route('qrcode.download', [ 'type' => 'png' ])}} <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->errorCorrection('H')->size(50)->generate('codingdriver.com')) !!}" /> --}}
