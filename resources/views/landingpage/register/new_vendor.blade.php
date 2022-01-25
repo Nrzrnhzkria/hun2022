@@ -168,8 +168,15 @@
 
                     <div class="col-md-6 pb-2">
                         <label for="formFileMultiple" class="form-label">Coupon:</label>
-                        <input class="form-control form-control-sm" type="file" name="img_name" value="{{ $coupon->img_name ?? '' }}" id="formFile" multiple>
-                        <em style="font-size: 10pt;">File format: png, jpeg</em>
+                        <div id="inputFormRow">
+                            <input class="form-control form-control-sm" type="file" name="img_name[]" value="{{ $coupon->img_name ?? '' }}" id="formFile">
+                            <em style="font-size: 10pt;">File format: png, jpeg</em>
+                            <div class="input-group-append">                
+                                <button id="removeRow" type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>
+                            </div>
+                        </div>
+                        <div id="newRow"></div>
+                        <button id="addRow" type='button' class='btn'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
                     </div>
                 </div>
 
@@ -183,4 +190,26 @@
         </form>
     </div>
 </div>
+
+<!-- Enable function to add row ------------------------------------------>
+<script type="text/javascript">
+    // add row
+    $("#addRow").click(function () {
+        var html = '';
+        html += '<div id="inputFormRow">';
+        html += '<div class="input-group mb-3">';
+        html += '<input type="file" name="img_name[]" class="form-control form-control-sm" id="formFile">';
+        html += '<div class="input-group-append">';
+        html += '<button id="removeRow" type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>';
+        html += '</div>';
+        html += '</div>';
+
+        $('#newRow').append(html);
+    });
+
+    // remove row
+    $(document).on('click', '#removeRow', function () {
+        $(this).closest('#inputFormRow').remove();
+    });
+</script>
 @endsection
