@@ -23,11 +23,10 @@ class DashboardController extends Controller
         $member = User::Where('role', 'Member')->count();
         $totaluser = $user + $member; // User from mobile apps
 
-        $totaluser = User::where('role', 'User')->count();
         $nonmember = User::where('role', 'User')->count();
         $member = User::where('role', 'Member')->count();
 
-        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser', 'member','nonmember'));
+        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser', 'member', 'nonmember'));
     }
 
     public function vendors()
