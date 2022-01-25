@@ -196,10 +196,10 @@
         html += '<div id="inputFormRow">';
         html += '<div class="input-group mb-3">';
         html += '<input type="file" name="img_name[]" class="form-control form-control-sm" id="formFile">';
-        html += '<em style="font-size: 10pt;">File format: png, jpeg</em>';
         html += '<div class="input-group-append">';
         html += '<button id="removeRow" type="button" class="btn btn-danger btn-sm"><i class="bi bi-x-lg"></i></button>';
         html += '</div>';
+        html += '<em style="font-size: 10pt;">File format: png, jpeg</em>';
         html += '</div>';
         html += '</div>';
 
