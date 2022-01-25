@@ -138,7 +138,7 @@
                     
                 </div>
 
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
+                <div class="fw-bold px-2 py-2" style="background-color: orange">Coupon Details (Optional)</div>
                 
                 <div class="row p-3">                  
                     <div class="col-md-6 pb-2">
