@@ -17,12 +17,12 @@ class DashboardController extends Controller
     public function dashboard()
     {
         $totalcoupon = Coupon::all()->count();
-        $totalvendor = User::where('role','vendor')->count();
+        $totalvendor = User::where('role','Vendor')->count();
         $totaluser = User::all()->count();
 
-        $totalappsuser = User::where('role', 'user')->count();
-        $nonmember = User::where('role', 'user')->where('hun_id', NULL)->count();
-        $member = $totalappsuser - $nonmember;
+        $totalappsuser = User::where('role', 'User')->count();
+        $nonmember = User::where('role', 'User')->count();
+        $member = User::where('role', 'Member')->count();
 
         return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser', 'member','nonmember'));
     }

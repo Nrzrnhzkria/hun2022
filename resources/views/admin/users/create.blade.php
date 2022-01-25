@@ -101,12 +101,12 @@
                             <div class="col-md-6">
                                 <select class="form-select" aria-label="Default select example" name="role">
                                     <option disabled selected>-- Please Select --</option>
-                                    <option value="superadmin">Superadmin</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="advisor">Advisor</option>
-                                    <option value="member">Members</option>
-                                    <option value="vendor">Vendor</option>
-                                    <option value="user">User</option>
+                                    <option value="Superadmin">Superadmin</option>
+                                    <option value="Admin">Admin</option>
+                                    <option value="Advisor">Advisor</option>
+                                    <option value="Member">Member</option>
+                                    <option value="Vendor">Vendor</option>
+                                    <option value="User">User</option>
                                 </select>
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">

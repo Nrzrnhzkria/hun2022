@@ -117,12 +117,12 @@
                             <div class="col-md-6">
                                 <select class="form-select" name="role" aria-label="Default select example">
                                     <option class="text-capitalize" value="{{ $user->role }}" selected>{{ $user->role }}</option>
-                                    <option value="superadmin">Superadmin</option>
-                                    <option value="admin">Admin</option>
-                                    <option value="advisor">Advisor</option>
-                                    <option value="members">Members</option>
-                                    <option value="vendor">Vendor</option>
-                                    <option value="user">User</option>
+                                    <option value="Superadmin">Superadmin</option>
+                                    <option value="Admin">Admin</option>
+                                    <option value="Advisor">Advisor</option>
+                                    <option value="Member">Member</option>
+                                    <option value="Vendor">Vendor</option>
+                                    <option value="User">User</option>
                                 </select>
                             </div>
                         </div>
