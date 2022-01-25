@@ -161,7 +161,8 @@ class VendorController extends Controller
 
         }
     
-        return redirect('choose-booth');
+        dd($coupon);
+        // return redirect('choose-booth');
     }
     
     public function booth(Request $request)
