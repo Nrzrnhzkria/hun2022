@@ -30,7 +30,7 @@
 
       <div class="col-md-4 pb-4">
         <div class="card border-0 shadow text-center" style="height: 125px">
-          <h6 class="pt-4">Total User</h6>
+          <h6 class="pt-4">Total Apps User</h6>
           <b class="display-6 pb-3">{{ number_format($totaluser) }}</b>
         </div>
       </div>
