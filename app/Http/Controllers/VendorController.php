@@ -153,6 +153,12 @@ class VendorController extends Controller
                     $insert[$key]['coupon_no'] = 0;
                     $insert[$key]['img_name'] = $path;
                     $insert[$key]['category'] = $request->category;
+            
+            $request->session()->get('coupon');
+            $coupon = new Coupon();
+            $coupon->fill($insert);
+            $request->session()->put('coupon', $coupon);
+        dd($coupon);
                 }
             }
 
@@ -167,15 +173,9 @@ class VendorController extends Controller
             //     'img_name' => $coupon_image,
             //     'category' => $request->category
             // );
-            
-            $request->session()->get('coupon');
-            $coupon = new Coupon();
-            $coupon->fill($insert);
-            $request->session()->put('coupon', $coupon);
 
         }
     
-        dd($coupon);
         // return redirect('choose-booth');
     }
     
