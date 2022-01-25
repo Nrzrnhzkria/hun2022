@@ -143,7 +143,6 @@ class VendorController extends Controller
             $request->session()->put('coupon', $coupon);
 
         }else{
-
             if ($request->hasfile('img_name')) {
                 $images = $request->file('img_name');
     
@@ -151,23 +150,25 @@ class VendorController extends Controller
                     $name = 'img_' . uniqid().'.'.$image->getClientOriginalName();
                     $path = $image->storeAs('uploads/coupon', $name, 'public');
     
+                    $optionCoupon = array(
+                        'coupon_no' => 0,
+                        'img_name' => '/storage/'.$path,
+                        'category' => $request->category
+                    );
+                    
+                    $request->session()->get('coupon');
+                    $coupon = new Coupon();
+                    $coupon->fill($optionCoupon);
+                    $request->session()->put('coupon', $coupon);
+       
+                    dd($coupon);
+
                     // Image::create([
                     //     'name' => $name,
                     //     'path' => '/storage/'.$path
                     //   ]);
                 }
             }
-
-            $optionCoupon = array(
-                'coupon_no' => 0,
-                'img_name' => '/storage/'.$path,
-                'category' => $request->category
-            );
-
-            $request->session()->get('coupon');
-            $coupon = new Coupon();
-            $coupon->fill($optionCoupon);
-            $request->session()->put('coupon', $coupon);
 
             // $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
             // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
@@ -186,7 +187,6 @@ class VendorController extends Controller
 
         }
     
-        dd($coupon);
         // return redirect('choose-booth');
     }
     
