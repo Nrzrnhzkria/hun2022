@@ -18,7 +18,10 @@ class DashboardController extends Controller
     {
         $totalcoupon = Coupon::all()->count();
         $totalvendor = User::where('role','Vendor')->count();
-        $totaluser = User::where('role', 'User')->orWhere('role', 'Member')->count();
+
+        $user = User::where('role', 'User')->count();
+        $member = User::Where('role', 'Member')->count();
+        $totaluser = $user + $member; // User from mobile apps
 
         $totaluser = User::where('role', 'User')->count();
         $nonmember = User::where('role', 'User')->count();
