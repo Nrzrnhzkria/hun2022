@@ -64,7 +64,7 @@ class HomeController extends Controller
 
     public function readmedia($media_id)
     {
-        $media_id = Media::where('id', $media_id)->first();
+        $media = Media::where('id', $media_id)->first();
         return view('landingpage.media.readmedia', compact('media'));
     }
     
