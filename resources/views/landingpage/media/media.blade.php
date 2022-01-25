@@ -25,7 +25,7 @@
                 <div class="card shadow mb-3">
                     <div class="row g-0">
                         <div class="col-md-2">
-                            <img src="{{ $media->img_name }}" class="img-fluid rounded-start" style="width:6rem; height:6rem" alt="...">
+                            <img src="{{ $media->img_name }}" class="img-fluid rounded-start" alt="...">
                         </div>
                         <div class="col-md-10">
                             <div class="card-body">
