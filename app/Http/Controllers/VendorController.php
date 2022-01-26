@@ -8,6 +8,8 @@ use App\Models\User;
 use App\Models\VendorDetails;
 use App\Models\Coupon;
 use App\Models\Membership;
+use App\Models\Booth;
+use App\Models\BoothDetails;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Hash;
 
@@ -44,16 +46,19 @@ class VendorController extends Controller
     public function new_register($get_ic, Request $request)
     {
         $vendor_ic = $get_ic;
-        $vendor = $request->session()->get('users');
-        $details = $request->session()->get('vendor_details');
-        $coupon = $request->session()->get('coupon');
+
+        $booth = Booth::all();
+        $booth_details = BoothDetails::all();
+        // $vendor = $request->session()->get('users');
+        // $details = $request->session()->get('vendor_details');
+        // $coupon = $request->session()->get('coupon');
 
         // generate id
         // $vendor_id = 'VND'.uniqid();
         // $details_id = 'DID'.uniqid();
         // $coupon_id = 'CID'.uniqid();
   
-        return view('landingpage.register.new_vendor', compact('vendor', 'details', 'coupon', 'vendor_ic'));
+        return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'vendor_ic'));
     }
 
     public function store(Request $request)

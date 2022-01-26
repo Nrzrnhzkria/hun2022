@@ -331,18 +331,43 @@ p {
                                     <div class="form-card">
                                         <div class="row">
                                             <div class="col-7">
-                                                <h2 class="fs-title">Personal Information:</h2>
+                                                <h2 class="fs-title">Coupon Details (Optional):</h2>
                                             </div>
                                             <div class="col-5">
                                                 <h2 class="steps">Step 2 - 4</h2>
                                             </div>
                                         </div> 
+                                         
+                                        <label class="fieldlabels">Coupon Category:</label>
+                                        <select name="category">                                 
+                                            <option disabled selected>-- Please Select --</option>
+                                            <option value="Automotive">Automotive</option>
+                                            <option value="Business Support & Supplies">Business Support & Supplies</option>
+                                            <option value="Computers & Electronics">Computers & Electronics</option>
+                                            <option value="Construction & Contractors">Construction & Contractors</option>
+                                            <option value="Education">Education</option>
+                                            <option value="Entertainment">Entertainment</option>
+                                            <option value="Food & Dining">Food & Dining</option>
+                                            <option value="Health & Medicine">Health & Medicine</option>
+                                            <option value="Home & Garden">Home & Garden</option>
+                                            <option value="Legal & Financial">Legal & Financial</option>
+                                            <option value="Manufacturing, Wholesale & Distribution">Manufacturing, Wholesale & Distribution</option>
+                                            <option value="Merchants (Retail)">Merchants (Retail)</option>
+                                            <option value="Miscellaneous">Miscellaneous</option>
+                                            <option value="Personal Care & Services">Personal Care & Services</option>
+                                            <option value="Real Estate">Real Estate</option>
+                                            <option value="Travel & Transportation">Travel & Transportation</option>
+                                        </select> 
                                         
-                                        <label class="fieldlabels">First Name: *</label> 
-                                        <input type="text" name="fname" placeholder="First Name" /> 
+                                        <div id="inputFormRow">
+                                            <label class="fieldlabels">Coupon:</label>
+                                            <input type="file" name="img_name[]" id="formFile" style="margin-bottom:0;" multiple>
+                                            <em style="font-size: 10pt;">File format: png, jpeg</em>
+                                        </div>
+                
+                                        <div id="newRow"></div>
+                                        <button id="addRow" type='button' class='btn btn-sm'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
                                         
-                                        <label class="fieldlabels">Last Name: *</label> 
-                                        <input type="text" name="lname" placeholder="Last Name" /> <label class="fieldlabels">Contact No.: *</label> <input type="text" name="phno" placeholder="Contact No." /> <label class="fieldlabels">Alternate Contact No.: *</label> <input type="text" name="phno_2" placeholder="Alternate Contact No." />
                                     </div>
                                     <input type="button" name="next" class="next action-button" value="Next" /> <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
                                 </fieldset>
@@ -350,24 +375,48 @@ p {
                                     <div class="form-card">
                                         <div class="row">
                                             <div class="col-7">
-                                                <h2 class="fs-title">Image Upload:</h2>
+                                                <h2 class="fs-title">Booth Details:</h2>
                                             </div>
                                             <div class="col-5">
                                                 <h2 class="steps">Step 3 - 4</h2>
                                             </div>
                                         </div> 
-                                        <label class="fieldlabels">Upload Your Photo:</label> 
-                                        <input type="file" name="pic" accept="image/*"> 
 
-                                        <label class="fieldlabels">Upload Signature Photo:</label> 
-                                        <input type="file" name="pic" accept="image/*">
+                                        @foreach ($booth_details as $key => $booth_detail)
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered table-sm">
+                                                <thead class="bg-dark text-white">
+                                                    <tr>
+                                                      <th scope="col">#</th>
+                                                      <th scope="col">{{ $booth->booth_name }}</th>
+                                                      <th scope="col">Lot Placement</th>
+                                                      <th scope="col">Price (RM)</th>
+                                                      <th scope="col" class="text-center">Check</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>                                                    
+                                                    @if ($booth->booth_id == $booth_detail->booth_id)    
+                                                    <tr>
+                                                        <th scope="row">{{ $booth_detail->firstItem() + $key }}</th>
+                                                        <td>{{ $booth_detail->booth_type }}</td>
+                                                        <td>{{ $booth_detail->lot_placement }}</td>
+                                                        <td>{{ number_format($booth_details->price) }}</td>
+                                                        <td class="text-center">
+                                                            <input type="radio" name="amount" value="{{ $booth_details->price }}">
+                                                        </td>
+                                                    </tr>
+                                                    @endif
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        @endforeach
                                     </div> 
 
                                     <input type="button" name="next" class="next action-button" value="Submit" /> 
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
 
                                 </fieldset>
-                                <fieldset>
+                                {{-- <fieldset>
                                     <div class="form-card">
                                         <div class="row">
                                             <div class="col-7">
@@ -394,7 +443,7 @@ p {
                                             </div>
                                         </div>
                                     </div>
-                                </fieldset>
+                                </fieldset> --}}
                             </form>
                         {{-- </div> --}}
                     </div>
