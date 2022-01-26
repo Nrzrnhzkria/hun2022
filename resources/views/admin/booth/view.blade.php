@@ -31,8 +31,7 @@
                                 <input type="text" class="form-control" name="booth_name" placeholder="Entrepreneur Booth" required>
                                 </div>
                             </div>
-                            <br>
-                            <div class="col-md-12 text-end px-2 py-4">
+                            <div class="col-md-12 text-end p-4">
                                 <button type="submit" class="btn btn-success"> <i class="bi bi-save"></i> Save</button>
                             </div>
                         </form>
@@ -99,8 +98,7 @@
                                                     <input type="text" class="form-control" name="booth_name" value="{{ $booth->booth_name }}" required>
                                                     </div>
                                                 </div>
-                                                <br>
-                                                <div class="col-md-12 text-end px-2 py-4">
+                                                <div class="col-md-12 text-end p-4">
                                                     <button type="submit" class="btn btn-success"> <i class="bi bi-save"></i> Update</button>
                                                 </div>
                                             </form>
