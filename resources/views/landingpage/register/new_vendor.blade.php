@@ -5,6 +5,10 @@
 @endsection
 
 <style>
+
+    fieldset {
+        display: none;
+    }
     .wrap { 
         max-width: 980px; 
         margin: 10px auto 0; 
