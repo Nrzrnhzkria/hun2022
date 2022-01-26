@@ -309,7 +309,7 @@ p {
 
                                         <label class="fieldlabels">Phone No.:<span class="text-danger">*</span></label>
                                         <input type="text" value="+60" name="phone_no" style="margin-bottom:0;" required/>
-                                        <br>
+                                        <br><br>
                                         <label class="fieldlabels">Details of Displayed Product:<span class="text-danger">*</span></label>
                                         <input type="file" name="product_details" id="formFile" style="margin-bottom:0;" required>
                                         <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
