@@ -135,9 +135,9 @@
     </div>
 
     <div class="row py-4">
-        <div class="col-md-5">
+        <div class="col-md-4">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
-                <div class="card" style="background-color: orange">
+                <div class="card border-0 p-4" style="background-color: orange">
                     <h3>ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
                     <ul>
                         <li>HUN members get attend to the seminar/ workshop/ programs with numerous information about marketing, licensing and franchising by top notch entrepreneur.</li>
@@ -146,7 +146,7 @@
                 </div>
             {{-- </a> --}}
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="card border-0">
                 <div class="card-body">
                     <h5 class="card-title">BECOME A VENDOR</h5>
