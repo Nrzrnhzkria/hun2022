@@ -8,14 +8,7 @@
     * {
       box-sizing: border-box;
     }
-    
-    #regForm {
-      margin: 100px auto;
-      padding: 40px;
-      width: 70%;
-      min-width: 300px;
-    }
-        
+            
     /* Mark input boxes that gets an error on validation: */
     input.invalid {
       background-color: #ffdddd;
