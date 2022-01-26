@@ -137,7 +137,7 @@
     <div class="row py-4">
         <div class="col-md-4">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
-                <div class="card border-0" style="background-color: orange">
+                <div class="card border-0 pb-5" style="background-color: orange">
                     <div class="card-body p-4">
                         <h3>ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
                         <br>
