@@ -11,48 +11,7 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Booth Details</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-            {{-- <a href="/create-booth" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Booth</a> --}}
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#newdetails">
-                <i class="bi bi-plus-lg"></i>New Details
-            </button>
-            <!-- Modal -->
-            <div class="modal fade" id="newdetails" tabindex="-1" role="dialog" aria-labelledby="newdetailsLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header border-bottom-0">
-                            <h5 class="modal-title" id="exampleModalLabel">Add New Details</h5>
-                        </div>
-                        <form action="{{ url('store-booth-details') }}/{{ $booth_details->booth_id }}" method="POST"> 
-                            @csrf
-                            <div class="form-group row px-4">
-                                <label for="ic" class="col-sm-4 col-form-label">Booth Type</label>
-                                <div class="col-sm-8">
-                                <input type="text" class="form-control" name="booth_type" placeholder="6M X 6M" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group row px-4">
-                                <label for="ic" class="col-sm-4 col-form-label">Lot Placement</label>
-                                <div class="col-sm-8">
-                                <input type="text" class="form-control" name="lot_placement" placeholder="Island" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group row px-4">
-                                <label for="ic" class="col-sm-4 col-form-label">Price (RM)</label>
-                                <div class="col-sm-8">
-                                <input type="number" class="form-control" name="price" required>
-                                </div>
-                            </div>
-            
-                            <div class="col-md-12 text-end px-4 pb-4">
-                                <button type="submit" class="btn btn-success"> <i class="bi bi-save"></i> Save</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+            <a href="/create-booth-details" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Details</a>
         </div>
     </div>
 

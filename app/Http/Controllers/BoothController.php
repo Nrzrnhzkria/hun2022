@@ -35,11 +35,11 @@ class BoothController extends Controller
     }
 
 
-    // public function create_booth_details($booth_id)
-    // {        
-    //     $booth_details = BoothDetails::where('booth_id', $booth_id)->first();
-    //     return view('admin.booth.create', compact('booth'));
-    // }
+    public function create_booth_details($booth_id)
+    {        
+        $booth_details = BoothDetails::where('booth_id', $booth_id)->first();
+        return view('admin.booth.create_details', compact('booth_details'));
+    }
 
     public function store_booth_details($booth_id, Request $request)
     {        
