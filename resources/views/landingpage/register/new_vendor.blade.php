@@ -257,11 +257,33 @@ p {
                                             </div>
                                         </div> 
 
-                                        <label class="fieldlabels">Email: *</label> 
-                                        <input type="email" name="email" placeholder="Email Id" /> 
+                                        <label class="fieldlabels">Company Name: *</label> 
+                                        <input type="email" name="company_name" placeholder="Company Sdn Bhd" /> 
 
-                                        <label class="fieldlabels">Username: *</label> 
-                                        <input type="text" name="uname" placeholder="UserName" /> <label class="fieldlabels">Password: *</label> <input type="password" name="pwd" placeholder="Password" /> <label class="fieldlabels">Confirm Password: *</label> <input type="password" name="cpwd" placeholder="Confirm Password" />
+                                        <label class="fieldlabels">Contact Person: *</label> 
+                                        <input type="text" name="name" placeholder="Muhammad" /> 
+                                        
+                                        <label class="fieldlabels">Designation: *</label>  
+                                        <select name="designation">                                 
+                                            <option disabled selected>-- Please Select --</option>
+                                            <option value="CEO">CEO</option>
+                                            <option value="Proprietor">Proprietor</option>
+                                            <option value="Owner">Owner</option>
+                                            <option value="Founder">Founder</option>
+                                            <option value="Team Leader">Team Leader</option>
+                                            <option value="Manager">Manager</option>
+                                            <option value="Assistant Manager">Assistant Manager</option>
+                                            <option value="Executive">Executive</option>
+                                            <option value="Director">Director</option>
+                                            <option value="Coordinator">Coordinator</option>
+                                            <option value="Administrator">Administrator</option>
+                                            <option value="Organizer">Organizer</option>
+                                            <option value="Administrator">Managing Partner</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                        
+                                        <label class="fieldlabels">Confirm Password: *</label>
+                                        <input type="text" value="{{ $vendor_ic }}" name="ic_no" readonly/>
                                     </div> 
 
                                     <input type="button" name="next" class="next action-button" value="Next" />
