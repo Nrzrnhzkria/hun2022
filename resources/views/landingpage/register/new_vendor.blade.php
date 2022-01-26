@@ -312,15 +312,15 @@ p {
 
                                         <label class="fieldlabels">Details of Displayed Product:<span class="text-danger">*</span></label>
                                         <input type="file" name="product_details" id="formFile">
-                                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                                        <em class="fieldlabels" style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
 
                                         <label class="fieldlabels">SSM Certificate:<span class="text-danger">*</span></label>
                                         <input type="file" name="ssm_cert" id="formFile">
-                                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                                        <em class="fieldlabels" style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
 
                                         <label class="fieldlabels">Vaccine Certificate:<span class="text-danger">*</span></label>
                                         <input type="file" name="vaccine_cert" id="formFile">
-                                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                                        <em class="fieldlabels" style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
                                     
 
                                     </div> 
