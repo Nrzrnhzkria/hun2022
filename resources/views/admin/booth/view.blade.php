@@ -32,7 +32,7 @@
                                 </div>
                             </div>
                             <br>
-                            <div class="col-md-12 text-end">
+                            <div class="col-md-12 text-end px-2 py-4">
                                 <button type="submit" class="btn btn-success"> <i class="bi bi-save"></i> Save</button>
                             </div>
                         </form>
@@ -100,8 +100,8 @@
                                                     </div>
                                                 </div>
                                                 <br>
-                                                <div class="col-md-12 text-end">
-                                                    <button type="submit" class="btn btn-success"> <i class="bi bi-save"></i> Save</button>
+                                                <div class="col-md-12 text-end px-2 py-4">
+                                                    <button type="submit" class="btn btn-success"> <i class="bi bi-save"></i> Update</button>
                                                 </div>
                                             </form>
                                         </div>
