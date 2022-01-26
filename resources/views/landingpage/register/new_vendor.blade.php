@@ -238,10 +238,10 @@ p {
                             <form id="msform">
                                 <!-- progressbar -->
                                 <ul id="progressbar">
-                                    <li class="active" id="account"><strong>Account</strong></li>
-                                    <li id="personal"><strong>Personal</strong></li>
-                                    <li id="payment"><strong>Image</strong></li>
-                                    <li id="confirm"><strong>Finish</strong></li>
+                                    <li class="active" id="account"><strong>Personal</strong></li>
+                                    <li id="personal"><strong>Coupon</strong></li>
+                                    <li id="payment"><strong>Booth</strong></li>
+                                    <li id="confirm"><strong>Payment</strong></li>
                                 </ul>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
