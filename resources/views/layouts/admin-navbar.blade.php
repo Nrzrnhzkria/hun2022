@@ -15,6 +15,13 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/dashboard"><i class="bi bi-house-door-fill"></i></a>
                 </li>
+
+                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin' )
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="/booth">Booth</a>
+                </li>
+                @else
+                @endif
                 
                 @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin' || Auth::user()->role == 'Advisor')
                 <li class="nav-item">
@@ -23,7 +30,7 @@
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'Superadmin')
+                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin' )
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/admin-media">Media</a>
                 </li>

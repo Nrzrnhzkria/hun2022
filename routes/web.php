@@ -54,6 +54,13 @@ Route::post('membership-callback', 'TransactionController@callback');
 | Admin Panel
 */
 Route::get('dashboard', 'DashboardController@dashboard');
+// Booth Management
+Route::get('booth', 'BoothController@booth');
+Route::get('create-booth', 'BoothController@create_booth');
+Route::post('store-booth', 'BoothController@store_booth');
+Route::get('update-booth/{booth_id}', 'BoothController@update_booth');
+Route::post('edit-booth/{booth_id}', 'BoothController@edit_booth');
+Route::get('delete-booth/{booth_id}', 'BoothController@destroy_booth');
 // Coupon Management
 Route::get('coupon', 'CouponController@coupon');
 Route::get('update-coupon/{coupon_id}', 'CouponController@update_coupon');
