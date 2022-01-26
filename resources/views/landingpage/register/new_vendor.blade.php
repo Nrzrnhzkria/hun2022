@@ -259,35 +259,35 @@ p {
                                             </div>
                                         </div> 
 
-                                        <label class="fieldlabels">Company Name: *</label> 
-                                        <input type="email" name="company_name" placeholder="Company Sdn Bhd" /> 
-
                                         <div class="row">
                                             <div class="col-6">
-                                                <label class="fieldlabels">Contact Person: *</label> 
-                                                <input type="text" name="name" placeholder="Muhammad" /> 
+                                                <label class="fieldlabels">Company Name: *</label> 
+                                                <input type="email" name="company_name" placeholder="Company Sdn Bhd" />
                                             </div>
-                                            <div class="col-6">                                                 
-                                                <label class="fieldlabels">Designation: *</label>  
-                                                <select name="designation">                                 
-                                                    <option disabled selected>-- Please Select --</option>
-                                                    <option value="CEO">CEO</option>
-                                                    <option value="Proprietor">Proprietor</option>
-                                                    <option value="Owner">Owner</option>
-                                                    <option value="Founder">Founder</option>
-                                                    <option value="Team Leader">Team Leader</option>
-                                                    <option value="Manager">Manager</option>
-                                                    <option value="Assistant Manager">Assistant Manager</option>
-                                                    <option value="Executive">Executive</option>
-                                                    <option value="Director">Director</option>
-                                                    <option value="Coordinator">Coordinator</option>
-                                                    <option value="Administrator">Administrator</option>
-                                                    <option value="Organizer">Organizer</option>
-                                                    <option value="Administrator">Managing Partner</option>
-                                                    <option value="Others">Others</option>
-                                                </select>
+                                            <div class="col-6">
+                                                <label class="fieldlabels">Contact Person: *</label> 
+                                                <input type="text" name="name" placeholder="Muhammad" />     
                                             </div>
                                         </div>
+
+                                        <label class="fieldlabels">Designation: *</label>  
+                                        <select name="designation">                                 
+                                            <option disabled selected>-- Please Select --</option>
+                                            <option value="CEO">CEO</option>
+                                            <option value="Proprietor">Proprietor</option>
+                                            <option value="Owner">Owner</option>
+                                            <option value="Founder">Founder</option>
+                                            <option value="Team Leader">Team Leader</option>
+                                            <option value="Manager">Manager</option>
+                                            <option value="Assistant Manager">Assistant Manager</option>
+                                            <option value="Executive">Executive</option>
+                                            <option value="Director">Director</option>
+                                            <option value="Coordinator">Coordinator</option>
+                                            <option value="Administrator">Administrator</option>
+                                            <option value="Organizer">Organizer</option>
+                                            <option value="Administrator">Managing Partner</option>
+                                            <option value="Others">Others</option>
+                                        </select>
                                        
                                         <label class="fieldlabels">IC No.: *</label>
                                         <input type="text" value="{{ $vendor_ic }}" name="ic_no" readonly/>
