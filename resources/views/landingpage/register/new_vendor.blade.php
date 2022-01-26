@@ -6,25 +6,22 @@
 
 <style>
 
-    fieldset {
-        display: none;
-    }
     .wrap { 
         max-width: 980px; 
         margin: 10px auto 0; 
     }
     #steps { 
-        margin: 80px 0 0 0 
+        margin: 80px 0 0 0; 
     }
     .commands { 
         overflow: hidden; 
         margin-top: 30px; 
     }
     .prev {
-        float:left
+        float:left;
     }
     .next, .submit {
-        float:right
+        float:right;
     }
     .error { 
         color: #b33; 
