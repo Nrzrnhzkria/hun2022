@@ -141,7 +141,7 @@
                     <div class="card-body p-4">
                         <h3>ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
                         <br>
-                        <ul class="text-justify">
+                        <ul style="text-align: justify">
                             <li>HUN members get attend to the seminar/workshop/programs with numerous information about marketing, licensing and franchising by top notch entrepreneur.</li>
                             <li>HUN members will be able to stand a chance to win amazing prizes by participating in lucky draw.</li>
                         </ul>
@@ -153,8 +153,8 @@
             <div class="card border-0">
                 <div class="card-body p-4">
                     <h4 class="card-title">BECOME A VENDOR</h4>
-                    <p class="card-text text-justify">Learn how to get started as vendor and finding business opportunities with HUN</p>
-                    <ul class="card-text text-justify">
+                    <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN</p>
+                    <ul class="card-text" style="text-align: justify">
                         <li>Valuable exposure in creating trustful and legitimate business of your brands</li>
                         <li>Build Community Networking and meet thousands of local consumers who are interested in local brand</li>
                         <li>Business is professionally managed to take local sources to the globalization market.</li>
@@ -167,13 +167,13 @@
             <div class="card border-0">
                 <div class="card-body p-4">
                     <h4 class="card-title">THE EXHIBITIONS</h4>
-                    <p class="card-text text-justify">
+                    <p class="card-text" style="text-align: justify">
                         There are 8 upcoming exhibition, booth, programs, mentoring and etc can help growth your business and acquire information about new industry developments.
                     </p>
-                    <p class="card-text text-justify">
+                    <p class="card-text" style="text-align: justify">
                         The exhibition aims to host more than 2000 booths from local and international products.
                     </p>
-                    <p class="card-text text-justify">
+                    <p class="card-text" style="text-align: justify">
                         The exhibitions which businesses and companies in a specific niche come together to showcase their brands and products or promote new business developments.
                     </p>
                 </div>
