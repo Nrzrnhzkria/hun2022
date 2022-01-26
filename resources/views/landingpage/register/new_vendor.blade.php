@@ -234,7 +234,7 @@ p {
 
         <div class="container-fluid">
             <div class="row justify-content-center">
-                <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2">
+                <div class="col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 text-center p-0 mt-3 mb-2">
                     <div class="card px-4 py-4">
              
                         {{-- <div class="card px-0 pt-4 pb-0 mt-3 mb-3"> --}}
