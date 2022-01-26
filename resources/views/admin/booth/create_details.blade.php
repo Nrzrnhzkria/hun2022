@@ -14,7 +14,7 @@
         <div class="col-md-8">
             <div class="card p-3">
                 <div class="card-body">
-                    <form method="POST" action="{{ url('store-booth-details') }}/{{ $booth_details->booth_id }}">
+                    <form method="POST" action="{{ url('store-booth-details') }}/{{ $booth->booth_id }}">
                         @csrf
                         
                         <div class="row mb-3">
