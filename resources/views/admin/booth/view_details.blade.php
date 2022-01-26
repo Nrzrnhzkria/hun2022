@@ -11,7 +11,7 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Booth Details</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-            <a href="/create-booth-details" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Details</a>
+            <a href="{{ url('create-booth-details') }}/{{ $booth_details->booth_id }}" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Details</a>
         </div>
     </div>
 
