@@ -62,9 +62,105 @@
                 <!-- One "tab" for each step in the form: -->
                 <div class="tab">
                     <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
-                    Name:
-                    <p><input placeholder="First name..." class="form-control form-control-sm" oninput="this.className = ''" name="fname"></p>
-                    <p><input placeholder="Last name..." class="form-control form-control-sm" oninput="this.className = ''" name="lname"></p>
+
+                    <div class="row p-3">
+
+                        <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
+    
+                        <div class="col-md-12 pb-2">
+                            <label>Name of Company:<span class="text-danger">*</span></label>
+                            <input type="text" value="{{ $details->company_name ?? '' }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name" oninput="this.className = ''">
+                        </div>
+    
+                        <div class="col-md-6 pb-2">
+                            <label>Contact Person:<span class="text-danger">*</span></label>
+                            <input type="text" value="{{ $vendor->name ?? '' }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name" oninput="this.className = ''">
+                        </div>
+                        <div class="col-md-6 pb-2">
+                            <label>Designation:<span class="text-danger">*</span></label>
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation ?? '' }}" oninput="this.className = ''">                                 
+                                <option disabled selected>-- Please Select --</option>
+                                <option value="CEO">CEO</option>
+                                <option value="Proprietor">Proprietor</option>
+                                <option value="Owner">Owner</option>
+                                <option value="Founder">Founder</option>
+                                <option value="Team Leader">Team Leader</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Assistant Manager">Assistant Manager</option>
+                                <option value="Executive">Executive</option>
+                                <option value="Director">Director</option>
+                                <option value="Coordinator">Coordinator</option>
+                                <option value="Administrator">Administrator</option>
+                                <option value="Organizer">Organizer</option>
+                                <option value="Administrator">Managing Partner</option>
+                                <option value="Others">Others</option>
+                            </select>
+                        </div>
+    
+                        <div class="col-md-6 pb-2">
+                            <label>IC/Passport No.:<span class="text-danger">*</span></label>
+                            <input type="text" value="{{ $vendor_ic ?? '' }}" class="form-control form-control-sm" name="ic_no" oninput="this.className = ''" readonly/>
+                        </div>
+    
+                        {{-- <div class="col-md-6 pb-2">
+                            <label>Nationality:<span class="text-danger">*</span></label>
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality ?? '' }}">                                 
+                                <option disabled selected>-- Please Select --</option>
+                                <option value="local">Citizens</option>
+                                <option value="international">Non-citizens</option>
+                            </select>
+                        </div> --}}
+    
+                        <div class="col-md-12 pb-2">
+                            <label>Company Address:<span class="text-danger">*</span></label>
+                            <textarea type="text" value="{{ $details->company_address ?? '' }}" class="form-control form-control-sm" placeholder="Ali"  name="company_address" oninput="this.className = ''"></textarea>
+                        </div>
+    
+                        <div class="col-md-6 pb-2">
+                            <label>Email:<span class="text-danger">*</span></label>
+                            <input type="email"  value="{{ $vendor->email ?? '' }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com" oninput="this.className = ''"/>
+                            <input type="hidden"  value="{{ $vendor_ic ?? '' }}" class="form-control form-control-sm" name="password"/>
+                        </div>
+    
+                        <div class="col-md-6 pb-2">
+                            <label>Nature of Business:<span class="text-danger">*</span></label>
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature ?? '' }}" oninput="this.className = ''">                                 
+                                <option disabled selected>-- Please Select --</option>
+                                <option value="Sole proprietorship">Sole proprietorship</option>
+                                <option value="Partnership">Partnership</option>
+                                <option value="Private limited company">Private limited company</option>
+                                <option value="Public limited company">Public limited company</option>
+                                <option value="Unlimited companies">Unlimited companies</option>
+                                <option value="Foreign company">Foreign company</option>
+                                <option value="Limited liability partnership">Limited liability partnership</option>
+                            </select>
+                        </div>
+    
+                        <div class="col-md-6 pb-2">
+                            <label for="phoneno" class="form-label">Phone No.:<span class="text-danger">*</span></label>
+                            <input type="text" value="+60{{ $vendor->phone_no ?? '' }}" class="form-control form-control-sm" name="phone_no" oninput="this.className = ''" required/>
+                        </div>
+    
+                        <div class="col-md-6 pb-2">
+                            <label for="formFile" class="form-label">Details of Displayed Product:<span class="text-danger">*</span></label>
+                            <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details ?? '' }}" id="formFile" oninput="this.className = ''">
+                            <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                        </div>
+    
+                        <div class="col-md-6 pb-2">
+                            <label for="formFile" class="form-label">SSM Certificate:<span class="text-danger">*</span></label>
+                            <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert ?? '' }}" id="formFile" oninput="this.className = ''">
+                            <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                        </div>
+    
+                        <div class="col-md-6 pb-2">
+                            <label for="formFile" class="form-label">Vaccine Certificate:<span class="text-danger">*</span></label>
+                            <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert ?? '' }}" id="formFile" oninput="this.className = ''">
+                            <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                        </div>
+                        
+                    </div>
+
                 </div>
                 <div class="tab">Contact Info:
                     <p><input placeholder="E-mail..." class="form-control form-control-sm" oninput="this.className = ''" name="email"></p>
