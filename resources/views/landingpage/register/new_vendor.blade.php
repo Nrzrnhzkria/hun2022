@@ -50,7 +50,8 @@ p {
 }
 
 #msform input,
-#msform textarea {
+#msform textarea,
+#msform select {
     padding: 8px 15px 8px 15px;
     border: 1px solid #ccc;
     border-radius: 0px;
@@ -65,7 +66,8 @@ p {
 }
 
 #msform input:focus,
-#msform textarea:focus {
+#msform textarea:focus,
+#msform select:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
