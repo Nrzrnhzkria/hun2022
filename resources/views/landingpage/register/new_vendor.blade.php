@@ -284,7 +284,7 @@ p {
                                             <option value="Others">Others</option>
                                         </select>
                                         
-                                        <label class="fieldlabels">Confirm Password: *</label>
+                                        <label class="fieldlabels">IC No.: *</label>
                                         <input type="text" value="{{ $vendor_ic }}" name="ic_no" readonly/>
                                     </div> 
 
