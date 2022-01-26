@@ -70,7 +70,7 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Booth Name</th>
-                            <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
+                            <th scope="col"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -78,7 +78,7 @@
                         <tr>
                             <th scope="row">{{ $booths->firstItem() + $key }}</th>
                             <td>{{ $booth->booth_name }}</td>
-                            <td class="text-center">
+                            <td>
                                 <!-- Update trigger modal -->
                                 <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#update{{ $booth->booth_id }}">
                                     <i class="bi bi-pencil-square"></i>
