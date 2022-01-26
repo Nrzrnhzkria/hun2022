@@ -5,39 +5,39 @@
 @endsection
 
 <style>
-    * {
-      box-sizing: border-box;
+    .wrap { 
+        max-width: 980px; 
+        margin: 10px auto 0; 
     }
-            
-    /* Mark input boxes that gets an error on validation: */
-    input.invalid {
-      background-color: #ffdddd;
+    #steps { 
+        margin: 80px 0 0 0 
     }
-    
-    /* Hide all steps by default: */
-    .tab {
-      display: none;
+    .commands { 
+        overflow: hidden; 
+        margin-top: 30px; 
     }
-        
-    /* Make circles that indicate the steps of the form: */
-    .step {
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbbbbb;
-      border: none;  
-      border-radius: 50%;
-      display: inline-block;
-      opacity: 0.5;
+    .prev {
+        float:left
     }
-    
-    .step.active {
-      opacity: 1;
+    .next, .submit {
+        float:right
     }
-    
-    /* Mark the steps that are finished and valid: */
-    .step.finish {
-      background-color: #04AA6D;
+    .error { 
+        color: #b33; 
+    }
+    #progress { 
+        position: relative; 
+        height: 5px; 
+        background-color: #eee; 
+        margin-bottom: 20px; 
+    }
+    #progress-complete { 
+        border: 0; 
+        position: absolute; 
+        height: 5px; 
+        min-width: 10px; 
+        background-color: #337ab7; 
+        transition: width .2s ease-in-out; 
     }
 </style>
 
@@ -49,20 +49,130 @@
         </div>
 
         <div class="card px-4 py-4">
-            <div id="example-basic">
-                <h3>Keyboard</h3>
-                <section>
-                    <p>Try the keyboard navigation by clicking arrow left or right!</p>
-                </section>
-                <h3>Effects</h3>
-                <section>
-                    <p>Wonderful transition effects.</p>
-                </section>
-                <h3>Pager</h3>
-                <section>
-                    <p>The next and previous buttons help you to navigate through your content.</p>
-                </section>
+            <div class="row wrap">
+                <div class="col-lg-12">
+
+                    <div id='progress'><div id='progress-complete'></div></div>
+                
+                    <form id="SignupForm" action="">
+                        <fieldset>
+                            <legend>Account information</legend>
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input id="Name" type="text" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">Email</label>
+                                <input id="Email" type="email" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Password</label>
+                                <input id="Password" type="password" class="form-control" />
+                            </div>
+                        </fieldset>
+                
+                        <fieldset>
+                            <legend>Company information</legend>
+                            <div class="form-group">
+                                <label for="CompanyName">Company Name</label>
+                                <input id="CompanyName" type="text" class="form-control" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="Website">Website</label>
+                                <input id="Website" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="CompanyEmail">CompanyEmail</label>
+                                <input id="CompanyEmail" type="text" class="form-control" />
+                            </div>
+                        </fieldset>
+                
+                        <fieldset class="form-horizontal" role="form">
+                            <legend>Billing information</legend>
+                            <div class="form-group">
+                                <label for="NameOnCard" class="col-sm-2 control-label">Name on Card</label>
+                                <div class="col-sm-10">
+                                    <input id="NameOnCard" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="CardNumber" class="col-sm-2 control-label">Card Number</label>
+                                <div class="col-sm-10">
+                                    <input id="CardNumber" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="CreditcardMonth" class="col-sm-2 control-label">Expiration</label>
+                                <div class="col-sm-10">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <select id="CreditcardMonth" class="form-control col-sm-2">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <select id="CreditcardYear" class="form-control">
+                                                <option value="2009">2009</option>
+                                                <option value="2010">2010</option>
+                                                <option value="2011">2011</option>
+                                                <option value="2012">2012</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                            </select>        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Address1" class="col-sm-2 control-label">Address 1</label>
+                                <div class="col-sm-10">
+                                    <input id="Address1" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Address2" class="col-sm-2 control-label">Address 2</label>
+                                <div class="col-sm-10">
+                                    <input id="Address2" type="text" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Zip" class="col-sm-2 control-label">ZIP</label>
+                                <div class="col-sm-4">
+                                    <input id="Zip" type="text" class="form-control" />
+                                </div>
+                                <label for="Country" class="col-sm-2 control-label">Country</label>
+                                <div class="col-sm-4">
+                                    <select id="Country" class="form-control">
+                                        <option value="CA">Canada</option>
+                                        <option value="US">United States of America</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <p>
+                            <button id="SaveAccount" class="btn btn-primary submit">Submit form</button>
+                        </p>
+                    </form>
+                
+                </div>
             </div>
+            
         </div>
         {{-- <form action="{{ url('new-registration/store') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -243,11 +353,29 @@
 
 {{-- Multi-level form script --}}
 <script>
-    $("#example-basic").steps({
-        headerTag: "h3",
-        bodyTag: "section",
-        transitionEffect: "slideLeft",
-        autoFocus: true
+    $( function() {
+        var $signupForm = $( '#SignupForm' );
+
+        $signupForm.validate({errorElement: 'em'});
+
+        $signupForm.formToWizard({
+            submitButton: 'SaveAccount',
+            nextBtnClass: 'btn btn-primary next',
+            prevBtnClass: 'btn btn-default prev',
+            buttonTag:    'button',
+            validateBeforeNext: function(form, step) {
+                var stepIsValid = true;
+                var validator = form.validate();
+                $(':input', step).each( function(index) {
+                    var xy = validator.element(this);
+                    stepIsValid = stepIsValid && (typeof xy == 'undefined' || xy);
+                });
+                return stepIsValid;
+            },
+            progress: function (i, count) {
+                $('#progress-complete').width(''+(i/count*100)+'%');
+            }
+        });
     });
 </script>
 {{-- <!-- Enable function to add row ------------------------------------------>
