@@ -99,7 +99,7 @@
     
                         <div class="col-md-6 pb-2">
                             <label>IC/Passport No.:<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control form-control-sm" name="ic_no" oninput="this.className = ''" readonly/>
+                            <input type="text" class="form-control form-control-sm" name="ic_no" value="{{ $vendor_ic }}" oninput="this.className = ''" readonly/>
                         </div>
     
                         {{-- <div class="col-md-6 pb-2">
@@ -119,7 +119,7 @@
                         <div class="col-md-6 pb-2">
                             <label>Email:<span class="text-danger">*</span></label>
                             <input type="email" class="form-control form-control-sm" name="email" placeholder="example@gmail.com" oninput="this.className = ''"/>
-                            <input type="hidden" value="{{ $vendor_ic ?? '' }}" class="form-control form-control-sm" name="password"/>
+                            <input type="hidden" value="{{ $vendor_ic }}" class="form-control form-control-sm" name="password"/>
                         </div>
     
                         <div class="col-md-6 pb-2">
