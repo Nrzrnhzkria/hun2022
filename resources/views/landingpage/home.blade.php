@@ -78,7 +78,7 @@
     </div>
 </div>
 
-<div class="container py-4">
+<div class="container py-3">
 
     <div class="row pb-4">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -134,7 +134,7 @@
         </div>
     </div>
 
-    <div class="row py-4">
+    <div class="row py-3">
         <div class="col-md-4">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
                 <div class="card border-0 pb-5" style="background-color: orange">
@@ -184,7 +184,7 @@
         </div>
     </div>
 
-    <div class="row pt-4">
+    <div class="row pt-3">
         <div class="col-md-6 text-center">
             <img class="img-fluid" src="{{ asset('assets/img/phone.png') }}" width="350rem">
         </div>
