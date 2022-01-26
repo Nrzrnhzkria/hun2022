@@ -232,10 +232,11 @@ p {
             <h1>New Registration Form</h1>
         </div>
 
-        <div class="card px-4 py-4">
-            {{-- <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"> --}}
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="card px-4 py-4">
+             
+                    {{--<div class="col-11 col-sm-9 col-md-7 col-lg-6 col-xl-5 text-center p-0 mt-3 mb-2"> --}}
                         {{-- <div class="card px-0 pt-4 pb-0 mt-3 mb-3"> --}}
                             <form id="msform" action="{{ url('new-registration/store') }}" method="POST" enctype="multipart/form-data">
                                 <!-- progressbar -->
@@ -259,15 +260,12 @@ p {
                                             </div>
                                         </div> 
 
-                                        <div class="col-sm-6">
-                                            <label class="fieldlabels">Company Name: *</label> 
-                                            <input type="email" name="company_name" placeholder="Company Sdn Bhd" />
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label class="fieldlabels">Contact Person: *</label> 
-                                            <input type="text" name="name" placeholder="Muhammad" />     
-                                        </div>
+                                        <label class="fieldlabels">Company Name: *</label> 
+                                        <input type="email" name="company_name" placeholder="Company Sdn Bhd" /> 
 
+                                        <label class="fieldlabels">Contact Person: *</label> 
+                                        <input type="text" name="name" placeholder="Muhammad" /> 
+                                        
                                         <label class="fieldlabels">Designation: *</label>  
                                         <select name="designation">                                 
                                             <option disabled selected>-- Please Select --</option>
@@ -286,8 +284,8 @@ p {
                                             <option value="Administrator">Managing Partner</option>
                                             <option value="Others">Others</option>
                                         </select>
-                                       
-                                        <label class="fieldlabels">IC No.: *</label>
+                                        
+                                        <label class="fieldlabels">IC No: *</label>
                                         <input type="text" value="{{ $vendor_ic }}" name="ic_no" readonly/>
                                     </div> 
 
@@ -363,9 +361,9 @@ p {
                                 </fieldset>
                             </form>
                         {{-- </div> --}}
-                    {{-- </div>
+                    {{-- </div> --}}
                 </div>
-            </div> --}}
+            </div>
         </div>
         {{-- <form action="{{ url('new-registration/store') }}" method="POST" enctype="multipart/form-data">
         @csrf
