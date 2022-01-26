@@ -44,7 +44,7 @@ class BoothController extends Controller
         
         $booth->delete();
         $booth_details->delete();
-        return redirect('booth-details/'.$booth_id)->with('deleteboothdetails','Booth details has been deleted successfully.');
+        return redirect('booth-details/'.$booth_id)->with('deletebooth','Booth has been deleted successfully.');
     }
 
     public function booth_details($booth_id)
