@@ -19,14 +19,6 @@
       display: none;
     }
         
-    button:hover {
-      opacity: 0.8;
-    }
-    
-    #prevBtn {
-      background-color: #bbbbbb;
-    }
-    
     /* Make circles that indicate the steps of the form: */
     .step {
       height: 15px;
