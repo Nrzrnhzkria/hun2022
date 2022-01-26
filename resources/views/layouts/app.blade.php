@@ -12,6 +12,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/template.js') }}" defer></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.js"></script>
 	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.js"></script>
 
