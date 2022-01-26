@@ -97,7 +97,7 @@
                             </select>
                         </div>
     
-                        <div class="col-md-6 pb-2">
+                        <div class="col-md-12 pb-2">
                             <label>IC/Passport No.:<span class="text-danger">*</span></label>
                             <input type="text" class="form-control form-control-sm" name="ic_no" value="{{ $vendor_ic }}" oninput="this.className = ''" readonly/>
                         </div>
