@@ -136,23 +136,26 @@
 
     <div class="row py-4">
         <div class="col-md-5">
-            <a href="http://" class="btn btn-warning text-start p-4"> 
-                <h3>CLICK HERE TO KNOW MORE ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-                    consequat.
-                </p>
-            </a>
+            {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
+                <div class="card" style="background-color: orange">
+                    <h3>ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
+                    <ul>
+                        <li>HUN members get attend to the seminar/ workshop/ programs with numerous information about marketing, licensing and franchising by top notch entrepreneur.</li>
+                        <li>HUN members will be able to stand a chance to win amazing prizes by participating in lucky draw.</li>
+                    </ul>
+                </div>
+            {{-- </a> --}}
         </div>
         <div class="col-md-3">
             <div class="card border-0">
                 <div class="card-body">
                     <h5 class="card-title">BECOME A VENDOR</h5>
-                    <p class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-                    </p>
+                    <p class="card-text">Learn how to get started as vendor and finding business opportunities with HUN</p>
+                    <ul class="card-text">
+                        <li>Valuable exposure in creating trustful and legitimate business of your brands</li>
+                        <li>Build Community Networking and meet thousands of local consumers who are interested in local brand</li>
+                        <li>Business is professionally managed to take local sources to the globalization market.</li>
+                    </ul>
                     <a href="registration" class="btn btn-warning fw-bold">Register</a>
                 </div>
             </div>
@@ -162,10 +165,13 @@
                 <div class="card-body">
                     <h5 class="card-title">THE EXHIBITIONS</h5>
                     <p class="card-text">
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque 
-                        corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa 
-                        qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita 
-                        distinctio.
+                        There are 8 upcoming exhibition, booth, programs, mentoring and etc can help growth your business and acquire information about new industry developments.
+                    </p>
+                    <p class="card-text">
+                        The exhibition aims to host more than 2000 booths from local and international products.
+                    </p>
+                    <p class="card-text">
+                        The exhibitions which businesses and companies in a specific niche come together to showcase their brands and products or promote new business developments.
                     </p>
                 </div>
             </div>
