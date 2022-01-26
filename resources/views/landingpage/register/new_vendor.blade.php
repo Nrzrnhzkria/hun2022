@@ -170,7 +170,7 @@
                         
                         <div id="inputFormRow">
                             <label for="formFileMultiple" class="form-label">Coupon:</label>
-                            <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile">
+                            <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                             <em style="font-size: 10pt;">File format: png, jpeg</em>
                         </div>
 
