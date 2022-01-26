@@ -21,7 +21,7 @@
                         <h5>LEGAL</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms Of Use</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+                            <li class="nav-item mb-2"><a href="/policy" class="nav-link p-0 text-muted">Privacy & Policy</a></li>
                             <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cookies</a></li>
                         </ul>
                     </td>

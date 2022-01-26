@@ -27,6 +27,7 @@ Route::get('news/{news_id}', 'HomeController@readmore');
 Route::get('media', 'HomeController@media');
 Route::get('media/{media_id}', 'HomeController@readmedia');
 Route::get('contact', 'HomeController@contact');
+Route::get('policy', 'HomeController@policy');
 
 /* ------------------------------------------------------------------------------------ //
 | Vendor Registration
