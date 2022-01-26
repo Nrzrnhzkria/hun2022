@@ -259,15 +259,13 @@ p {
                                             </div>
                                         </div> 
 
-                                        <div class="row">
-                                            <div class="col-6">
-                                                <label class="fieldlabels">Company Name: *</label> 
-                                                <input type="email" name="company_name" placeholder="Company Sdn Bhd" />
-                                            </div>
-                                            <div class="col-6">
-                                                <label class="fieldlabels">Contact Person: *</label> 
-                                                <input type="text" name="name" placeholder="Muhammad" />     
-                                            </div>
+                                        <div class="col-6">
+                                            <label class="fieldlabels">Company Name: *</label> 
+                                            <input type="email" name="company_name" placeholder="Company Sdn Bhd" />
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="fieldlabels">Contact Person: *</label> 
+                                            <input type="text" name="name" placeholder="Muhammad" />     
                                         </div>
 
                                         <label class="fieldlabels">Designation: *</label>  
