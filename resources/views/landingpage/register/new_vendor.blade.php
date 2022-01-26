@@ -318,7 +318,7 @@
                 }
             }
             hideButtons(current);
-        })
+        });
     
         // Submit button click
         btnsubmit.click(function(){
@@ -337,7 +337,7 @@
                 }
             }
             hideButtons(current);
-        })
+        });
         
         $('.form').validate({ // initialize plugin
             ignore:":not(:visible)",   
