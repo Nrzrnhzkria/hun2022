@@ -49,6 +49,8 @@ class VendorController extends Controller
 
         $booth = Booth::all();
         $booth_details = BoothDetails::all();
+
+        $count = 1;
         // $vendor = $request->session()->get('users');
         // $details = $request->session()->get('vendor_details');
         // $coupon = $request->session()->get('coupon');
@@ -58,7 +60,7 @@ class VendorController extends Controller
         // $details_id = 'DID'.uniqid();
         // $coupon_id = 'CID'.uniqid();
   
-        return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'vendor_ic'));
+        return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'count', 'vendor_ic'));
     }
 
     public function store(Request $request)

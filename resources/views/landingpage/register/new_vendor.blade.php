@@ -398,7 +398,7 @@ p {
                                                     @foreach ($booth_details as $key => $booth_detail)                                                    
                                                     @if ($booths->booth_id == $booth_detail->booth_id)    
                                                     <tr>
-                                                        <th scope="row">{{ $booth_details->firstItem() + $key }}</th>
+                                                        <th scope="row">{{ $count++ }}</th>
                                                         <td>{{ $booth_detail->booth_type }}</td>
                                                         <td>{{ $booth_detail->lot_placement }}</td>
                                                         <td>{{ number_format($booth_details->price) }}</td>
