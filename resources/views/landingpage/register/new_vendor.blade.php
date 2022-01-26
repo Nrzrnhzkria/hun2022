@@ -414,7 +414,7 @@
       // This function deals with validation of the form fields
       var x, y, i, valid = true;
       x = document.getElementsByClassName("tab");
-      y = x[currentTab].getElementsById("validate");
+      y = x[currentTab].getElementById("validate");
       // A loop that checks every input field in the current tab:
       for (i = 0; i < y.length; i++) {
         // If a field is empty...
