@@ -55,7 +55,7 @@
                             <td>{{ $booth_detail->booth_type }}</td>
                             <td>{{ number_format($booth_detail->price) }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update-booth') }}/{{ $booth_detail->booth_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-booth-details') }}/{{ $booth_detail->booth_id }}/{{ $booth_detail->details_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                
                         @endforeach
