@@ -46,10 +46,10 @@ class BoothController extends Controller
 
     public function store_booth_details($booth_id, Request $request)
     {        
-        // $booth_details = BoothDetails::orderBy('id','desc')->first(); 
-        // $auto_inc = $booth_details->id + 1;
-        // $details_id = 'BD' . 0 . $auto_inc;  
-        $details_id =  'BD'. 0 . 0 . 1;
+        $booth_details = BoothDetails::orderBy('id','desc')->first(); 
+        $auto_inc = $booth_details->id + 1;
+        $details_id = 'BD' . 0 . 0 . $auto_inc;  
+        // $details_id =  'BD'. 0 . 0 . 1;
 
         BoothDetails::create([
             'details_id' => $details_id,
