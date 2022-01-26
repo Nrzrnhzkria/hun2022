@@ -175,7 +175,7 @@
                         </div>
 
                         <div id="newRow"></div>
-                        <button id="addRow" type='button' class='btn'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
+                        <button id="addRow" type='button' class='btn btn-sm'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
                     
                     </div>
                 </div>
@@ -198,7 +198,7 @@
         var html = '';
         html += '<div id="inputFormRow">';
         html += '<div class="input-group mb-3">';
-        html += '<input type="text" name="feature[]" class="form-control form-control-sm" autocomplete="off"  aria-describedby="button-addon2" required>';
+        html += '<input type="file" name="feature[]" class="form-control form-control-sm" autocomplete="off" aria-describedby="button-addon2" id="formFile" required>';
         html += '<button id="removeRow" type="button" class="btn btn-danger btn-sm" id="button-addon2"><i class="bi bi-x-lg"></i></button>';
         html += '</div>';
         html += '</div>';
