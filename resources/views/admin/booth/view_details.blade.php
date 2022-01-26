@@ -61,7 +61,7 @@
                 </table>
             </div>
             @else
-              <p>There are no booth to display.</p>
+              <p>There are no details to display.</p>
             @endif
         </div>
     </div>
