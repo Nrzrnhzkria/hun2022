@@ -30,7 +30,7 @@ class BoothController extends Controller
 
     public function booth_details($booth_id)
     {
-        $booth_details =  BoothDetails::where('booth_id', $booth_id)->paginate(15);
+        $booth_details =  BoothDetails::where('booth_id', $booth_id)->first();
         return view('admin.booth.view_details', compact('booth_details'));
     }
 
