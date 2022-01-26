@@ -7,23 +7,23 @@
 @section('content')
 <div class="container">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Update Booth</h1>
+        <h1 class="h2">Update Details</h1>
     </div>
 
     <div class="row justify-content-center py-3">
         <div class="col-md-8">
             <div class="card p-3">
                 <div class="card-body">
-                    <form method="POST" action="{{ url('edit-qr') }}/{{ $qr->id }}">
+                    <form method="POST" action="{{ url('edit-booth') }}/{{ $booth_details->booth_id }}/{{ $booth_details->details_id }}">
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="seminar_name" class="col-md-4 col-form-label text-md-end">Seminar Name</label>
+                            <label for="booth_type" class="col-md-4 col-form-label text-md-end">Booth Type</label>
 
                             <div class="col-md-6">
-                                <input id="seminar_name" type="text" class="form-control @error('seminar_name') is-invalid @enderror" name="seminar_name" value="{{ $qr->seminar_name }}" required autofocus>
+                                <input id="booth_type" type="text" class="form-control @error('booth_type') is-invalid @enderror" name="booth_type" value="{{ $booth_details->booth_type }}" required autofocus>
 
-                                @error('seminar_name')
+                                @error('booth_type')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -32,12 +32,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="location_name" class="col-md-4 col-form-label text-md-end">Location Name</label>
+                            <label for="lot_placement" class="col-md-4 col-form-label text-md-end">Lot Placement</label>
 
                             <div class="col-md-6">
-                                <input id="location_name" type="text" class="form-control @error('location_name') is-invalid @enderror" name="location_name" value="{{ $qr->location_name }}" required>
+                                <input id="lot_placement" type="text" class="form-control @error('lot_placement') is-invalid @enderror" name="lot_placement" value="{{ $booth_details->lot_placement }}" required>
 
-                                @error('location_name')
+                                @error('lot_placement')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -46,68 +46,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="max_participant" class="col-md-4 col-form-label text-md-end">Maximum Participant</label>
+                            <label for="price" class="col-md-4 col-form-label text-md-end">Price (RM)</label>
 
                             <div class="col-md-6">
-                                <input id="max_participant" type="number" class="form-control @error('max_participant') is-invalid @enderror" name="max_participant" value="{{ $qr->max_participant }}" required>
+                                <input id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ $booth_details->price }}" required>
 
-                                @error('max_participant')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="qr_value" class="col-md-4 col-form-label text-md-end">QR Value</label>
-
-                            <div class="col-md-6">
-                                <input id="qr_value" type="text" class="form-control @error('qr_value') is-invalid @enderror" name="qr_value" value="{{ $qr->qr_value }}" readonly>
-
-                                @error('qr_value')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="seminar_date" class="col-md-4 col-form-label text-md-end">Seminar Date</label>
-
-                            <div class="col-md-6">
-                                <input id="seminar_date" type="date" class="form-control @error('seminar_date') is-invalid @enderror" name="seminar_date" value="{{ $qr->seminar_date }}" required>
-                                
-                                @error('seminar_date')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-                        
-                        <div class="row mb-3">
-                            <label for="time_start" class="col-md-4 col-form-label text-md-end">Time Start</label>
-
-                            <div class="col-md-6">
-                                <input id="time_start" type="time" class="form-control @error('time_start') is-invalid @enderror" name="time_start" value="{{ $qr->time_start }}" required>
-
-                                @error('time_start')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="time_end" class="col-md-4 col-form-label text-md-end">Time End</label>
-
-                            <div class="col-md-6">
-                                <input id="time_end" type="time" class="form-control @error('time_end') is-invalid @enderror" name="time_end" value="{{ $qr->time_end }}" required>
-
-                                @error('time_end')
+                                @error('price')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -121,9 +65,9 @@
                                     Update
                                 </button>
                                 
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $qr->id }}"><i class="bi bi-trash"></i></button>
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $booth_details->details_id }}"><i class="bi bi-trash"></i></button>
                                 <!-- Modal -->
-                                <div class="modal fade" id="exampleModal{{ $qr->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal{{ $booth_details->details_id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-header">
@@ -131,11 +75,11 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                        Are you sure you want to delete this seminar ?
+                                        Are you sure you want to delete this details ?
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <a class="btn btn-danger" href="{{ url('delete-qr') }}/{{ $qr->id }}">Delete</a>
+                                        <a class="btn btn-danger" href="{{ url('delete-booth-details') }}/{{ $booth_details->booth_id }}/{{ $booth_details->details_id }}">Delete</a>
                                         </div>
                                     </div>
                                     </div>

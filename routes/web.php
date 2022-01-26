@@ -60,9 +60,9 @@ Route::post('store-booth', 'BoothController@store_booth');
 Route::get('booth-details/{booth_id}', 'BoothController@booth_details');
 Route::get('create-booth-details/{booth_id}', 'BoothController@create_booth_details');
 Route::post('store-booth-details/{booth_id}', 'BoothController@store_booth_details');
-Route::get('update-booth/{booth_id}', 'BoothController@update_booth_details');
-Route::post('edit-booth/{booth_id}', 'BoothController@edit_booth_details');
-Route::get('delete-booth/{booth_id}', 'BoothController@destroy_booth_details');
+Route::get('update-booth-details/{booth_id}/{details_id}', 'BoothController@update_booth_details');
+Route::post('edit-booth-details/{booth_id}/{details_id}', 'BoothController@edit_booth_details');
+Route::get('delete-booth-details/{booth_id}/{details_id}', 'BoothController@destroy_booth_details');
 // Coupon Management
 Route::get('coupon', 'CouponController@coupon');
 Route::get('update-coupon/{coupon_id}', 'CouponController@update_coupon');

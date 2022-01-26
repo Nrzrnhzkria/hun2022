@@ -62,11 +62,11 @@ class BoothController extends Controller
         return redirect('booth-details/'.$booth_id)->with('addbooth','Booth details has been created successfully.');
     }
 
-    public function update_booth_details($booth_id)
+    public function update_booth_details($booth_id, $details_id)
     {
-        $booth = Booth::where('booth_id', $booth_id)->first();
+        $booth_details = BoothDetails::where('booth_id', $booth_id)->where('details_id', $details_id)->first();
 
-        return view('admin.booth.update', compact('booth')); 
+        return view('admin.booth.update_details', compact('booth_details')); 
     }
 
     public function edit_booth_details($booth_id, Request $request)
