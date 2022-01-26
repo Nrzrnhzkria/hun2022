@@ -382,20 +382,21 @@ p {
                                             </div>
                                         </div> 
 
-                                        @foreach ($booth_details as $key => $booth_detail)
+                                        @foreach ($booth as $booths)
                                         <div class="table-responsive">
                                             <table class="table table-bordered table-sm">
                                                 <thead class="bg-dark text-white">
                                                     <tr>
                                                       <th scope="col">#</th>
-                                                      <th scope="col">{{ $booth->booth_name }}</th>
+                                                      <th scope="col">{{ $booths->booth_name }}</th>
                                                       <th scope="col">Lot Placement</th>
                                                       <th scope="col">Price (RM)</th>
                                                       <th scope="col" class="text-center">Check</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>                                                    
-                                                    @if ($booth->booth_id == $booth_detail->booth_id)    
+                                                <tbody>
+                                                    @foreach ($booth_details as $key => $booth_detail)                                                    
+                                                    @if ($booths->booth_id == $booth_detail->booth_id)    
                                                     <tr>
                                                         <th scope="row">{{ $booth_detail->firstItem() + $key }}</th>
                                                         <td>{{ $booth_detail->booth_type }}</td>
@@ -406,6 +407,7 @@ p {
                                                         </td>
                                                     </tr>
                                                     @endif
+                                                    @endforeach
                                                 </tbody>
                                             </table>
                                         </div>
