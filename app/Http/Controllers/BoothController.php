@@ -51,7 +51,7 @@ class BoothController extends Controller
         // $details_id = 'BD' . 0 . $auto_inc;  
         $details_id =  'BD'. 0 . 1;
 
-        Booth::create([
+        BoothDetails::create([
             'details_id' => $details_id,
             'booth_type' => $request->booth_type,
             'lot_placement' => $request->booth_type,
