@@ -9,14 +9,8 @@
       box-sizing: border-box;
     }
     
-    body {
-      background-color: #f1f1f1;
-    }
-    
     #regForm {
-      background-color: #ffffff;
       margin: 100px auto;
-      font-family: Raleway;
       padding: 40px;
       width: 70%;
       min-width: 300px;
@@ -30,7 +24,6 @@
       padding: 10px;
       width: 100%;
       font-size: 17px;
-      font-family: Raleway;
       border: 1px solid #aaaaaa;
     }
     
@@ -49,8 +42,6 @@
       color: #ffffff;
       border: none;
       padding: 10px 20px;
-      font-size: 17px;
-      font-family: Raleway;
       cursor: pointer;
     }
     
