@@ -139,7 +139,7 @@
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
                 <div class="card border-0 pb-5" style="background-color: orange">
                     <div class="card-body p-4">
-                        <h3>ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
+                        <h3 class="text-center">ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
                         <br>
                         <ul style="text-align: justify">
                             <li>HUN members get attend to the seminar/workshop/programs with numerous information about marketing, licensing and franchising by top notch entrepreneur.</li>
@@ -152,7 +152,7 @@
         <div class="col-md-4">
             <div class="card border-0">
                 <div class="card-body p-4">
-                    <h4 class="card-title">BECOME A VENDOR</h4>
+                    <h4 class="card-title text-center">BECOME A VENDOR</h4>
                     <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN</p>
                     <ul class="card-text" style="text-align: justify">
                         <li>Valuable exposure in creating trustful and legitimate business of your brands</li>
@@ -160,7 +160,7 @@
                         <li>Business is professionally managed to take local sources to the globalization market.</li>
                     </ul>
 
-                    <div class="col-auto text-center pt-2">
+                    <div class="col-auto text-center pt-3">
                         <a href="registration" class="btn btn-warning fw-bold">Register</a>
                     </div>
                 </div>
@@ -169,7 +169,7 @@
         <div class="col-md-4">
             <div class="card border-0">
                 <div class="card-body p-4">
-                    <h4 class="card-title">THE EXHIBITIONS</h4>
+                    <h4 class="card-title text-center">THE EXHIBITIONS</h4>
                     <p class="card-text" style="text-align: justify">
                         There are 8 upcoming exhibition, booth, programs, mentoring and etc can help growth your business and acquire information about new industry developments.
                     </p>
