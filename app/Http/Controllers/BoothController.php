@@ -49,17 +49,17 @@ class BoothController extends Controller
         // $booth_details = BoothDetails::orderBy('id','desc')->first(); 
         // $auto_inc = $booth_details->id + 1;
         // $details_id = 'BD' . 0 . $auto_inc;  
-        $details_id =  'BD'. 0 . 1;
+        $details_id =  'BD'. 0 . 0 . 1;
 
         BoothDetails::create([
             'details_id' => $details_id,
             'booth_type' => $request->booth_type,
-            'lot_placement' => $request->booth_type,
+            'lot_placement' => $request->lot_placement,
             'price' => $request->price,
             'booth_id' => $booth_id
         ]);
 
-        return redirect('booth-details/'.$booth_id)->with('addbooth','Booth details has been created successfully.');
+        return redirect('booth-details/'.$booth_id)->with('addboothdetails','Booth details has been created successfully.');
     }
 
     public function update_booth_details($booth_id, $details_id)
@@ -69,21 +69,23 @@ class BoothController extends Controller
         return view('admin.booth.update_details', compact('booth_details')); 
     }
 
-    public function edit_booth_details($booth_id, Request $request)
+    public function edit_booth_details($booth_id, $details_id, Request $request)
     {
-        $booth = Booth::where('booth_id', $booth_id)->first();
+        $booth_details = BoothDetails::where('booth_id', $booth_id)->where('details_id', $details_id)->first();
 
-        $booth->seminar_name = $request->booth_name;
-        $booth->save();
+        $booth_details->booth_type = $request->booth_type;
+        $booth_details->lot_placement = $request->lot_placement;
+        $booth_details->price = $request->price;
+        $booth_details->save();
 
-        return redirect('booth')->with('updatebooth','Booth has been updated successfully.'); 
+        return redirect('booth-details/'.$booth_id)->with('updateboothdetails','Booth has been updated successfully.'); 
     }
 
-    public function destroy_booth_details($boothv_id){
-        $booth = Booth::where('booth_id', $booth_id);
+    public function destroy_booth_details($booth_id, $details_id){
+        $booth_details = BoothDetails::where('booth_id', $booth_id)->where('details_id', $details_id);
         
-        $booth->delete();
-        return redirect('booth')->with('deletebooth','Booth has been deleted successfully.');
+        $booth_details->delete();
+        return redirect('booth-details/'.$booth_id)->with('deleteboothdetails','Booth has been deleted successfully.');
     }
 
 }

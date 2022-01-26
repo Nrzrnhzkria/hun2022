@@ -33,6 +33,24 @@
     </div>
     @endif
     
+    @if ($message = Session::get('addboothdetails'))
+    <div class="alert alert-info alert-block">
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
+
+    @if ($message = Session::get('updateboothdetails'))
+    <div class="alert alert-info alert-block">
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
+
+    @if ($message = Session::get('deleteboothdetails'))
+    <div class="alert alert-info alert-block">
+        <strong>{{ $message }}</strong>
+    </div>
+    @endif
+
     <div class="row">
         
         <div class="col-md-12">
