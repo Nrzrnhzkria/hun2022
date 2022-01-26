@@ -59,7 +59,7 @@ class BoothController extends Controller
             'booth_id' => $booth_id
         ]);
 
-        return redirect('booth')->with('addbooth','Booth has been created successfully.');
+        return redirect('booth-details/'.$booth_id)->with('addbooth','Booth details has been created successfully.');
     }
 
     public function update_booth_details($booth_id)
