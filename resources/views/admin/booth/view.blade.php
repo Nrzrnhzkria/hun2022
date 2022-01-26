@@ -11,33 +11,31 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Booth</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
-            <div class="btn-group me-2">
-                {{-- <a href="/create-booth" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Booth</a> --}}
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#newbooth">
-                    <i class="bi bi-plus-lg"></i>New Booth
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="newbooth" tabindex="-1" role="dialog" aria-labelledby="newboothLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header border-bottom-0">
-                                <h5 class="modal-title" id="exampleModalLabel">Add New Booth</h5>
-                            </div>
-                            <form action="{{ url('store-booth') }}" method="POST"> 
-                                @csrf
-                                <div class="form-group row px-4">
-                                    <label for="ic" class="col-sm-4 col-form-label">Booth Name</label>
-                                    <div class="col-sm-8">
-                                    <input type="text" class="form-control" name="booth_name" placeholder="Entrepreneur Booth" required>
-                                    </div>
-                                </div>
-                
-                                <div class='col-md-12 text-right px-4 pb-4'>
-                                    <button type='submit' class='btn btn-success'> <i class="bi bi-save pr-2"></i>Save</button>
-                                </div>
-                            </form>
+            {{-- <a href="/create-booth" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Booth</a> --}}
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#newbooth">
+                <i class="bi bi-plus-lg"></i>New Booth
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="newbooth" tabindex="-1" role="dialog" aria-labelledby="newboothLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header border-bottom-0">
+                            <h5 class="modal-title" id="exampleModalLabel">Add New Booth</h5>
                         </div>
+                        <form action="{{ url('store-booth') }}" method="POST"> 
+                            @csrf
+                            <div class="form-group row px-4">
+                                <label for="ic" class="col-sm-4 col-form-label">Booth Name</label>
+                                <div class="col-sm-8">
+                                <input type="text" class="form-control" name="booth_name" placeholder="Entrepreneur Booth" required>
+                                </div>
+                            </div>
+            
+                            <div class='col-md-12 text-right px-4 pb-4'>
+                                <button type='submit' class='btn btn-success'> <i class="bi bi-save pr-2"></i>Save</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
