@@ -198,9 +198,8 @@
         var html = '';
         html += '<div id="inputFormRow">';
         html += '<div class="input-group mb-3">';
-        html += '<input type="text" name="feature[]" class="form-control" autocomplete="off" required>';
-        html += '<div class="input-group-append">';
-        html += '<button id="removeRow" type="button" class="btn btn-danger"><i class="bi bi-x-lg"></i></button>';
+        html += '<input type="text" name="feature[]" class="form-control form-control-sm" autocomplete="off"  aria-describedby="button-addon2" required>';
+        html += '<button id="removeRow" type="button" class="btn btn-danger btn-sm" id="button-addon2"><i class="bi bi-x-lg"></i></button>';
         html += '</div>';
         html += '</div>';
 
