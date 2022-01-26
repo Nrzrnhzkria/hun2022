@@ -79,7 +79,7 @@
                             <th scope="row">{{ $booths->firstItem() + $key }}</th>
                             <td>{{ $booth->booth_name }}</td>
                             <td class="text-center">
-                                <!-- Button trigger modal -->
+                                <!-- Update trigger modal -->
                                 <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#update{{ $booth->booth_id }}">
                                     <i class="bi bi-pencil-square"></i>
                                 </button>
@@ -105,6 +105,33 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <!-- Delete trigger modal -->
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete{{ $booth->booth_id }}"><i class="bi bi-trash"></i></button>
+                                <!-- Modal -->
+                                <div class="modal fade" id="delete{{ $booth->booth_id }}" tabindex="-1" aria-labelledby="deleteLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Delete Confirmation</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                        <p>Are you sure you want to delete this booth ?</p>
+                                        <p>This table will be affected after deletion :</p>
+                                        <ul>
+                                            <li>Booth</li>
+                                            <li>Booth Details</li>
+                                        </ul>
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <a class="btn btn-danger" href="{{ url('delete-booth') }}/{{ $booth->booth_id }}">Delete</a>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+
                                 <a href="{{ url('booth-details') }}/{{ $booth->booth_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                

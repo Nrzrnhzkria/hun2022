@@ -38,6 +38,15 @@ class BoothController extends Controller
         return redirect('booth')->with('updatebooth','Booth has been updated successfully.'); 
     }
 
+    public function destroy_booth($booth_id){
+        $booth = Booth::where('booth_id', $booth_id);
+        $booth_details = BoothDetails::where('booth_id', $booth_id);
+        
+        $booth->delete();
+        $booth_details->delete();
+        return redirect('booth-details/'.$booth_id)->with('deleteboothdetails','Booth details has been deleted successfully.');
+    }
+
     public function booth_details($booth_id)
     {
         $booth =  Booth::where('booth_id', $booth_id)->first();
