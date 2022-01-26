@@ -24,6 +24,7 @@ class BoothController extends Controller
         $booth_id = uniqid();
 
         Booth::create([
+            'booth_id' => $booth_id,
             'booth_name' => $request->booth_name
         ]);
 
