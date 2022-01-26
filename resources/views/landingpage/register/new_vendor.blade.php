@@ -395,15 +395,15 @@ p {
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach ($booth_details as $key => $booth_detail)                                                    
+                                                    @foreach ($booth_details as $booth_detail)                                                    
                                                     @if ($booths->booth_id == $booth_detail->booth_id)    
                                                     <tr>
                                                         <th scope="row">{{ $count++ }}</th>
                                                         <td>{{ $booth_detail->booth_type }}</td>
                                                         <td>{{ $booth_detail->lot_placement }}</td>
-                                                        <td>{{ number_format($booth_details->price) }}</td>
+                                                        <td>{{ number_format($booth_detail->price) }}</td>
                                                         <td class="text-center">
-                                                            <input type="radio" name="amount" value="{{ $booth_details->price }}">
+                                                            <input type="radio" name="amount" value="{{ $booth_detail->price }}">
                                                         </td>
                                                     </tr>
                                                     @endif
