@@ -25,15 +25,7 @@
     .tab {
       display: none;
     }
-    
-    button {
-      background-color: #04AA6D;
-      color: #ffffff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-    }
-    
+        
     button:hover {
       opacity: 0.8;
     }
