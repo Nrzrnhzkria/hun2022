@@ -259,11 +259,11 @@ p {
                                             </div>
                                         </div> 
 
-                                        <div class="col-6">
+                                        <div class="col-sm-6">
                                             <label class="fieldlabels">Company Name: *</label> 
                                             <input type="email" name="company_name" placeholder="Company Sdn Bhd" />
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-sm-6">
                                             <label class="fieldlabels">Contact Person: *</label> 
                                             <input type="text" name="name" placeholder="Muhammad" />     
                                         </div>
