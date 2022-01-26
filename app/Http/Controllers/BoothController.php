@@ -28,6 +28,16 @@ class BoothController extends Controller
         return redirect('booth')->with('addbooth','Booth has been created successfully.');
     }
 
+    public function edit_booth($booth_id, Request $request)
+    {
+        $booth = Booth::where('booth_id', $booth_id)->first();
+
+        $booth->booth_name = $request->booth_name;
+        $booth->save();
+
+        return redirect('booth')->with('updatebooth','Booth has been updated successfully.'); 
+    }
+
     public function booth_details($booth_id)
     {
         $booth =  Booth::where('booth_id', $booth_id)->first();

@@ -57,6 +57,7 @@ Route::get('dashboard', 'DashboardController@dashboard');
 // Booth Management
 Route::get('booth', 'BoothController@booth');
 Route::post('store-booth', 'BoothController@store_booth');
+Route::post('edit-booth/{booth_id}', 'BoothController@edit_booth');
 Route::get('booth-details/{booth_id}', 'BoothController@booth_details');
 Route::get('create-booth-details/{booth_id}', 'BoothController@create_booth_details');
 Route::post('store-booth-details/{booth_id}', 'BoothController@store_booth_details');
