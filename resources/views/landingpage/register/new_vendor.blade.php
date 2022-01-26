@@ -58,7 +58,6 @@ p {
     margin-top: 2px;
     width: 100%;
     box-sizing: border-box;
-    font-family: montserrat;
     color: #2C3E50;
     background-color: #ECEFF1;
     font-size: 16px;
