@@ -15,18 +15,7 @@
       width: 70%;
       min-width: 300px;
     }
-    
-    h1 {
-      text-align: center;  
-    }
-    
-    input {
-      padding: 10px;
-      width: 100%;
-      font-size: 17px;
-      border: 1px solid #aaaaaa;
-    }
-    
+        
     /* Mark input boxes that gets an error on validation: */
     input.invalid {
       background-color: #ffdddd;
