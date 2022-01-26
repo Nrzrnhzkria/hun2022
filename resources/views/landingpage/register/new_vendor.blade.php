@@ -69,16 +69,16 @@
     
                         <div class="col-md-12 pb-2">
                             <label>Name of Company:<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name" oninput="this.className = ''">
+                            <input type="text" class="form-control form-control-sm" placeholder="Company Sdn Bhd" name="company_name">
                         </div>
     
                         <div class="col-md-6 pb-2">
                             <label>Contact Person:<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control form-control-sm" placeholder="Mohammad"  name="name" oninput="this.className = ''">
+                            <input type="text" class="form-control form-control-sm" placeholder="Mohammad"  name="name">
                         </div>
                         <div class="col-md-6 pb-2">
                             <label>Designation:<span class="text-danger">*</span></label>
-                            <select class="form-select form-select-sm" aria-label="Default select example" name="designation" oninput="this.className = ''">                                 
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="designation">                                 
                                 <option disabled selected>-- Please Select --</option>
                                 <option value="CEO">CEO</option>
                                 <option value="Proprietor">Proprietor</option>
@@ -99,7 +99,7 @@
     
                         <div class="col-md-12 pb-2">
                             <label>IC/Passport No.:<span class="text-danger">*</span></label>
-                            <input type="text" class="form-control form-control-sm" name="ic_no" value="{{ $vendor_ic }}" oninput="this.className = ''" readonly/>
+                            <input type="text" class="form-control form-control-sm" name="ic_no" value="{{ $vendor_ic }}" readonly/>
                         </div>
     
                         {{-- <div class="col-md-6 pb-2">
@@ -113,18 +113,18 @@
     
                         <div class="col-md-12 pb-2">
                             <label>Company Address:<span class="text-danger">*</span></label>
-                            <textarea type="text" class="form-control form-control-sm" placeholder="Ali"  name="company_address" oninput="this.className = ''"></textarea>
+                            <textarea type="text" class="form-control form-control-sm" placeholder="Ali"  name="company_address"></textarea>
                         </div>
     
                         <div class="col-md-6 pb-2">
                             <label>Email:<span class="text-danger">*</span></label>
-                            <input type="email" class="form-control form-control-sm" name="email" placeholder="example@gmail.com" oninput="this.className = ''"/>
-                            {{-- <input type="hidden" value="{{ $vendor_ic }}" class="form-control form-control-sm" name="password"/> --}}
+                            <input type="email" class="form-control form-control-sm" name="email" placeholder="example@gmail.com"/>
+                            <input type="hidden" value="{{ $vendor_ic }}" class="form-control form-control-sm" name="password"/>
                         </div>
     
                         <div class="col-md-6 pb-2">
                             <label>Nature of Business:<span class="text-danger">*</span></label>
-                            <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" oninput="this.className = ''">                                 
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature">                                 
                                 <option disabled selected>-- Please Select --</option>
                                 <option value="Sole proprietorship">Sole proprietorship</option>
                                 <option value="Partnership">Partnership</option>
@@ -138,24 +138,24 @@
     
                         <div class="col-md-6 pb-2">
                             <label for="phoneno" class="form-label">Phone No.:<span class="text-danger">*</span></label>
-                            <input type="text" value="+60" class="form-control form-control-sm" name="phone_no" oninput="this.className = ''" required/>
+                            <input type="text" value="+60" class="form-control form-control-sm" name="phone_no" required/>
                         </div>
     
                         <div class="col-md-6 pb-2">
                             <label for="formFile" class="form-label">Details of Displayed Product:<span class="text-danger">*</span></label>
-                            <input class="form-control form-control-sm" type="file" name="product_details" id="formFile" oninput="this.className = ''">
+                            <input class="form-control form-control-sm" type="file" name="product_details" id="formFile">
                             <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
                         </div>
     
                         <div class="col-md-6 pb-2">
                             <label for="formFile" class="form-label">SSM Certificate:<span class="text-danger">*</span></label>
-                            <input class="form-control form-control-sm" type="file" name="ssm_cert" id="formFile" oninput="this.className = ''">
+                            <input class="form-control form-control-sm" type="file" name="ssm_cert" id="formFile">
                             <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
                         </div>
     
                         <div class="col-md-6 pb-2">
                             <label for="formFile" class="form-label">Vaccine Certificate:<span class="text-danger">*</span></label>
-                            <input class="form-control form-control-sm" type="file" name="vaccine_cert" id="formFile" oninput="this.className = ''">
+                            <input class="form-control form-control-sm" type="file" name="vaccine_cert" id="formFile">
                             <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
                         </div>
                         
