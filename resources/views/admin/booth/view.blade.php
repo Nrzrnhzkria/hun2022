@@ -14,33 +14,30 @@
             <div class="btn-group me-2">
                 {{-- <a href="/create-booth" class="btn btn-outline-dark"><i class="bi bi-plus-lg"></i> Add Booth</a> --}}
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#newbooth">
+                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#newbooth">
                     <i class="bi bi-plus-lg"></i>New Booth
                 </button>
                 <!-- Modal -->
                 <div class="modal fade" id="newbooth" tabindex="-1" role="dialog" aria-labelledby="newboothLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header border-bottom-0">
-                        <h5 class="modal-title" id="exampleModalLabel">Add New Booth</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        </div>
-                        <form action="{{ url('store-booth') }}" method="POST"> 
-                            @csrf
-                            <div class="form-group row px-4">
-                                <label for="ic" class="col-sm-4 col-form-label">Booth Name</label>
-                                <div class="col-sm-8">
-                                <input type="text" class="form-control" name="booth_name" placeholder="Entrepreneur Booth" required>
+                        <div class="modal-content">
+                            <div class="modal-header border-bottom-0">
+                                <h5 class="modal-title" id="exampleModalLabel">Add New Booth</h5>
+                            </div>
+                            <form action="{{ url('store-booth') }}" method="POST"> 
+                                @csrf
+                                <div class="form-group row px-4">
+                                    <label for="ic" class="col-sm-4 col-form-label">Booth Name</label>
+                                    <div class="col-sm-8">
+                                    <input type="text" class="form-control" name="booth_name" placeholder="Entrepreneur Booth" required>
+                                    </div>
                                 </div>
-                            </div>
-            
-                            <div class='col-md-12 text-right px-4 pb-4'>
-                                <button type='submit' class='btn btn-success'> <i class="bi bi-save pr-2"></i>Save</button>
-                            </div>
-                        </form>
-                    </div>
+                
+                                <div class='col-md-12 text-right px-4 pb-4'>
+                                    <button type='submit' class='btn btn-success'> <i class="bi bi-save pr-2"></i>Save</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
