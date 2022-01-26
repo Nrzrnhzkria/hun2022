@@ -6,40 +6,76 @@
 
 <style>
 
-    .wrap { 
-        max-width: 980px; 
-        margin: 10px auto 0; 
-    }
-    #steps { 
-        margin: 80px 0 0 0; 
-    }
-    .commands { 
-        overflow: hidden; 
-        margin-top: 30px; 
-    }
-    .prev {
-        float:left;
-    }
-    .next, .submit {
-        float:right;
-    }
-    .error { 
-        color: #b33; 
-    }
-    #progress { 
-        position: relative; 
-        height: 5px; 
-        background-color: #eee; 
-        margin-bottom: 20px; 
-    }
-    #progress-complete { 
-        border: 0; 
-        position: absolute; 
-        height: 5px; 
-        min-width: 10px; 
-        background-color: #337ab7; 
-        transition: width .2s ease-in-out; 
-    }
+.msf-view {
+  display: none;
+}
+
+.msf-navigation {
+  text-align: center;
+}
+
+.msf-nav-button {
+  display: none;
+}
+
+.msf-header {
+  padding-top: 10px;
+  margin-bottom: 40px;
+  color: #777;
+}
+
+.msf-header .msf-step {
+  font-size: 20px;
+  /*display : inline-block;
+       vertical-align : middle;*/
+}
+
+.msf-header .msf-step i.fa {
+  height: 60px;
+  width: 60px;
+  line-height: 55px;
+  text-align: center;
+  border: 3px solid #777;
+  border-radius: 100%;
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.msf-header .msf-step.msf-step-active {
+  color: #ef4035;
+  /*color:#3c763d;*/
+}
+
+.msf-header .msf-step.msf-step-active i.fa {
+  border-color: #ef4035;
+  /*border-color : #3c763d;*/
+}
+
+.msf-header .msf-step.msf-step-complete {
+  /*color: #ef4035;*/
+  color: #3c763d;
+}
+
+.msf-header .msf-step.msf-step-complete i.fa {
+  /*border-color : #ef4035;*/
+  border-color: #3c763d;
+}
+
+.input-validation-error {
+  border-color: red;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
+.input-validation-error:focus {
+  border-color: red;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255, 0, 0, 0.6);
+}
+
 </style>
 
 @section('content')
@@ -50,129 +86,125 @@
         </div>
 
         <div class="card px-4 py-4">
-            <div class="row wrap">
-                <div class="col-lg-12">
-
-                    <div id='progress'><div id='progress-complete'></div></div>
-                
-                    <form id="SignupForm" action="">
-                        <fieldset>
-                            <legend>Account information</legend>
-                            <div class="form-group">
-                                <label for="Name">Name</label>
-                                <input id="Name" type="text" class="form-control" required />
+                <div id="wrapper">
+              
+                  <div id="container body-content">
+                  
+                  
+                          <div class="progress">
+                              <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+                                  <span class="sr-only">0% Complete</span>
+                              </div>
+                          </div>
+                  
+                    <form class="form-horizontal msf">
+                      <div class="msf-header">
+                        <div class="row text-center">
+                          <div class="msf-step col-md-4"><i class="fa fa-clipboard"></i> <span>Enter Request Details</span></div>
+                          <div class="msf-step col-md-4"><i class="fa fa-credit-card"></i><span>Further Details</span></div>
+                          <div class="msf-step col-md-4"><i class="fa fa-check"></i> <span>Review and Submit</span></div>
+                        </div>
+                      </div>
+              
+                      <div class="msf-content">
+                        <div class="msf-view">
+              
+                          <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                              <div class="form-group">
+                                <input id="name" name="name" type="text" class="form-control" placeholder="Name" data-bind="value: Name" data-val="true" data-val-required="name is required">
+                                <!--data-val="true" data-val-required="name is required"-->
+                              </div>
+                              <div class="form-group">
+                                <input id="email" name="email" type="text" class="form-control" placeholder="Email" data-bind="value: Email" data-val="true" data-val-required="email is required">
+                                <!-- data-val="true" data-val-required="email is required -->
+                              </div>
+                              <div class="form-group">
+                                <textarea id="details" name="details" rows="10" class="form-control" placeholder="Enter Details" data-bind="value: Details"></textarea>
+                              </div>
+              
                             </div>
-                            <div class="form-group">
-                                <label for="Email">Email</label>
-                                <input id="Email" type="email" class="form-control" required />
+                          </div>
+              
+              
+                        </div>
+                        <div class="msf-view">
+                          <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                              <div class="form-group">
+                                <select id="countries" name="countries" class="form-control" data-bind="options: availableCountries, selectedOptions: chosenCountries" data-val="true" data-val-required="select a country" size="5" multiple="true"></select>
+                              </div>
+              
+                              <div class="form-group">
+              
+                                <select id="type" name="type" class="form-control" data-bind="options: availableTypes, selectedOptions: chosenType, optionsCaption: 'Choose Request Type'" data-val="true" data-val-required="Request type is required.">
+                                </select>
+              
+                                <!-- data-val="true" data-val-required="email is required -->
+                              </div>
+                              <!--   <div class="form-group">
+                                <textarea id="additionaldetails" name="additionaldetails" rows="10" class="form-control" placeholder="Enter Additional Details" data-bind="value: AdditionalDetails"></textarea>
+                              </div>
+                              -->
+              
                             </div>
-                            <div class="form-group">
-                                <label for="Password">Password</label>
-                                <input id="Password" type="password" class="form-control" />
+                          </div>
+                        </div>
+                        <div class="msf-view">
+                          <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                              <label>Name</label> : <span data-bind="text: Name"></span>
                             </div>
-                        </fieldset>
-                
-                        <fieldset>
-                            <legend>Company information</legend>
-                            <div class="form-group">
-                                <label for="CompanyName">Company Name</label>
-                                <input id="CompanyName" type="text" class="form-control" required />
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                              <label>Email</label> : <span data-bind="text: Email"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="Website">Website</label>
-                                <input id="Website" type="text" class="form-control" />
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                              <label>Type</label> : <span data-bind="text: chosenType"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="CompanyEmail">CompanyEmail</label>
-                                <input id="CompanyEmail" type="text" class="form-control" />
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                              <label>Countries</label> : <span data-bind="text: chosenCountries"></span>
                             </div>
-                        </fieldset>
-                
-                        <fieldset class="form-horizontal" role="form">
-                            <legend>Billing information</legend>
-                            <div class="form-group">
-                                <label for="NameOnCard" class="col-sm-2 control-label">Name on Card</label>
-                                <div class="col-sm-10">
-                                    <input id="NameOnCard" type="text" class="form-control" />
-                                </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 col-md-offset-3">
+                              <label>Details</label> : <span data-bind="text: Details"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="CardNumber" class="col-sm-2 control-label">Card Number</label>
-                                <div class="col-sm-10">
-                                    <input id="CardNumber" type="text" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="CreditcardMonth" class="col-sm-2 control-label">Expiration</label>
-                                <div class="col-sm-10">
-                                    <div class="row">
-                                        <div class="col-xs-3">
-                                            <select id="CreditcardMonth" class="form-control col-sm-2">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            </select>
-                                        </div>
-                                        <div class="col-xs-3">
-                                            <select id="CreditcardYear" class="form-control">
-                                                <option value="2009">2009</option>
-                                                <option value="2010">2010</option>
-                                                <option value="2011">2011</option>
-                                                <option value="2012">2012</option>
-                                                <option value="2013">2013</option>
-                                                <option value="2014">2014</option>
-                                                <option value="2015">2015</option>
-                                                <option value="2016">2016</option>
-                                                <option value="2017">2017</option>
-                                                <option value="2018">2018</option>
-                                                <option value="2019">2019</option>
-                                            </select>        
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Address1" class="col-sm-2 control-label">Address 1</label>
-                                <div class="col-sm-10">
-                                    <input id="Address1" type="text" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Address2" class="col-sm-2 control-label">Address 2</label>
-                                <div class="col-sm-10">
-                                    <input id="Address2" type="text" class="form-control" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="Zip" class="col-sm-2 control-label">ZIP</label>
-                                <div class="col-sm-4">
-                                    <input id="Zip" type="text" class="form-control" />
-                                </div>
-                                <label for="Country" class="col-sm-2 control-label">Country</label>
-                                <div class="col-sm-4">
-                                    <select id="Country" class="form-control">
-                                        <option value="CA">Canada</option>
-                                        <option value="US">United States of America</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <p>
-                            <button id="SaveAccount" class="btn btn-primary submit">Submit form</button>
-                        </p>
+                          </div>
+                          
+                           <div class="row">
+                                          <div class="col-md-6 col-md-offset-3">
+                                              <div class="form-group">
+                                                   <input id="additional" name="additional" type="text" class="form-control" placeholder="Additional Details"  data-val="true" data-val-required="name is required">    
+                                              </div>
+                                          </div>
+                                      </div>
+                        </div>
+                      </div>
+              
+                      <div class="msf-navigation">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <button type="button" data-type="back" class="btn msf-nav-button"><i class="fa fa-chevron-left"></i> Back </button>
+                          </div>
+              
+                          <div class="col-md-3 col-md-offset-6">
+                            <button type="button" data-type="next" class="btn msf-nav-button">Next <i class="fa fa-chevron-right"></i></button>
+              
+                            <button type="submit" data-type="submit" class="btn msf-nav-button">Submit</button>
+                          </div>
+              
+                        </div>
+                      </div>
                     </form>
-                
-                </div>
-            </div>
+              
+                  </div>
+                </div>              
             
         </div>
         {{-- <form action="{{ url('new-registration/store') }}" method="POST" enctype="multipart/form-data">
@@ -354,30 +386,301 @@
 
 {{-- Multi-level form script --}}
 <script>
-    $( function() {
-        var $signupForm = $( '#SignupForm' );
+    (function(factory) {
+  'use strict';
+  if (typeof define === 'function' && define.amd) {
+    // AMD is used - Register as an anonymous module.
+    define(['jquery', 'jquery-validation'], factory);
+  } else if (typeof exports === 'object') {
+    factory(require('jquery'), require('jquery-validation'));
+  } else {
+    // Neither AMD nor CommonJS used. Use global variables.
+    if (typeof jQuery === 'undefined') {
+      throw 'multi-step-form-js requires jQuery to be loaded first';
+    }
+    if (typeof jQuery.validator === 'undefined') {
+      throw 'multi-step-form-js requires requires jquery.validation.js to be loaded first';
+    }
+    factory(jQuery);
+  }
+}(function($) {
+  'use strict';
 
-        $signupForm.validate({errorElement: 'em'});
+  const msfCssClasses = {
+    header: "msf-header",
+    step: "msf-step",
+    stepComplete: "msf-step-complete",
+    stepActive: "msf-step-active",
+    content: "msf-content",
+    view: "msf-view",
+    navigation: "msf-navigation",
+    navButton: "msf-nav-button"
+  };
 
-        $signupForm.formToWizard({
-            submitButton: 'SaveAccount',
-            nextBtnClass: 'btn btn-primary next',
-            prevBtnClass: 'btn btn-default prev',
-            buttonTag:    'button',
-            validateBeforeNext: function(form, step) {
-                var stepIsValid = true;
-                var validator = form.validate();
-                $(':input', step).each( function(index) {
-                    var xy = validator.element(this);
-                    stepIsValid = stepIsValid && (typeof xy == 'undefined' || xy);
-                });
-                return stepIsValid;
-            },
-            progress: function (i, count) {
-                $('#progress-complete').width(''+(i/count*100)+'%');
+  const msfNavTypes = {
+    back: "back",
+    next: "next",
+    submit: "submit"
+
+  };
+
+  const msfEventTypes = {
+    viewChanged: "msf:viewChanged"
+  };
+
+  $.fn.multiStepForm = function(options) {
+    var form = this;
+
+    var defaults = {
+      activeIndex: 0,
+      validate: {}
+    };
+
+    var settings = $.extend({}, defaults, options);
+
+    //find the msf-content object
+    form.content = this.find("." + msfCssClasses.content).first();
+
+    if (form.content.length === 0) {
+      throw new Error('Multi-Step Form requires a child element of class \'' + msfCssClasses.content + '\'');
+    }
+
+    //find the msf-views within the content object
+    form.views = $(this.content).find("." + msfCssClasses.view);
+
+    if (form.views.length === 0) {
+      throw new Error('Multi-Step Form\'s element of class \'' + msfCssClasses.content + '\' requires n elements of class \'' + msfCssClasses.view + '\'');
+    }
+
+    form.header = this.find("." + msfCssClasses.header).first();
+    form.navigation = this.find("." + msfCssClasses.navigation).first();
+    form.steps = [];
+
+    form.getActiveView = function() {
+      return form.views.filter(function() {
+        return this.style && this.style.display !== '' && this.style.display !== 'none'
+      });
+    };
+
+    form.setActiveView = function(index) {
+      var view = form.getActiveView();
+      var previousIndex = form.views.index(view);
+
+      view = form.views.eq(index);
+      view.show();
+      view.find(':input').first().focus();
+
+      //trigger the 'view has changed' event
+      form.trigger(msfEventTypes.viewChanged, {
+        currentIndex: index,
+        previousIndex: previousIndex,
+        totalSteps: form.steps.length
+      });
+    }
+
+    form.init = function() {
+
+      this.initHeader = function() {
+        if (form.header.length === 0) {
+          form.header = $("<div/>", {
+            "class": msfCssClasses.header,
+            "display": "none"
+          });
+
+          $(form).prepend(form.header);
+        }
+
+        form.steps = $(form.header).find("." + msfCssClasses.step);
+
+        this.initStep = function(index, view) {
+
+          if (form.steps.length < index + 1) {
+            $(form.header).append($("<div/>", {
+              "class": msfCssClasses.step,
+              "display": "none"
+            }));
+          }
+        }
+
+        $.each(form.views, this.initStep);
+
+        form.steps = $(form.header).find("." + msfCssClasses.step);
+      };
+
+
+      this.initNavigation = function() {
+
+        if (form.navigation.length === 0) {
+          form.navigation = $("<div/>", {
+            "class": msfCssClasses.navigation
+          });
+
+          $(form.content).after(form.navigation);
+        }
+
+        this.initNavButton = function(type) {
+          var element = this.navigation.find("button[data-type='" + type + "'], input[type='button']"),
+            type;
+          if (element.length === 0) {
+            element = $("<button/>", {
+              "class": msfCssClasses.navButton,
+              "data-type": type,
+              "html": type
+            });
+            element.appendTo(form.navigation);
+          }
+
+          return element;
+        };
+
+        form.backNavButton = this.initNavButton(msfNavTypes.back);
+        form.nextNavButton = this.initNavButton(msfNavTypes.next);
+        form.submitNavButton = this.initNavButton(msfNavTypes.submit);
+      };
+
+
+      this.initHeader();
+      this.initNavigation();
+
+      this.views.each(function(index, element) {
+
+        var view = element,
+          $view = $(element);
+
+        $view.on('show', function(e) {
+          if (this !== e.target)
+            return;
+
+          //hide whichever view is currently showing
+          form.getActiveView().hide();
+
+          //choose which navigation buttons should be displayed based on index of view 
+          if (index > 0) {
+            form.backNavButton.show();
+          }
+
+          if (index == form.views.length - 1) {
+            form.nextNavButton.hide();
+            form.submitNavButton.show();
+          } else {
+            form.submitNavButton.hide();
+            form.nextNavButton.show();
+
+            //if this is not the last view do not allow the enter key to submit the form as it is not completed yet
+            $(this).find(':input').keypress(function(e) {
+              if (e.which == 13) // Enter key = keycode 13
+              {
+                form.nextNavButton.click();
+                return false;
+              }
+            });
+          }
+
+          //determine if each step is completed or active based in index
+          $.each(form.steps, function(i, element) {
+            if (i < index) {
+              $(element).removeClass(msfCssClasses.stepActive);
+              $(element).addClass(msfCssClasses.stepComplete);
+            } else if (i === index) {
+              $(element).removeClass(msfCssClasses.stepComplete);
+              $(element).addClass(msfCssClasses.stepActive);
+            } else {
+              $(element).removeClass(msfCssClasses.stepComplete);
+              $(element).removeClass(msfCssClasses.stepActive);
             }
+          });
         });
+
+        $view.on('hide', function(e) {
+          if (this !== e.target)
+            return;
+
+          //hide all navigation buttons, display choices will be set on show event
+          form.backNavButton.hide();
+          form.nextNavButton.hide();
+          form.submitNavButton.hide();
+        });
+      });
+
+      form.setActiveView(settings.activeIndex);
+    };
+
+    form.init();
+
+    form.nextNavButton.click(function() {
+      var view = form.getActiveView();
+
+      //validate the input in the current view
+      if (form.validate(settings.validate).subset(view)) {
+        var i = form.views.index(view);
+
+        form.setActiveView(i + 1);
+      }
     });
+
+    form.backNavButton.click(function() {
+      var view = form.getActiveView();
+      var i = form.views.index(view);
+
+      form.setActiveView(i - 1);
+    });
+
+  };
+
+  $.validator.prototype.subset = function(container) {
+    var ok = true;
+    var self = this;
+    $(container).find(':input').each(function() {
+      if (!self.element($(this))) ok = false;
+    });
+    return ok;
+  };
+
+  $.each(['show', 'hide'], function(i, ev) {
+    var el = $.fn[ev];
+    $.fn[ev] = function() {
+      this.trigger(ev);
+      return el.apply(this, arguments);
+    };
+  });
+}));
+
+
+
+
+
+function ViewModel() {
+  var self = this;
+
+  self.Name = ko.observable('');
+  self.Email = ko.observable('');
+  self.Details = ko.observable('');
+
+  self.AdditionalDetails = ko.observable('');
+  self.availableTypes = ko.observableArray(['New', 'Open', 'Closed']);
+  self.chosenType = ko.observable('');
+
+  self.availableCountries = ko.observableArray(['France', 'Germany', 'Spain', 'United States', 'Mexico']),
+    self.chosenCountries = ko.observableArray([]) // Initially, only Germany is selected
+
+
+}
+
+var viewModel = new ViewModel();
+
+ko.applyBindings(viewModel);
+
+
+$(document).on("msf:viewChanged", function(event, data) {
+
+  var progress = Math.round((data.currentIndex / data.totalSteps) * 100);
+
+  $(".progress-bar").css("width", progress + "%").attr('aria-valuenow', progress);;
+});
+
+
+$(".msf:first").multiStepForm();
+
 </script>
 {{-- <!-- Enable function to add row ------------------------------------------>
 <script type="text/javascript">
