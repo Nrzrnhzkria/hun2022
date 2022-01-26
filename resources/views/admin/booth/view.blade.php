@@ -80,7 +80,7 @@
                             <th scope="row">{{ $booths->firstItem() + $key }}</th>
                             <td>{{ $booth->booth_name }}</td>
                             <td class="text-center">
-                                <a href="{{ url('view-booth-details') }}/{{ $booth->booth_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('booth-details') }}/{{ $booth->booth_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                
                         @endforeach
