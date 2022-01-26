@@ -261,13 +261,13 @@ p {
                                         </div> 
 
                                         <label class="fieldlabels">Company Name: *</label> 
-                                        <input type="email" name="company_name" placeholder="Company Sdn Bhd" /> 
+                                        <input type="email" name="company_name" placeholder="Company Sdn Bhd" required/> 
 
                                         <label class="fieldlabels">Contact Person: *</label> 
-                                        <input type="text" name="name" placeholder="Muhammad" /> 
+                                        <input type="text" name="name" placeholder="Muhammad" required/> 
                                         
                                         <label class="fieldlabels">Designation: *</label>  
-                                        <select name="designation">                                 
+                                        <select name="designation" required>                                 
                                             <option disabled selected>-- Please Select --</option>
                                             <option value="CEO">CEO</option>
                                             <option value="Proprietor">Proprietor</option>
@@ -287,6 +287,42 @@ p {
                                         
                                         <label class="fieldlabels">IC No: *</label>
                                         <input type="text" value="{{ $vendor_ic }}" name="ic_no" readonly/>
+
+                                        <label class="fieldlabels">Company Address: *</label>
+                                        <textarea type="text" name="compan_address"></textarea>
+
+                                        <label class="fieldlabels">Email:<span class="text-danger">*</span></label>
+                                        <input type="email" name="email" placeholder="example@gmail.com" required/>
+                                        <input type="hidden" value="{{ $vendor_ic }}" name="password"/>
+
+                                        <label class="fieldlabels">Nature of Business:<span class="text-danger">*</span></label>
+                                        <select name="business_nature">                                 
+                                            <option disabled selected>-- Please Select --</option>
+                                            <option value="Sole proprietorship">Sole proprietorship</option>
+                                            <option value="Partnership">Partnership</option>
+                                            <option value="Private limited company">Private limited company</option>
+                                            <option value="Public limited company">Public limited company</option>
+                                            <option value="Unlimited companies">Unlimited companies</option>
+                                            <option value="Foreign company">Foreign company</option>
+                                            <option value="Limited liability partnership">Limited liability partnership</option>
+                                        </select>
+
+                                        <label class="fieldlabels">Phone No.:<span class="text-danger">*</span></label>
+                                        <input type="text" value="+60" name="phone_no" required/>
+
+                                        <label class="fieldlabels">Details of Displayed Product:<span class="text-danger">*</span></label>
+                                        <input type="file" name="product_details" id="formFile">
+                                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+
+                                        <label class="fieldlabels">SSM Certificate:<span class="text-danger">*</span></label>
+                                        <input type="file" name="ssm_cert" id="formFile">
+                                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+
+                                        <label class="fieldlabels">Vaccine Certificate:<span class="text-danger">*</span></label>
+                                        <input type="file" name="vaccine_cert" id="formFile">
+                                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                                    
+
                                     </div> 
 
                                     <input type="button" name="next" class="next action-button" value="Next" />
