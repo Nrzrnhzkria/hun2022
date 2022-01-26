@@ -138,7 +138,7 @@
         <div class="col-md-4">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
                 <div class="card border-0" style="background-color: orange">
-                    <div class="card-body">
+                    <div class="card-body p-1">
                         <h3>ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
                         <br>
                         <ul>
@@ -151,7 +151,7 @@
         </div>
         <div class="col-md-4">
             <div class="card border-0">
-                <div class="card-body">
+                <div class="card-body p-1">
                     <h4 class="card-title">BECOME A VENDOR</h4>
                     <p class="card-text">Learn how to get started as vendor and finding business opportunities with HUN</p>
                     <ul class="card-text">
@@ -165,7 +165,7 @@
         </div>
         <div class="col-md-4">
             <div class="card border-0">
-                <div class="card-body">
+                <div class="card-body p-1">
                     <h4 class="card-title">THE EXHIBITIONS</h4>
                     <p class="card-text">
                         There are 8 upcoming exhibition, booth, programs, mentoring and etc can help growth your business and acquire information about new industry developments.
