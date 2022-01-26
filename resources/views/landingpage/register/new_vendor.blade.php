@@ -162,9 +162,46 @@
                     </div>
 
                 </div>
-                <div class="tab">Contact Info:
-                    <p><input placeholder="E-mail..." class="form-control form-control-sm" oninput="this.className = ''" name="email"></p>
-                    <p><input placeholder="Phone..." class="form-control form-control-sm" oninput="this.className = ''" name="phone"></p>
+                <div class="tab">
+                    <div class="fw-bold px-2 py-2" style="background-color: orange">Coupon Details (Optional)</div>
+                
+                    <div class="row p-3">                  
+                        <div class="col-md-6 pb-2">
+                            <label for="formFile" class="form-label">Coupon Category:</label>
+                            <select class="form-select form-select-sm" aria-label="Default select example" name="category" value="{{ $coupon->category ?? '' }}">                                 
+                                <option disabled selected>-- Please Select --</option>
+                                <option value="Automotive">Automotive</option>
+                                <option value="Business Support & Supplies">Business Support & Supplies</option>
+                                <option value="Computers & Electronics">Computers & Electronics</option>
+                                <option value="Construction & Contractors">Construction & Contractors</option>
+                                <option value="Education">Education</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Food & Dining">Food & Dining</option>
+                                <option value="Health & Medicine">Health & Medicine</option>
+                                <option value="Home & Garden">Home & Garden</option>
+                                <option value="Legal & Financial">Legal & Financial</option>
+                                <option value="Manufacturing, Wholesale & Distribution">Manufacturing, Wholesale & Distribution</option>
+                                <option value="Merchants (Retail)">Merchants (Retail)</option>
+                                <option value="Miscellaneous">Miscellaneous</option>
+                                <option value="Personal Care & Services">Personal Care & Services</option>
+                                <option value="Real Estate">Real Estate</option>
+                                <option value="Travel & Transportation">Travel & Transportation</option>
+                            </select>                         
+                        </div>
+
+                        <div class="col-md-6 pb-2">
+                            
+                            <div id="inputFormRow">
+                                <label for="formFileMultiple" class="form-label">Coupon:</label>
+                                <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
+                                <em style="font-size: 10pt;">File format: png, jpeg</em>
+                            </div>
+
+                            <div id="newRow"></div>
+                            <button id="addRow" type='button' class='btn btn-sm'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
+                        
+                        </div>
+                    </div>
                 </div>
                 <div class="tab">Birthday:
                     <p><input placeholder="dd" class="form-control form-control-sm" oninput="this.className = ''" name="dd"></p>
@@ -177,8 +214,8 @@
                 </div>
                 <div style="overflow:auto;">
                     <div style="float:right;">
-                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                        <button type="button" id="prevBtn" class="btn btn-outline-warning fw-bold" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" class="btn btn-warning fw-bold" onclick="nextPrev(1)">Next</button>
                     </div>
                 </div>
                 <!-- Circles which indicates the steps of the form: -->
