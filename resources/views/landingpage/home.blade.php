@@ -159,7 +159,10 @@
                         <li>Build Community Networking and meet thousands of local consumers who are interested in local brand</li>
                         <li>Business is professionally managed to take local sources to the globalization market.</li>
                     </ul>
-                    <a href="registration" class="btn btn-warning fw-bold">Register</a>
+
+                    <div class="col-auto text-center">
+                        <a href="registration" class="btn btn-warning fw-bold">Register</a>
+                    </div>
                 </div>
             </div>
         </div>
