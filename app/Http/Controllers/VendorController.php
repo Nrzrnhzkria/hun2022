@@ -149,8 +149,10 @@ class VendorController extends Controller
                 $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
                 $values->move(public_path('assets/files/coupons'), $imagename);
 
+                $i=1;
+
                 $optionCoupon = array(
-                    'coupon_no' => 0,
+                    'coupon_no' => $i++,
                     'img_name' => $coupon_image,
                     'category' => $request->category
                 );
