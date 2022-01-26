@@ -137,12 +137,14 @@
     <div class="row py-4">
         <div class="col-md-4">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
-                <div class="card border-0 p-4" style="background-color: orange">
-                    <h4>ABOUT HUN MEMBERSHIP AND BENEFITS</h4>
-                    <ul>
-                        <li>HUN members get attend to the seminar/ workshop/ programs with numerous information about marketing, licensing and franchising by top notch entrepreneur.</li>
-                        <li>HUN members will be able to stand a chance to win amazing prizes by participating in lucky draw.</li>
-                    </ul>
+                <div class="card border-0" style="background-color: orange">
+                    <div class="card-body">
+                        <h4>ABOUT HUN MEMBERSHIP AND BENEFITS</h4>
+                        <ul>
+                            <li>HUN members get attend to the seminar/ workshop/ programs with numerous information about marketing, licensing and franchising by top notch entrepreneur.</li>
+                            <li>HUN members will be able to stand a chance to win amazing prizes by participating in lucky draw.</li>
+                        </ul>
+                    </div>
                 </div>
             {{-- </a> --}}
         </div>
