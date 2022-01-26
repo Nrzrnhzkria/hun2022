@@ -78,14 +78,14 @@ class BoothController extends Controller
         $booth_details->price = $request->price;
         $booth_details->save();
 
-        return redirect('booth-details/'.$booth_id)->with('updateboothdetails','Booth has been updated successfully.'); 
+        return redirect('booth-details/'.$booth_id)->with('updateboothdetails','Booth details has been updated successfully.'); 
     }
 
     public function destroy_booth_details($booth_id, $details_id){
         $booth_details = BoothDetails::where('booth_id', $booth_id)->where('details_id', $details_id);
         
         $booth_details->delete();
-        return redirect('booth-details/'.$booth_id)->with('deleteboothdetails','Booth has been deleted successfully.');
+        return redirect('booth-details/'.$booth_id)->with('deleteboothdetails','Booth details has been deleted successfully.');
     }
 
 }
