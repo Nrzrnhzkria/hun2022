@@ -39,6 +39,11 @@ class HomeController extends Controller
         return view('landingpage.about.intro');
     }
 
+    public function organization()
+    {
+        return view('landingpage.organization');
+    }
+
     public function events()
     {
         return view('landingpage.events');

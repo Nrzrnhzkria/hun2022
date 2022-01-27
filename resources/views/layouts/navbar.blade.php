@@ -18,8 +18,9 @@
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="/preface">Opening Remarks</a></li>
                         <li><a class="dropdown-item" href="/introduction">Introduction</a></li>
-                        <li><a class="dropdown-item" href="#">Organizational Chart</a></li>
-                        <li><a class="dropdown-item" href="#">Vision & Mision</a></li>
+                        <li><a class="dropdown-item" href="/organization">Organizational Chart</a></li>
+                        <li><a class="dropdown-item" href="/objective">Objective</a></li>
+                        <li><a class="dropdown-item" href="/vision-mission">Vision & Mission</a></li>
                     </ul>
                 </li>
                 {{-- <li class="nav-item">
