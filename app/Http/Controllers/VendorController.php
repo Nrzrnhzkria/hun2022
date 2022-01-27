@@ -51,8 +51,9 @@ class VendorController extends Controller
         $booth_details = BoothDetails::all();
 
         $count = 1;
+        $k = 1;
 
-        return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'count', 'vendor_ic'));
+        return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'count', 'k', 'vendor_ic'));
     }
 
     public function store_vendor($get_ic, Request $request){

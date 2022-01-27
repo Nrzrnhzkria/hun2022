@@ -190,8 +190,8 @@
                                         <td>{{ $booth_detail->booth_type }}</td>
                                         <td>{{ $booth_detail->lot_placement }}</td>
                                         <td>{{ number_format($booth_detail->price) }}</td>
-                                        <td class="text-center">
-                                            <input type="checkbox" name="amount" value="{{ $booth_detail->price }}">
+                                        <td id="catlist" class="text-center">
+                                            <input type="checkbox" name="amount" id="price{{ $k++ }}" value="{{ $booth_detail->price }}">
                                         </td>
                                     </tr>
                                     @endif
@@ -200,6 +200,7 @@
                             </table>
                         </div>
                         @endforeach
+                        <input type="text" id="total" value="0" />
                     </div>
                 </div>
 
@@ -233,5 +234,18 @@
     $(document).on('click', '#removeRow', function () {
         $(this).closest('#inputFormRow').remove();
     });
+</script>
+
+<!-- Enable function to calculate amount ------------------------------------------>
+<script>
+    function calcAndShowTotal() {
+        var total = 0;
+        $('#catlist :checkbox:checked').each(function() {
+            total += parseFloat($(this).attr('value')) || 0;
+        });
+        $('#total').val(total);
+    }
+
+    $('#catlist :checkbox').change(calcAndShowTotal).change();
 </script>
 @endsection
