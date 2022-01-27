@@ -514,14 +514,14 @@ class VendorController extends Controller
                 $coupon->coupon_no = 0;
                 $coupon->img_name = 'no value';
                 $coupon->category = 'no value';
-                // $coupon->save();
+                $coupon->save();
 
             }else{
 
                 $coupon->coupon_no = 0;
                 $coupon->img_name = 'no value';
                 $coupon->category = $request->category;
-                // $coupon->save();
+                $coupon->save();
 
             }
 
@@ -537,7 +537,7 @@ class VendorController extends Controller
                 $coupon->coupon_no = $i;
                 $coupon->img_name = $coupon_image;
                 $coupon->category = $request->category;
-                // $coupon->save();
+                $coupon->save();
     
             }
 
@@ -612,7 +612,7 @@ class VendorController extends Controller
         // $coupon = Coupon::where('vendor_id', $user_id,)->first();
         // $coupon->fill($optionCoupon);
         // $request->session()->put('coupon', $coupon);
-            dd($request->img_name);
+            dd($coupon);
         // return redirect('update-registration/'.  $user_id)->with('update','Your registration has been updated successfully.');
     }
 }
