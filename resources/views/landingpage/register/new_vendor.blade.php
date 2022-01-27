@@ -215,7 +215,7 @@
 
                 <div class="col-md-12">
                     <div class="pull-right">
-                        <button type="submit" class="btn btn-warning fw-bold">Next <i class="bi bi-chevron-double-right"></i></button>
+                        <button type="submit" id="save" class="btn btn-warning fw-bold">Next <i class="bi bi-chevron-double-right"></i></button>
                     </div>
                 </div>
                 
@@ -261,8 +261,14 @@
 
     }).trigger("change")
 
-    var totalamount = $('#total').html();
-    $("#totalz").val(totalamount);
+    $(document).ready(function(){
+        $("#save").mouseover(function(){
+            var totalamount = $('#total').html();
+            $("#totalz").val(totalamount);
+        });
+    });
+
+    
 
 </script>
 @endsection
