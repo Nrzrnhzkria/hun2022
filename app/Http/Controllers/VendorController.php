@@ -612,7 +612,7 @@ class VendorController extends Controller
         // $coupon = Coupon::where('vendor_id', $user_id,)->first();
         // $coupon->fill($optionCoupon);
         // $request->session()->put('coupon', $coupon);
-            dd($coupon);
-        // return redirect('update-registration/'.  $user_id)->with('update','Your registration has been updated successfully.');
+            // dd($coupon);
+        return redirect('update-registration/'.  $user_id)->with('update','Your registration has been updated successfully.');
     }
 }
