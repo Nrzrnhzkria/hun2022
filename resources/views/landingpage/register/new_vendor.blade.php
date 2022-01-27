@@ -257,8 +257,9 @@
 
     });
 
-    $('#total').text(sum)
+    $('#total').html(sum)
 
 }).trigger("change")
+
 </script>
 @endsection
