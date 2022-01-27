@@ -418,7 +418,7 @@ p {
                                     </div> 
 
                                     {{-- <button type="submit" class="next action-button"> Submit </button> --}}
-                                    <input type="button" name="submit" class="next action-button" value="Submit" />
+                                    <input type="button" name="submit" class="submit action-button" value="Submit" />
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
 
                                 </fieldset>
