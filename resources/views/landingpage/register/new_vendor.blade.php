@@ -206,7 +206,8 @@
                     <div class="col-md-12 text-end">
                         <p>Total Amount (RM)</p>
                         <h2>
-                            <span id="total" name="amount">
+                            <span id="total">
+                            <input id="gettotal" type="hidden" name="amount" value="">
                                 {{-- <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly> --}}
                             </span>
                         </h2>
@@ -261,5 +262,10 @@
 
 }).trigger("change")
 
+</script>
+
+<script>
+    var data = $('#total').html();
+    $('#gettotal').val(data);
 </script>
 @endsection
