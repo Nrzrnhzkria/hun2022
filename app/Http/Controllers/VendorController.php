@@ -51,15 +51,7 @@ class VendorController extends Controller
         $booth_details = BoothDetails::all();
 
         $count = 1;
-        // $vendor = $request->session()->get('users');
-        // $details = $request->session()->get('vendor_details');
-        // $coupon = $request->session()->get('coupon');
-
-        // generate id
-        // $vendor_id = 'VND'.uniqid();
-        // $details_id = 'DID'.uniqid();
-        // $coupon_id = 'CID'.uniqid();
-  
+        
         return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'count', 'vendor_ic'));
     }
 
@@ -210,55 +202,26 @@ class VendorController extends Controller
     }
 
     public function payment_status(Request $request){
-        // $vendor = $request->session()->get('users');
-        // $details = $request->session()->get('vendor_details');
-        // $coupon = $request->session()->get('coupon');
-        // $payment = $request->session()->get('payment');
         $response = request()->all();
-        return $response;
-        // $response = request()->status_id;
+        // return $response;
+        $status = request()->status_id;
+        $bill_id = request()->order_id;
+        $payment = Membership::where('senangpay_id', $bill_id)->first();
 
-        // if($response == 1){
+        if($status == 1){
             
-        //     // $vendor->save();
+            // $payment->status = 'success';
+            // $payment->save();
 
-        //     // $detailsData = array(
-        //     //     'user_id' => $vendor->id
-        //     // );
-        //     // $details->fill($detailsData);
-        //     // $request->session()->put('vendor_details', $details);
-        //     // $details->save();
+            return view('landingpage.register.success');
 
-        //     // $optionCoupon = array(
-        //     //     'vendor_id' => $vendor->id
-        //     // );
-        //     // $coupon->fill($optionCoupon);
-        //     // $request->session()->put('coupon', $coupon);
-        //     // $coupon->save();
+        }else{
 
-        //     // $paymentData = array(
-        //     //     'payer_id' => $vendor->id
-        //     // );       
-        //     // $payment->fill($paymentData);
-        //     // $request->session()->put('payment', $payment);
-        //     // $payment->save();
+            // $payment->status = 'failed';
+            // $payment->save();
 
-        //     // $request->session()->forget('vendor');
-        //     // $request->session()->forget('details');
-        //     // $request->session()->forget('coupon');
-        //     // $request->session()->forget('payment');
-
-        //     return view('landingpage.register.success');
-
-        // }else{
-
-        //     // $request->session()->forget('vendor');
-        //     // $request->session()->forget('details');
-        //     // $request->session()->forget('coupon');
-        //     // $request->session()->forget('payment');
-
-        //     return view('landingpage.register.failed');
-        // }
+            return view('landingpage.register.failed');
+        }
         
     }
 

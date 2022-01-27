@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Coupon;
+use App\Models\VendorDetails;
+use App\Models\Membership;
 use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
@@ -60,8 +62,15 @@ class DashboardController extends Controller
 
     public function destroy_vendor($vendor_id){
         $vendor = User::where('id', $vendor_id);
+        $vendordetails = VendorDetails::where('user_id', $vendor_id);
+        $coupon = Coupon::where('vendor_id', $vendor_id);
+        $member = Membership::where('payer_id', $vendor_id);
         
         $vendor->delete();
+        $vendordetails->delete();
+        $coupon->delete();
+        $member->delete();
+
         return redirect('vendors')->with('deletevendor','Vendor has been deleted successfully.');
     }
 
