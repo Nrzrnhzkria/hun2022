@@ -65,22 +65,22 @@ class VendorController extends Controller
 
     public function store_vendor($get_ic, Request $request){
 
-        // $datavalidation = $request->validate([
-        //     'name' => 'required',
-        //     'email'=> 'required|unique:users,email',
-        //     'password'=> 'required',
-        //     'ic_no' => 'required',
-        //     'phone_no' => 'required',
-        //     'role'=> 'required',
-        //     'company_name'=> 'required',
-        //     'designation' => 'required',
-        //     'nationality'=> 'required',
-        //     'company_address'=> 'required',
-        //     'business_nature' => 'required',
-        //     'product_details' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
-        //     'ssm_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
-        //     'vaccine_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048'
-        // ]);
+        $datavalidation = $request->validate([
+            'name' => 'required',
+            'email'=> 'required|unique:users,email',
+            'password'=> 'required',
+            'ic_no' => 'required',
+            'phone_no' => 'required',
+            'role'=> 'required',
+            'company_name'=> 'required',
+            'designation' => 'required',
+            'nationality'=> 'required',
+            'company_address'=> 'required',
+            'business_nature' => 'required',
+            'product_details' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
+            'ssm_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048',
+            'vaccine_cert' => 'required|mimes:docx,csv,txt,xlx,xls,pdf|max:2048'
+        ]);
 
         User::create([
             'hun_id' => NULL,
