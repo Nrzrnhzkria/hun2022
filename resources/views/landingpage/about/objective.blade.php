@@ -12,8 +12,8 @@
             <h1>Organizational Chart</h1>
         </div>
         
-        <div class="col-md-12 text-center">
-            <div class="card">
+        <div class="col-md-12">
+            <div class="card" style="background-color: orange">
                 <div class="card-body p-4">
 
                     <ol>
