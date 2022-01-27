@@ -134,13 +134,13 @@
                             <thead>
                                 <th>#</th>
                                 <th>Document Name</th>
-                                <th>Image</th>
+                                <th>File Link</th>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
                                     <td>SSM Certificate</td>
-                                    <td><img src="{{ $details->ssm_cert }}" style="width: 10rem"></td>
+                                    <td>{{ $details->ssm_cert }}</td>
                                 </tr>
                             </tbody>
                         </table>
