@@ -257,7 +257,7 @@
 
     });
 
-    $('#total').number(sum)
+    $('#total').text(sum)
 
 }).trigger("change")
 </script>
