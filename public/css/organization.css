@@ -25,9 +25,9 @@
 
 /* Generic styling */
 
-body{
+/* body{
 	background: #F5EEC9;	
-}
+} */
 
 .content{
 	width: 100%;
@@ -46,13 +46,13 @@ a:focus{
 	}	
 }
 
-ul{
+.up{
 	padding: 0;
 	margin: 0;
 	list-style: none;		
 }
 
-ul a{
+.up a{
 	display: block;
 	background: #ccc;
 	border: 4px solid #fff;
@@ -71,19 +71,19 @@ ul a{
 }
 
 @media print {
-    ul a{
+    .up a{
         border: 4px solid #000;
     }
 }
 
 @media screen and (max-width: 767px){
-	ul a{
+	.up a{
 		font-size: 1em;
 	}
 }
 
 
-ul a span{
+.up a span{
 	top: 50%;
 	margin-top: -0.7em;
 	display: block;
