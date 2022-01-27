@@ -418,7 +418,7 @@ p {
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
 
                                 </fieldset>
-                                {{-- <fieldset>
+                                <fieldset>
                                     <div class="form-card">
                                         <div class="row">
                                             <div class="col-7">
@@ -445,7 +445,7 @@ p {
                                             </div>
                                         </div>
                                     </div>
-                                </fieldset> --}}
+                                </fieldset>
                             </form>
                         {{-- </div> --}}
                     </div>
