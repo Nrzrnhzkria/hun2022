@@ -206,7 +206,7 @@
                     <div class="col-md-12 text-end">
                         Total (RM)
                         <h3><div id="total">
-                            0
+                            <input type="text" name="amount" value="0" style="border: none; background-color: transparent;" readonly>
                         </div></h3>
                     </div>
                 </div>
