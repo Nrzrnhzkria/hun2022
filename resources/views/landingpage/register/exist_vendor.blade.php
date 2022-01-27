@@ -58,7 +58,8 @@
                     </div>
                     <div class="col-md-6 pb-2">
                         <label>Designation:</label>
-                        <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation }}">                                 
+                        <input type="text" value="{{ $details->designation }}" class="form-control form-control-sm" name="designation"/>
+                        {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="CEO">CEO</option>
                             <option value="Proprietor">Proprietor</option>
@@ -74,7 +75,7 @@
                             <option value="Organizer">Organizer</option>
                             <option value="Administrator">Managing Partner</option>
                             <option value="Others">Others</option>
-                        </select>
+                        </select> --}}
                     </div>
 
                     <div class="col-md-6 pb-2">
@@ -84,16 +85,17 @@
 
                     <div class="col-md-6 pb-2">
                         <label>Nationality:</label>
-                        <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality }}">                                 
+                        <input type="text" value="{{ $details->nationality }}" class="form-control form-control-sm" name="nationality"/>
+                        {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="local">Citizens</option>
                             <option value="international">Non-citizens</option>
-                        </select>
+                        </select> --}}
                     </div>
 
                     <div class="col-md-12 pb-2">
                         <label>Company Address:</label>
-                        <textarea type="text" value="{{ $details->company_address }}" class="form-control form-control-sm" placeholder="Ali"  name="company_address"></textarea>
+                        <textarea type="text" class="form-control form-control-sm" placeholder="Ali"  name="company_address">{{ $details->company_address }}</textarea>
                     </div>
 
                     <div class="col-md-6 pb-2">
@@ -103,7 +105,8 @@
 
                     <div class="col-md-6 pb-2">
                         <label>Nature of Business:</label>
-                        <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature }}">                                 
+                        <input type="text" value="{{ $details->business_nature }}" class="form-control form-control-sm" name="business_nature"/>
+                        {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="Sole proprietorship">Sole proprietorship</option>
                             <option value="Partnership">Partnership</option>
@@ -112,13 +115,15 @@
                             <option value="Unlimited companies">Unlimited companies</option>
                             <option value="Foreign company">Foreign company</option>
                             <option value="Limited liability partnership">Limited liability partnership</option>
-                        </select>
+                        </select> --}}
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="phoneno" class="form-label">Phone No.:</label>
                         <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" required/>
                     </div>
+
+                    <div class="fw-bold px-2 py-2" style="background-color: orange">Documents</div>
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Details of Displayed Product:</label>
