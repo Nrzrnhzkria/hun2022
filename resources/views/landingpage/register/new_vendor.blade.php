@@ -240,13 +240,13 @@ p {
                         {{-- <div class="card px-0 pt-4 pb-0 mt-3 mb-3"> --}}
                             <form id="msform" action="{{ url('new-registration/store') }}" method="POST" enctype="multipart/form-data">
                                 <!-- progressbar -->
-                                <ul id="progressbar">
+                                <ul id="progressbar" class="pl-5">
                                     <li class="active" id="account"><strong>Personal</strong></li>
                                     <li id="personal"><strong>Coupon</strong></li>
                                     <li id="payment"><strong>Booth</strong></li>
                                     <li id="confirm"><strong>Payment</strong></li>
                                 </ul>
-                                <div class="progress ml-5" >
+                                <div class="progress" >
                                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div> 
                                 <br> <!-- fieldsets -->
