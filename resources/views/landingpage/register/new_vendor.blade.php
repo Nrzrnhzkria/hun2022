@@ -258,14 +258,14 @@
 
     });
 
-    $('#demo').html(sum)
+    $('#total').html(sum)
 
 }).trigger("change")
 
 </script>
 
 <script>
-    var data = $('#demo').html();
-    $('#total').val(data);
+    var amoun = document.getElementById("first_name").value;
+    document.getElementById('first_nameVal').innerHTML = first_name;
 </script>
 @endsection
