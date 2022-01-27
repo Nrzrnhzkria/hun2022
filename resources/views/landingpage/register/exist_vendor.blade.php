@@ -125,11 +125,11 @@
                 
                 </div>
 
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Documents</div>
+                <div class="fw-bold px-2 py-2" style="background-color: orange">Coupon Details</div>
 
                 <div class="row p-3">
 
-                    <div class="table-responsive">
+                    {{-- <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <th>#</th>
@@ -144,10 +144,10 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    </div> --}}
 
 
-                    <div class="col-md-6 pb-2">
+                    {{-- <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Details of Displayed Product:</label>
                         <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details }}" id="formFile">
                     </div>
@@ -160,7 +160,7 @@
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Vaccine Certificate:</label>
                         <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert }}" id="formFile">
-                    </div>
+                    </div> --}}
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Coupon Category:</label>
