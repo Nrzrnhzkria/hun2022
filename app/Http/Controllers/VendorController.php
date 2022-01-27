@@ -171,43 +171,44 @@ class VendorController extends Controller
         $booth_name = Booth::where('booth_id', $booth_id)->first();
         $booth_type = BoothDetails::where('details_id', $details_id)->first();
 
-        $bill_id = 'ID'.uniqid();
+        dd($booth_type);
+        // $bill_id = 'ID'.uniqid();
 
-        $payment->senangpay_id = $bill_id;
-        $payment->save();
+        // $payment->senangpay_id = $bill_id;
+        // $payment->save();
         
-        $amount = ($payment->amount)*100;
+        // $amount = ($payment->amount)*100;
 
-        $data = array(
-            // 'userSecretKey' => config('toyyibpay.key'),
-            // 'categoryCode' => config('toyyibpay.category'),
-            'userSecretKey' => 'a25txcs8-x59p-adcl-xwz7-1d3grr2p6c1p',
-            'categoryCode' => 'vokse6qd',
-            'billName' => 'HUN Vendor Registration',
-            'billDescription' => $booth_name->booth_name . ' - ' . $booth_type->booth_type,
-            'billPriceSetting' => 1,
-            'billPayorInfo' => 1,
-            'billAmount' => $amount,
-            'billReturnUrl' => 'https://hariusahawannegara.com.my/payment-status',
-            'billCallbackUrl' => 'https://hariusahawannegara.com.my/payment-callback',
-            'billExternalReferenceNo' => $bill_id,
-            'billTo' => $vendor->name,
-            'billEmail' => $vendor->email,
-            'billPhone' => $vendor->phone_no, // cannot null or 0
-            'billSplitPayment' => 0,
-            'billSplitPaymentArgs' => '',
-            'billPaymentChannel' => 2,
-            'billContentEmail' => 'Thank you for registering to HUN!',
-            'billChargeToCustomer' => 2
-        );
+        // $data = array(
+        //     // 'userSecretKey' => config('toyyibpay.key'),
+        //     // 'categoryCode' => config('toyyibpay.category'),
+        //     'userSecretKey' => 'a25txcs8-x59p-adcl-xwz7-1d3grr2p6c1p',
+        //     'categoryCode' => 'vokse6qd',
+        //     'billName' => 'HUN Vendor Registration',
+        //     'billDescription' => $booth_name->booth_name . ' - ' . $booth_type->booth_type,
+        //     'billPriceSetting' => 1,
+        //     'billPayorInfo' => 1,
+        //     'billAmount' => $amount,
+        //     'billReturnUrl' => 'https://hariusahawannegara.com.my/payment-status',
+        //     'billCallbackUrl' => 'https://hariusahawannegara.com.my/payment-callback',
+        //     'billExternalReferenceNo' => $bill_id,
+        //     'billTo' => $vendor->name,
+        //     'billEmail' => $vendor->email,
+        //     'billPhone' => $vendor->phone_no, // cannot null or 0
+        //     'billSplitPayment' => 0,
+        //     'billSplitPaymentArgs' => '',
+        //     'billPaymentChannel' => 2,
+        //     'billContentEmail' => 'Thank you for registering to HUN!',
+        //     'billChargeToCustomer' => 2
+        // );
 
-        $url = 'https://dev.toyyibpay.com/index.php/api/createBill';
-        $response = Http::asForm()->post($url, $data);
-        $bill_code = $response->json()[0]['BillCode'];
+        // $url = 'https://dev.toyyibpay.com/index.php/api/createBill';
+        // $response = Http::asForm()->post($url, $data);
+        // $bill_code = $response->json()[0]['BillCode'];
 
-        // dd($amount);
-        // dd($response->json()); // to know error
-        return redirect('https://dev.toyyibpay.com/' . $bill_code); // return url
+        // // dd($amount);
+        // // dd($response->json()); // to know error
+        // return redirect('https://dev.toyyibpay.com/' . $bill_code); // return url
     }
 
     public function payment_status(Request $request){
