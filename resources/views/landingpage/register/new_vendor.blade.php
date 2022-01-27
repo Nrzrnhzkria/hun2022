@@ -208,7 +208,7 @@
                         <h2>
                             <span id="total"></span>
                                 {{-- <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly> --}}
-                            <input id="totalz" type="text" name="amount" value="">
+                            <input id="totalz" type="hidden" name="amount" value="">
                         </h2>
                     </div>
                 </div>
