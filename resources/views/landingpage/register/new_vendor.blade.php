@@ -207,7 +207,7 @@
                         <p>Total Amount (RM)</p>
                         <h2>
                             <span id="total">
-                            <input id="gettotal" type="hidden" name="amount" value="">
+                            <input id="gettotal" type="text" name="amount" value="">
                                 {{-- <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly> --}}
                             </span>
                         </h2>
