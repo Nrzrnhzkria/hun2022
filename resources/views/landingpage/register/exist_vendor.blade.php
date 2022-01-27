@@ -139,8 +139,8 @@
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>SSM Certificate</td>
-                                    <td>{{ $details->ssm_cert }}</td>
+                                    <td>Product Details</td>
+                                    <td>{{ $details->product_details }}</td>
                                 </tr>
                             </tbody>
                         </table>
