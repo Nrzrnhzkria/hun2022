@@ -706,7 +706,7 @@ p {
             .css("width",percent+"%")
         }
 
-        $('.submit').on("click",function() {
+        $(".submit").on("click",function() {
             return true;
         });
         // $(".submit").click(function(){
