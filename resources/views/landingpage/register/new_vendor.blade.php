@@ -200,7 +200,11 @@
                             </table>
                         </div>
                         @endforeach
-                        <h3><input type="text" id="total" name="amount" value="0" style="border: none; background-color: transparent;" readonly></h3>
+                        <input type="checkbox" class="check" value="3.99" id="one" checked>
+<input type="checkbox" class="check" value="5.99" id="two">
+<input type="checkbox" class="check" value="7.99" id="three">
+<div id="total">0</div>
+                        {{-- <h3><input type="text" id="total" name="amount" value="0" style="border: none; background-color: transparent;" readonly></h3> --}}
                     </div>
                 </div>
 
