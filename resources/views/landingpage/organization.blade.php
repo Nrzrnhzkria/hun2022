@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-
+<link href="{{ asset('css/organization.css') }}" rel="stylesheet">
 <div class="container py-4">
     <div class="content">
         <h1>Responsive Organization Chart</h1>
