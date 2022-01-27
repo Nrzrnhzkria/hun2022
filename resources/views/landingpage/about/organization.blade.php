@@ -8,7 +8,7 @@
 
 <div class="container py-4">
     <div class="card px-4 py-4">
-        <img class="img-fluid" src="{{ asset('assets/img/organization.png') }}">
+        <img class="img-fluid" src="{{ asset('assets/img/organization.png') }}" width="60%">
     </div>
 </div>
 
