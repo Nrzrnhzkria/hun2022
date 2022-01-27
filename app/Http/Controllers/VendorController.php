@@ -117,16 +117,26 @@ class VendorController extends Controller
             'ssm_cert' => $ssm_cert,
             'vaccine_cert' => $vaccine_cert
         ]);
-
-        $check_image = $request->img_name;
         
-        if($check_image == null){
+        if($request->img_name == null){
 
-            Coupon::create([
-                'vendor_id' => $vendor->id,
-                'coupon_no' => 0,
-                'category' => $request->category
-            ]);
+            if($request->category == null){
+
+                Coupon::create([
+                    'vendor_id' => $vendor->id,
+                    'coupon_no' => 0,
+                    'category' => NULL
+                ]);
+
+            }else{
+
+                Coupon::create([
+                    'vendor_id' => $vendor->id,
+                    'coupon_no' => 0,
+                    'category' => $request->category
+                ]);
+
+            }
 
         }else{
 
