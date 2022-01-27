@@ -11,7 +11,7 @@
             <h1>New Registration Form</h1>
         </div>
 
-        <form action="{{ url('new-registration/store') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('new-registration/store') }}/{{ $vendor_ic }}" method="POST" enctype="multipart/form-data">
         @csrf
     
             <div class="card px-4 py-4">
