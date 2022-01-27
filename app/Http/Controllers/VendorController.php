@@ -187,8 +187,8 @@ class VendorController extends Controller
             'billPriceSetting' => 1,
             'billPayorInfo' => 1,
             'billAmount' => $amount,
-            'billReturnUrl' => 'https://hariusahawannegara.com.my/payment-status/'.$get_ic,
-            'billCallbackUrl' => 'https://hariusahawannegara.com.my/payment-callback/'.$get_ic,
+            'billReturnUrl' => 'https://hariusahawannegara.com.my/payment-status',
+            'billCallbackUrl' => 'https://hariusahawannegara.com.my/payment-callback',
             'billExternalReferenceNo' => $bill_id,
             'billTo' => $vendor->name,
             'billEmail' => $vendor->email,
@@ -209,60 +209,60 @@ class VendorController extends Controller
         return redirect('https://dev.toyyibpay.com/' . $bill_code); // return url
     }
 
-    public function payment_status($get_ic, Request $request){
+    public function payment_status(Request $request){
         // $vendor = $request->session()->get('users');
         // $details = $request->session()->get('vendor_details');
         // $coupon = $request->session()->get('coupon');
         // $payment = $request->session()->get('payment');
-        // $response = request()->all(['status_id', 'billcode', 'order_id']);
-        // return $response;
-        $response = request()->status_id;
+        $response = request()->all();
+        return $response;
+        // $response = request()->status_id;
 
-        if($response == 1){
+        // if($response == 1){
             
-            // $vendor->save();
+        //     // $vendor->save();
 
-            // $detailsData = array(
-            //     'user_id' => $vendor->id
-            // );
-            // $details->fill($detailsData);
-            // $request->session()->put('vendor_details', $details);
-            // $details->save();
+        //     // $detailsData = array(
+        //     //     'user_id' => $vendor->id
+        //     // );
+        //     // $details->fill($detailsData);
+        //     // $request->session()->put('vendor_details', $details);
+        //     // $details->save();
 
-            // $optionCoupon = array(
-            //     'vendor_id' => $vendor->id
-            // );
-            // $coupon->fill($optionCoupon);
-            // $request->session()->put('coupon', $coupon);
-            // $coupon->save();
+        //     // $optionCoupon = array(
+        //     //     'vendor_id' => $vendor->id
+        //     // );
+        //     // $coupon->fill($optionCoupon);
+        //     // $request->session()->put('coupon', $coupon);
+        //     // $coupon->save();
 
-            // $paymentData = array(
-            //     'payer_id' => $vendor->id
-            // );       
-            // $payment->fill($paymentData);
-            // $request->session()->put('payment', $payment);
-            // $payment->save();
+        //     // $paymentData = array(
+        //     //     'payer_id' => $vendor->id
+        //     // );       
+        //     // $payment->fill($paymentData);
+        //     // $request->session()->put('payment', $payment);
+        //     // $payment->save();
 
-            // $request->session()->forget('vendor');
-            // $request->session()->forget('details');
-            // $request->session()->forget('coupon');
-            // $request->session()->forget('payment');
+        //     // $request->session()->forget('vendor');
+        //     // $request->session()->forget('details');
+        //     // $request->session()->forget('coupon');
+        //     // $request->session()->forget('payment');
 
-            return view('landingpage.register.success');
+        //     return view('landingpage.register.success');
 
-        }else{
+        // }else{
 
-            // $request->session()->forget('vendor');
-            // $request->session()->forget('details');
-            // $request->session()->forget('coupon');
-            // $request->session()->forget('payment');
+        //     // $request->session()->forget('vendor');
+        //     // $request->session()->forget('details');
+        //     // $request->session()->forget('coupon');
+        //     // $request->session()->forget('payment');
 
-            return view('landingpage.register.failed');
-        }
+        //     return view('landingpage.register.failed');
+        // }
         
     }
 
-    public function callback($get_ic){
+    public function callback(){
         $response = request()->all(['refno', 'status', 'reason', 'billcode', 'order_id', 'amount']);
         Log::info($response);
     }
