@@ -191,7 +191,8 @@
                                         <td>{{ $booth_detail->lot_placement }}</td>
                                         <td>{{ number_format($booth_detail->price) }}</td>
                                         <td id="catlist" class="text-center">
-                                            <input type="radio" class="check" value="{{ $booth_detail->price }}">
+                                            {{-- <input type="radio" class="check" value="{{ $booth_detail->price }}"> --}}
+                                            <input type="radio" name="amount" value="{{ $booth_detail->price }}">
                                         </td>
                                     </tr>
                                     @endif
@@ -202,13 +203,13 @@
                         @endforeach
                     </div>
                         
-                    <div class="col-md-12 text-end">
+                    {{-- <div class="col-md-12 text-end">
                         <p>Total Amount (RM)</p>
                         <h2>
                             <span id="total"></span>
                             <input id="totalz" type="hidden" name="amount" value="">
                         </h2>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="col-md-12">
