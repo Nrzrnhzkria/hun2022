@@ -193,6 +193,8 @@
                                         <td id="catlist" class="text-center">
                                             {{-- <input type="radio" class="check" value="{{ $booth_detail->price }}"> --}}
                                             <input type="radio" name="amount" value="{{ $booth_detail->price }}">
+                                            <input type="hidden" name="booth_id" value="{{ $booth_detail->booth_id }}">
+                                            <input type="hidden" name="details_id" value="{{ $booth_detail->details_id }}">
                                         </td>
                                     </tr>
                                     @endif
@@ -245,7 +247,7 @@
 </script> --}}
 
 <!-- Enable function to calculate amount ------------------------------------------>
-<script>
+{{-- <script>
     $('input:radio').on('change', function () {
         var sum = 0;
 
@@ -269,5 +271,5 @@
 
     
 
-</script>
+</script> --}}
 @endsection

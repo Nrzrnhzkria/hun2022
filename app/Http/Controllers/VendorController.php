@@ -155,7 +155,9 @@ class VendorController extends Controller
         Membership::create([
             'payer_id' => $vendor->id,
             'amount' => $request->amount,
-            'senangpay_id' => 'no value'
+            'senangpay_id' => 'no value',
+            'booth_id' => $request->booth_id,
+            'details_id' => $request->details_id,
         ]); 
 
         return redirect('payment/' . $get_ic); 
@@ -164,6 +166,11 @@ class VendorController extends Controller
     public function create_bill($get_ic, Request $request){
         $vendor = User::where('ic_no', $get_ic)->first();
         $payment = Membership::where('payer_id', $vendor->id)->first();
+        $booth_id = $payment->booth_id;
+        $details_id = $payment->details;
+        $booth_name = Booth::where('booth_id', $booth_id)->first();
+        $booth_type = BoothDetails::where('details_id', $details_id)->first();
+
         $bill_id = 'ID'.uniqid();
 
         $payment->senangpay_id = $bill_id;
@@ -177,7 +184,7 @@ class VendorController extends Controller
             'userSecretKey' => 'a25txcs8-x59p-adcl-xwz7-1d3grr2p6c1p',
             'categoryCode' => 'vokse6qd',
             'billName' => 'HUN Vendor Registration',
-            'billDescription' => 'Hari Usahawan Negara 2022',
+            'billDescription' => $booth_name->booth_name . ' - ' . $booth_type->booth_type,
             'billPriceSetting' => 1,
             'billPayorInfo' => 1,
             'billAmount' => $amount,
