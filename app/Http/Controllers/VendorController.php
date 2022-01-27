@@ -125,7 +125,7 @@ class VendorController extends Controller
                 Coupon::create([
                     'vendor_id' => $vendor->id,
                     'coupon_no' => 0,
-                    'category' => 'null'
+                    'category' => 'no value'
                 ]);
 
             }else{
