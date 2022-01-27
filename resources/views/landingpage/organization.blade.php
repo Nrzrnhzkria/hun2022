@@ -7,7 +7,7 @@
 @section('content')
 <link href="{{ asset('css/organization.css') }}" rel="stylesheet">
 <div class="container py-4">
-    <div class="content">
+    {{-- <div class="content"> --}}
         <h1>Responsive Organization Chart</h1>
         <figure class="org-chart cf">
           <ul class="administration up">
@@ -74,7 +74,7 @@
             </li>
           </ul>			
         </figure>
-    </div>
+    {{-- </div> --}}
 </div>
 
 @endsection
