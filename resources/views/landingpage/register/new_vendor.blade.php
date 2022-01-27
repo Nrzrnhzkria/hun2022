@@ -204,12 +204,12 @@
                     </div>
                         
                     <div class="col-md-12 text-end">
-                        Total
-                        <h3>
+                        Total Amount (RM)
+                        <h2>
                             <div id="total">
-                               RM <input type="text" name="amount" value="0" style="border: none; background-color: transparent;" readonly>
+                                <input type="text" name="amount" value="0" style="border: none; background-color: transparent;" readonly>
                             </div>
-                        </h3>
+                        </h2>
                     </div>
                 </div>
 
