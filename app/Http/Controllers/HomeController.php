@@ -41,7 +41,7 @@ class HomeController extends Controller
 
     public function organization()
     {
-        return view('landingpage.organization');
+        return view('landingpage.about.organization');
     }
 
     public function events()

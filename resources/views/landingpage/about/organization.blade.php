@@ -7,7 +7,8 @@
 @section('content')
 
 <div class="container py-4">
-    <img class="img-fluid" src="{{ asset('assets/img/organization.png') }}" width="100%">
+    <div class="card px-4 py-4" style="background-image: url('{{ asset('assets/img/organization.png') }}');">
+    </div>
 </div>
 
 @endsection
