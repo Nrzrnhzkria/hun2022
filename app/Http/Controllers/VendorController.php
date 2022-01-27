@@ -486,13 +486,21 @@ class VendorController extends Controller
     //----------------------------------- Existing Vendor -----------------------------------//
     public function update_register($user_id, Request $request){
 
-        $vend = User::where('id', $user_id)->first();
+        $vendor = User::where('id', $user_id)->first();
+        $details = VendorDetails::where('user_id', $user_id)->first();
         $payment = Membership::where('payer_id', $user_id)->first();
-        $vendor = $request->session()->get('users');
-        $details = $request->session()->get('vendor_details');
-        $coupon = $request->session()->get('coupon');
+        $coupon = Coupon::where('vendor_id', $user_id)->first();
+
+        $booth_id = $payment->booth_id;
+        $details_id = $payment->details_id;
+        $booth_name = Booth::where('booth_id', $booth_id)->first();
+        $booth_type = BoothDetails::where('details_id', $details_id)->first();
+
+        // $vendor = $request->session()->get('users');
+        // $details = $request->session()->get('vendor_details');
+        // $coupon = $request->session()->get('coupon');
   
-        return view('landingpage.register.exist_vendor', compact('vend', 'payment', 'vendor', 'details', 'coupon'));
+        return view('landingpage.register.exist_vendor', compact('vendor', 'details', 'payment', 'coupon', 'booth_name', 'booth_type'));
     }
 
     public function store_update($user_id, Request $request)

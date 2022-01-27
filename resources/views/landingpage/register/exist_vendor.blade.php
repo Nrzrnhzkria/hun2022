@@ -47,22 +47,18 @@
 
                 <div class="row p-3">
 
-                    <input type="hidden" value="{{ $vend->id ?? '' }}" class="form-control form-control-sm" name="user_id" readonly/>
-                    <input type="hidden" value="{{ $details->id ?? '' }}" class="form-control form-control-sm" name="details_id" readonly/>
-                    <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
-
                     <div class="col-md-12 pb-2">
                         <label>Name of Company:</label>
-                        <input type="text" value="{{ $details->company_name ?? '' }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name">
+                        <input type="text" value="{{ $details->company_name }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name">
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label>Contact Person:</label>
-                        <input type="text" value="{{ $vendor->name ?? '' }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name">
+                        <input type="text" value="{{ $vendor->name  }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name">
                     </div>
                     <div class="col-md-6 pb-2">
                         <label>Designation:</label>
-                        <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation ?? '' }}">                                 
+                        <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="CEO">CEO</option>
                             <option value="Proprietor">Proprietor</option>
@@ -83,12 +79,12 @@
 
                     <div class="col-md-6 pb-2">
                         <label>IC/Passport No.:</label>
-                        <input type="text" value="{{ $vendor->ic_no ?? '' }}" class="form-control form-control-sm" name="ic_no" readonly/>
+                        <input type="text" value="{{ $vendor->ic_no }}" class="form-control form-control-sm" name="ic_no" readonly/>
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label>Nationality:</label>
-                        <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality ?? '' }}">                                 
+                        <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="local">Citizens</option>
                             <option value="international">Non-citizens</option>
@@ -97,17 +93,17 @@
 
                     <div class="col-md-12 pb-2">
                         <label>Company Address:</label>
-                        <textarea type="text" value="{{ $details->company_address ?? '' }}" class="form-control form-control-sm" placeholder="Ali"  name="company_address"></textarea>
+                        <textarea type="text" value="{{ $details->company_address }}" class="form-control form-control-sm" placeholder="Ali"  name="company_address"></textarea>
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label>Email:</label>
-                        <input type="email"  value="{{ $vendor->email ?? '' }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com"/>
+                        <input type="email"  value="{{ $vendor->email }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com"/>
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label>Nature of Business:</label>
-                        <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature ?? '' }}">                                 
+                        <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="Sole proprietorship">Sole proprietorship</option>
                             <option value="Partnership">Partnership</option>
@@ -121,33 +117,32 @@
 
                     <div class="col-md-6 pb-2">
                         <label for="phoneno" class="form-label">Phone No.:</label>
-                        <input type="text" value="{{ $vendor->phone_no ?? '' }}" class="form-control form-control-sm" name="phone_no" required/>
+                        <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" required/>
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Details of Displayed Product:</label>
-                        <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details ?? '' }}" id="formFile">
+                        <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details }}" id="formFile">
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">SSM Certificate:</label>
-                        <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert ?? '' }}" id="formFile">
+                        <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert }}" id="formFile">
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Vaccine Certificate:</label>
-                        <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert ?? '' }}" id="formFile">
+                        <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert }}" id="formFile">
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Coupon Category:</label>
-                        <input class="form-control form-control-sm" type="text" name="category" value="{{ $coupon->category ?? '' }}"/>                            
-                        <input type="hidden" value="{{ $coupon_id ?? '' }}" class="form-control form-control-sm" name="coupon_no" readonly/>
+                        <input class="form-control form-control-sm" type="text" name="category" value="{{ $coupon->category }}"/>      
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="formFileMultiple" class="form-label">Coupon:</label>
-                        <input class="form-control form-control-sm" type="file" name="img_name" value="{{ $coupon->img_name ?? '' }}" id="formFile">
+                        <input class="form-control form-control-sm" type="file" name="img_name[]" value="{{ $coupon->img_name }}" id="formFile" multiple>
                     </div>
                     
                 </div>
@@ -157,13 +152,23 @@
                 <div class="row p-3">
                     <div class="col-md-6 pb-2">
                         <label for="phoneno" class="form-label">Amount:</label>
-                        <input type="text" value="RM {{ $payment->amount ?? '' }}" class="form-control form-control-sm" name="amount" readonly/>
+                        <input type="text" value="RM {{ $payment->amount }}" class="form-control form-control-sm" name="amount" readonly/>
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="phoneno" class="form-label">Bill ID:</label>
-                        <input type="text" value="{{ $payment->senangpay_id ?? '' }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
+                        <input type="text" value="{{ $payment->senangpay_id }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
                     </div>    
+
+                    <div class="col-md-6 pb-2">
+                        <label for="phoneno" class="form-label">Booth Name:</label>
+                        <input type="text" value="{{ $booth_name->booth_name }}" class="form-control form-control-sm" name="booth_name" readonly/>
+                    </div>   
+                    
+                    <div class="col-md-6 pb-2">
+                        <label for="phoneno" class="form-label">Booth Type:</label>
+                        <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
+                    </div>  
                 </div>
 
                 <div class="col-md-12">
