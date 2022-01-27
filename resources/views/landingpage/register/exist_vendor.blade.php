@@ -122,9 +122,13 @@
                         <label for="phoneno" class="form-label">Phone No.:</label>
                         <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" readonly/>
                     </div>
+                
+                </div>
 
-                    <div class="fw-bold px-2 py-2" style="background-color: orange">Documents</div>
+                <div class="fw-bold px-2 py-2" style="background-color: orange">Documents</div>
 
+                <div class="row p-3">
+                    
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Details of Displayed Product:</label>
                         <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details }}" id="formFile">
