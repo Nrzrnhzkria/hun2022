@@ -204,7 +204,7 @@
                     </div>
                         
                     <div class="col-md-12 text-end">
-                        Total Amount (RM)
+                        Total Amount(RM)
                         <h2>
                             <div id="total">
                                 <input type="text" name="amount" value="0" style="border: none; background-color: transparent;" readonly>
@@ -257,17 +257,7 @@
 
     });
 
-    // Create our number formatter.
-    var formatter = new Intl.NumberFormat('ms-MY', {
-        style: 'currency',
-        currency: 'MYR',
-
-        // These options are needed to round to whole numbers if that's what you want.
-        //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-        //maximumFractionDigits: 0, // (causes 2500.99 to be printed as $2,501)
-    });
-
-    $('#total').formatter.format(sum);
+    $('#total').text(sum)
 
 }).trigger("change")
 </script>
