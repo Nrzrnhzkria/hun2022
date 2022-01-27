@@ -267,5 +267,7 @@
 <script>
     var data = $('#total').html();
     $('#gettotal').val(data);
+
+    console.log(data);
 </script>
 @endsection
