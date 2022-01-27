@@ -42,7 +42,7 @@
                     <a class="nav-link text-dark" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                 </li> --}}
                 <!-- Default dropstart button -->
-                <div class="btn-group dropstart">
+                {{-- <div class="btn-group dropstart">
                     <a class="nav-link text-dark" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </a>
@@ -55,7 +55,7 @@
                             </form>
                         </li>
                     </ul>
-                </div>
+                </div> --}}
                 
             </ul>
         </div>
