@@ -51,7 +51,7 @@ class VendorController extends Controller
         $booth_details = BoothDetails::all();
 
         $count = 1;
-        
+
         return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'count', 'vendor_ic'));
     }
 
@@ -78,13 +78,13 @@ class VendorController extends Controller
             'hun_id' => NULL,
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($get_ic),
+            'password' => Hash::make($request->ic_no),
             'phone_no' => $request->phone_no,
             'ic_no' => $request->ic_no,
             'role' => 'Vendor',
         ]);        
 
-        $vendor = User::where('ic_no', $get_ic)->first();
+        $vendor = User::where('ic_no', $request->ic_no)->first();
 
         $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
         $details_path = 'https://hariusahawannegara.com.my/assets/files/product_details/' . $product_details;
