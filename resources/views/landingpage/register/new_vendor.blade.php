@@ -204,9 +204,10 @@
                     </div>
                         
                     <div class="col-md-12 text-end">
-                        <div id="total">
-                            Total : <h3>0</h3>
-                        </div>
+                        Total (RM)
+                        <h3><div id="total">
+                            0
+                        </div></h3>
                     </div>
                 </div>
 
