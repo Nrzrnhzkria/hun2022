@@ -204,7 +204,7 @@
                     </div>
                         
                     <div class="col-md-12 text-end">
-                        Total Amount(RM)
+                        <p>Total Amount (RM)</p>
                         <h2>
                             <div id="total">
                                 <input type="text" name="amount" value="0" style="border: none; background-color: transparent;" readonly>
