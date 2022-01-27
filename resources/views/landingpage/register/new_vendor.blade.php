@@ -16,7 +16,7 @@
     
             <div class="card px-4 py-4">
 
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
+                {{-- <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
     
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -124,7 +124,7 @@
                         <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
                     </div>
                     
-                </div>
+                </div> --}}
 
                 <div class="fw-bold px-2 py-2" style="background-color: orange">Coupon Details (Optional)</div>
                 
@@ -156,7 +156,7 @@
                         
                         <div id="inputFormRow">
                             <label for="formFileMultiple" class="form-label">Coupon:</label>
-                            <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile">
+                            <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                             <em style="font-size: 10pt;">File format: png, jpeg</em>
                         </div>
 
@@ -166,7 +166,7 @@
                     </div>
                 </div>
 
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Booth Details</div>
+                {{-- <div class="fw-bold px-2 py-2" style="background-color: orange">Booth Details</div>
                 
                 <div class="row p-3">        
                     <div class="col-md-12 pb-2">
@@ -209,7 +209,7 @@
                             <input id="totalz" type="hidden" name="amount" value="">
                         </h2>
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="col-md-12">
                     <div class="pull-right">
