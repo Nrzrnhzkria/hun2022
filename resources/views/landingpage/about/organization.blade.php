@@ -13,7 +13,7 @@
         </div>
         
         <div class="col-md-12 text-center">
-            <img class="img-fluid" src="{{ asset('assets/img/about/org.png') }}" style="width: 40rem">
+            <img class="img-fluid" src="{{ asset('assets/img/about/organization.png') }}" style="width: 40rem">
         </div>
     </div>
 </div>
