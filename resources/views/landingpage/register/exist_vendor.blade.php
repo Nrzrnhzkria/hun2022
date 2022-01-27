@@ -190,7 +190,7 @@
                         <label for="formFile" class="form-label">Coupon Category:</label>
                         {{-- <input class="form-control form-control-sm" type="text" name="category" value="{{ $coupon->category }}"/>   --}}
                         <select class="form-select form-select-sm" aria-label="Default select example" name="category">                                 
-                            <option disabled selected>{{ $coupon->category }}</option>
+                            <option value="{{ $coupon->category }}" selected>{{ $coupon->category }}</option>
                             <option value="Automotive">Automotive</option>
                             <option value="Business Support & Supplies">Business Support & Supplies</option>
                             <option value="Computers & Electronics">Computers & Electronics</option>
