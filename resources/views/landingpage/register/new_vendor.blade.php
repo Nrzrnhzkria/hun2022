@@ -707,7 +707,7 @@ p {
         }
 
         $('.submit').on("click",function() {
-            return false;
+            return true;
         });
         // $(".submit").click(function(){
         //     return false;
