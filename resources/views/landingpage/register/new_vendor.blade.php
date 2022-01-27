@@ -206,8 +206,8 @@
                     <div class="col-md-12 text-end">
                         <p>Total Amount (RM)</p>
                         <h2>
-                            <span id="total">
-                            <input id="gettotal" type="text" name="amount" value="">
+                            <span id="demo">
+                            <input id="totalz" type="text" name="amount" value="">
                                 {{-- <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly> --}}
                             </span>
                         </h2>
@@ -258,16 +258,14 @@
 
     });
 
-    $('#total').html(sum)
+    $('#demo').html(sum)
 
 }).trigger("change")
 
 </script>
 
 <script>
-    var data = $('#total').html();
-    $('#gettotal').val(data);
-
-    console.log(data);
+    var data = $('#demo').html();
+    $('#total').val(data);
 </script>
 @endsection
