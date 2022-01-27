@@ -417,8 +417,8 @@ p {
                                         @endforeach
                                     </div> 
 
-                                    {{-- <button type="submit" class="next action-button"> Submit </button> --}}
-                                    <input type="button" name="submit" class="submit action-button" value="Submit" />
+                                    <button type="submit" class="btn btn-warning fw-bold">Next <i class="bi bi-chevron-double-right"></i></button>
+                                    {{-- <input type="button" name="submit" class="submit action-button" value="Submit" /> --}}
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
 
                                 </fieldset>
