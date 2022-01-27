@@ -187,8 +187,8 @@ class VendorController extends Controller
             'billPriceSetting' => 1,
             'billPayorInfo' => 1,
             'billAmount' => $amount,
-            'billReturnUrl' => 'https://hariusahawannegara.com.my/payment-status',
-            'billCallbackUrl' => 'https://hariusahawannegara.com.my/payment-callback',
+            'billReturnUrl' => 'https://hariusahawannegara.com.my/payment-status/'.$get_ic,
+            'billCallbackUrl' => 'https://hariusahawannegara.com.my/payment-callback/'.$get_ic,
             'billExternalReferenceNo' => $bill_id,
             'billTo' => $vendor->name,
             'billEmail' => $vendor->email,
@@ -262,7 +262,7 @@ class VendorController extends Controller
         
     }
 
-    public function callback(){
+    public function callback($get_ic){
         $response = request()->all(['refno', 'status', 'reason', 'billcode', 'order_id', 'amount']);
         Log::info($response);
     }

@@ -39,7 +39,7 @@ Route::get('new-registration/{get_ic}', 'VendorController@new_register');
 Route::post('new-registration/store/{get_ic}', 'VendorController@store_vendor');
 Route::get('payment/{get_ic}', 'VendorController@create_bill');
 Route::get('payment-status/{get_ic}', 'VendorController@payment_status');
-Route::post('payment-callback', 'VendorController@callback');
+Route::post('payment-callback/{get_ic}', 'VendorController@callback');
 // Route::post('new-registration/store', 'VendorController@store');
 Route::get('choose-booth', 'VendorController@booth');
 Route::post('choose-booth/store', 'VendorController@store_booth');
