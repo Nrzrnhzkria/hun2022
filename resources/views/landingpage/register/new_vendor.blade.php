@@ -16,9 +16,9 @@
     
             <div class="card px-4 py-4">
 
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
+                {{-- <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div> --}}
     
-                @if ($errors->any())
+                {{-- @if ($errors->any())
                     <div class="alert alert-danger">
                         <ul class="px-3">
                             @foreach ($errors->all() as $error)
@@ -28,9 +28,9 @@
                     </div>
                 @endif
 
-                <div class="row p-3">
+                <div class="row p-3"> --}}
 
-                    <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
+                    {{-- <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
 
                     <div class="col-md-12 pb-2">
                         <label>Name of Company:<span class="text-danger">*</span></label>
@@ -164,7 +164,7 @@
                         <button id="addRow" type='button' class='btn btn-sm'><i class="bi bi-plus-lg pr-2"></i>Add Row</button>
                     
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="fw-bold px-2 py-2" style="background-color: orange">Booth Details</div>
                 
