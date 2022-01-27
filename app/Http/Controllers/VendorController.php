@@ -212,15 +212,15 @@ class VendorController extends Controller
 
         if($status == 1){
             
-            // $payment->status = 'success';
-            // $payment->save();
+            $payment->status = 'success';
+            $payment->save();
 
             return view('landingpage.register.success');
 
         }else{
 
-            // $payment->status = 'failed';
-            // $payment->save();
+            $payment->status = 'failed';
+            $payment->save();
 
             return view('landingpage.register.failed');
         }
