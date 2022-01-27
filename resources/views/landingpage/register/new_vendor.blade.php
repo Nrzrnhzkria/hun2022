@@ -262,7 +262,7 @@
     }).trigger("change")
 
     $(document).ready(function(){
-        $("#save").on('change', function(){
+        $("#save").mouseover(function(){
             var totalamount = $('#total').html();
             $("#totalz").val(totalamount);
         });
