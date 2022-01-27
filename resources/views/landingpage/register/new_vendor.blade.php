@@ -418,7 +418,8 @@ p {
                                     </div> 
 
                                     {{-- <button type="submit" class="btn btn-warning fw-bold">Next <i class="bi bi-chevron-double-right"></i></button> --}}
-                                    <input type="button" name="submit" class="submit action-button" value="Submit" />
+                                    <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                                    {{-- <input type="button" name="submit" class="submit action-button" value="Submit" /> --}}
                                     <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
 
                                 </fieldset>
@@ -706,9 +707,13 @@ p {
             .css("width",percent+"%")
         }
 
-        $(".submit").on("click",function() {
+        // $(".submit").on("click",function() {
+        //     return false;
+        // });
+
+        $(".submit").click(function(){
             return false;
-        });
+        })
         // $(".submit").click(function(){
         //     return false;
         // })
