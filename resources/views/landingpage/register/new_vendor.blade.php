@@ -191,7 +191,7 @@
                                         <td>{{ $booth_detail->lot_placement }}</td>
                                         <td>{{ number_format($booth_detail->price) }}</td>
                                         <td id="catlist" class="text-center">
-                                            <input type="checkbox" class="check" id="price_{{ $k++ }}" value="{{ $booth_detail->price }}">
+                                            <input type="checkbox" class="check" value="{{ $booth_detail->price }}">
                                         </td>
                                     </tr>
                                     @endif
@@ -204,10 +204,12 @@
                     </div>
                         
                     <div class="col-md-12 text-end">
-                        Total (RM)
-                        <h3><div id="total">
-                            <input type="text" name="amount" value="0" style="border: none; background-color: transparent;" readonly>
-                        </div></h3>
+                        Total
+                        <h3>
+                            <div id="total">
+                               RM <input type="text" name="amount" value="0" style="border: none; background-color: transparent;" readonly>
+                            </div>
+                        </h3>
                     </div>
                 </div>
 
