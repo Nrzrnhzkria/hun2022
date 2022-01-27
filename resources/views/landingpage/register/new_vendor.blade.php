@@ -709,7 +709,7 @@ p {
 
     });
 </script>
-{{-- <!-- Enable function to add row ------------------------------------------>
+<!-- Enable function to add row ------------------------------------------>
 <script type="text/javascript">
     // add row
     $("#addRow").click(function () {
@@ -728,5 +728,5 @@ p {
     $(document).on('click', '#removeRow', function () {
         $(this).closest('#inputFormRow').remove();
     });
-</script> --}}
+</script>
 @endsection
