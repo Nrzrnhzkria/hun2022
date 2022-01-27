@@ -125,6 +125,30 @@
                 
                 </div>
 
+                <div class="fw-bold px-2 py-2" style="background-color: orange">Payment Details</div>
+                
+                <div class="row p-3">
+                    <div class="col-md-6 pb-2">
+                        <label for="phoneno" class="form-label">Amount:</label>
+                        <input type="text" value="RM {{ $payment->amount }}" class="form-control form-control-sm" name="amount" readonly/>
+                    </div>
+
+                    <div class="col-md-6 pb-2">
+                        <label for="phoneno" class="form-label">Bill ID:</label>
+                        <input type="text" value="{{ $payment->senangpay_id }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
+                    </div>    
+
+                    <div class="col-md-6 pb-2">
+                        <label for="phoneno" class="form-label">Booth Name:</label>
+                        <input type="text" value="{{ $booth_name->booth_name }}" class="form-control form-control-sm" name="booth_name" readonly/>
+                    </div>   
+                    
+                    <div class="col-md-6 pb-2">
+                        <label for="phoneno" class="form-label">Booth Type:</label>
+                        <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
+                    </div>  
+                </div>
+
                 <div class="fw-bold px-2 py-2" style="background-color: orange">Coupon Details</div>
 
                 <div class="row p-3">
@@ -172,30 +196,6 @@
                         <input class="form-control form-control-sm" type="file" name="img_name[]" value="{{ $coupon->img_name }}" id="formFile" multiple>
                     </div>
                     
-                </div>
-
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Payment Details</div>
-                
-                <div class="row p-3">
-                    <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Amount:</label>
-                        <input type="text" value="RM {{ $payment->amount }}" class="form-control form-control-sm" name="amount" readonly/>
-                    </div>
-
-                    <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Bill ID:</label>
-                        <input type="text" value="{{ $payment->senangpay_id }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
-                    </div>    
-
-                    <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Booth Name:</label>
-                        <input type="text" value="{{ $booth_name->booth_name }}" class="form-control form-control-sm" name="booth_name" readonly/>
-                    </div>   
-                    
-                    <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Booth Type:</label>
-                        <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
-                    </div>  
                 </div>
 
                 <div class="col-md-12">
