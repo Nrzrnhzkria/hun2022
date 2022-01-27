@@ -191,7 +191,7 @@
                                         <td>{{ $booth_detail->lot_placement }}</td>
                                         <td>{{ number_format($booth_detail->price) }}</td>
                                         <td class="text-center">
-                                            <input type="radio" name="amount" value="{{ $booth_detail->price }}">
+                                            <input type="checkbox" name="amount" value="{{ $booth_detail->price }}">
                                         </td>
                                     </tr>
                                     @endif
