@@ -11,8 +11,8 @@
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
             <h1>Organizational Chart</h1>
         </div>
-
-        <div class="card px-4 py-4" style="background-image: url('{{ asset('assets/img/about/orgbg.png') }}');">
+        
+        <div class="col-md-12 text-center">
             <img class="img-fluid" src="{{ asset('assets/img/about/org.png') }}" style="width: 40rem">
         </div>
     </div>
