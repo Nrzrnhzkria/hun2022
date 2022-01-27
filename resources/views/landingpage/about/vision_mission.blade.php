@@ -16,7 +16,7 @@
             <div class="card shadow border-0" style="background-color: orange">
                 <div class="card-body p-4">
 
-                    <ol>
+                    <ol class="fw-bold">
                         <li class="pb-2">DPUKM has a clearly outlined goal set out to elevate entrepreneurs especially among Bumiputera in Malaysia</li>
                         <li class="pb-2">Raise awareness and better understanding of various entrepreneurship opportunities publicly</li>
                         <li class="pb-2">Provide guidance for Bumiputera novice entrepreneurs to venture into business sector</li>

@@ -16,7 +16,7 @@
             <div class="card shadow border-0" style="background-color: orange">
                 <div class="card-body p-4">
 
-                    <ol>
+                    <ol class="fw-bold">
                         <li class="pb-2">National Entrepreneur Day HUN 2022 for the first time conducted/commencing/premiering in Malaysia and will be annual celebration for entrepreneurs</li>
                         <li class="pb-2">Introducing local entrepreneur brands to all Malaysians</li>
                         <li class="pb-2">Nominate Special Award to productive entrepreneurs that deserve recognition for their success</li>
