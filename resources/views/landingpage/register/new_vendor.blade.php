@@ -191,7 +191,7 @@
                                         <td>{{ $booth_detail->lot_placement }}</td>
                                         <td>{{ number_format($booth_detail->price) }}</td>
                                         <td id="catlist" class="text-center">
-                                            <input type="checkbox" class="check" value="{{ $booth_detail->price }}">
+                                            <input type="radio" class="check" value="{{ $booth_detail->price }}">
                                         </td>
                                     </tr>
                                     @endif
@@ -223,7 +223,7 @@
 </div>
 
 <!-- Enable function to add row ------------------------------------------>
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     // add row
     $("#addRow").click(function () {
         var html = '';
@@ -241,11 +241,11 @@
     $(document).on('click', '#removeRow', function () {
         $(this).closest('#inputFormRow').remove();
     });
-</script>
+</script> --}}
 
 <!-- Enable function to calculate amount ------------------------------------------>
 <script>
-    $('input:checkbox').on('change', function () {
+    $('input:radio').on('change', function () {
         var sum = 0;
 
 
