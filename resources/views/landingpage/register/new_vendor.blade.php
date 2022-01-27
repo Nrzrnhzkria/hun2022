@@ -206,7 +206,7 @@
                     <div class="col-md-12 text-end">
                         <p>Total Amount (RM)</p>
                         <h2>
-                            <span id="demo"></span>
+                            <span id="total"></span>
                                 {{-- <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly> --}}
                             <input id="totalz" type="text" name="amount" value="">
                         </h2>
@@ -248,23 +248,21 @@
 <!-- Enable function to calculate amount ------------------------------------------>
 <script>
     $('input:checkbox').on('change', function () {
-    var sum = 0;
+        var sum = 0;
 
 
-    $('.check').each(function () {
+        $('.check').each(function () {
 
-        if (this.checked) sum = sum + parseFloat($(this).val());
+            if (this.checked) sum = sum + parseFloat($(this).val());
 
-    });
+        });
 
-    $('#demo').html(sum)
+        $('#total').html(sum)
 
-}).trigger("change")
+    }).trigger("change")
 
-</script>
+    var totalamount = $('#total').html();
+    $("#totalz").val(totalamount);
 
-<script>
-    var data = $('#demo').html();
-    $('#total').val(data);
 </script>
 @endsection
