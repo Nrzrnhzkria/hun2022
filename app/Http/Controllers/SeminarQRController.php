@@ -11,6 +11,11 @@ use Auth;
 
 class SeminarQRController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     // public function addQR(Request $request){
     //     return SeminarQR::insertDB($request);
     // }

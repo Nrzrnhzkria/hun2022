@@ -8,6 +8,11 @@ use App\Models\BoothDetails;
 
 class BoothController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function booth()
     {
         $booths = Booth::orderBy('id', 'desc')->paginate(15);

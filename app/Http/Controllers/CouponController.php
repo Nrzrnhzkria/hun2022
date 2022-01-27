@@ -7,6 +7,11 @@ use App\Models\Coupon;
 
 class CouponController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function addCoupon(Request $request){
         return Coupon::insertDB($request);
     }

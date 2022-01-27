@@ -7,6 +7,11 @@ use App\Models\SeminarAttendance;
 
 class SeminarAttendanceController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function attendance()
     {
         $seminars = SeminarAttendance::orderBy('id', 'desc')->paginate(15);
