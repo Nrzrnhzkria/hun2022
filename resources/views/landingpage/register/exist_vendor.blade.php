@@ -128,7 +128,25 @@
                 <div class="fw-bold px-2 py-2" style="background-color: orange">Documents</div>
 
                 <div class="row p-3">
-                    
+
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <th>#</th>
+                                <th>Document Name</th>
+                                <th>Image</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>SSM Certificate</td>
+                                    <td><img src="{{ $details->ssm_cert }}" style="width: 10rem"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Details of Displayed Product:</label>
                         <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details }}" id="formFile">
