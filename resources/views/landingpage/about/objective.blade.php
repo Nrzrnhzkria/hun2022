@@ -24,6 +24,7 @@
                         <li class="pb-2">Establish a wide network amongst entrepreneurs in upholding the economic globalization</li>
                         <li class="pb-2">Set up as milestone for Malaysians citizen to cultivate interest in develop into an entrepreneur</li>
                         <li class="pb-2">Gather entrepreneurship in Malaysia from  government ministry government agencies, corporate, private NGOs and individuals</li>
+                        <li class="pb-2">Gather Malaysian entrepreneurs in online and offline businesses platform during the National Entrepreneur Day Fiesta (HUN) 2022</li>
                     </ol>
                 </div>
             </div>

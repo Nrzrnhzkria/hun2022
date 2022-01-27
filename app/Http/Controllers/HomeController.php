@@ -49,6 +49,11 @@ class HomeController extends Controller
         return view('landingpage.about.objective');
     }
 
+    public function vision_mission()
+    {
+        return view('landingpage.about.vision_mission');
+    }
+
     public function events()
     {
         return view('landingpage.events');
