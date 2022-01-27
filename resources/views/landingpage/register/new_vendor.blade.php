@@ -246,8 +246,8 @@ p {
                                     <li id="payment"><strong>Booth</strong></li>
                                     <li id="confirm"><strong>Payment</strong></li>
                                 </ul>
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-striped progress-bar-animated pl-2" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress pl-4">
+                                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div> 
                                 <br> <!-- fieldsets -->
                                 <fieldset>
