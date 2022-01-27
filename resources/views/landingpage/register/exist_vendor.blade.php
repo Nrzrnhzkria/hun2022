@@ -17,7 +17,7 @@
         </div>
         @endif
 
-        <form action="{{ url('exist-registration/store') }}/{{ $vend->id }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('exist-registration/store') }}/{{ $vendor->id }}" method="POST" enctype="multipart/form-data">
         @csrf
     
             <div class="card px-4 py-4">
