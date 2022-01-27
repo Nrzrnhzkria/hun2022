@@ -206,10 +206,9 @@
                     <div class="col-md-12 text-end">
                         <p>Total Amount (RM)</p>
                         <h2>
-                            <span id="demo">
-                            <input id="totalz" type="text" name="amount" value="">
+                            <span id="total"></span>
                                 {{-- <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly> --}}
-                            </span>
+                            <input id="totalz" type="text" name="amount" value="">
                         </h2>
                     </div>
                 </div>
@@ -265,7 +264,7 @@
 </script>
 
 <script>
-    var amoun = document.getElementById("first_name").value;
-    document.getElementById('first_nameVal').innerHTML = first_name;
+    var amount = document.getElementById("total").value;
+    document.getElementById('totalz').innerHTML = amount;
 </script>
 @endsection
