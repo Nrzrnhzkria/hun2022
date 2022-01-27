@@ -238,7 +238,7 @@ p {
                     <div class="card px-4 py-4">
              
                         {{-- <div class="card px-0 pt-4 pb-0 mt-3 mb-3"> --}}
-                            <form id="msform" action="{{ url('new-registration/store') }}" method="POST" enctype="multipart/form-data">
+                            <form id="msform" action="{{ url('new-registration/store') }}/{{ $vendor_ic }}" method="POST" enctype="multipart/form-data">
                                 <!-- progressbar -->
                                 <ul id="progressbar" style="padding-right: 2rem">
                                     <li class="active" id="account"><strong>Personal</strong></li>

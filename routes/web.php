@@ -36,12 +36,16 @@ Route::get('registration', 'VendorController@register');
 Route::get('verification', 'VendorController@check_ic');
 // New Vendor
 Route::get('new-registration/{get_ic}', 'VendorController@new_register');
-Route::post('new-registration/store', 'VendorController@store');
+Route::post('new-registration/store/{get_ic}', 'VendorController@store_vendor');
+Route::get('payment/{get_ic}', 'VendorController@create_bill');
+Route::get('payment-status/{get_ic}', 'VendorController@payment_status');
+Route::post('payment-callback', 'VendorController@callback');
+// Route::post('new-registration/store', 'VendorController@store');
 Route::get('choose-booth', 'VendorController@booth');
 Route::post('choose-booth/store', 'VendorController@store_booth');
-Route::get('payment', 'VendorController@create_bill');
-Route::get('payment-status', 'VendorController@payment_status');
-Route::post('payment-callback', 'VendorController@callback');
+// Route::get('payment', 'VendorController@create_bill');
+// Route::get('payment-status', 'VendorController@payment_status');
+// Route::post('payment-callback', 'VendorController@callback');
 // Existing Vendor
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
 Route::post('exist-registration/store/{user_id}', 'VendorController@store_update');
