@@ -16,7 +16,10 @@ class Membership extends Model
     protected $fillable = [
         'payer_id',  
         'amount',
+        'status',
         'senangpay_id', 
+        'booth_id',
+        'details_id',
     ];
 
     public static function insertDB(Request $request){

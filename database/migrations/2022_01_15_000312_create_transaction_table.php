@@ -18,7 +18,10 @@ class CreateTransactionTable extends Migration
             $table->unsignedBigInteger('payer_id');
             $table->foreign('payer_id')->references('id')->on('users');  
             $table->smallInteger('amount'); 
+            $table->string('status')->nullable();
             $table->string('senangpay_id'); 
+            $table->string('booth_id')->nullable();
+            $table->string('details_id')->nullable();
             $table->timestamps();
         });
     }
