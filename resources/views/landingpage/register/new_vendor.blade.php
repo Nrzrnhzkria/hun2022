@@ -71,8 +71,8 @@
                         <label>Nationality:<span class="text-danger">*</span></label>
                         <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality ?? '' }}">                                 
                             <option disabled selected>-- Please Select --</option>
-                            <option value="local">Citizens</option>
-                            <option value="international">Non-citizens</option>
+                            <option value="Local">Citizens</option>
+                            <option value="International">Non-citizens</option>
                         </select>
                     </div>
 
