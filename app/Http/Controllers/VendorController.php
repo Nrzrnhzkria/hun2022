@@ -507,19 +507,42 @@ class VendorController extends Controller
     {
         $coupon = Coupon::where('vendor_id', $user_id)->first();
 
-        foreach($request->file('img_name') as $values) {
-            $imagename = 'img_' . uniqid().'.'.$values->extension();
-            $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-            $values->move(public_path('assets/files/coupons'), $imagename);
+        if($request->img_name == null){
 
-            $i=1;
+            if($request->category == null){
 
-            $coupon->coupon_no = $i;
-            $coupon->img_name = $coupon_image;
-            $coupon->category = $request->category;
-            $coupon->save();
+                $coupon->coupon_no = 0;
+                $coupon->img_name = 'no value';
+                $coupon->category = 'no value';
+                $coupon->save();
+
+            }else{
+
+                $coupon->coupon_no = 0;
+                $coupon->img_name = 'no value';
+                $coupon->category = $request->category;
+                $coupon->save();
+
+            }
+
+        }else{
+
+            foreach($request->file('img_name') as $values) {
+                $imagename = 'img_' . uniqid().'.'.$values->extension();
+                $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+                $values->move(public_path('assets/files/coupons'), $imagename);
+    
+                $i=1;
+    
+                $coupon->coupon_no = $i;
+                $coupon->img_name = $coupon_image;
+                $coupon->category = $request->category;
+                $coupon->save();
+    
+            }
 
         }
+
         // $validatedVendor = $request->validate([
         //     'name' => 'required',
         //     'email'=> 'required',
