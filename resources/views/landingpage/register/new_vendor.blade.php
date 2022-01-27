@@ -191,7 +191,7 @@
                                         <td>{{ $booth_detail->lot_placement }}</td>
                                         <td>{{ number_format($booth_detail->price) }}</td>
                                         <td id="catlist" class="text-center">
-                                            <input type="checkbox" class="check" id="price{{ $k++ }}" value="{{ $booth_detail->price }}">
+                                            <input type="checkbox" class="check" id="price_{{ $k++ }}" value="{{ $booth_detail->price }}">
                                         </td>
                                     </tr>
                                     @endif
@@ -200,11 +200,13 @@
                             </table>
                         </div>
                         @endforeach
-                        <input type="checkbox" class="check" value="3.99" id="one" checked>
-<input type="checkbox" class="check" value="5.99" id="two">
-<input type="checkbox" class="check" value="7.99" id="three">
-<div id="total">0</div>
                         {{-- <h3><input type="text" id="total" name="amount" value="0" style="border: none; background-color: transparent;" readonly></h3> --}}
+                    </div>
+                        
+                    <div class="col-md-12 text-end">
+                        <div id="total">
+                            Total : <h3>0</h3>
+                        </div>
                     </div>
                 </div>
 
