@@ -207,7 +207,7 @@
                         <p>Total Amount (RM)</p>
                         <h2>
                             <div id="total">
-                                <input type="text" name="amount" value="0" style="border: none; background-color: transparent;" readonly>
+                                <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly>
                             </div>
                         </h2>
                     </div>
