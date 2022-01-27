@@ -206,9 +206,9 @@
                     <div class="col-md-12 text-end">
                         <p>Total Amount (RM)</p>
                         <h2>
-                            <div id="total">
-                                <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly>
-                            </div>
+                            <span id="total" name="amount">
+                                {{-- <input type="text" name="amount" value="" style="border: none; background-color: transparent;" readonly> --}}
+                            </span>
                         </h2>
                     </div>
                 </div>
