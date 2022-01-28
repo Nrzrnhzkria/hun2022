@@ -36,7 +36,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Role</th>
+                            <th scope="col">Phone No</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
@@ -46,7 +46,7 @@
                             <th scope="row">{{ $vendors->firstItem() + $key }}</th>
                             <td>{{ $vendor->name }}</td>
                             <td>{{ $vendor->email }}</td>
-                            <td class="text-capitalize">{{ $vendor->role }}</td>
+                            <td>{{ $vendor->phone_no }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-vendor') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
