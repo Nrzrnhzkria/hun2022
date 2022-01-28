@@ -51,8 +51,8 @@
                         <tr>
                             <th scope="row">{{ $seminars->firstItem() + $key }}</th>
                             <td>{{ $seminar->seminar_name }}</td>
-                            <td>{{ $seminar->seminar_date }}</td>
-                            <td>{{ $seminar->time_start }} - {{ $seminar->time_end }}</td>
+                            <td>{{ date('d/m/Y', strtotime($seminar->seminar_date)) }}</td>
+                            <td>{{ date('h:m a', strtotime($seminar->time_start)) }} - {{ date('h:m a', strtotime($seminar->time_end)) }}</td>
                             <td class="text-center">
                                 <a href="{{ url('view-attendance') }}/{{ $seminar->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
