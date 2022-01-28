@@ -112,25 +112,25 @@ class VendorController extends Controller
         
         if($request->img_name == null){
 
-            if($request->category == null){
+            // if($request->category == null){
 
-                Coupon::create([
-                    'vendor_id' => $vendor->id,
-                    'coupon_no' => 0,
-                    'img_name' => 'no value',
-                    'category' => 'no value'
-                ]);
+            //     Coupon::create([
+            //         'vendor_id' => $vendor->id,
+            //         'coupon_no' => 0,
+            //         'img_name' => 'no value',
+            //         'category' => 'no value'
+            //     ]);
 
-            }else{
+            // }else{
 
-                Coupon::create([
-                    'vendor_id' => $vendor->id,
-                    'coupon_no' => 0,
-                    'img_name' => 'no value',
-                    'category' => $request->category
-                ]);
+            //     Coupon::create([
+            //         'vendor_id' => $vendor->id,
+            //         'coupon_no' => 0,
+            //         'img_name' => 'no value',
+            //         'category' => $request->category
+            //     ]);
 
-            }
+            // }
 
         }else{
 
@@ -509,21 +509,21 @@ class VendorController extends Controller
 
         if($request->img_name == null){
 
-            if($request->category == null){
+            // if($request->category == null){
 
-                $coupon->coupon_no = 0;
-                $coupon->img_name = 'no value';
-                $coupon->category = 'no value';
-                $coupon->save();
+            //     $coupon->coupon_no = 0;
+            //     $coupon->img_name = 'no value';
+            //     $coupon->category = 'no value';
+            //     $coupon->save();
 
-            }else{
+            // }else{
 
-                $coupon->coupon_no = 0;
-                $coupon->img_name = 'no value';
-                $coupon->category = $request->category;
-                $coupon->save();
+            //     $coupon->coupon_no = 0;
+            //     $coupon->img_name = 'no value';
+            //     $coupon->category = $request->category;
+            //     $coupon->save();
 
-            }
+            // }
 
         }else{
 
@@ -531,14 +531,16 @@ class VendorController extends Controller
                 $imagename = 'img_' . uniqid().'.'.$values->extension();
                 $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
                 $values->move(public_path('assets/files/coupons'), $imagename);
-    
+
                 $i=1;
-    
-                $coupon->coupon_no = $i;
-                $coupon->img_name = $coupon_image;
-                $coupon->category = $request->category;
-                $coupon->save();
-    
+
+                Coupon::create([
+                    'vendor_id' => $vendor->id,
+                    'coupon_no' => $i++,
+                    'img_name' => $coupon_image,
+                    'category' => $request->category
+                ]);
+
             }
 
         }
