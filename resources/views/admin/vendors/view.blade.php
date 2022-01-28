@@ -48,7 +48,14 @@
                             <th scope="row">{{ $count++ }}</th>
                             <td>{{ $vendor->name }}</td>
                             <td>{{ $payment->amount }}</td>
-                            <td>{{ $payment->status }}</td>
+                            <td>
+                                @if ({{ $payment->status }} == 'success')
+                                    <span class="badge rounded-pill bg-success">Success</span>
+                                @else
+                                    <span class="badge rounded-pill bg-danger">Failed</span>
+                                @endif
+                                
+                            </td>
                             <td class="text-center">
                                 <a href="{{ url('update-vendor') }}/{{ $payment->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
