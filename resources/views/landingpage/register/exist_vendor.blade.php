@@ -215,7 +215,7 @@
                         <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                     </div>
 
-                    <div class="row-fluid">
+                    <div class="row">
                         @foreach ($coupon as $coupons)
                             @if ($vendor->id == $coupons->vendor_id)
                             <div class="col-md-4">
