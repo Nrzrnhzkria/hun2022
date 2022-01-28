@@ -57,6 +57,8 @@ class VendorController extends Controller
 
     public function store_vendor($get_ic, Request $request){
 
+        $booth_details = BoothDetails::where('details_id', $request->details_id)->first();
+
         // $datavalidation = $request->validate([
         //     'name' => 'required',
         //     'email'=> 'required|unique:users,email',
@@ -154,9 +156,9 @@ class VendorController extends Controller
 
         // Membership::create([
         //     'payer_id' => $vendor->id,
-        //     'amount' => $request->amount,
+        //     'amount' => $booth_details->amount,
         //     'senangpay_id' => 'no value',
-        //     'booth_id' => $request->booth_id,
+        //     'booth_id' => $booth_details->booth_id,
         //     'details_id' => $request->details_id,
         // ]); 
 
