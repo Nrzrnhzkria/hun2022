@@ -52,7 +52,9 @@
                             <td class="text-center">
                                 <a href="{{ url('update-vendor') }}/{{ $payment->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
-                        </tr>                
+                        </tr>        
+                        @endif                           
+                        @endforeach                      
                         @endforeach
                     </tbody>
                 </table>
