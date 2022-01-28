@@ -15,8 +15,8 @@
     <div class="row">
         
         <div class="col-md-12">
-            <div class="float-right pt-3">{{ $participants->links() }}</div>
-            @if(count($participants) > 0)
+            <div class="float-right pt-3">{{ $attendance->links() }}</div>
+            @if(count($attendance) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
@@ -29,8 +29,8 @@
                     </thead>
                     <tbody>
                         @foreach ($participants as $participant)
-                        @foreach ($attendance as $attendance)
-                        @if ($attendance->user_id == $participant->id)
+                        @foreach ($attendance as $attendances)
+                        @if ($attendances->user_id == $participant->id)
                             <tr>
                                 <th scope="row">{{ $count++ }}</th>
                                 <td>{{ $participant->name }}</td>
