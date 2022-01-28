@@ -215,25 +215,26 @@
                         <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                     </div>
 
-                    <br>
-                    @foreach ($coupon as $coupons)
-                        @if ($vendor->id == $coupons->vendor_id)
-                        <div class="col-md-4">
-                            <div class="card mb-3">
-                                <div class="row g-0">
-                                  <div class="col-md-4">
-                                    <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
-                                  </div>
-                                  <div class="col-md-8">
-                                    <div class="card-body py-0">
-                                      <p class="fw-bold pt-2">{{ $coupons->category }}</p>
+                    <div class="row-fluid">
+                        @foreach ($coupon as $coupons)
+                            @if ($vendor->id == $coupons->vendor_id)
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
                                     </div>
-                                  </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body py-0">
+                                        <p class="fw-bold pt-2">{{ $coupons->category }}</p>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        @endif
-                    @endforeach
+                            @endif
+                        @endforeach
+                    </div>
                     
                 </div>
 
