@@ -218,13 +218,17 @@
                     <br>
                     @foreach ($coupon as $coupons)
                         @if ($vendor->id == $coupons->vendor_id)
-                        <div class="col-md-2">
-                            <div class="card">
-                                <img src="{{ $coupons->img_name }}" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <p class="text-center fw-bold">
-                                        {{ $coupons->category }}
-                                    </p>
+                        <div class="col-md-3">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                  <div class="col-md-8">
+                                    <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="card-body">
+                                      <h5 class="card-title">{{ $coupons->category }}</h5>
+                                    </div>
+                                  </div>
                                 </div>
                             </div>
                         </div>
