@@ -218,7 +218,7 @@
                     <br>
                     @foreach ($coupon as $coupons)
                         @if ($vendor->id == $coupons->vendor_id)
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="card mb-3">
                                 <div class="row g-0">
                                   <div class="col-md-4">
