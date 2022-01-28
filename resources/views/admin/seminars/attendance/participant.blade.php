@@ -38,6 +38,7 @@
                                 <td>{{ $participant->phone_no }}</td>
                             </tr>  
                         @endif                           
+                        @endforeach                      
                         @endforeach
                     </tbody>
                 </table>
