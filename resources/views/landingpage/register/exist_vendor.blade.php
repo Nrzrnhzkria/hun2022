@@ -225,7 +225,7 @@
                                     <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
                                   </div>
                                   <div class="col-md-8">
-                                    <div class="card-body pb-0">
+                                    <div class="card-body py-0">
                                       <p class="fw-bold">{{ $coupons->category }}</p>
                                     </div>
                                   </div>
