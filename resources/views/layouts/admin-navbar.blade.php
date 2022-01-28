@@ -30,14 +30,14 @@
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin' )
+                @if(Auth::user()->role == 'Superadmin')
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/admin-media">Media</a>
                 </li>
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin')
+                @if(Auth::user()->role == 'Superadmin')
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/admin-news">News</a>
                 </li>
