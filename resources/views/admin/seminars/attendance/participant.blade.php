@@ -29,8 +29,8 @@
                     </thead>
                     <tbody>
                         @foreach ($participants as $key => $participant)
-                        @if ($attendance->user_id == $participant->id)
                         @if ($seminar->id == $attendance->seminar_id)
+                        @if ($attendance->user_id == $participant->id)
                             <tr>
                                 <th scope="row">{{ $count++ }}</th>
                                 <td>{{ $participant->name }}</td>
