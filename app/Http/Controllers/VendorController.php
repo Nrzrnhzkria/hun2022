@@ -160,7 +160,7 @@ class VendorController extends Controller
         //     'details_id' => $request->details_id,
         // ]); 
 
-        dd($request->amount);
+        dd($request->details_id);
         // return redirect('payment/' . $get_ic); 
     }
 
