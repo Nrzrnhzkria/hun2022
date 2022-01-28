@@ -35,19 +35,20 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Vendor</th>
-                            <th scope="col">Amount</th>
+                            <th scope="col">Booth</th>
                             <th scope="col" class="text-center">Payment Status</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($vendors as $vendor)
+                        @foreach ($booth_types as $booth_type)
                         @foreach ($payments as $payment)
                         @if ($payment->payer_id == $vendor->id)
                         <tr>
                             <th scope="row">{{ $count++ }}</th>
                             <td>{{ $vendor->name }}</td>
-                            <td>{{ $payment->amount }}</td>
+                            <td>{{ $booth_type->booth_type }}</td>
                             <td class="text-center">
                                 @if ( $payment->status == 'success')
                                     <span class="badge rounded-pill bg-success">Success</span>
@@ -61,7 +62,8 @@
                             </td>
                         </tr>        
                         @endif                           
-                        @endforeach                      
+                        @endforeach                       
+                        @endforeach                     
                         @endforeach
                     </tbody>
                 </table>

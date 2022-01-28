@@ -35,9 +35,10 @@ class DashboardController extends Controller
     {
         $payments = Membership::where('amount', '>', '51')->paginate(15);
         $vendors = User::orderBy('id', 'desc')->get();
+        $booth_types = BoothDetails::orderBy('id', 'desc')->get();
         $count = 1;
 
-        return view('admin.vendors.view', compact('payments', 'vendors', 'count'));
+        return view('admin.vendors.view', compact('payments', 'vendors', 'booth_types', 'count'));
     }
 
     public function update_vendor($vendor_id)
