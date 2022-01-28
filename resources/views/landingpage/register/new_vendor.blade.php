@@ -190,10 +190,11 @@
                                         <td>{{ $booth_detail->booth_type }}</td>
                                         <td>{{ $booth_detail->lot_placement }}</td>
                                         <td>{{ number_format($booth_detail->price) }}</td>
-                                        <td id="catlist" class="text-center">
+                                        {{-- <td id="catlist" class="text-center"> --}}
+                                        <td class="text-center">
                                             {{-- <input type="radio" class="check" value="{{ $booth_detail->price }}"> --}}
-                                            <input type="text" name="booth_id" value="{{ $booth_detail->booth_id }}"/>
-                                            <input type="text" name="details_id" value="{{ $booth_detail->details_id }}"/>
+                                            <input type="text" id="booth_id" value="{{ $booth_detail->booth_id }}"/>
+                                            <input type="text" id="details_id" value="{{ $booth_detail->details_id }}"/>
                                             
                                             <input type="radio" name="amount" value="{{ $booth_detail->price }}"/>
 
@@ -207,6 +208,8 @@
                         @endforeach
                     </div>
                         
+                    
+                    <input id="booth_type" type="text" name="details_id">
                     {{-- <div class="col-md-12 text-end">
                         <p>Total Amount (RM)</p>
                         <h2>
@@ -274,4 +277,13 @@
     
 
 </script> --}}
+
+<script>
+    $(document).ready(function(){
+        $("#save").mouseover(function(){
+            var booth_type = $('#details_id').html();
+            $("#booth_type").val(booth_type);
+        });
+    });
+</script>
 @endsection
