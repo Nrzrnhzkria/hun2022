@@ -117,7 +117,6 @@ class DashboardController extends Controller
     {
         $user = User::where('id', $user_id)->first();
 
-        $user->hun_id = $request->hun_id;
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = Hash::make($request['password']);
