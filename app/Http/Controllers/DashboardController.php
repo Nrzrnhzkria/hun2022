@@ -125,14 +125,14 @@ class DashboardController extends Controller
         $user->role = $request->role;
         $user->save();
 
-        return redirect('users')->with('updatesuccess','User has been updated successfully.'); 
+        return redirect('admins')->with('updatesuccess','User has been updated successfully.'); 
     }
 
     public function destroy_admin($user_id){
         $user = User::where('id', $user_id);
         
         $user->delete();
-        return redirect('users')->with('deleteuser','User has been deleted successfully.');
+        return redirect('admins')->with('deleteuser','User has been deleted successfully.');
     }
 
     public function users()
