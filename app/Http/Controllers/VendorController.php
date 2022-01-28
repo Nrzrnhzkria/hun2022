@@ -505,6 +505,7 @@ class VendorController extends Controller
 
     public function store_update($user_id, Request $request)
     {
+        $vendor = User::where('id', $user_id)->first();
         $coupon = Coupon::where('vendor_id', $user_id)->first();
 
         if($request->img_name == null){

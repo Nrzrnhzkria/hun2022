@@ -153,7 +153,7 @@
 
                 <div class="row p-3">
 
-                    {{-- <div class="table-responsive">
+                    <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <th>#</th>
@@ -168,7 +168,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div> --}}
+                    </div>
 
 
                     {{-- <div class="col-md-6 pb-2">
@@ -214,6 +214,17 @@
                         <label for="formFileMultiple" class="form-label">Coupon:</label>
                         <input class="form-control form-control-sm" type="file" name="img_name[]" value="{{ $coupon->img_name }}" id="formFile" multiple>
                     </div>
+
+                    @foreach ($coupon as $coupons)
+                        @if ($vendor->id == $coupons->vendor_id)
+                            <div class="card" style="width: 18rem;">
+                                <img src="{{ $coupons->img_name }}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <p class="card-text">{{ $coupons->img_name }}</p>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
                     
                 </div>
 
