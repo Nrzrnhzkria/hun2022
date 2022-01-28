@@ -40,21 +40,22 @@
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Seminar ID</th>
-                            <th scope="col">User ID</th>
-                            {{-- <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th> --}}
+                            <th scope="col">Seminar Name</th>
+                            <th scope="col">Location Name</th>
+                            <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($seminars as $key => $seminar)
+                        @foreach ($seminars as $key => $seminar)                          
                         <tr>
                             <th scope="row">{{ $seminars->firstItem() + $key }}</th>
-                            <td>{{ $seminar->seminar_id }}</td>
-                            <td>{{ $seminar->user_id }}</td>
-                            {{-- <td class="text-center">
-                                <a href="{{ url('update-seminar') }}/{{ $seminar->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
-                            </td> --}}
-                        </tr>                
+                            <td>{{ $seminar->seminar_name }}</td>
+                            <td>{{ $seminar->location_name }}</td>
+                            <td>{{ $attendance->seminar_date }}</td>
+                            <td class="text-center">
+                                <a href="{{ url('view-attendance) }}/{{ $seminar->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                            </td>
+                        </tr>           
                         @endforeach
                     </tbody>
                 </table>
