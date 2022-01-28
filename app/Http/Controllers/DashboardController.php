@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Coupon;
-use App\Models\VendorDetails;
 use App\Models\Membership;
+use App\Models\BoothDetails;
+use App\Models\VendorDetails;
 use Illuminate\Support\Facades\Hash;
 
 class DashboardController extends Controller
