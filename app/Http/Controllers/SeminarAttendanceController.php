@@ -24,8 +24,8 @@ class SeminarAttendanceController extends Controller
     public function view($seminar_id)
     {
         $seminar = SeminarQR::where('id', $seminar_id)->first();
-        $attendance = SeminarAttendance::where('seminar_id', $seminar_id)->first();
-        $participants = User::orderBy('id', 'desc')->paginate(15);
+        $attendance = SeminarAttendance::where('seminar_id', $seminar_id)->paginate(15);
+        $participants = User::orderBy('id', 'desc')->get();
         $count = 1;
 
         return view('admin.seminars.attendance.participant', compact('seminar', 'attendance', 'participants', 'count'));
