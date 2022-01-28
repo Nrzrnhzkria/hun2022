@@ -28,17 +28,15 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($attendance as $participant)
                         @foreach ($participants as $participant)
+                        @foreach ($attendance as $attendance)
                         @if ($attendance->user_id == $participant->id)
-                        @if ($seminar->id == $attendance->seminar_id)
                             <tr>
                                 <th scope="row">{{ $count++ }}</th>
                                 <td>{{ $participant->name }}</td>
                                 <td>{{ $participant->email }}</td>
                                 <td>{{ $participant->phone_no }}</td>
-                            </tr>    
-                        @endif 
+                            </tr>  
                         @endif                           
                         @endforeach
                     </tbody>
