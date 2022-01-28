@@ -42,10 +42,10 @@
                     </thead>
                     <tbody>
                         @foreach ($vendors as $vendor)
-                        @foreach ($payments as $key => $payment)
+                        @foreach ($payments as $payment)
                         @if ($payment->payer_id == $vendor->id)
                         <tr>
-                            <th scope="row">{{ $payments->firstItem() + $key }}</th>
+                            <th scope="row">{{ $count++ }}</th>
                             <td>{{ $vendor->name }}</td>
                             <td>{{ $payment->amount }}</td>
                             <td>{{ $payment->status }}</td>
