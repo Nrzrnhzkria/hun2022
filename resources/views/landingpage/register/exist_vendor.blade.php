@@ -221,10 +221,10 @@
                         <div class="col-md-3">
                             <div class="card mb-3">
                                 <div class="row g-0">
-                                  <div class="col-md-8">
+                                  <div class="col-md-4">
                                     <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
                                   </div>
-                                  <div class="col-md-4">
+                                  <div class="col-md-8">
                                     <div class="card-body">
                                       <h5 class="card-title">{{ $coupons->category }}</h5>
                                     </div>
