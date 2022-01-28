@@ -222,7 +222,7 @@
                             <div class="card">
                                 <img src="{{ $coupons->img_name }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p class="card-text text-center fw-bold" style="font-size: 8pt">
+                                    <p class="text-center fw-bold" style="font-size: 8pt">
                                         {{ $coupons->category }}
                                     </p>
                                 </div>
