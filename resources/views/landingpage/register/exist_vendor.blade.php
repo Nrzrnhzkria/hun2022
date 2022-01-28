@@ -220,7 +220,7 @@
                             <div class="card" style="width: 18rem;">
                                 <img src="{{ $coupons->img_name }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p class="card-text">{{ $coupons->img_name }}</p>
+                                    <p class="card-text">{{ $coupons->category }}</p>
                                 </div>
                             </div>
                         @endif
