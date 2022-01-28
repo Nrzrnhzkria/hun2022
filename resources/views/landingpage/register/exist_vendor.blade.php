@@ -226,7 +226,7 @@
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body">
-                                      <h5 class="card-title">{{ $coupons->category }}</h5>
+                                      <p class="fw-bold">{{ $coupons->category }}</>
                                     </div>
                                   </div>
                                 </div>
