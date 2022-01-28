@@ -215,13 +215,14 @@
                         <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                     </div>
 
+                    <br>
                     @foreach ($coupon as $coupons)
                         @if ($vendor->id == $coupons->vendor_id)
                         <div class="col-md-2">
                             <div class="card">
                                 <img src="{{ $coupons->img_name }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p class="card-text">{{ $coupons->category }}</p>
+                                    <p class="card-text text-center fw-bold">{{ $coupons->category }}</p>
                                 </div>
                             </div>
                         </div>
