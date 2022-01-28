@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row px-5">
+    <div class="row px-2">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
             <h1>Update Registration Form</h1>
         </div>
@@ -20,7 +20,7 @@
         <form action="{{ url('exist-registration/store') }}/{{ $vendor->id }}" method="POST" enctype="multipart/form-data">
         @csrf
     
-            <div class="card px-2 py-4">
+            <div class="card px-4 py-4">
                 {{-- <ul class="nav nav-tabs px-2 py-2">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Step 1</a>
