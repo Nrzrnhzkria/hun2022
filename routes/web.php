@@ -92,7 +92,6 @@ Route::get('update-news/{news_id}', 'HUNNewsController@update_news');
 Route::post('edit-news/{news_id}', 'HUNNewsController@edit_news');
 Route::get('delete-news/{news_id}', 'HUNNewsController@destroy_news');
 // Seminar Management
-Route::get('attendance', 'SeminarAttendanceController@attendance');
 Route::get('qrcode', 'SeminarQRController@qrcode');
 Route::get('create-qr', 'SeminarQRController@create_qr');
 Route::post('store-qr', 'SeminarQRController@store_qr');
@@ -101,6 +100,8 @@ Route::post('edit-qr/{qr_id}', 'SeminarQRController@edit_qr');
 Route::get('delete-qr/{qr_id}', 'SeminarQRController@destroy_qr');
 Route::get('register-seminar/{qr_id}', 'SeminarQRController@registeruser');
 Route::post('download-qr/{type}/{qr_id}', 'SeminarQRController@downloadQRCode')->name('qrcode.download');
+Route::get('attendance', 'SeminarAttendanceController@attendance');
+Route::get('view-attendance/{seminar_id}', 'SeminarAttendanceController@view');
 Route::get('register-success/{qr_id}/{user_id}', 'SeminarQRController@registersuccess');
 // Vendor Management
 Route::get('vendors', 'DashboardController@vendors');
