@@ -215,7 +215,7 @@
                         <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                     </div>
 
-                    <h3 class="py-3">Uploaded Coupon</h3>
+                    <h4 class="py-3">Uploaded Coupon</h4>
 
                     @if(count($coupon) > 0)
                     @foreach ($coupon as $coupons)
