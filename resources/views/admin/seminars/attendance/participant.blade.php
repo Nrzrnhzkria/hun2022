@@ -14,7 +14,7 @@
     
     <div class="row">
         
-        <div class="col-md-12">
+        <div class="col-md-9">
             <div class="float-right pt-3">{{ $attendance->links() }}</div>
             @if(count($attendance) > 0)
             <div class="table-responsive">
@@ -44,8 +44,17 @@
                 </table>
             </div>
             @else
-              <p>There are no attendee to display.</p>
+              <p>There are no participant to display.</p>
             @endif
+        </div>
+
+        <div class="col-md-3">
+            <div class="row-fluid pb-2">
+                <div class="card border-0 shadow text-center" style="height: 125px">
+                  <h6 class="pt-4">Total Participant</h6>
+                  <b class="display-6 pb-3">{{ number_format($totalattendance) }}</b>
+                </div>
+            </div>
         </div>
     </div>
     
