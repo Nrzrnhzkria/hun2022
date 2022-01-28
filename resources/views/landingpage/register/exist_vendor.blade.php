@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container">
-    <div class="row px-3">
+    <div class="row px-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
             <h1>Update Registration Form</h1>
         </div>
@@ -221,10 +221,10 @@
                         <div class="col-md-4">
                             <div class="card mb-3">
                                 <div class="row g-0">
-                                  <div class="col-md-6">
+                                  <div class="col-md-4">
                                     <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
                                   </div>
-                                  <div class="col-md-6">
+                                  <div class="col-md-8">
                                     <div class="card-body py-0">
                                       <p class="fw-bold pt-2">{{ $coupons->category }}</p>
                                     </div>
