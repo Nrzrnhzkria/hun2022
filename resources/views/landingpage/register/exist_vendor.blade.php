@@ -237,7 +237,7 @@
                         @endif
                     @endforeach
                     @else
-                      <p>There are no uploaded coupon to display.</p>
+                      <p>There are no coupon to display. You can upload at the <em>Choose Files</em> above </p>
                     @endif
                     
                 </div>
