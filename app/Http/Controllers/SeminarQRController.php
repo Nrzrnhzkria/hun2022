@@ -22,7 +22,7 @@ class SeminarQRController extends Controller
     
     public function qrcode()
     {
-        $seminarsqr = SeminarQR::orderBy('id', 'desc')->paginate(15);
+        $seminarsqr = SeminarQR::orderBy('seminar_date', 'desc')->paginate(15);
         return view('admin.seminars.qrcode.view', compact('seminarsqr'));
     }
 
