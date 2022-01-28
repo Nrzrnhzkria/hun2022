@@ -535,7 +535,7 @@ class VendorController extends Controller
                 $i=1;
 
                 Coupon::create([
-                    'vendor_id' => $vendor->id,
+                    'vendor_id' => $user_id,
                     'coupon_no' => $i++,
                     'img_name' => $coupon_image,
                     'category' => $request->category
