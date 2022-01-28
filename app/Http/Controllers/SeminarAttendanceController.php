@@ -16,7 +16,7 @@ class SeminarAttendanceController extends Controller
     
     public function attendance()
     {
-        $seminars = SeminarQR::orderBy('seminar_date', 'asc')->paginate(15);
+        $seminars = SeminarQR::orderBy('seminar_date', 'desc')->paginate(15);
 
         return view('admin.seminars.attendance.view', compact('seminars'));
     }
