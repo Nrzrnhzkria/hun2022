@@ -47,8 +47,8 @@ class VendorController extends Controller
     {
         $vendor_ic = $get_ic;
 
-        $booth = Booth::orderBy('id', 'desc')->get();
-        $booth_details = BoothDetails::orderBy('id', 'desc')->get();
+        $booth = Booth::orderBy('id', 'asc')->get();
+        $booth_details = BoothDetails::orderBy('id', 'asc')->get();
 
         $count = 1;
 
