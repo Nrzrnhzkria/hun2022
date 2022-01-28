@@ -48,7 +48,7 @@
                         @if ($payment->payer_id == $vendor->id)
                         <tr>
                             <th scope="row">{{ $count++ }}</th>
-                            <td>{{ $vendor->name }}</td>
+                            <td>{{ $vendor->company_name }}</td>
                             <td>{{ $booth_type->booth_type }}</td>
                             <td class="text-center">
                                 @if ( $payment->status == 'success')
