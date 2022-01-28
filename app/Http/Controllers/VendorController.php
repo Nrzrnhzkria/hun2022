@@ -489,7 +489,7 @@ class VendorController extends Controller
         $vendor = User::where('id', $user_id)->first();
         $details = VendorDetails::where('user_id', $user_id)->first();
         $payment = Membership::where('payer_id', $user_id)->first();
-        $coupon = Coupon::where('vendor_id', $user_id)->first();
+        $coupon = Coupon::where('vendor_id', $user_id)->get();
 
         $booth_id = $payment->booth_id;
         $details_id = $payment->details_id;
@@ -506,7 +506,7 @@ class VendorController extends Controller
     public function store_update($user_id, Request $request)
     {
         $vendor = User::where('id', $user_id)->first();
-        $coupon = Coupon::where('vendor_id', $user_id)->get();
+        $coupon = Coupon::where('vendor_id', $user_id)->first();
 
         if($request->img_name == null){
 
