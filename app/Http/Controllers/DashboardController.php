@@ -48,7 +48,6 @@ class DashboardController extends Controller
     {
         $vendor = User::where('id', $vendor_id)->first();
 
-        $vendor->hun_id = $request->hun_id;
         $vendor->name = $request->name;
         $vendor->email = $request->email;
         $vendor->password = Hash::make($request['password']);
