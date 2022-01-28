@@ -45,7 +45,7 @@
                         @foreach ($booth_types as $booth_type)
                         @foreach ($payments as $payment)
                         @if ($payment->details_id == $booth_type->details_id)
-                        @if ($payment->payer_id == $vendor->id)
+                        @if ($payment->payer_id == $vendor->user_id)
                         <tr>
                             <th scope="row">{{ $count++ }}</th>
                             <td>{{ $vendor->company_name }}</td>
@@ -59,7 +59,7 @@
                                 
                             </td>
                             <td class="text-center">
-                                <a href="{{ url('update-vendor') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-vendor') }}/{{ $vendor->user_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>        
                         @endif        

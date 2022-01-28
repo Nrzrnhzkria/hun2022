@@ -35,7 +35,7 @@ class DashboardController extends Controller
     public function vendors()
     {
         $payments = Membership::where('amount', '>', '51')->paginate(15);
-        $vendors = User::orderBy('id', 'desc')->get();
+        $vendors = VendorDetails::orderBy('id', 'desc')->get();
         $booth_types = BoothDetails::orderBy('id', 'desc')->get();
         $count = 1;
 
