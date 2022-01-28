@@ -33,8 +33,9 @@ class DashboardController extends Controller
 
     public function vendors()
     {
-        $vendors = User::orderBy('id', 'desc')->where('role', 'vendor')->paginate(15);
-        return view('admin.vendors.view', compact('vendors'));
+        $payments = Membership::where('amount', '>', '51')->paginate(15);
+        // $vendors = User::orderBy('id', 'desc')->get();
+        return view('admin.vendors.view', compact('payments'));
     }
 
     public function update_vendor($vendor_id)

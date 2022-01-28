@@ -27,28 +27,28 @@
     <div class="row">
         
         <div class="col-md-12">
-            <div class="float-right pt-3">{{ $vendors->links() }}</div>
-            @if(count($vendors) > 0)
+            <div class="float-right pt-3">{{ $payments->links() }}</div>
+            @if(count($payments) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Phone No</th>
+                            <th scope="col">Vendor ID</th>
+                            <th scope="col">Amount</th>
+                            <th scope="col">Payment Status</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($vendors as $key => $vendor)
+                        @foreach ($payments as $key => $payment)
                         <tr>
-                            <th scope="row">{{ $vendors->firstItem() + $key }}</th>
-                            <td>{{ $vendor->name }}</td>
-                            <td>{{ $vendor->email }}</td>
-                            <td>{{ $vendor->phone_no }}</td>
+                            <th scope="row">{{ $payments->firstItem() + $key }}</th>
+                            <td>{{ $payment->payer_id }}</td>
+                            <td>{{ $payment->amount }}</td>
+                            <td>{{ $payment->status }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update-vendor') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-vendor') }}/{{ $payment->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                
                         @endforeach
