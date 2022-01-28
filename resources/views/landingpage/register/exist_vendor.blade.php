@@ -217,7 +217,7 @@
 
                     @foreach ($coupon as $coupons)
                         @if ($vendor->id == $coupons->vendor_id)
-                        <div class="col-md-3">
+                        <div class="col-md-2">
                             <div class="card">
                                 <img src="{{ $coupons->img_name }}" class="card-img-top" alt="...">
                                 <div class="card-body">
