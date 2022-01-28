@@ -41,7 +41,8 @@
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Seminar Name</th>
-                            <th scope="col">Location Name</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
@@ -50,8 +51,8 @@
                         <tr>
                             <th scope="row">{{ $seminars->firstItem() + $key }}</th>
                             <td>{{ $seminar->seminar_name }}</td>
-                            <td>{{ $seminar->location_name }}</td>
-                            <td>{{ $attendance->seminar_date }}</td>
+                            <td>{{ $seminar->seminar_date }}</td>
+                            <td>{{ $seminar->time_start }} - {{ $seminar->time_end }}</td>
                             <td class="text-center">
                                 <a href="{{ url('view-attendance') }}/{{ $seminar->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
