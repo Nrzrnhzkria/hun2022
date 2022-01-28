@@ -215,8 +215,9 @@
                         <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                     </div>
 
-                    <br><br><br>
+                    <h3>Uploaded Coupon</h3>
 
+                    @if(count($coupon) > 0)
                     @foreach ($coupon as $coupons)
                         @if ($vendor->id == $coupons->vendor_id)
                         <div class="col-md-4">
@@ -235,6 +236,9 @@
                         </div>
                         @endif
                     @endforeach
+                    @else
+                      <p>There are no uploaded coupon to display.</p>
+                    @endif
                     
                 </div>
 
