@@ -193,8 +193,8 @@
                                         <td id="catlist" class="text-center">
                                             {{-- <input type="radio" class="check" value="{{ $booth_detail->price }}"> --}}
                                             <input type="radio" name="amount" value="{{ $booth_detail->price }}">
-                                            <input type="hidden" name="booth_id" value="{{ $booth_detail->booth_id }}">
-                                            <input type="hidden" name="details_id" value="{{ $booth_detail->details_id }}">
+                                            {{-- <input type="hidden" name="booth_id" value="{{ $booth_detail->booth_id }}">
+                                            <input type="hidden" name="details_id" value="{{ $booth_detail->details_id }}"> --}}
                                         </td>
                                     </tr>
                                     @endif
