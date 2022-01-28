@@ -36,7 +36,7 @@
                             <th scope="col">#</th>
                             <th scope="col">Vendor</th>
                             <th scope="col">Amount</th>
-                            <th scope="col">Payment Status</th>
+                            <th scope="col" class="text-center">Payment Status</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
@@ -48,7 +48,7 @@
                             <th scope="row">{{ $count++ }}</th>
                             <td>{{ $vendor->name }}</td>
                             <td>{{ $payment->amount }}</td>
-                            <td>
+                            <td class="text-center">
                                 @if ( $payment->status == 'success')
                                     <span class="badge rounded-pill bg-success">Success</span>
                                 @else
