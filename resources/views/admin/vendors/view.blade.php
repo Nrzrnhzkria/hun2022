@@ -34,17 +34,19 @@
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Vendor ID</th>
+                            <th scope="col">Vendor</th>
                             <th scope="col">Amount</th>
                             <th scope="col">Payment Status</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($vendors as $vendor)
                         @foreach ($payments as $key => $payment)
+                        @if ($payment->payer_id == $vendor->id)
                         <tr>
                             <th scope="row">{{ $payments->firstItem() + $key }}</th>
-                            <td>{{ $payment->payer_id }}</td>
+                            <td>{{ $vendor->name }}</td>
                             <td>{{ $payment->amount }}</td>
                             <td>{{ $payment->status }}</td>
                             <td class="text-center">
