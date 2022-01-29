@@ -1,7 +1,7 @@
 @extends('layouts.admin-panel')
 
 @section('title')
-    Users
+    Apps User
 @endsection
 
 @section('content')
