@@ -173,28 +173,7 @@ class DashboardController extends Controller
 
     public function export_members()
     {
-        $members = User::where('role', 'Member')->get();
-        $pdf = PDF::loadView('admin.users.export_members', compact('members'));
-        
-        return $pdf->download('HUN_Members.pdf');
-
-        // return Excel::download(new MembersExport($members), 'HUN_Members.xlsx');
-
-        // return redirect('members');
-        
-        // foreach($members as $member){
-        //     $data = [
-        //         'hun_id' => $member->hun_id,
-        //         'name' => $member->name,
-        //         'ic_no' => $member->ic_no,
-        //         'email' => $member->email,
-        //         'phone_no' => $member->phone_no
-        //     ];
-        // }
-
-        // $pdf = PDF::loadView('admin.users.export_members', $data);
-    
-        // return $pdf->download('HUN_Members.pdf');
+        return Excel::download(new MembersExport, 'HUN_Members.xlsx');
 
     }
 
