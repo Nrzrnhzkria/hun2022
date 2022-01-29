@@ -45,7 +45,7 @@
         <div class="col-md-4">
             <div class="card">
                 <a href="/members" class="text-dark text-decoration-none">
-                    <div class="row">
+                    <div class="row p-3">
                         <div class="col-md-4">
                             <i class="bi bi-person-check-fill" style="font-size: 52pt"></i>
                         </div>
@@ -60,7 +60,7 @@
         <div class="col-md-4">
             <div class="card">
                 <a href="/non-members" class="text-dark text-decoration-none">
-                    <div class="row">
+                    <div class="row p-3">
                         <div class="col-md-4">
                             <i class="bi bi-person-x" style="font-size: 52pt"></i>
                         </div>
