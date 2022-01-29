@@ -26,6 +26,18 @@
                 <p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;As human being, our life is mapped out on the plans and decisions of Allah SWT and  as human being we can comprehend it only as far as Allah permits to do so . Despite, we should not discourage and strive to achieve what we aspire to, while recognizing that Allah has the perfect plan.
                 </p>
             </div>
+
+            <div class="row p-4">
+                <em style="text-align: justify;">
+                    Syukur alhamdulillah saya panjatkan ke hadrat llahi dengan limpah dan kurniaNya masih lagi
+diberikan kesempatan dan kekuatan untuk memimpin Dewan Perniagaan Usahawan Kecil Malaysia (DPUKM), semoga dikuatkan semangat untuk terus mengeratkan silaturrahim di antara usahawan-usahawan di dalam DPUKM khususnya dan seluruh Malaysia amnya.</em>
+
+                <em style="text-align: justify;"> Syabas dan terima kasih diucapkan kepada semua Ahli Majlis Tertinggi DPUKM kerana bersama-sama saya dalam merealisasikan visi dan misi DPUKM supaya menjadi platform terbaik bagi semua usahawan di Malaysia sama ada yang baru memulakan perniagaan mahupun yang sudah berjaya dalam perniagaan masing-masing. Di dalam kita semua mengharungi kehidupan yang semakin sibuk dengan tugas-tugas harian, ktia juga terikat dengan tuntutan untuk memperbaiki dan merapatkan silaturrahim di antara semua usahawan. Saya dan Ahli Majlis Tertinggi telah mengatur beberapa aktiviti dan gerak kerja demi membuka ruang dan peluang kepada usahawan-usahawan supaya lebih berjaya dan berdaya saing di dalam dunia perniagaan yang semakin mencabar dewasa ini. 
+                </em>
+
+                <em style="text-align: justify;">Sesungguhnya manusia hanya boleh merancang, namun Allah jua yang menentukan segalanya. Oleh itu, kita sewajarnya terus berusaha dan tidak merasa jemu untuk mencapai apa yang kita cita-citakan, 
+                Sekian, wassalam.</em>
+            </div>
         </div>
     </div>
 </div>
