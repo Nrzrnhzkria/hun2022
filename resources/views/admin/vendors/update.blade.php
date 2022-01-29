@@ -101,7 +101,7 @@
                         
                         </div>
                         
-                        <h4 class="border-bottom">Payment Details</h4>
+                        <h4 class="border-bottom">Booth Details</h4>
                         
                         <div class="row p-3">
         
