@@ -227,7 +227,7 @@
                             <div class="card mb-3">
                                 <div class="row g-0">
                                   <div class="col-md-4">
-                                    <img src="{{ assets('public/files/coupons/LKQowMJAMzEiyEZO7EuJb7TxAMVjfIf2MYsnTgWx.png') }}" class="img-fluid rounded-start" alt="...">
+                                    <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
                                   </div>
                                   <div class="col-md-8">
                                     <div class="card-body py-0">
