@@ -33,7 +33,7 @@
                     <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
 
                     <div class="col-md-12 pb-2">
-                        <label>Name of Company:<span class="text-danger">*</span></label>
+                        <label>Name of Company/<em>Nama Syarikat</em>:<span class="text-danger">*</span></label>
                         <input type="text" value="{{ $details->company_name ?? '' }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name">
                     </div>
 
