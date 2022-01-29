@@ -68,7 +68,6 @@ class DashboardController extends Controller
         $vendor->password = Hash::make($request['password']);
         $vendor->phone_no = $request->phone_no;
         $vendor->ic_no = $request->ic_no;
-        $vendor->role = $request->role;
         $vendor->save();
 
         $payment->status = $request->status;
