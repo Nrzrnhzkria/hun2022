@@ -105,6 +105,16 @@
                         
                         <div class="row p-3">
         
+                            <div class="col-md-6 pb-2">
+                                <label>Booth Name:</label>
+                                <input type="text" value="{{ $booth_name->booth_name }}" class="form-control form-control-sm" name="booth_name" readonly/>
+                            </div>   
+                            
+                            <div class="col-md-6 pb-2">
+                                <label>Booth Type:</label>
+                                <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
+                            </div>  
+        
                             <div class="col-md-4 pb-2">
                                 <label>Bill ID:</label>
                                 <input type="text" value="{{ $payment->senangpay_id }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
@@ -120,16 +130,6 @@
                                 <input type="text" value="{{ $payment->status }}" class="form-control form-control-sm" name="status"/>
                                 <em style="font-size: 10pt">success/failed</em>
                             </div> 
-        
-                            <div class="col-md-6 pb-2">
-                                <label>Booth Name:</label>
-                                <input type="text" value="{{ $booth_name->booth_name }}" class="form-control form-control-sm" name="booth_name" readonly/>
-                            </div>   
-                            
-                            <div class="col-md-6 pb-2">
-                                <label>Booth Type:</label>
-                                <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
-                            </div>  
 
                         </div>
 
