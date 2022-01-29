@@ -19,7 +19,9 @@
                     <form class="row g-3 px-3" method="POST" action="{{ url('edit-user') }}/{{ $user->id }}">
                         @csrf
 
-                        <br><br>
+                        <div class="row mb-3">
+                        </div>  
+                        
                         @if ($user->hun_id == null)
                             
                         @else
