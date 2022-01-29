@@ -179,12 +179,17 @@ class DashboardController extends Controller
 
         // return redirect('members');
         
-        // $data = [
-        //     'title' => 'Welcome to ItSolutionStuff.com',
-        //     'date' => date('m/d/Y')
-        // ];
+        foreach($members as $member){
+            $data = [
+                'hun_id' => $member->hun_id,
+                'name' => $member->name,
+                'ic_no' => $member->ic_no,
+                'email' => $member->email,
+                'phone_no' => $member->phone_no
+            ];
+        }
 
-        $pdf = PDF::loadView('admin.users.export_members', $members);
+        $pdf = PDF::loadView('admin.users.export_members', $data);
     
         return $pdf->download('HUN_Members.pdf');
 
