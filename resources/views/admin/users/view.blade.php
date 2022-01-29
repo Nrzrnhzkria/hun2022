@@ -42,14 +42,14 @@
     @endif
     
     <div class="row pb-3">
-        <div class="col-md-4">
+        <div class="col-md-4 pb-2">
             <div class="card">
                 <a href="/members" class="text-dark text-decoration-none">
-                    <div class="row py-3 px-4">
-                        <div class="col-md-4">
+                    <div class="row py-3 px-4 text-center">
+                        <div class="col-md-5">
                             <i class="bi bi-person-check-fill" style="font-size: 56pt"></i>
                         </div>
-                        <div class="col-md-8 pt-3">
+                        <div class="col-md-7 pt-3">
                             <h6>Member</h6>
                             <b class="display-6">{{ number_format($member) }}</b>
                         </div>
@@ -57,14 +57,14 @@
                 </a>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 pb-2">
             <div class="card">
                 <a href="/non-members" class="text-dark text-decoration-none">
-                    <div class="row py-3 px-4">
-                        <div class="col-md-4">
+                    <div class="row py-3 px-4 text-center">
+                        <div class="col-md-5">
                             <i class="bi bi-person-x" style="font-size: 56pt"></i>
                         </div>
-                        <div class="col-md-8 pt-3">
+                        <div class="col-md-7 pt-3">
                             <h6>Non-Member</h6>
                             <b class="display-6">{{ number_format($nonmember) }}</b>
                         </div>
