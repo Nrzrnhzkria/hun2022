@@ -23,16 +23,38 @@
 
                             <div class="col-md-12 pb-2">
                                 <label>Name of Company:</label>
-                                <input type="text" value="{{ $details->company_name }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name" readonly>
+                                <input type="text" value="{{ $details->company_name }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name">
                             </div>
         
                             <div class="col-md-6 pb-2">
                                 <label>Contact Person:</label>
-                                <input type="text" value="{{ $vendor->name  }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name" readonly>
+                                <input type="text" value="{{ $vendor->name  }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name">
+                            </div>
+
+                            <div class="col-md-6 pb-2">
+                                <label>Designation:</label>
+                                <input type="text" value="{{ $details->designation }}" class="form-control form-control-sm" name="designation" readonly/>
+                                {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation }}">                                 
+                                    <option disabled selected>-- Please Select --</option>
+                                    <option value="CEO">CEO</option>
+                                    <option value="Proprietor">Proprietor</option>
+                                    <option value="Owner">Owner</option>
+                                    <option value="Founder">Founder</option>
+                                    <option value="Team Leader">Team Leader</option>
+                                    <option value="Manager">Manager</option>
+                                    <option value="Assistant Manager">Assistant Manager</option>
+                                    <option value="Executive">Executive</option>
+                                    <option value="Director">Director</option>
+                                    <option value="Coordinator">Coordinator</option>
+                                    <option value="Administrator">Administrator</option>
+                                    <option value="Organizer">Organizer</option>
+                                    <option value="Administrator">Managing Partner</option>
+                                    <option value="Others">Others</option>
+                                </select> --}}
                             </div>
                         
                         </div>
-                        
+
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
