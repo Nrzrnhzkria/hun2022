@@ -34,23 +34,21 @@
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Vendor ID</th>
-                            <th scope="col">Coupon No.</th>
-                            {{-- <th scope="col">Image</th> --}}
+                            <th scope="col">Vendor</th>
                             <th scope="col">Category</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($vendors as $vendor)
                         @foreach ($coupons as $key => $coupon)
+                        @if ($coupon->vendor_id == $vendor->user_id)
                         <tr>
                             <th scope="row">{{ $coupons->firstItem() + $key }}</th>
-                            <td>{{ $coupon->vendor_id }}</td>
-                            <td>{{ $coupon->coupon_no }}</td>
-                            {{-- <td><img src="{{ $coupon->img_name }}" width="80rem"></td> --}}
+                            <td>{{ $vendor->company_name }}</td>
                             <td>{{ $coupon->category }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update-coupon') }}/{{ $coupon->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-coupon') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>                
                         @endforeach
