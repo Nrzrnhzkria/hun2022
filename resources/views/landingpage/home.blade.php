@@ -162,7 +162,7 @@
                     </ul>
 
                     <div class="col-auto text-center pt-3">
-                        <a href="registration" class="btn btn-warning fw-bold">Register</a>
+                        <a href="registration" class="btn btn-warning fw-bold">Vendor Registration</a>
                     </div>
                 </div>
             </div>
