@@ -16,11 +16,10 @@
 
 <div class="container">
     <div class="row px-2">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
-            <h1>News</h1>
-        </div>
+        <h1 class="text-center border-bottom pt-5">News</h1>
+        
         @foreach ($news as $new)
-        <div class="col-md-12">
+        <div class="col-md-12 pt-3">
             <a href="{{ url('news') }}/{{ $new->id }}" class="text-dark text-decoration-none">
                 <div class="card shadow mb-3">
                     <div class="row g-0">

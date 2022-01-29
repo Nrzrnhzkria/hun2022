@@ -16,11 +16,10 @@
 
 <div class="container">
     <div class="row px-2">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
-            <h1>Media</h1>
-        </div>
+        <h1 class="text-center border-bottom pt-5">Media</h1>
+        
+        <div class="col-md-12 pt-3">
         @foreach ($medias as $media)
-        <div class="col-md-12">
             <a href="{{ url('media') }}/{{ $media->id }}" class="text-dark text-decoration-none">  
                 <div class="card shadow mb-3" style="width: 18rem;">
                     <img src="{{ $media->img_name }}" class="card-img-top" alt="...">
@@ -43,8 +42,8 @@
                     </div>
                 </div> --}}
             </a>
-        </div>
         @endforeach
+        </div>
     </div>
 </div>
 
