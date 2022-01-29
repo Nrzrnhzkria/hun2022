@@ -137,7 +137,7 @@
     <div class="row py-4">
         <div class="col-md-4 pb-2">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
-                <div class="card shadow border-2" style="background-color: rgba(0, 128, 0, 0.4); height: 30rem">
+                <div class="card shadow border-2" style="background-color: green; height: 30rem">
                     <div class="card-body p-4">
                         <h3 class="text-center">ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
                         <br>
@@ -150,7 +150,7 @@
             {{-- </a> --}}
         </div>
         <div class="col-md-4 pb-2">
-            <div class="card shadow border-2" style="background-color: rgba(255, 166, 0, 0.4); height: 30rem">
+            <div class="card shadow border-2" style="background-color: orange; height: 30rem">
                 <div class="card-body p-4">
                     <h4 class="card-title text-center">BECOME A VENDOR</h4>
                     <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN.</p>
@@ -162,13 +162,13 @@
                     </ul>
 
                     <div class="col-auto text-center pt-3">
-                        <a href="registration" class="btn btn-warning fw-bold"><i class="bi bi-people-fill"></i> Vendor Registration</a>
+                        <a href="registration" class="btn btn-light fw-bold"><i class="bi bi-people-fill"></i> Vendor Registration</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-4 pb-2">
-            <div class="card shadow border-2" style="background-color: rgba(128, 0, 0, 0.4); height: 30rem">
+            <div class="card shadow border-2" style="background-color: red; height: 30rem">
                 <div class="card-body p-4">
                     <h4 class="card-title text-center">THE EXHIBITIONS</h4>
                     <p class="card-text" style="text-align: justify">
