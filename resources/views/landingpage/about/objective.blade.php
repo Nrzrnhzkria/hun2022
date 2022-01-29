@@ -8,11 +8,9 @@
 
 <div class="container">
     <div class="row px-2">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
-            <h1>Objective</h1>
-        </div>
+        <h1 class="text-center border-bottom pt-5">Objective</h1>
         
-        <div class="col-md-12">
+        <div class="col-md-12 pt-3">
             <div class="card shadow border-0" style="background-color: orange">
                 <div class="card-body p-4">
 
