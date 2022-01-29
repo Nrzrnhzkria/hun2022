@@ -49,7 +49,7 @@
                         <div class="col-md-4">
                             <i class="bi bi-person-check-fill" style="font-size: 52pt"></i>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 text-center pt-3">
                             <h6>Member</h6>
                             <b class="display-6">{{ number_format($member) }}</b>
                         </div>
@@ -64,7 +64,7 @@
                         <div class="col-md-4">
                             <i class="bi bi-person-x" style="font-size: 52pt"></i>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 text-center pt-3">
                             <h6>Non-Member</h6>
                             <b class="display-6">{{ number_format($nonmember) }}</b>
                         </div>
