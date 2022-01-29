@@ -5,6 +5,13 @@
 @endsection
 
 @section('content')
+<style>
+.card:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);    
+    transform: scale(1.01);
+    background-color: white;
+}
+</style>
 
 <div class="container">
     
@@ -37,7 +44,7 @@
     
     <div class="row pb-3">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card bg-transparent">
                 <a href="/members" class="text-dark text-decoration-none">
                     <div class="row p-4">
                         <div class="col-md-4">
@@ -52,7 +59,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
+            <div class="card bg-transparent">
                 <a href="/non-members" class="text-dark text-decoration-none">
                     <div class="row p-4">
                         <div class="col-md-4">
