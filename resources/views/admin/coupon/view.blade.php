@@ -27,36 +27,32 @@
     <div class="row">
         
         <div class="col-md-12">
-            <div class="float-right pt-3">{{ $redeems->links() }}</div>
-            @if(count($redeems) > 0)
+            <div class="float-right pt-3">{{ $coupons->links() }}</div>
+            @if(count($coupons) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Vendor</th>
+                            <th scope="col">Vendor ID</th>
+                            <th scope="col">Coupon No.</th>
+                            {{-- <th scope="col">Image</th> --}}
                             <th scope="col">Category</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($coupons as $coupon)
-                        @foreach ($vendors as $vendor)
-                        @foreach ($redeems as $key => $redeem)
-                        @if ($vendor->id == $redeem->user_id)
-                        @if ($coupon->id == $redeem->coupon_id)
+                        @foreach ($coupons as $key => $coupon)
                         <tr>
-                            <th scope="row">{{ $redeems->firstItem() + $key }}</th>
-                            <td>{{ $vendor->company_name }}</td>
+                            <th scope="row">{{ $coupons->firstItem() + $key }}</th>
+                            <td>{{ $coupon->vendor_id }}</td>
+                            <td>{{ $coupon->coupon_no }}</td>
+                            {{-- <td><img src="{{ $coupon->img_name }}" width="80rem"></td> --}}
                             <td>{{ $coupon->category }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-coupon') }}/{{ $coupon->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
-                        </tr>      
-                        @endif     
-                        @endif           
-                        @endforeach          
-                        @endforeach        
+                        </tr>                
                         @endforeach
                     </tbody>
                 </table>

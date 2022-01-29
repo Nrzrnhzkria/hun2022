@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request; 
 use App\Models\Coupon;
-use App\Models\Redeem;
-use App\Models\VendorDetails;
 
 class CouponController extends Controller
 {
@@ -20,11 +18,8 @@ class CouponController extends Controller
 
     public function coupon()
     {
-        $coupons = Coupon::orderBy('id', 'desc')->get();        
-        $vendors = VendorDetails::orderBy('id', 'desc')->get();
-        $redeems = Redeem::orderBy('id', 'desc')->paginate(15); 
-
-        return view('admin.coupon.view', compact('coupons', 'vendors', 'redeems'));
+        $coupons = Coupon::orderBy('id', 'desc')->paginate(15);
+        return view('admin.coupon.view', compact('coupons'));
     }
 
     public function update_coupon($coupon_id)
