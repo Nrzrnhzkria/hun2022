@@ -8,11 +8,9 @@
 
 <div class="container">
     <div class="row px-2">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
-            <h1>Organizational Chart</h1>
-        </div>
+        <h1 class="text-center border-bottom pt-5">Organizational Chart</h1>
         
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 text-center pt-3">
             <img class="img-fluid" src="{{ asset('assets/img/about/organization.png') }}" style="width: 40rem">
         </div>
     </div>
