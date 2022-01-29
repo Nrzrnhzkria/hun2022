@@ -138,7 +138,7 @@
         <div class="col-md-4">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
                 <div class="card border-0" style="background-color: rgba(0, 128, 0, 0.4); height: 28rem">
-                    <div class="card-body text-white p-4">
+                    <div class="card-body p-4">
                         <h3 class="text-center">ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
                         <br>
                         <ul style="text-align: justify">
@@ -151,7 +151,7 @@
         </div>
         <div class="col-md-4">
             <div class="card border-0" style="background-color: rgba(255, 166, 0, 0.4); height: 28rem">
-                <div class="card-body text-white p-4">
+                <div class="card-body p-4">
                     <h4 class="card-title text-center">BECOME A VENDOR</h4>
                     <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN.</p>
                     <ul class="card-text" style="text-align: justify">
@@ -161,14 +161,14 @@
                     </ul>
 
                     <div class="col-auto text-center pt-3">
-                        <a href="registration" class="btn btn-light fw-bold">Register</a>
+                        <a href="registration" class="btn btn-warning fw-bold">Register</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card border-0" style="background-color: rgba(128, 0, 64, 0.4); height: 28rem">
-                <div class="card-body text-white p-4">
+                <div class="card-body p-4">
                     <h4 class="card-title text-center">THE EXHIBITIONS</h4>
                     <p class="card-text" style="text-align: justify">
                         There are 8 upcoming exhibition, booth, programs, mentoring and etc can help growth your business and acquire information about new industry developments.
