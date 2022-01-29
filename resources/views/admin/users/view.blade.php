@@ -51,7 +51,7 @@
                         </div>
                         <div class="col-md-7 pt-3">
                             <h6>Member</h6>
-                            <b class="display-6">{{ number_format($member) }}</b>
+                            <b class="display-6 pb-2">{{ number_format($member) }}</b>
                         </div>
                     </div>
                 </a>
@@ -66,7 +66,7 @@
                         </div>
                         <div class="col-md-7 pt-3">
                             <h6>Non-Member</h6>
-                            <b class="display-6">{{ number_format($nonmember) }}</b>
+                            <b class="display-6 pb-2">{{ number_format($nonmember) }}</b>
                         </div>
                     </div>
                 </a>
