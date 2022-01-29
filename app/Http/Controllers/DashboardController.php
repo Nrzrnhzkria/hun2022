@@ -45,8 +45,9 @@ class DashboardController extends Controller
     public function update_vendor($vendor_id)
     {
         $vendor = User::where('id', $vendor_id)->first();
+        $details = VendorDetails::where('user_id', $vendor_id)->first();
 
-        return view('admin.vendors.update', compact('vendor'));
+        return view('admin.vendors.update', compact('vendor', 'details'));
     }
 
     public function edit_vendor($vendor_id, Request $request)

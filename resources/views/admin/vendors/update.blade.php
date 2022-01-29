@@ -19,6 +19,20 @@
                     <form class="row g-3 px-3" method="POST" action="{{ url('edit-vendor') }}/{{ $vendor->id }}">
                         @csrf
 
+                        <div class="row p-3">
+
+                            <div class="col-md-12 pb-2">
+                                <label>Name of Company:</label>
+                                <input type="text" value="{{ $details->company_name }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name" readonly>
+                            </div>
+        
+                            <div class="col-md-6 pb-2">
+                                <label>Contact Person:</label>
+                                <input type="text" value="{{ $vendor->name  }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name" readonly>
+                            </div>
+                        
+                        </div>
+                        
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
