@@ -21,7 +21,7 @@
                         
                         <div class="row p-3">
 
-                            <div class="col-md-12 pb-2">
+                            <div class="col-md-6 pb-2">
                                 <label>Name of Company:</label>
                                 <input type="text" value="{{ $details->company_name }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name">
                             </div>
@@ -30,10 +30,9 @@
                                 <label>Contact Person:</label>
                                 <input type="text" value="{{ $vendor->name  }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name">
                             </div>
-
                             <div class="col-md-6 pb-2">
                                 <label>Designation:</label>
-                                <input type="text" value="{{ $details->designation }}" class="form-control form-control-sm" name="designation" readonly/>
+                                <input type="text" value="{{ $details->designation }}" class="form-control form-control-sm" name="designation"/>
                                 {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation }}">                                 
                                     <option disabled selected>-- Please Select --</option>
                                     <option value="CEO">CEO</option>
@@ -52,15 +51,30 @@
                                     <option value="Others">Others</option>
                                 </select> --}}
                             </div>
-
+        
                             <div class="col-md-6 pb-2">
                                 <label>IC/Passport No.:</label>
-                                <input type="text" value="{{ $vendor->ic_no }}" class="form-control form-control-sm" name="ic_no" readonly/>
+                                <input type="text" value="{{ $vendor->ic_no }}" class="form-control form-control-sm" name="ic_no"/>
+                            </div>
+        
+                            <div class="col-md-6 pb-2">
+                                <label for="phoneno" class="form-label">Phone No.:</label>
+                                <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no"/>
+                            </div>
+        
+                            <div class="col-md-6 pb-2">
+                                <label>Email:</label>
+                                <input type="email" value="{{ $vendor->email }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com"/>
+                            </div>
+        
+                            <div class="col-md-12 pb-2">
+                                <label>Company Address:</label>
+                                <textarea type="text" class="form-control form-control-sm" placeholder="Ali"  name="company_address">{{ $details->company_address }}</textarea>
                             </div>
         
                             <div class="col-md-6 pb-2">
                                 <label>Nationality:</label>
-                                <input type="text" value="{{ $details->nationality }}" class="form-control form-control-sm" name="nationality" readonly/>
+                                <input type="text" value="{{ $details->nationality }}" class="form-control form-control-sm" name="nationality"/>
                                 {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality }}">                                 
                                     <option disabled selected>-- Please Select --</option>
                                     <option value="local">Citizens</option>
@@ -68,19 +82,9 @@
                                 </select> --}}
                             </div>
         
-                            <div class="col-md-12 pb-2">
-                                <label>Company Address:</label>
-                                <textarea type="text" class="form-control form-control-sm" placeholder="Ali"  name="company_address" readonly>{{ $details->company_address }}</textarea>
-                            </div>
-        
-                            <div class="col-md-6 pb-2">
-                                <label>Email:</label>
-                                <input type="email" value="{{ $vendor->email }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com" readonly/>
-                            </div>
-        
                             <div class="col-md-6 pb-2">
                                 <label>Nature of Business:</label>
-                                <input type="text" value="{{ $details->business_nature }}" class="form-control form-control-sm" name="business_nature" readonly/>
+                                <input type="text" value="{{ $details->business_nature }}" class="form-control form-control-sm" name="business_nature"/>
                                 {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature }}">                                 
                                     <option disabled selected>-- Please Select --</option>
                                     <option value="Sole proprietorship">Sole proprietorship</option>
@@ -91,11 +95,6 @@
                                     <option value="Foreign company">Foreign company</option>
                                     <option value="Limited liability partnership">Limited liability partnership</option>
                                 </select> --}}
-                            </div>
-        
-                            <div class="col-md-6 pb-2">
-                                <label for="phoneno" class="form-label">Phone No.:</label>
-                                <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" readonly/>
                             </div>
                         
                         </div>
