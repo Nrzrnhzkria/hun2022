@@ -43,6 +43,7 @@
                         @foreach ($coupons as $coupon)
                         @foreach ($vendors as $vendor)
                         @foreach ($redeems as $key => $redeem)
+                        @if ($vendor->id == $redeem->user_id)
                         @if ($coupon->id == $redeem->coupon_id)
                         <tr>
                             <th scope="row">{{ $redeems->firstItem() + $key }}</th>
@@ -52,8 +53,10 @@
                                 <a href="{{ url('update-coupon') }}/{{ $coupon->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>      
-                        @endif          
+                        @endif     
+                        @endif           
                         @endforeach          
+                        @endforeach        
                         @endforeach
                     </tbody>
                 </table>
