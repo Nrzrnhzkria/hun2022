@@ -33,16 +33,16 @@
                     <input type="hidden" value="Vendor" class="form-control" name="role" readonly/>
 
                     <div class="col-md-12 pb-2">
-                        <label>Name of Company/<em>Nama Syarikat</em>:<span class="text-danger">*</span></label>
+                        <label>Name of Company/<em style="font-size: 10pt;">Nama Syarikat</em>:<span class="text-danger">*</span></label>
                         <input type="text" value="{{ $details->company_name ?? '' }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name">
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Contact Person:<span class="text-danger">*</span></label>
+                        <label>Full Name/<em style="font-size: 10pt;">Nama Penuh</em><span class="text-danger">*</span></label>
                         <input type="text" value="{{ $vendor->name ?? '' }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name">
                     </div>
                     <div class="col-md-6 pb-2">
-                        <label>Designation:<span class="text-danger">*</span></label>
+                        <label>Designation/<em style="font-size: 10pt;">Jawatan</em><span class="text-danger">*</span></label>
                         <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation ?? '' }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="CEO">CEO</option>
@@ -63,12 +63,12 @@
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>IC/Passport No.:<span class="text-danger">*</span></label>
+                        <label>IC/Passport No./<em style="font-size: 10pt;">No. Kad Pengenalan/Pasport</em>:<span class="text-danger">*</span></label>
                         <input type="text" value="{{ $vendor_ic ?? '' }}" class="form-control form-control-sm" name="ic_no" readonly/>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Nationality:<span class="text-danger">*</span></label>
+                        <label>Nationality/<em style="font-size: 10pt;">Kewarganegaraan</em>:<span class="text-danger">*</span></label>
                         <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality ?? '' }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="Local">Citizens</option>
@@ -77,18 +77,18 @@
                     </div>
 
                     <div class="col-md-12 pb-2">
-                        <label>Company Address:<span class="text-danger">*</span></label>
+                        <label>Company Address/<em style="font-size: 10pt;">Alamat Syarikat</em>:<span class="text-danger">*</span></label>
                         <textarea type="text" value="{{ $details->company_address ?? '' }}" class="form-control form-control-sm" placeholder="Ali"  name="company_address"></textarea>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Email:<span class="text-danger">*</span></label>
+                        <label>Email/<em style="font-size: 10pt;">Emel</em>:<span class="text-danger">*</span></label>
                         <input type="email"  value="{{ $vendor->email ?? '' }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com"/>
                         <input type="hidden"  value="{{ $vendor_ic ?? '' }}" class="form-control form-control-sm" name="password"/>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Nature of Business:<span class="text-danger">*</span></label>
+                        <label>Nature of Business/<em style="font-size: 10pt;">Jenis Perniagaan</em>:<span class="text-danger">*</span></label>
                         <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature ?? '' }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="Sole proprietorship">Sole proprietorship</option>
@@ -102,26 +102,26 @@
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Phone No.:<span class="text-danger">*</span></label>
+                        <label for="phoneno" class="form-label">Phone No./<em style="font-size: 10pt;">No. Telefon</em>:<span class="text-danger">*</span></label>
                         <input type="text" value="+60{{ $vendor->phone_no ?? '' }}" class="form-control form-control-sm" name="phone_no" required/>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="formFile" class="form-label">Details of Displayed Product:<span class="text-danger">*</span></label>
+                        <label for="formFile" class="form-label">Details of Displayed Product/<em style="font-size: 10pt;">Butiran Produk yang Dipaparkan</em>:<span class="text-danger">*</span></label>
                         <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details ?? '' }}" id="formFile">
-                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                        <em style="font-size: 10pt;">File format: docx, csv, pdf (File size must below 1MB)</em>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="formFile" class="form-label">SSM Certificate:<span class="text-danger">*</span></label>
+                        <label for="formFile" class="form-label">SSM Certificate/<em style="font-size: 10pt;">Sijil SSM</em>:<span class="text-danger">*</span></label>
                         <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert ?? '' }}" id="formFile">
-                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                        <em style="font-size: 10pt;">File format: docx, csv, pdf (File size must below 1MB)</em>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="formFile" class="form-label">Vaccine Certificate:<span class="text-danger">*</span></label>
+                        <label for="formFile" class="form-label">Vaccine Certificate/<em style="font-size: 10pt;">Sijil Vaksin</em>:<span class="text-danger">*</span></label>
                         <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert ?? '' }}" id="formFile">
-                        <em style="font-size: 10pt;">File format: docx, csv, txt, xlx, xls, pdf</em>
+                        <em style="font-size: 10pt;">File format: docx, csv, pdf (File size must below 1MB)</em>
                     </div>
                     
                 </div>
@@ -130,7 +130,7 @@
                 
                 <div class="row p-3">                  
                     <div class="col-md-6 pb-2">
-                        <label for="formFile" class="form-label">Coupon Category:</label>
+                        <label for="formFile" class="form-label">Coupon Category/<em style="font-size: 10pt;">Kategori Kupon</em>:</label>
                         <select class="form-select form-select-sm" aria-label="Default select example" name="category" value="{{ $coupon->category ?? '' }}">                                 
                             <option disabled selected>-- Please Select --</option>
                             <option value="Automotive">Automotive</option>
@@ -155,7 +155,7 @@
                     <div class="col-md-6 pb-2">
                         
                         {{-- <div id="inputFormRow"> --}}
-                            <label for="formFileMultiple" class="form-label">Coupon:</label>
+                            <label for="formFileMultiple" class="form-label">Coupon/<em style="font-size: 10pt;">Kupon</em>:</label>
                             <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                             <em style="font-size: 10pt;">File format: png, jpeg</em>
                         {{-- </div> --}}
