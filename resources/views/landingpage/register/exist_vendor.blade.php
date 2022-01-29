@@ -47,7 +47,7 @@
 
                 <div class="row p-3">
 
-                    <div class="col-md-12 pb-2">
+                    <div class="col-md-6 pb-2">
                         <label>Name of Company:</label>
                         <input type="text" value="{{ $details->company_name }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name" readonly>
                     </div>
@@ -84,13 +84,13 @@
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Nationality:</label>
-                        <input type="text" value="{{ $details->nationality }}" class="form-control form-control-sm" name="nationality" readonly/>
-                        {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality }}">                                 
-                            <option disabled selected>-- Please Select --</option>
-                            <option value="local">Citizens</option>
-                            <option value="international">Non-citizens</option>
-                        </select> --}}
+                        <label for="phoneno" class="form-label">Phone No.:</label>
+                        <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" readonly/>
+                    </div>
+
+                    <div class="col-md-6 pb-2">
+                        <label>Email:</label>
+                        <input type="email" value="{{ $vendor->email }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com" readonly/>
                     </div>
 
                     <div class="col-md-12 pb-2">
@@ -99,8 +99,13 @@
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Email:</label>
-                        <input type="email" value="{{ $vendor->email }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com" readonly/>
+                        <label>Nationality:</label>
+                        <input type="text" value="{{ $details->nationality }}" class="form-control form-control-sm" name="nationality" readonly/>
+                        {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality }}">                                 
+                            <option disabled selected>-- Please Select --</option>
+                            <option value="local">Citizens</option>
+                            <option value="international">Non-citizens</option>
+                        </select> --}}
                     </div>
 
                     <div class="col-md-6 pb-2">
@@ -116,11 +121,6 @@
                             <option value="Foreign company">Foreign company</option>
                             <option value="Limited liability partnership">Limited liability partnership</option>
                         </select> --}}
-                    </div>
-
-                    <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Phone No.:</label>
-                        <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" readonly/>
                     </div>
                 
                 </div>
