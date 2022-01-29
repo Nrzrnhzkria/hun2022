@@ -117,8 +117,8 @@
 
                             <div class="col-md-4 pb-2">
                                 <label>Status:</label>
-                                <input type="text" value="RM {{ $payment->status }}" class="form-control form-control-sm" name="status"/>
-                                <em>success/failed</em>
+                                <input type="text" value="{{ $payment->status }}" class="form-control form-control-sm" name="status"/>
+                                <em style="font-size: 10pt">success/failed</em>
                             </div> 
         
                             <div class="col-md-6 pb-2">
