@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="row px-2">
-        <h1 class="text-center border-bottom pt-5 pb-3">Contact</h1>
+        <h1 class="text-center border-bottom pt-5">Contact</h1>
         
         <div class="col-md-5 pt-5 pb-3">
             
@@ -25,7 +25,7 @@
 
         </div>
         
-        <div class="col-md-7">
+        <div class="col-md-7 pt-3">
 
             <div class="mapouter">
                 <div class="gmap_canvas">
