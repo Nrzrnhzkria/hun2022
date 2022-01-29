@@ -39,14 +39,24 @@
 
         <div class="col-md-3">
             <a href="/members" class="btn text-dark text-decoration-none">
+                <div class="col-md-6">
+                    <i class="bi bi-person-badge"></i>
+                </div>
+                <div class="col-md-6">
                     <h6 class="pt-4">Member</h6>
                     <b class="display-6 pb-3">{{ number_format($member) }}</b>
+                </div>
             </a>
         </div>
         <div class="col-md-3">
             <a href="/non-members" class="btn text-dark text-decoration-none">
+                <div class="col-md-6">
+                    <i class="bi bi-person-badge-fill"></i>
+                </div>
+                <div class="col-md-6">
                     <h6 class="pt-4">Non-Member</h6>
                     <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
+                </div>
             </a>
         </div>
         
