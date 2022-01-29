@@ -162,6 +162,20 @@ class DashboardController extends Controller
 
         return view('admin.users.view', compact('users', 'member','nonmember'));
     }
+    
+    public function members()
+    {
+        $members = User::orderBy('id', 'desc')->where('role', 'Member')->paginate(10);
+
+        return view('admin.users.members', compact('members'));
+    }
+
+    public function non_members()
+    {
+        $users = User::orderBy('id', 'desc')->where('role', 'User')->paginate(10);
+
+        return view('admin.users.non_members', compact('users'));
+    }
 
     public function update_user($user_id)
     {
