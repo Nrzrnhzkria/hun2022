@@ -21,7 +21,7 @@
 
                         <div class="row mb-3">
                         </div>  
-                        
+
                         @if ($user->hun_id == null)
                             
                         @else
@@ -29,7 +29,7 @@
                                 <label for="hun_id" class="col-md-4 col-form-label text-md-end">HUN ID</label>
 
                                 <div class="col-md-6">
-                                    <input id="hun_id" type="text" class="form-control @error('hun_id') is-invalid @enderror" name="hun_id" value="{{ $user->hun_id }}" required autocomplete="hun_id" autofocus>
+                                    <input id="hun_id" type="text" class="form-control @error('hun_id') is-invalid @enderror" name="hun_id" value="{{ $user->hun_id }}" required autocomplete="hun_id" readonly>
                 
                                     @error('hun_id')
                                         <span class="invalid-feedback" role="alert">
