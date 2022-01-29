@@ -10,19 +10,14 @@
     
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Members</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+            <div class="btn-group">  
+                <a class="btn btn-outline-dark" href="{{ url('export-members') }}">
+                    <i class="bi bi-download pr-2"></i> Export
+                </a>
+            </div>
+        </div>
     </div>
-
-    @if ($message = Session::get('updatesuccess'))
-    <div class="alert alert-info alert-block">
-        <strong>{{ $message }}</strong>
-    </div>
-    @endif
-
-    @if ($message = Session::get('deleteuser'))
-    <div class="alert alert-info alert-block">
-        <strong>{{ $message }}</strong>
-    </div>
-    @endif
     
     <div class="row pb-3">    
         
