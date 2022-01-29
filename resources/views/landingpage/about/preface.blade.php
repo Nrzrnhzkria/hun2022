@@ -38,6 +38,12 @@ diberikan kesempatan dan kekuatan untuk memimpin Dewan Perniagaan Usahawan Kecil
                 <p style="text-align: justify;"><em>&nbsp;&nbsp;&nbsp;&nbsp;Sesungguhnya manusia hanya boleh merancang, namun Allah jua yang menentukan segalanya. Oleh itu, kita sewajarnya terus berusaha dan tidak merasa jemu untuk mencapai apa yang kita cita-citakan, 
                 Sekian, wassalam.</em></p>
             </div>
+
+            <div class="row p-4">
+                <p>YBHG DATO' SERI ABU HASAN BIN MOHD NOR</p>
+                <img class="img-fluid" src="{{ asset('assets/img/about/signature.png') }}" alt="" style="width: 5rem">
+                <p>President</p>
+            </div>
         </div>
     </div>
 </div>
