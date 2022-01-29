@@ -19,19 +19,23 @@
                     <form class="row g-3 px-3" method="POST" action="{{ url('edit-user') }}/{{ $user->id }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="hun_id" class="col-md-4 col-form-label text-md-end">HUN ID</label>
+                        @if ($user->hun_id == null)
+                            
+                        @else
+                            <div class="row mb-3">
+                                <label for="hun_id" class="col-md-4 col-form-label text-md-end">HUN ID</label>
 
-                            <div class="col-md-6">
-                                <input id="hun_id" type="text" class="form-control @error('hun_id') is-invalid @enderror" name="hun_id" value="{{ $user->hun_id }}" required autocomplete="hun_id" autofocus>
-            
-                                @error('hun_id')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+                                <div class="col-md-6">
+                                    <input id="hun_id" type="text" class="form-control @error('hun_id') is-invalid @enderror" name="hun_id" value="{{ $user->hun_id }}" required autocomplete="hun_id" autofocus>
+                
+                                    @error('hun_id')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>    
+                        @endif
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
