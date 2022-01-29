@@ -37,8 +37,8 @@
     
     <div class="row pb-3">
         <div class="col-md-4">
-            <a href="/members" class="text-dark text-decoration-none">
-                <div class="card" style="height: 125px">
+            <div class="card">
+                <a href="/members" class="text-dark text-decoration-none">
                     <div class="row p-4">
                         <div class="col-md-4">
                             <i class="bi bi-person-badge-fill" style="font-size: 48pt"></i>
@@ -48,12 +48,12 @@
                             <b class="display-6">{{ number_format($member) }}</b>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
         <div class="col-md-4">
-            <a href="/non-members" class="text-dark text-decoration-none">
-                <div class="card">
+            <div class="card">
+                <a href="/non-members" class="text-dark text-decoration-none">
                     <div class="row p-4">
                         <div class="col-md-4">
                             <i class="bi bi-person-badge" style="font-size: 48pt"></i>
@@ -63,8 +63,8 @@
                             <b class="display-6">{{ number_format($nonmember) }}</b>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
         
         {{-- <div class="col-md-9">
