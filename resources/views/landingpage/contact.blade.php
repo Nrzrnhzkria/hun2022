@@ -8,9 +8,8 @@
 
 <div class="container">
     <div class="row px-2">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-5 pb-2 mb-3 border-bottom">
-            <h1>Contact</h1>
-        </div>
+        <h1 class="text-center border-bottom pt-5 pb-3">Contact</h1>
+        
         <div class="col-md-5 pt-5 pb-3">
             
             <div class="card shadow p-4" style="background-color: orange">
