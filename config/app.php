@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
         // Tarsoft\Toyyibpay\ToyyibpayServiceProvider::class,
 
         /*
@@ -233,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class,
         // 'Toyyibpay' => Tarsoft\Toyyibpay\ToyyibpayFacade::class,
 
     ],

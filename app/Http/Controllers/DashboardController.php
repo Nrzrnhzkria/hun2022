@@ -10,6 +10,7 @@ use App\Models\Booth;
 use App\Models\BoothDetails;
 use App\Models\VendorDetails;
 use Illuminate\Support\Facades\Hash;
+use PDF;
 
 class DashboardController extends Controller
 {
@@ -168,6 +169,25 @@ class DashboardController extends Controller
         $members = User::orderBy('id', 'desc')->where('role', 'Member')->paginate(10);
 
         return view('admin.users.members', compact('members'));
+    }
+
+    public function export_members()
+    {
+        $members = User::where('role', 'Member')->get();
+
+        // return Excel::download(new MembersExport($members), 'HUN_Members.xlsx');
+
+        // return redirect('members');
+        
+        // $data = [
+        //     'title' => 'Welcome to ItSolutionStuff.com',
+        //     'date' => date('m/d/Y')
+        // ];
+
+        $pdf = PDF::loadView('admin.users.export_members', $members);
+    
+        return $pdf->download('HUN_Members.pdf');
+
     }
 
     public function non_members()

@@ -117,6 +117,7 @@ Route::post('edit-admin/{user_id}', 'DashboardController@edit_admin');
 Route::get('delete-admin/{user_id}', 'DashboardController@destroy_admin');
 Route::get('users', 'DashboardController@users');
 Route::get('members', 'DashboardController@members');
+Route::get('export-members', 'DashboardController@export_members');
 Route::get('non-members', 'DashboardController@non_members');
 Route::get('update-user/{user_id}', 'DashboardController@update_user');
 Route::post('edit-user/{user_id}', 'DashboardController@edit_user');
