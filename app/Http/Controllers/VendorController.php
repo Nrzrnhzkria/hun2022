@@ -71,9 +71,9 @@ class VendorController extends Controller
             'nationality'=> 'required',
             'company_address'=> 'required',
             'business_nature' => 'required',
-            'product_details' => 'required|mimes:docx,csv,pdf|max:2048',
-            'ssm_cert' => 'required|mimes:docx,csv,pdf|max:2048',
-            'vaccine_cert' => 'required|mimes:docx,csv,pdf|max:2048'
+            'product_details' => 'required|mimes:docx,csv,pdf|max:1024',
+            'ssm_cert' => 'required|mimes:docx,csv,pdf|max:1024',
+            'vaccine_cert' => 'required|mimes:docx,csv,pdf|max:1024'
         ]);
 
         User::create([
