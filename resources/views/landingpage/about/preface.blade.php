@@ -41,7 +41,7 @@ diberikan kesempatan dan kekuatan untuk memimpin Dewan Perniagaan Usahawan Kecil
 
             <div class="row p-4">
                 <p>YBHG DATO' SERI ABU HASAN BIN MOHD NOR</p>
-                <img class="img-fluid" src="{{ asset('assets/img/about/signature.png') }}" alt="" style="width: 5rem">
+                <img class="img-fluid" src="{{ asset('assets/img/about/signature.png') }}" alt="" style="width: 10rem">
                 <p>President</p>
             </div>
         </div>
