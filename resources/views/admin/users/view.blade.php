@@ -37,24 +37,28 @@
     
     <div class="row pb-3">
 
-        <div class="col-md-3">
             <a href="/members" class="text-dark text-decoration-none">
                 <div class="card" style="height: 125px">
-                    <i class="bi bi-person-badge-fill" style="font-size: 48pt"></i>
-                    <h6 class="pt-4">Member</h6>
-                    <b class="display-6 pb-3">{{ number_format($member) }}</b>
+                    <div class="col-md-4">
+                        <i class="bi bi-person-badge-fill" style="font-size: 48pt"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h6 class="pt-4">Member</h6>
+                        <b class="display-6 pb-3">{{ number_format($member) }}</b>
+                    </div>
                 </div>
             </a>
-        </div>
-        <div class="col-md-3">
             <a href="/non-members" class="text-dark text-decoration-none">
                 <div class="card" style="height: 125px">
-                    <i class="bi bi-person-badge" style="font-size: 48pt"></i>
-                    <h6 class="pt-4">Non-Member</h6>
-                    <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
+                    <div class="col-md-4">
+                        <i class="bi bi-person-badge" style="font-size: 48pt"></i>
+                    </div>
+                    <div class="col-md-8">
+                        <h6 class="pt-4">Non-Member</h6>
+                        <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
+                    </div>
                 </div>
             </a>
-        </div>
         
         {{-- <div class="col-md-9">
             @if(count($users) > 0)
