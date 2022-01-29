@@ -127,8 +127,13 @@
 
                             <div class="col-md-4 pb-2">
                                 <label>Status:</label>
-                                <input type="text" value="{{ $payment->status }}" class="form-control form-control-sm" name="status"/>
-                                <em style="font-size: 10pt">success/failed</em>
+                                <select class="form-select form-select-sm" aria-label="Default select example" name="status">                                 
+                                    <option disabled selected>-- {{ $payment->status }} --</option>
+                                    <option value="success">Success</option>
+                                    <option value="failed">Failed</option>
+                                </select>
+                                {{-- <input type="text" value="{{ $payment->status }}" class="form-control form-control-sm" name="status"/>
+                                <em style="font-size: 10pt">success/failed</em> --}}
                             </div> 
 
                         </div>
