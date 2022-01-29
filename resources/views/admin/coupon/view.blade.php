@@ -27,8 +27,8 @@
     <div class="row">
         
         <div class="col-md-12">
-            <div class="float-right pt-3">{{ $coupons->links() }}</div>
-            @if(count($coupons) > 0)
+            <div class="float-right pt-3">{{ $redeems->links() }}</div>
+            @if(count($redeems) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
