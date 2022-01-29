@@ -20,7 +20,7 @@ class CouponController extends Controller
 
     public function coupon()
     {
-        $coupons = Coupon::orderBy('id', 'desc')->paginate(15);        
+        $coupons = Coupon::orderBy('id', 'desc')->get();        
         $vendors = VendorDetails::orderBy('id', 'desc')->get();
         // $redeems = Redeem::where('coupon_id', $coupons->id)->count();
 
