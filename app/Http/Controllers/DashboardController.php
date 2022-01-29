@@ -62,7 +62,7 @@ class DashboardController extends Controller
     {
         $vendor = User::where('id', $vendor_id)->first();
         $details = VendorDetails::where('user_id', $vendor_id)->first();
-        $payment = Membership::where('payer_id', $vendor_id)->first();
+        // $payment = Membership::where('payer_id', $vendor_id)->first();
 
         $vendor->name = $request->name;
         $vendor->email = $request->email;
@@ -76,8 +76,8 @@ class DashboardController extends Controller
         $details->company_address = $request->business_nature;
         $details->save();
 
-        $payment->status = $request->status;
-        $payment->save();
+        // $payment->status = $request->status;
+        // $payment->save();
 
         return redirect('vendors')->with('updatevendor','Vendor has been updated successfully.'); 
     }

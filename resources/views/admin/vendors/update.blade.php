@@ -115,17 +115,17 @@
                                 <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
                             </div>  
         
-                            <div class="col-md-4 pb-2">
+                            <div class="col-md-6 pb-2">
                                 <label>Bill ID:</label>
                                 <input type="text" value="{{ $payment->senangpay_id }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
                             </div>  
 
-                            <div class="col-md-4 pb-2">
+                            <div class="col-md-6 pb-2">
                                 <label>Amount:</label>
                                 <input type="text" value="RM {{ $payment->amount }}" class="form-control form-control-sm" name="amount" readonly/>
                             </div>  
 
-                            <div class="col-md-4 pb-2">
+                            {{-- <div class="col-md-4 pb-2">
                                 <label>Status:</label>
                                 <select class="form-select form-select-sm" aria-label="Default select example" name="status">                                 
                                     <option disabled selected>-- {{ $payment->status }} --</option>
@@ -133,8 +133,8 @@
                                     <option value="failed">Failed</option>
                                 </select>
                                 {{-- <input type="text" value="{{ $payment->status }}" class="form-control form-control-sm" name="status"/>
-                                <em style="font-size: 10pt">success/failed</em> --}}
-                            </div> 
+                                <em style="font-size: 10pt">success/failed</em>
+                            </div>  --}}
 
                         </div>
 
