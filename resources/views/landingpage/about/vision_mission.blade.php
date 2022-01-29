@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="row px-2">
-        <h1 class="text-center border-bottom">Vision & Mission</h1>
+        <h1 class="text-center border-bottom py-3">Vision & Mission</h1>
         
         <div class="col-md-12">
             <div class="card shadow border-0" style="background-color: orange">
