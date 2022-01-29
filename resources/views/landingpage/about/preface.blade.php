@@ -8,7 +8,7 @@
 
 <div class="container py-4">
     <div class="row px-2">
-        <div class="card px-4 py-4" style="background-image: url('{{ asset('assets/img/about/orgbg.png') }}'); opacity: 0.2; background-repeat: no-repeat; background-position: bottom;">
+        <div class="card px-4 py-4" style="background-image: url('{{ asset('assets/img/about/orgbg.png') }}'); background-repeat: no-repeat; background-position: bottom;">
             <div class="row pb-4">
                 <div class="col-md-12 text-center">        
                     <img class="img-fluid" src="{{ asset('assets/img/about/ds_abuhasan.png') }}" alt="" style="width: 20rem">
@@ -17,7 +17,7 @@
 
             <div class="text-center fw-bold px-2 py-2" style="background-color: orange">OPENING REMARKS BY YBHG DATO' SERI ABU HASAN BIN MOHD NOR</div>
 
-            <div class="row p-4">
+            <div class="row fw-bold p-4">
                 <p style="text-align: justify;">&nbsp;&nbsp;&nbsp;&nbsp;Alhamdulillah, All praises are to Allah, the Merciful, the All Beneficient, by
                     Grace and Blessings who has favoured us and of His believing servants and still giving me an  opportunity and strength to lead the DEWAN PERNIAGAAN USAHAWAN KECIL MALAYSIA (DPUKM), and for those desiring entrepreneurs a long way in winning over their trust and building a strong connection between each other through DPUKM especially in community and Malaysia. 
                 </p> 
@@ -27,7 +27,7 @@
                 </p>
             </div>
 
-            <div class="row p-4">
+            <div class="row fw-bold p-4">
                 <p style="text-align: justify;"><em>
                     &nbsp;&nbsp;&nbsp;&nbsp;Syukur alhamdulillah saya panjatkan ke hadrat llahi dengan limpah dan kurniaNya masih lagi
 diberikan kesempatan dan kekuatan untuk memimpin Dewan Perniagaan Usahawan Kecil Malaysia (DPUKM), semoga dikuatkan semangat untuk terus mengeratkan silaturrahim di antara usahawan-usahawan di dalam DPUKM khususnya dan seluruh Malaysia amnya.</em></p>
@@ -39,7 +39,7 @@ diberikan kesempatan dan kekuatan untuk memimpin Dewan Perniagaan Usahawan Kecil
                 Sekian, wassalam.</em></p>
             </div>
 
-            <div class="row p-4">
+            <div class="row fw-bold p-4">
                 <p>YBHG DATO' SERI ABU HASAN BIN MOHD NOR</p>
                 <img class="img-fluid" src="{{ asset('assets/img/about/signature.png') }}" alt="" style="width: 10rem">
                 <p>President</p>
