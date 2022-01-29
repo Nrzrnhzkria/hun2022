@@ -535,9 +535,13 @@ class VendorController extends Controller
         }else{
 
             foreach($request->file('img_name') as $values) {
+                // $imagename = 'img_' . uniqid().'.'.$values->extension();
+                // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+                // $values->move(public_path('assets/files/coupons'), $imagename);
+
                 $imagename = 'img_' . uniqid().'.'.$values->extension();
-                $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-                $values->move(public_path('assets/files/coupons'), $imagename);
+                $path_5 = $request->file('img_name')->store('public/files/coupons') . $imagename;
+                $coupon_image = 'https://hariusahawannegara.com.my/' . $path_5;
 
                 $i=1;
 
