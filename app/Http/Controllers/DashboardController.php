@@ -61,6 +61,7 @@ class DashboardController extends Controller
     public function edit_vendor($vendor_id, Request $request)
     {
         $vendor = User::where('id', $vendor_id)->first();
+        $payment = Membership::where('payer_id', $vendor_id)->first();
 
         $vendor->name = $request->name;
         $vendor->email = $request->email;
@@ -69,6 +70,9 @@ class DashboardController extends Controller
         $vendor->ic_no = $request->ic_no;
         $vendor->role = $request->role;
         $vendor->save();
+
+        $payment->status = $request->status;
+        $payment->save();
 
         return redirect('vendors')->with('updatevendor','Vendor has been updated successfully.'); 
     }
