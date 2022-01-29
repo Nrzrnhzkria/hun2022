@@ -52,6 +52,51 @@
                                     <option value="Others">Others</option>
                                 </select> --}}
                             </div>
+
+                            <div class="col-md-6 pb-2">
+                                <label>IC/Passport No.:</label>
+                                <input type="text" value="{{ $vendor->ic_no }}" class="form-control form-control-sm" name="ic_no" readonly/>
+                            </div>
+        
+                            <div class="col-md-6 pb-2">
+                                <label>Nationality:</label>
+                                <input type="text" value="{{ $details->nationality }}" class="form-control form-control-sm" name="nationality" readonly/>
+                                {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality }}">                                 
+                                    <option disabled selected>-- Please Select --</option>
+                                    <option value="local">Citizens</option>
+                                    <option value="international">Non-citizens</option>
+                                </select> --}}
+                            </div>
+        
+                            <div class="col-md-12 pb-2">
+                                <label>Company Address:</label>
+                                <textarea type="text" class="form-control form-control-sm" placeholder="Ali"  name="company_address" readonly>{{ $details->company_address }}</textarea>
+                            </div>
+        
+                            <div class="col-md-6 pb-2">
+                                <label>Email:</label>
+                                <input type="email" value="{{ $vendor->email }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com" readonly/>
+                            </div>
+        
+                            <div class="col-md-6 pb-2">
+                                <label>Nature of Business:</label>
+                                <input type="text" value="{{ $details->business_nature }}" class="form-control form-control-sm" name="business_nature" readonly/>
+                                {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature }}">                                 
+                                    <option disabled selected>-- Please Select --</option>
+                                    <option value="Sole proprietorship">Sole proprietorship</option>
+                                    <option value="Partnership">Partnership</option>
+                                    <option value="Private limited company">Private limited company</option>
+                                    <option value="Public limited company">Public limited company</option>
+                                    <option value="Unlimited companies">Unlimited companies</option>
+                                    <option value="Foreign company">Foreign company</option>
+                                    <option value="Limited liability partnership">Limited liability partnership</option>
+                                </select> --}}
+                            </div>
+        
+                            <div class="col-md-6 pb-2">
+                                <label for="phoneno" class="form-label">Phone No.:</label>
+                                <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" readonly/>
+                            </div>
                         
                         </div>
 
