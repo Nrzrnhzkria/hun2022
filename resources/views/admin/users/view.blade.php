@@ -47,7 +47,7 @@
                 <a href="/members" class="text-dark text-decoration-none">
                     <div class="row p-4">
                         <div class="col-md-4">
-                            <i class="bi bi-person-badge-fill" style="font-size: 48pt"></i>
+                            <i class="bi bi-person-check-fill" style="font-size: 52pt"></i>
                         </div>
                         <div class="col-md-8">
                             <h6>Member</h6>
@@ -62,7 +62,7 @@
                 <a href="/non-members" class="text-dark text-decoration-none">
                     <div class="row p-4">
                         <div class="col-md-4">
-                            <i class="bi bi-person-x" style="font-size: 48pt"></i>
+                            <i class="bi bi-person-x" style="font-size: 52pt"></i>
                         </div>
                         <div class="col-md-8">
                             <h6>Non-Member</h6>
