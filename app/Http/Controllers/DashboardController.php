@@ -70,7 +70,7 @@ class DashboardController extends Controller
         $vendor->ic_no = $request->ic_no;
         $vendor->save();
 
-        $details->company_name = $request->name;
+        $details->company_name = $request->company_name;
         $details->designation = $request->designation;
         $details->nationality = $request->nationality;
         $details->company_address = $request->business_nature;
