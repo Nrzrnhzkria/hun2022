@@ -44,8 +44,8 @@
                             <i class="bi bi-person-badge-fill" style="font-size: 48pt"></i>
                         </div>
                         <div class="col-md-8">
-                            <h6 class="pt-4">Member</h6>
-                            <b class="display-6 pb-3">{{ number_format($member) }}</b>
+                            <h6>Member</h6>
+                            <b class="display-6">{{ number_format($member) }}</b>
                         </div>
                     </div>
                 </div>
@@ -57,8 +57,8 @@
                             <i class="bi bi-person-badge" style="font-size: 48pt"></i>
                         </div>
                         <div class="col-md-8">
-                            <h6 class="pt-4">Non-Member</h6>
-                            <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
+                            <h6>Non-Member</h6>
+                            <b class="display-6">{{ number_format($nonmember) }}</b>
                         </div>
                     </div>
                 </div>
