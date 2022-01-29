@@ -154,6 +154,7 @@
                 <div class="card-body p-4">
                     <h4 class="card-title text-center">BECOME A VENDOR</h4>
                     <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN.</p>
+                    <br>
                     <ul class="card-text" style="text-align: justify">
                         <li>Valuable exposure in creating trustful and legitimate business of your brands.</li>
                         <li>Build Community Networking and meet thousands of local consumers who are interested in local brand.</li>
