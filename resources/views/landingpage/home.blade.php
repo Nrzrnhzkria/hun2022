@@ -137,7 +137,7 @@
     <div class="row py-4">
         <div class="col-md-4">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
-                <div class="card border-2" style="background-color: rgba(0, 128, 0, 0.4); height: 28rem">
+                <div class="card border-2" style="background-color: rgba(0, 128, 0, 0.4); height: 30rem">
                     <div class="card-body p-4">
                         <h3 class="text-center">ABOUT HUN MEMBERSHIP AND BENEFITS</h3>
                         <br>
@@ -150,7 +150,7 @@
             {{-- </a> --}}
         </div>
         <div class="col-md-4">
-            <div class="card border-2" style="background-color: rgba(255, 166, 0, 0.4); height: 28rem">
+            <div class="card border-2" style="background-color: rgba(255, 166, 0, 0.4); height: 30rem">
                 <div class="card-body p-4">
                     <h4 class="card-title text-center">BECOME A VENDOR</h4>
                     <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN.</p>
@@ -168,7 +168,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card border-2" style="background-color: rgba(128, 0, 28, 0.4); height: 28rem">
+            <div class="card border-2" style="background-color: rgba(128, 0, 0, 0.4); height: 30rem">
                 <div class="card-body p-4">
                     <h4 class="card-title text-center">THE EXHIBITIONS</h4>
                     <p class="card-text" style="text-align: justify">
