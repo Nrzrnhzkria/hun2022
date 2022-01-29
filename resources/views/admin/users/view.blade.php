@@ -39,7 +39,7 @@
 
         <div class="col-md-3">
             <a href="/members" class="text-dark text-decoration-none">
-                <div class="card border-0 shadow text-center" style="height: 125px">
+                <div class="card" style="height: 125px">
                     <i class="bi bi-person-badge-fill" style="font-size: 24pt"></i>
                     <h6 class="pt-4">Member</h6>
                     <b class="display-6 pb-3">{{ number_format($member) }}</b>
@@ -48,8 +48,8 @@
         </div>
         <div class="col-md-3">
             <a href="/non-members" class="text-dark text-decoration-none">
-                <div class="card border-0 shadow text-center" style="height: 125px">
-                    <i class="bi bi-person-badge-fill" style="font-size: 24pt"></i>
+                <div class="card" style="height: 125px">
+                    <i class="bi bi-person-badge" style="font-size: 24pt"></i>
                     <h6 class="pt-4">Non-Member</h6>
                     <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
                 </div>
