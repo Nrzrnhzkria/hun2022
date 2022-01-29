@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Coupon;
 use App\Models\Membership;
+use App\Models\Booth;
 use App\Models\BoothDetails;
 use App\Models\VendorDetails;
 use Illuminate\Support\Facades\Hash;
