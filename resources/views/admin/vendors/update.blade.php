@@ -100,7 +100,32 @@
                             </div>
                         
                         </div>
+                        
+                        <h4 class="border-bottom">Payment Details</h4>
+                        
+                        <div class="row p-3">
 
+                            <div class="col-md-6 pb-2">
+                                <label for="phoneno" class="form-label">Amount:</label>
+                                <input type="text" value="RM {{ $payment->amount }}" class="form-control form-control-sm" name="amount" readonly/>
+                            </div>
+        
+                            <div class="col-md-6 pb-2">
+                                <label for="phoneno" class="form-label">Bill ID:</label>
+                                <input type="text" value="{{ $payment->senangpay_id }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
+                            </div>    
+        
+                            <div class="col-md-6 pb-2">
+                                <label for="phoneno" class="form-label">Booth Name:</label>
+                                <input type="text" value="{{ $booth_name->booth_name }}" class="form-control form-control-sm" name="booth_name" readonly/>
+                            </div>   
+                            
+                            <div class="col-md-6 pb-2">
+                                <label for="phoneno" class="form-label">Booth Type:</label>
+                                <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
+                            </div>  
+
+                        </div>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">

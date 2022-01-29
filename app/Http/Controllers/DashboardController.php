@@ -46,8 +46,15 @@ class DashboardController extends Controller
     {
         $vendor = User::where('id', $vendor_id)->first();
         $details = VendorDetails::where('user_id', $vendor_id)->first();
+        $payment = Membership::where('payer_id', $user_id)->first();
+        $coupon = Coupon::where('vendor_id', $user_id)->get();
 
-        return view('admin.vendors.update', compact('vendor', 'details'));
+        $booth_id = $payment->booth_id;
+        $details_id = $payment->details_id;
+        $booth_name = Booth::where('booth_id', $booth_id)->first();
+        $booth_type = BoothDetails::where('details_id', $details_id)->first();
+
+        return view('admin.vendors.update', compact('vendor', 'details', 'payment', 'coupon', 'booth_name', 'booth_type'));
     }
 
     public function edit_vendor($vendor_id, Request $request)
