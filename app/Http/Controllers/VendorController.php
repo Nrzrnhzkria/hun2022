@@ -541,14 +541,14 @@ class VendorController extends Controller
 
                 $imagename = 'img_' . uniqid().'.'.$values->extension();
                 $path_5 = $values->store('public/files/coupons');
-                $coupon_image = 'https://hariusahawannegara.com.my/' . $path_5;
+                // $coupon_image = 'https://hariusahawannegara.com.my/' . $path_5;
 
                 $i=1;
 
                 Coupon::create([
                     'vendor_id' => $user_id,
                     'coupon_no' => $i++,
-                    'img_name' => $coupon_image,
+                    'img_name' => $path_5,
                     'category' => $request->category
                 ]);
 
