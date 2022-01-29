@@ -36,7 +36,7 @@
                     <a class="nav-link text-dark" href="/contact">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-warning text-dark fw-bold" href="/registration">Register</a>
+                    <a class="btn btn-warning text-dark fw-bold" href="/registration"><i class="bi bi-people-fill"></i> Vendor Registration</a>
                 </li>
                 {{-- </li><li class="nav-item">
                     <a class="nav-link text-dark" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
