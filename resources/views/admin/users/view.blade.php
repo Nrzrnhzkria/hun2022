@@ -44,20 +44,20 @@
                             <i class="bi bi-person-badge-fill" style="font-size: 48pt"></i>
                         </div>
                         <div class="col-md-8">
-                            <h6 class="pt-4">Member</h6>
+                            <h6>Member</h6>
                             <b class="display-6 pb-3">{{ number_format($member) }}</b>
                         </div>
                     </div>
                 </div>
             </a>
             <a href="/non-members" class="text-dark text-decoration-none">
-                <div class="card" style="height: 125px">
+                <div class="card">
                     <div class="row p-4">
                         <div class="col-md-4">
                             <i class="bi bi-person-badge" style="font-size: 48pt"></i>
                         </div>
                         <div class="col-md-8">
-                            <h6 class="pt-4">Non-Member</h6>
+                            <h6>Non-Member</h6>
                             <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
                         </div>
                     </div>
