@@ -109,19 +109,19 @@
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Details of Displayed Product / <em style="font-size: 10pt;">Butiran Produk yang Dipaparkan</em><span class="text-danger">*</span></label>
                         <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details ?? '' }}" id="formFile">
-                        <em style="font-size: 10pt;">File format: docx, csv, pdf (File size must below 1MB)</em>
+                        <em style="font-size: 10pt;">File format: docx, csv, pdf, png, jpeg (File size must below 1MB)</em>
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">SSM Certificate / <em style="font-size: 10pt;">Sijil SSM</em><span class="text-danger">*</span></label>
                         <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert ?? '' }}" id="formFile">
-                        <em style="font-size: 10pt;">File format: docx, csv, pdf (File size must below 1MB)</em>
+                        <em style="font-size: 10pt;">File format: docx, csv, pdf, png, jpeg (File size must below 1MB)</em>
                     </div>
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Vaccine Certificate / <em style="font-size: 10pt;">Sijil Vaksin</em><span class="text-danger">*</span></label>
                         <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert ?? '' }}" id="formFile">
-                        <em style="font-size: 10pt;">File format: docx, csv, pdf (File size must below 1MB)</em>
+                        <em style="font-size: 10pt;">File format: docx, csv, pdf, png, jpeg (File size must below 1MB)</em>
                     </div>
                     
                 </div>

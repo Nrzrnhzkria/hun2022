@@ -213,6 +213,9 @@
                     <div class="col-md-6 pb-2">
                         <label for="formFileMultiple" class="form-label">Coupon:</label>
                         <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
+                        <em style="font-size: 10pt;">File format: png, jpeg (Each image size must below 1MB)</em><br>
+                        <em style="font-size: 10pt;">*Please provide 200x400 pixel sizes of coupon</em><br>
+                        <em style="font-size: 10pt;">*Every coupon are require to put company name or items name or brand on it</em>
                     </div>
 
                     <h4 class="py-3">Uploaded Coupon</h4>
