@@ -38,19 +38,15 @@
     <div class="row pb-3">
 
         <div class="col-md-3">
-            <a href="/members" class="text-dark text-decoration-none">
-                <div class="card border-0 shadow text-center" style="height: 125px">
+            <a href="/members" class="btn text-dark text-decoration-none">
                     <h6 class="pt-4">Member</h6>
                     <b class="display-6 pb-3">{{ number_format($member) }}</b>
-                </div>
             </a>
         </div>
         <div class="col-md-3">
-            <a href="/non-members" class="text-dark text-decoration-none">
-                <div class="card border-0 shadow text-center" style="height: 125px">
+            <a href="/non-members" class="btn text-dark text-decoration-none">
                     <h6 class="pt-4">Non-Member</h6>
                     <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
-                </div>
             </a>
         </div>
         
