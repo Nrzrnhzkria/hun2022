@@ -36,7 +36,7 @@
     @endif
     
     <div class="row pb-3">
-
+        <div class="col-md-4">
             <a href="/members" class="text-dark text-decoration-none">
                 <div class="card" style="height: 125px">
                     <div class="row p-4">
@@ -45,11 +45,13 @@
                         </div>
                         <div class="col-md-8">
                             <h6>Member</h6>
-                            <b class="display-6 pb-3">{{ number_format($member) }}</b>
+                            <b class="display-6">{{ number_format($member) }}</b>
                         </div>
                     </div>
                 </div>
             </a>
+        </div>
+        <div class="col-md-4">
             <a href="/non-members" class="text-dark text-decoration-none">
                 <div class="card">
                     <div class="row p-4">
@@ -58,11 +60,12 @@
                         </div>
                         <div class="col-md-8">
                             <h6>Non-Member</h6>
-                            <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
+                            <b class="display-6">{{ number_format($nonmember) }}</b>
                         </div>
                     </div>
                 </div>
             </a>
+        </div>
         
         {{-- <div class="col-md-9">
             @if(count($users) > 0)
