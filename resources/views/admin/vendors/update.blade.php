@@ -133,8 +133,8 @@
 
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="col-md-12">
+                            <div class="pull-right">
                                 <button type="submit" class="btn btn-primary float-right">
                                     <i class="bi bi-save"></i> Save Changes
                                 </button>
