@@ -135,7 +135,7 @@
     </div>
 
     <div class="row py-4">
-        <div class="col-md-4">
+        <div class="col-md-4 pb-2">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
                 <div class="card shadow border-2" style="background-color: rgba(0, 128, 0, 0.4); height: 30rem">
                     <div class="card-body p-4">
@@ -149,7 +149,7 @@
                 </div>
             {{-- </a> --}}
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 pb-2">
             <div class="card shadow border-2" style="background-color: rgba(255, 166, 0, 0.4); height: 30rem">
                 <div class="card-body p-4">
                     <h4 class="card-title text-center">BECOME A VENDOR</h4>
@@ -167,7 +167,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 pb-2">
             <div class="card shadow border-2" style="background-color: rgba(128, 0, 0, 0.4); height: 30rem">
                 <div class="card-body p-4">
                     <h4 class="card-title text-center">THE EXHIBITIONS</h4>
