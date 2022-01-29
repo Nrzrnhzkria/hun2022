@@ -14,9 +14,9 @@
 
     <div class="row justify-content-center py-3">
         <div class="col-md-10">
-            <div class="card py-5">
+            <div class="card">
                 <div class="card-body">
-                    <form class="row g-3" method="POST" action="{{ url('edit-vendor') }}/{{ $vendor->id }}">
+                    <form class="row g-3 px-3" method="POST" action="{{ url('edit-vendor') }}/{{ $vendor->id }}">
                         @csrf
                         
                         <div class="row p-3">
