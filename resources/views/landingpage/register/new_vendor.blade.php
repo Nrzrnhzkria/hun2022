@@ -157,7 +157,9 @@
                         {{-- <div id="inputFormRow"> --}}
                             <label for="formFileMultiple" class="form-label">Coupon / <em style="font-size: 10pt;">Kupon</em></label>
                             <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
-                            <em style="font-size: 10pt;">File format: png, jpeg (Each image size must below 1MB)</em>
+                            <p style="font-size: 10pt;"><em>File format: png, jpeg (Each image size must below 1MB)</em></p>
+                            <p style="font-size: 10pt;"><em>*Please provide 200x400 sizes of coupon</em></p>
+                            <p style="font-size: 10pt;"><em>*Every coupon are require to put company name or items name or brand on it</em></p>
                         {{-- </div> --}}
 
                         {{-- <div id="newRow"></div>
