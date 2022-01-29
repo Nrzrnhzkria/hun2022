@@ -140,7 +140,7 @@ class VendorController extends Controller
 
             foreach($request->file('img_name') as $values) {
                 $imagename = 'img_' . uniqid().'.'.$values->extension();
-                $path_4 = $request->file('img_name')->store('public/files/coupons') . $imagename;
+                $path_4 = $values->store('public/files/coupons') . $imagename;
                 $coupon_image = 'https://hariusahawannegara.com.my/' . $path_4;
                 // $values->move(public_path('assets/files/coupons'), $imagename);
 
@@ -540,7 +540,7 @@ class VendorController extends Controller
                 // $values->move(public_path('assets/files/coupons'), $imagename);
 
                 $imagename = 'img_' . uniqid().'.'.$values->extension();
-                $path_5 = $values->store('public/files/coupons') . $imagename;
+                $path_5 = $values->store('public/files/coupons');
                 $coupon_image = 'https://hariusahawannegara.com.my/' . $path_5;
 
                 $i=1;
