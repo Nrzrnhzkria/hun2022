@@ -59,111 +59,114 @@ class VendorController extends Controller
 
         $booth_details = BoothDetails::where('details_id', $request->details_id)->first();
 
-        $datavalidation = $request->validate([
-            'name' => 'required',
-            'email'=> 'required|unique:users,email',
-            'password'=> 'required',
-            'ic_no' => 'required|unique:users,ic_no',
-            'phone_no' => 'required',
-            'role'=> 'required',
-            'company_name'=> 'required',
-            'designation' => 'required',
-            'nationality'=> 'required',
-            'company_address'=> 'required',
-            'business_nature' => 'required',
-            'product_details' => 'required|mimes:docx,csv,pdf|max:1024',
-            'ssm_cert' => 'required|mimes:docx,csv,pdf|max:1024',
-            'vaccine_cert' => 'required|mimes:docx,csv,pdf|max:1024'
-        ]);
+        // $datavalidation = $request->validate([
+        //     'name' => 'required',
+        //     'email'=> 'required|unique:users,email',
+        //     'password'=> 'required',
+        //     'ic_no' => 'required|unique:users,ic_no',
+        //     'phone_no' => 'required',
+        //     'role'=> 'required',
+        //     'company_name'=> 'required',
+        //     'designation' => 'required',
+        //     'nationality'=> 'required',
+        //     'company_address'=> 'required',
+        //     'business_nature' => 'required',
+        //     'product_details' => 'required|mimes:docx,csv,pdf|max:1024',
+        //     'ssm_cert' => 'required|mimes:docx,csv,pdf|max:1024',
+        //     'vaccine_cert' => 'required|mimes:docx,csv,pdf|max:1024'
+        // ]);
 
-        User::create([
-            'hun_id' => NULL,
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->ic_no),
-            'phone_no' => $request->phone_no,
-            'ic_no' => $request->ic_no,
-            'role' => 'Vendor',
-        ]);        
+        // User::create([
+        //     'hun_id' => NULL,
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'password' => Hash::make($request->ic_no),
+        //     'phone_no' => $request->phone_no,
+        //     'ic_no' => $request->ic_no,
+        //     'role' => 'Vendor',
+        // ]);        
 
-        $vendor = User::where('ic_no', $request->ic_no)->first();
+        // $vendor = User::where('ic_no', $request->ic_no)->first();
 
-        $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
-        $details_path = 'https://hariusahawannegara.com.my/assets/files/product_details/' . $product_details;
-        $request->file('product_details')->move(public_path('assets/files/product_details') . $product_details);
+        // $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
+        // $details_path = 'https://hariusahawannegara.com.my/assets/files/product_details/' . $product_details;
+        // // $request->file('product_details')->move(public_path('assets/files/product_details') . $product_details);
+        // $request->file('file')->store('public/files/product_details');
 
-        $ssm_image = 'file_' . uniqid() . $request->file('ssm_cert')->getClientOriginalName();
-        $ssm_cert = 'https://hariusahawannegara.com.my/assets/files/ssm_cert/' . $ssm_image;
-        $request->file('ssm_cert')->move(public_path('assets/files/ssm_cert') . $ssm_image);
+        // $ssm_image = 'file_' . uniqid() . $request->file('ssm_cert')->getClientOriginalName();
+        // $ssm_cert = 'https://hariusahawannegara.com.my/assets/files/ssm_cert/' . $ssm_image;
+        // // $request->file('ssm_cert')->move(public_path('assets/files/ssm_cert') . $ssm_image);
+        // $request->file('ssm_cert')->store('public/files/ssm_cert');
 
         $vaccine_image = 'file_' . uniqid() . $request->file('vaccine_cert')->getClientOriginalName();
-        $vaccine_cert = 'https://hariusahawannegara.com.my/assets/files/vaccine_cert/' . $vaccine_image;
-        $request->file('vaccine_cert')->move(public_path('assets/files/vaccine_cert') . $vaccine_image);
+        $vaccine_cert = 'https://hariusahawannegara.com.my/storage/app/public/files/vaccine_cert/' . $vaccine_image;
+        // $request->file('vaccine_cert')->move(public_path('assets/files/vaccine_cert') . $vaccine_image);
+        $path = $request->file('vaccine_cert')->store('public/files/vaccine_cert');
 
-        VendorDetails::create([
-            'user_id' => $vendor->id,
-            'company_name' => $request->company_name,
-            'designation' => $request->designation,
-            'nationality' => $request->nationality,
-            'company_address' => $request->company_address,
-            'business_nature' => $request->business_nature,
-            'product_details' => $details_path,
-            'ssm_cert' => $ssm_cert,
-            'vaccine_cert' => $vaccine_cert
-        ]);
+        // VendorDetails::create([
+        //     'user_id' => $vendor->id,
+        //     'company_name' => $request->company_name,
+        //     'designation' => $request->designation,
+        //     'nationality' => $request->nationality,
+        //     'company_address' => $request->company_address,
+        //     'business_nature' => $request->business_nature,
+        //     'product_details' => $details_path,
+        //     'ssm_cert' => $ssm_cert,
+        //     'vaccine_cert' => $vaccine_cert
+        // ]);
         
-        if($request->img_name == null){
+        // if($request->img_name == null){
 
-            // if($request->category == null){
+        //     // if($request->category == null){
 
-            //     Coupon::create([
-            //         'vendor_id' => $vendor->id,
-            //         'coupon_no' => 0,
-            //         'img_name' => 'no value',
-            //         'category' => 'no value'
-            //     ]);
+        //     //     Coupon::create([
+        //     //         'vendor_id' => $vendor->id,
+        //     //         'coupon_no' => 0,
+        //     //         'img_name' => 'no value',
+        //     //         'category' => 'no value'
+        //     //     ]);
 
-            // }else{
+        //     // }else{
 
-            //     Coupon::create([
-            //         'vendor_id' => $vendor->id,
-            //         'coupon_no' => 0,
-            //         'img_name' => 'no value',
-            //         'category' => $request->category
-            //     ]);
+        //     //     Coupon::create([
+        //     //         'vendor_id' => $vendor->id,
+        //     //         'coupon_no' => 0,
+        //     //         'img_name' => 'no value',
+        //     //         'category' => $request->category
+        //     //     ]);
 
-            // }
+        //     // }
 
-        }else{
+        // }else{
 
-            foreach($request->file('img_name') as $values) {
-                $imagename = 'img_' . uniqid().'.'.$values->extension();
-                $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
-                $values->move(public_path('assets/files/coupons'), $imagename);
+        //     foreach($request->file('img_name') as $values) {
+        //         $imagename = 'img_' . uniqid().'.'.$values->extension();
+        //         $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
+        //         $values->move(public_path('assets/files/coupons'), $imagename);
 
-                $i=1;
+        //         $i=1;
 
-                Coupon::create([
-                    'vendor_id' => $vendor->id,
-                    'coupon_no' => $i++,
-                    'img_name' => $coupon_image,
-                    'category' => $request->category
-                ]);
+        //         Coupon::create([
+        //             'vendor_id' => $vendor->id,
+        //             'coupon_no' => $i++,
+        //             'img_name' => $coupon_image,
+        //             'category' => $request->category
+        //         ]);
 
-            }
+        //     }
 
-        }
+        // }
 
-        Membership::create([
-            'payer_id' => $vendor->id,
-            'amount' => $booth_details->price,
-            'senangpay_id' => 'no value',
-            'booth_id' => $booth_details->booth_id,
-            'details_id' => $request->details_id,
-        ]); 
+        // Membership::create([
+        //     'payer_id' => $vendor->id,
+        //     'amount' => $booth_details->price,
+        //     'senangpay_id' => 'no value',
+        //     'booth_id' => $booth_details->booth_id,
+        //     'details_id' => $request->details_id,
+        // ]); 
 
-        // dd($booth_details);
-        return redirect('payment/' . $get_ic); 
+        dd($path);
+        // return redirect('payment/' . $get_ic); 
     }
 
     public function create_bill($get_ic, Request $request){
