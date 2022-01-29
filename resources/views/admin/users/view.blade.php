@@ -36,8 +36,25 @@
     @endif
     
     <div class="row pb-3">
+
+        <div class="col-md-3">
+            <a href="/members">
+                <div class="card border-0 shadow text-center" style="height: 125px">
+                    <h6 class="pt-4">Member</h6>
+                    <b class="display-6 pb-3">{{ number_format($member) }}</b>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="/non-members">
+                <div class="card border-0 shadow text-center" style="height: 125px">
+                    <h6 class="pt-4">Non-Member</h6>
+                    <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
+                </div>
+            </a>
+        </div>
         
-        <div class="col-md-9">
+        {{-- <div class="col-md-9">
             @if(count($users) > 0)
             <div class="table-responsive">
                 <table class="table">
@@ -69,22 +86,7 @@
               <p>There are no user to display.</p>
             @endif
             <div  class="self-align-end pt-3">{{ $users->links() }}</div>
-        </div>
-
-        <div class="col-md-3">
-            <div class="row-fluid pb-2">
-                <div class="card border-0 shadow text-center" style="height: 125px">
-                  <h6 class="pt-4">Member</h6>
-                  <b class="display-6 pb-3">{{ number_format($member) }}</b>
-                </div>
-            </div>
-            <div class="row-fluid pb-2">
-                <div class="card border-0 shadow text-center" style="height: 125px">
-                  <h6 class="pt-4">Non-Member</h6>
-                  <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
-                </div>
-            </div>
-        </div>
+        </div> --}}
 
     </div>
     
