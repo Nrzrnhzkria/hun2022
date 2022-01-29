@@ -8,7 +8,7 @@
 
 <div class="container py-4">
     <div class="row px-2">
-        <div class="card px-4 py-4" style="background-image: url('{{ asset('assets/img/about/orgbg.png') }}'); background-repeat: no-repeat;">
+        <div class="card px-4 py-4" style="background-image: url('{{ asset('assets/img/about/orgbg.png') }}'); background-repeat: no-repeat; background-position: bottom;">
             <div class="row pb-4">
                 <div class="col-md-12 text-center">        
                     <img class="img-fluid" src="{{ asset('assets/img/about/ds_abuhasan.png') }}" alt="" style="width: 20rem">
