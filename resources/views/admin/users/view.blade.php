@@ -52,7 +52,7 @@
             </a>
             <a href="/non-members" class="text-dark text-decoration-none">
                 <div class="card" style="height: 125px">
-                    <div class="row"></div>
+                    <div class="row">
                         <div class="col-md-4">
                             <i class="bi bi-person-badge" style="font-size: 48pt"></i>
                         </div>
