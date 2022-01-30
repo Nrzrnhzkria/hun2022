@@ -41,9 +41,9 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($coupons as $coupon)
                         @foreach ($vendors as $vendor)
                         {{-- @foreach ($details as $detail) --}}
-                        @foreach ($coupons as $coupon)
                         {{-- @if ($vendor->id == $detail->user_id) --}}
                         @if ($coupon->vendor_id == $vendor->id)
                         <tr>
