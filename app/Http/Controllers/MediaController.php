@@ -63,9 +63,10 @@ class MediaController extends Controller
 
         if($request->hasFile('img_name'))
         {
-            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $img_name = 'https://hariusahawannegara.com.my/assets/img/media/' . $imagename;
-            $request->img_name->move(public_path('assets/img/media'), $imagename);
+            $media_path = 'public/admin/media';
+            $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
+            $request->file('img_name')->storeAs($media_path, $path);
+            $media_image = 'https://hariusahawannegara.com.my/storage/admin/media/' . $path;
         }
 
         $media->user_id = $user_id;
