@@ -84,7 +84,7 @@
                                 </select> --}}
                             </div>
         
-                            <div class="col-md-6 pb-2">
+                            <div class="col-md-6 pb-4">
                                 <label>Nature of Business:</label>
                                 <input type="text" value="{{ $details->business_nature }}" class="form-control form-control-sm" name="business_nature"/>
                                 {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature }}">                                 
@@ -97,6 +97,35 @@
                                     <option value="Foreign company">Foreign company</option>
                                     <option value="Limited liability partnership">Limited liability partnership</option>
                                 </select> --}}
+                            </div>
+
+                            <div class="col-md-12 py-2">                     
+                                <div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead>
+                                            <th>#</th>
+                                            <th>Document</th>
+                                            <th class="text-center"><i class="bi bi-sliders"></i></th>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Product Details</td>
+                                                <td class="text-center"><a href="{{ $details->product_details }}" class="btn btn-outline-dark btn-sm"><i class="bi bi-eye-fill"></i> View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>SSM Certificate</td>
+                                                <td class="text-center"><a href="{{ $details->ssm_cert }}" class="btn btn-outline-dark btn-sm"><i class="bi bi-eye-fill"></i> View</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Vaccine Certificate</td>
+                                                <td class="text-center"><a href="{{ $details->vaccine_cert }}" class="btn btn-outline-dark btn-sm"><i class="bi bi-eye-fill"></i> View</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         
                         </div>
