@@ -27,7 +27,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">HUN ID</th>
                             <th scope="col">Name</th>
                             <th scope="col">Role</th>
@@ -37,8 +37,8 @@
                     <tbody>
                         @foreach ($members as $key => $member)
                         <tr>
-                            <th scope="row">{{ $members->firstItem() + $key }}</th>
-                            <td>{{ $member->hun_id }}</td>
+                            {{-- <th scope="row">{{ $members->firstItem() + $key }}</th> --}}
+                            <th>{{ $member->hun_id }}</th>
                             <td>{{ $member->name }}</td>
                             <td class="text-capitalize">{{ $member->role }}</td>
                             <td class="text-center">
