@@ -8,7 +8,7 @@
 
 <div class="container">
     <div class="row px-2">
-        <h1 class="text-center border-bottom pt-5">Objective</h1>
+        <h1 class="text-center border-bottom pt-5">Events</h1>
 
         <div class="col-md-12 pt-3">
             <div class="card mb-3">
