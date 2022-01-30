@@ -65,7 +65,7 @@ class VendorController extends Controller
             'name' => 'required',
             'email'=> 'required|unique:users,email',
             'password'=> 'required',
-            'ic_no' => 'required|unique:users,ic_no',
+            'ic_no' => 'required',
             'phone_no' => 'required',
             'role'=> 'required',
             'company_name'=> 'required',
