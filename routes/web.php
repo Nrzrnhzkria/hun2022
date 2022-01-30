@@ -74,8 +74,8 @@ Route::post('edit-booth-details/{booth_id}/{details_id}', 'BoothController@edit_
 Route::get('delete-booth-details/{booth_id}/{details_id}', 'BoothController@destroy_booth_details');
 // Coupon Management
 Route::get('coupon', 'CouponController@coupon');
-Route::get('update-coupon/{coupon_id}', 'CouponController@update_coupon');
-Route::post('edit-coupon/{coupon_id}', 'CouponController@edit_coupon');
+Route::get('update-coupon/{vendor_id}', 'CouponController@update_coupon');
+// Route::post('edit-coupon/{vendor_id}', 'CouponController@edit_coupon');
 Route::get('delete-coupon/{coupon_id}', 'CouponController@destroy_coupon');
 // Media Management
 Route::get('admin-media', 'MediaController@media');

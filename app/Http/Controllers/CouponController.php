@@ -29,35 +29,36 @@ class CouponController extends Controller
         return view('admin.coupon.view', compact('payments', 'vendors', 'details', 'count'));
     }
 
-    public function update_coupon($coupon_id)
-    {
-        $coupons = Coupon::where('id', $coupon_id)->first();
+    public function update_coupon($vendor_id)
+    {        
+        $vendor = User::where('id', $vendor_id)->first();
+        $coupons = Coupon::where('vendor_id', $vendor_id)->get();
 
-        return view('admin.coupon.update', compact('coupons')); 
+        return view('admin.coupon.update', compact('vendor', 'coupons')); 
     }
 
-    public function edit_coupon($coupon_id, Request $request)
-    {
-        $coupons = Coupon::where('id', $coupon_id)->first();
+    // public function edit_coupon($coupon_id, Request $request)
+    // {
+    //     $coupons = Coupon::where('id', $coupon_id)->first();
 
-        if($request->hasFile('img_name'))
-        {
-            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $img_name = 'https://hariusahawannegara.com.my/assets/img/coupon/' . $imagename;
-            $request->img_name->move(public_path('assets/img/coupon'), $imagename);
-        }
+    //     if($request->hasFile('img_name'))
+    //     {
+    //         $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+    //         $img_name = 'https://hariusahawannegara.com.my/assets/img/coupon/' . $imagename;
+    //         $request->img_name->move(public_path('assets/img/coupon'), $imagename);
+    //     }
 
-        $coupons->vendor_id = $request->vendor_id;
-        $coupons->coupon_no = $request->coupon_no;
-        $coupons->category = $request->category;
-        if($request->hasFile('img_name'))
-        {
-            $coupons->img_name = $img_name;
-        }
-        $coupons->save();
+    //     $coupons->vendor_id = $request->vendor_id;
+    //     $coupons->coupon_no = $request->coupon_no;
+    //     $coupons->category = $request->category;
+    //     if($request->hasFile('img_name'))
+    //     {
+    //         $coupons->img_name = $img_name;
+    //     }
+    //     $coupons->save();
 
-        return redirect('coupon')->with('updatecoupon','Coupon has been updated successfully.'); 
-    }
+    //     return redirect('coupon')->with('updatecoupon','Coupon has been updated successfully.'); 
+    // }
 
     public function destroy_coupon($coupon_id){
         $coupons = Coupon::where('id', $coupon_id);
