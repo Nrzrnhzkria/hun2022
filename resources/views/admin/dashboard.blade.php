@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="container py-3">
+<div class="container pb-5">
     
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
