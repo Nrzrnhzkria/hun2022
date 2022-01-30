@@ -50,10 +50,10 @@
                             <th scope="row">{{ $count++ }}</th>
                             {{-- <td>{{ $detail->company_name }}</td> --}}
                             <td>{{ $coupon->id }}</td>
-                            <td>{{ $vendor->phone_no }}</td>
+                            {{-- <td>{{ $vendor->phone_no }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-coupon') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
-                            </td>
+                            </td> --}}
                         </tr>        
                         {{-- @endif         --}}
                         {{-- @endif                           
