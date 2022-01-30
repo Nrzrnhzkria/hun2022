@@ -48,16 +48,16 @@
                 <div class="row p-3">
 
                     <div class="col-md-6 pb-2">
-                        <label>Name of Company:</label>
+                        <label>Name of Company / <em style="font-size: 10pt;">Nama Syarikat</em></label>
                         <input type="text" value="{{ $details->company_name }}" class="form-control form-control-sm" placeholder="Company Sdn Bhd"  name="company_name" readonly>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Contact Person:</label>
+                        <label>Contact Person / <em style="font-size: 10pt;">Nama Penuh</em></label>
                         <input type="text" value="{{ $vendor->name  }}" class="form-control form-control-sm" placeholder="Mohammad"  name="name" readonly>
                     </div>
                     <div class="col-md-6 pb-2">
-                        <label>Designation:</label>
+                        <label>Designation / <em style="font-size: 10pt;">Jawatan</em></label>
                         <input type="text" value="{{ $details->designation }}" class="form-control form-control-sm" name="designation" readonly/>
                         {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="designation" value="{{ $details->designation }}">                                 
                             <option disabled selected>-- Please Select --</option>
@@ -79,27 +79,27 @@
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>IC/Passport No.:</label>
+                        <label>IC/Passport No. / <em style="font-size: 10pt;">No. Kad Pengenalan/Pasport</em></label>
                         <input type="text" value="{{ $vendor->ic_no }}" class="form-control form-control-sm" name="ic_no" readonly/>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Phone No.:</label>
+                        <label for="phoneno" class="form-label">Phone No. / <em style="font-size: 10pt;">No. Telefon</em></label>
                         <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" readonly/>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Email:</label>
+                        <label>Email / <em style="font-size: 10pt;">Emel</em></label>
                         <input type="email" value="{{ $vendor->email }}" class="form-control form-control-sm" name="email" placeholder="example@gmail.com" readonly/>
                     </div>
 
                     <div class="col-md-12 pb-2">
-                        <label>Company Address:</label>
+                        <label>Company Address / <em style="font-size: 10pt;">Alamat Syarikat</em></label>
                         <textarea type="text" class="form-control form-control-sm" placeholder="Ali"  name="company_address" readonly>{{ $details->company_address }}</textarea>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Nationality:</label>
+                        <label>Nationality / <em style="font-size: 10pt;">Kewarganegaraan</em></label>
                         <input type="text" value="{{ $details->nationality }}" class="form-control form-control-sm" name="nationality" readonly/>
                         {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="nationality" value="{{ $details->nationality }}">                                 
                             <option disabled selected>-- Please Select --</option>
@@ -109,7 +109,7 @@
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label>Nature of Business:</label>
+                        <label>Nature of Business / <em style="font-size: 10pt;">Jenis Perniagaan</em></label>
                         <input type="text" value="{{ $details->business_nature }}" class="form-control form-control-sm" name="business_nature" readonly/>
                         {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature }}">                                 
                             <option disabled selected>-- Please Select --</option>
@@ -129,22 +129,22 @@
                 
                 <div class="row p-3">
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Amount:</label>
+                        <label for="phoneno" class="form-label">Amount / <em style="font-size: 10pt;">Jumlah</em></label>
                         <input type="text" value="RM {{ $payment->amount }}" class="form-control form-control-sm" name="amount" readonly/>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Bill ID:</label>
+                        <label for="phoneno" class="form-label">Bill ID / <em style="font-size: 10pt;">ID Bil</em></label>
                         <input type="text" value="{{ $payment->senangpay_id }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
                     </div>    
 
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Booth Name:</label>
+                        <label for="phoneno" class="form-label">Booth Name / <em style="font-size: 10pt;">Nama Gerai</em></label>
                         <input type="text" value="{{ $booth_name->booth_name }}" class="form-control form-control-sm" name="booth_name" readonly/>
                     </div>   
                     
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Booth Type:</label>
+                        <label for="phoneno" class="form-label">Booth Type / <em style="font-size: 10pt;">Jenis Gerai</em></label>
                         <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
                     </div>  
                 </div>
@@ -187,7 +187,7 @@
                     </div> --}}
 
                     <div class="col-md-6 pb-2">
-                        <label for="formFile" class="form-label">Coupon Category:</label>
+                        <label for="formFile" class="form-label">Coupon Category / <em style="font-size: 10pt;">Kategori Kupon</em></label>
                         {{-- <input class="form-control form-control-sm" type="text" name="category" value="{{ $coupon->category }}"/>   --}}
                         <select class="form-select form-select-sm" aria-label="Default select example" name="category">                                 
                             <option disabled selected>-- Please Select --</option>
@@ -211,7 +211,7 @@
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="formFileMultiple" class="form-label">Coupon:</label>
+                        <label for="formFileMultiple" class="form-label">Coupon / <em style="font-size: 10pt;">Kupon</em></label>
                         <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                         <em style="font-size: 10pt;">File format: png, jpeg (Each image size must below 1MB)</em><br>
                         <em style="font-size: 10pt;">*Please provide 200x400 pixel sizes of coupon</em><br>
