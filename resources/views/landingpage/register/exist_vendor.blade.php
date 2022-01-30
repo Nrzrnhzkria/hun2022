@@ -164,7 +164,17 @@
                                 <tr>
                                     <td>1</td>
                                     <td>Product Details</td>
-                                    <td>{{ $details->product_details }}</td>
+                                    <td><a href="{{ $details->product_details }}">Download</a></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>SSM Certificate</td>
+                                    <td><a href="{{ $details->ssm_cert }}">Download</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Vaccine Certificate</td>
+                                    <td><a href="{{ $details->vaccine_cert }}">Download</a></td>
                                 </tr>
                             </tbody>
                         </table>
