@@ -17,8 +17,8 @@
         <div class="col-md-6 offset-md-3">
             <div class="card shadow">
                 <div class="card-body">
-                    <div class="pb-3">Please enter IC No. / Passport</div>
-                    <em style="font-size: 10pt;">Sila masukkan No. Kad Pengenalan/Pasport</em>
+                    <div>Please enter IC No. / Passport</div>
+                    <em class="pb-3" style="font-size: 10pt;">Sila masukkan No. Kad Pengenalan/Pasport</em>
                     <form action="verification" method="get">
                         @csrf
                         <div class="col-md-12">
