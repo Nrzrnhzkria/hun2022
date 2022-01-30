@@ -541,7 +541,7 @@ class VendorController extends Controller
 
                 $datavalidation = $request->validate([
                     'category' => 'required',
-                    'img_name' => 'required|mimes:png,jpeg|max:1024'
+                    'img_name' => 'required|max:1024'
                 ]);
 
                 $destination_path = 'public/files/coupons';
