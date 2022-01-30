@@ -161,7 +161,8 @@
                             <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
                             <em style="font-size: 10pt;">File format: png, jpeg (Each image size must below 1MB)</em><br>
                             <em style="font-size: 10pt;">*Please provide 200x400 pixel sizes of coupon</em><br>
-                            <em style="font-size: 10pt;">*Every coupon are require to put company name or items name or brand on it</em>
+                            <em style="font-size: 10pt;">*Every coupon are require to put company name or items name or brand on it</em><br>
+                            <em style="font-size: 10pt;">Click <a href="https://hariusahawannegara.com.my/assets/img/coupon.jpeg">here</a> to see example</em>
                         {{-- </div> --}}
 
                         {{-- <div id="newRow"></div>
