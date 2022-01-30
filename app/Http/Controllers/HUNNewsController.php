@@ -25,17 +25,20 @@ class HUNNewsController extends Controller
     }
 
     public function store_news(Request $request)
-    {        
-		$user_id = Auth::user()->id;
-
-        $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-        $news_image = 'https://hariusahawannegara.com.my/assets/img/news/' . $imagename;
-        $request->img_name->move(public_path('assets/img/news'), $imagename);
-
+    { 
         $this->validate($request, [
             'title' => 'required|string|max:100',
             'teaser' => 'required|string|max:250',
-        ]);
+            'content' => 'required',
+            'img_name' => 'required',
+        ]);    
+
+		$user_id = Auth::user()->id;
+
+        $news_path = 'public/admin/news';
+        $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
+        $request->file('img_name')->storeAs($news_path, $path);
+        $news_image = 'https://hariusahawannegara.com.my/storage/admin/news/' . $path;
 
         HUNNews::create([
             'user_id' => $user_id,

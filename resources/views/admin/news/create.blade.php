@@ -19,6 +19,16 @@
                     
                     <form action="{{ url('store-news') }}" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
+                        
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="px-3">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
 
                         <div class="row g-2 mb-3">
                             <div class="col-md-6">
