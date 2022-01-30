@@ -10,7 +10,7 @@
     <div class="row px-2">
         <h1 class="text-center border-bottom pt-5">Vision & Mission</h1>
         
-        <div class="col-md-12 pt-3">                
+        <div class="col-md-12 pt-3 fw-bold">                
             <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
 
                 1. DPUKM has a clearly outlined goal set out to elevate entrepreneurs especially among Bumiputera in Malaysia
