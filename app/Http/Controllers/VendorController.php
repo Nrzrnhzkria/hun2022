@@ -539,10 +539,10 @@ class VendorController extends Controller
                 // $coupon_image = 'https://hariusahawannegara.com.my/assets/files/coupons/' . $imagename;
                 // $values->move(public_path('assets/files/coupons'), $imagename);
 
-                $destination_path = 'public/files/coupons/';
+                $destination_path = 'public/files/coupons';
                 $imagename = 'img_' . uniqid().'.'.$values->extension();
                 $path_5 = $values->storeAs($destination_path, $imagename);
-                // $coupon_image = 'https://hariusahawannegara.com.my/storage/files/coupons' . $imagename;
+                $coupon_image = 'https://hariusahawannegara.com.my/storage/files/coupons' . $imagename;
 
                 // $i=1;
 
