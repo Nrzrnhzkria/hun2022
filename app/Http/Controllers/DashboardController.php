@@ -10,7 +10,7 @@ use App\Models\Booth;
 use App\Models\BoothDetails;
 use App\Models\VendorDetails;
 use Illuminate\Support\Facades\Hash;
-use PDF;
+use Maatwebsite\Excel\Facades\Excel;
 
 class DashboardController extends Controller
 {
