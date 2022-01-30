@@ -44,7 +44,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">Seminar Name</th>
                             <th scope="col">Location</th>
                             <th scope="col">Date</th>
@@ -55,8 +55,8 @@
                     <tbody>
                         @foreach ($seminarsqr as $key => $seminarqr)
                         <tr>
-                            <th scope="row">{{ $seminarsqr->firstItem() + $key }}</th>
-                            <td>{{ $seminarqr->seminar_name }}</td>
+                            {{-- <th scope="row">{{ $seminarsqr->firstItem() + $key }}</th> --}}
+                            <th>{{ $seminarqr->seminar_name }}</th>
                             <td>{{ $seminarqr->location_name }}</td>
                             <td>{{ date('d/m/Y', strtotime($seminarqr->seminar_date)) }}</td>
                             <td>
