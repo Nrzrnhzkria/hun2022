@@ -52,18 +52,18 @@
     
                         <h4 class="py-3">Uploaded Coupon</h4>
     
-                        @if(count($coupon) > 0)
-                        @foreach ($coupon as $coupons)
-                            @if ($vendor->id == $coupons->vendor_id)
+                        @if(count($coupons) > 0)
+                        @foreach ($coupons as $coupon)
+                            @if ($vendor->id == $coupon->vendor_id)
                             <div class="col-md-4">
                                 <div class="card mb-3">
                                     <div class="row g-0">
                                       <div class="col-md-4">
-                                        <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
+                                        <img src="{{ $coupon->img_name }}" class="img-fluid rounded-start" alt="...">
                                       </div>
                                       <div class="col-md-8">
                                         <div class="card-body py-0">
-                                          <p class="fw-bold pt-2">{{ $coupons->category }}</p>
+                                          <p class="fw-bold pt-2">{{ $coupon->category }}</p>
                                         </div>
                                       </div>
                                     </div>
