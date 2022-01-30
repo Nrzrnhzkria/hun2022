@@ -89,15 +89,67 @@
           datasets: [{
             label: 'Automotive',
             backgroundColor: "#000080",
-            data: [80]
+            data: [{{$automotive}}]
           }, {
             label: 'Business Support & Supplies',
             backgroundColor: "#d3d3d3",
-            data: [90]
+            data: [{{$bss}}]
           }, {
             label: 'Computers & Electronics',
             backgroundColor: "#add8e6",
-            data: [45]
+            data: [{{$ce}}]
+          }, {
+            label: 'Construction & Contractors',
+            backgroundColor: "red",
+            data: [{{$cc}}]
+          }, {
+            label: 'Education',
+            backgroundColor: "green",
+            data: [{{$education}}]
+          },{
+            label: 'Entertainment',
+            backgroundColor: "orange",
+            data: [{{$entertainment}}]
+          }, {
+            label: 'Food & Dining',
+            backgroundColor: "#00aba9",
+            data: [{{$fnd}}]
+          }, {
+            label: 'Health & Medicine',
+            backgroundColor: "purple",
+            data: [{{$hnm}}]
+          }, {
+            label: 'Home & Garden',
+            backgroundColor: "yellow",
+            data: [{{$hng}}]
+          }, {
+            label: 'Legal & Financial',
+            backgroundColor: "cyan",
+            data: [{{$lnf}}]
+          },{
+            label: 'Manufacturing, Wholesale & Distribution',
+            backgroundColor: "maroon",
+            data: [{{$mwd}}]
+          }, {
+            label: 'Merchants (Retail)',
+            backgroundColor: "#b91d47",
+            data: [{{$merchant}}]
+          }, {
+            label: 'Miscellaneous',
+            backgroundColor: "magenta",
+            data: [{{$miscellaneous}}]
+          }, {
+            label: 'Personal Care & Services',
+            backgroundColor: "gray",
+            data: [{{$pcs}}]
+          }, {
+            label: 'Real Estate',
+            backgroundColor: "black",
+            data: [{{$estate}}]
+          }, {
+            label: 'Travel & Transportation',
+            backgroundColor: "brown",
+            data: [{{$travel}}]
           }]
         },
         options: {
