@@ -27,8 +27,8 @@
     <div class="row">
         
         <div class="col-md-12">
-            <div class="float-right pt-3">{{ $payments->links() }}</div>
-            @if(count($payments) > 0)
+            <div class="float-right pt-3">{{ $coupons->links() }}</div>
+            @if(count($coupons) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
@@ -43,7 +43,7 @@
                     <tbody>
                         @foreach ($vendors as $vendor)
                         @foreach ($details as $detail)
-                        @foreach ($payments as $payment)
+                        @foreach ($coupons as $coupon)
                         @if ($vendor->id == $detail->user_id)
                         @if ($payment->payer_id == $vendor->id)
                         <tr>
