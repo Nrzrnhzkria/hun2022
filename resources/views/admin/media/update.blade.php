@@ -19,6 +19,17 @@
                     
                     <form action="{{ url('edit-media') }}/{{ $media->id }}" method="POST" id="dynamic_form" enctype="multipart/form-data"> 
                         @csrf
+                        
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="px-3">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        
                         <div class="col-md-12 text-center mb-3">
                             <img src="{{ $media->img_name }}" width="300rem">
                         </div>

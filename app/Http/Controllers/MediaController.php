@@ -25,18 +25,20 @@ class MediaController extends Controller
     }
 
     public function store_media(Request $request)
-    {        
+    {      
+        $this->validate($request, [
+            'title' => 'required|string|max:100',
+            'teaser' => 'required|string|max:250',
+            'content' => 'required',
+            'img_name' => 'required',
+        ]); 
+
 		$user_id = Auth::user()->id;
 
         $media_path = 'public/admin/media';
         $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
         $request->file('img_name')->storeAs($media_path, $path);
         $media_image = 'https://hariusahawannegara.com.my/storage/admin/media/' . $path;
-
-        $this->validate($request, [
-            'title' => 'required|string|max:100',
-            'teaser' => 'required|string|max:250',
-        ]);
 
         Media::create([
             'user_id' => $user_id,
@@ -58,6 +60,13 @@ class MediaController extends Controller
 
     public function edit_media($media_id, Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required|string|max:100',
+            'teaser' => 'required|string|max:250',
+            'content' => 'required',
+            'img_name' => 'required',
+        ]); 
+        
         $media = Media::where('id', $media_id)->first();
         $user_id = Auth::user()->id;
 
