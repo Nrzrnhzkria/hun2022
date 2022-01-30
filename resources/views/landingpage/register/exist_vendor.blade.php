@@ -35,16 +35,6 @@
 
                 <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information / <em style="font-size: 10pt;">Maklumat Pempamer</em></div>
     
-                @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul class="px-3">
-                            @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                @endif
-
                 <div class="row p-3">
 
                     <div class="col-md-6 pb-2">
@@ -160,7 +150,7 @@
                         </ul>
                     </div>
                 @endif
-                
+
                 <div class="row p-3">
 
                     {{-- <div class="table-responsive">
