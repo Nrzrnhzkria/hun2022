@@ -38,7 +38,17 @@ class SeminarQRController extends Controller
     }
 
     public function store_qr(Request $request)
-    {
+    {      
+        $datavalidation = $request->validate([
+            'seminar_name' => 'required',
+            'location_name' => 'required',
+            'max_participant' => 'required',
+            'qr_value' => 'required',
+            'seminar_date' => 'required',
+            'time_start' => 'required',
+            'time_end' => 'required'
+        ]);
+
         SeminarQR::create([
             'seminar_name' => $request->seminar_name,
             'location_name' => $request->location_name,
@@ -60,7 +70,17 @@ class SeminarQRController extends Controller
     }
 
     public function edit_qr($qr_id, Request $request)
-    {
+    {  
+        $datavalidation = $request->validate([
+            'seminar_name' => 'required',
+            'location_name' => 'required',
+            'max_participant' => 'required',
+            'qr_value' => 'required',
+            'seminar_date' => 'required',
+            'time_start' => 'required',
+            'time_end' => 'required'
+        ]);
+        
         $qr = SeminarQR::where('id', $qr_id)->first();
 
         $qr->seminar_name = $request->seminar_name;

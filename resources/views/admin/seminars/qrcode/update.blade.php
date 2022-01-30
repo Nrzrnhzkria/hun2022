@@ -16,6 +16,16 @@
                 <div class="card-body">
                     <form method="POST" action="{{ url('edit-qr') }}/{{ $qr->id }}">
                         @csrf
+                        
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="px-3">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
 
                         <div class="row mb-3">
                             <label for="seminar_name" class="col-md-4 col-form-label text-md-end">Seminar Name</label>
