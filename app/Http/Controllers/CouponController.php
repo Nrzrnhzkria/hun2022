@@ -18,8 +18,12 @@ class CouponController extends Controller
 
     public function coupon()
     {
-        $coupons = Coupon::orderBy('id', 'desc')->paginate(15);
-        return view('admin.coupon.view', compact('coupons'));
+        $payments = Membership::where('amount', '>', '51')->paginate(15);
+        $vendors = Vendor::orderBy('id', 'desc')->get();
+        $details = VendorDetails::orderBy('id', 'desc')->get();
+        $count = 1;
+
+        return view('admin.coupon.view', compact('payments', 'vendors', 'details', 'count'));
     }
 
     public function update_coupon($coupon_id)

@@ -27,38 +27,44 @@
     <div class="row">
         
         <div class="col-md-12">
-            <div class="float-right pt-3">{{ $coupons->links() }}</div>
-            @if(count($coupons) > 0)
+            <div class="float-right pt-3">{{ $payments->links() }}</div>
+            @if(count($payments) > 0)
             <div class="table-responsive">
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">Vendor ID</th>
-                            <th scope="col">Coupon No.</th>
-                            {{-- <th scope="col">Image</th> --}}
-                            <th scope="col">Category</th>
+                            <th scope="col">Vendor</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone No</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($coupons as $key => $coupon)
+                        @foreach ($vendors as $vendor)
+                        @foreach ($details as $detail)
+                        @foreach ($payments as $payment)
+                        @if ($vendor->user_id == $detail->user_id)
+                        @if ($payment->payer_id == $vendor->user_id)
                         <tr>
-                            <th scope="row">{{ $coupons->firstItem() + $key }}</th>
-                            <td>{{ $coupon->vendor_id }}</td>
-                            <td>{{ $coupon->coupon_no }}</td>
-                            {{-- <td><img src="{{ $coupon->img_name }}" width="80rem"></td> --}}
-                            <td>{{ $coupon->category }}</td>
+                            <th scope="row">{{ $count++ }}</th>
+                            <td>{{ $detail->company_name }}</td>
+                            <td>{{ $vendor->email }}</td>
+                            <td>{{ $vendor->phone_no }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update-coupon') }}/{{ $coupon->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-coupon') }}/{{ $vendor->user_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
-                        </tr>                
+                        </tr>        
+                        @endif        
+                        @endif                           
+                        @endforeach                       
+                        @endforeach                     
                         @endforeach
                     </tbody>
                 </table>
             </div>
             @else
-              <p>There are no coupon to display.</p>
+              <p>There are no vendor to display.</p>
             @endif
         </div>
     </div>
