@@ -45,7 +45,7 @@
                         @foreach ($details as $detail)
                         @foreach ($coupons as $coupon)
                         @if ($vendor->id == $detail->user_id)
-                        @if ($payment->payer_id == $vendor->id)
+                        @if ($coupon->vendor_id == $vendor->id)
                         <tr>
                             <th scope="row">{{ $count++ }}</th>
                             <td>{{ $detail->company_name }}</td>
