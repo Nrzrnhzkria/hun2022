@@ -138,7 +138,7 @@
         <div class="col-md-4 pb-2">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
                 <div class="card shadow text-white border-0 bg-success" style="height: 35rem">
-                    <div class="card-body p-4">
+                    <div class="card-body">
                         <h4 class="card-header text-center">ABOUT HUN MEMBERSHIP</h4>
                         <br>
                         <ul style="text-align: justify">
@@ -151,7 +151,7 @@
         </div>
         <div class="col-md-4 pb-2">
             <div class="card shadow border-0 bg-warning" style="height: 35rem">
-                <div class="card-body p-4">
+                <div class="card-body">
                     <h4 class="card-header text-center">BECOME A VENDOR</h4>
                     <br><br>
                     <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN.</p>
@@ -169,7 +169,7 @@
         </div>
         <div class="col-md-4 pb-2">
             <div class="card shadow border-0 bg-danger" style="height: 35rem">
-                <div class="card-body text-white p-4">
+                <div class="card-body text-white">
                     <h4 class="card-header text-center">THE EXHIBITIONS</h4>
                     <br><br>
                     <p class="card-text" style="text-align: justify">
