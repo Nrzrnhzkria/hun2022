@@ -119,23 +119,23 @@
                                 <thead>
                                     <th>#</th>
                                     <th>Document Name</th>
-                                    <th><i class="bi bi-sliders"></i></th>
+                                    <th class="text-center"><i class="bi bi-sliders"></i></th>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
                                         <td>Product Details</td>
-                                        <td><a href="{{ $details->product_details }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td class="text-center"><a href="{{ $details->product_details }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>SSM Certificate</td>
-                                        <td><a href="{{ $details->ssm_cert }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td class="text-center"><a href="{{ $details->ssm_cert }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>Vaccine Certificate</td>
-                                        <td><a href="{{ $details->vaccine_cert }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td class="text-center"><a href="{{ $details->vaccine_cert }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                 </tbody>
                             </table>
