@@ -17,41 +17,7 @@
             <div class="card p-3">
                 <div class="card-body">
                     <div class="row p-3">
-    
-                        <div class="col-md-6 pb-2">
-                            <label for="formFile" class="form-label">Coupon Category:</label>
-                            {{-- <input class="form-control form-control-sm" type="text" name="category" value="{{ $coupon->category }}"/>   --}}
-                            <select class="form-select form-select-sm" aria-label="Default select example" name="category">                                 
-                                <option disabled selected>-- Please Select --</option>
-                                <option value="Automotive">Automotive</option>
-                                <option value="Business Support & Supplies">Business Support & Supplies</option>
-                                <option value="Computers & Electronics">Computers & Electronics</option>
-                                <option value="Construction & Contractors">Construction & Contractors</option>
-                                <option value="Education">Education</option>
-                                <option value="Entertainment">Entertainment</option>
-                                <option value="Food & Dining">Food & Dining</option>
-                                <option value="Health & Medicine">Health & Medicine</option>
-                                <option value="Home & Garden">Home & Garden</option>
-                                <option value="Legal & Financial">Legal & Financial</option>
-                                <option value="Manufacturing, Wholesale & Distribution">Manufacturing, Wholesale & Distribution</option>
-                                <option value="Merchants (Retail)">Merchants (Retail)</option>
-                                <option value="Miscellaneous">Miscellaneous</option>
-                                <option value="Personal Care & Services">Personal Care & Services</option>
-                                <option value="Real Estate">Real Estate</option>
-                                <option value="Travel & Transportation">Travel & Transportation</option>
-                            </select>    
-                        </div>
-    
-                        <div class="col-md-6 pb-2">
-                            <label for="formFileMultiple" class="form-label">Coupon:</label>
-                            <input class="form-control form-control-sm" type="file" name="img_name[]" id="formFile" multiple>
-                            <em style="font-size: 10pt;">File format: png, jpeg (Each image size must below 1MB)</em><br>
-                            <em style="font-size: 10pt;">*Please provide 200x400 pixel sizes of coupon</em><br>
-                            <em style="font-size: 10pt;">*Every coupon are require to put company name or items name or brand on it</em>
-                        </div>
-    
-                        <h4 class="py-3">Uploaded Coupon</h4>
-    
+       
                         @if(count($coupons) > 0)
                         @foreach ($coupons as $coupon)
                             @if ($vendor->id == $coupon->vendor_id)
