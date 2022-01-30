@@ -173,6 +173,15 @@ class DashboardController extends Controller
 
     public function edit_admin($user_id, Request $request)
     {
+        $datavalidation = $request->validate([
+            'name' => 'required',
+            'email'=> 'required|unique:users,email',
+            'password'=> 'required',
+            'ic_no' => 'required',
+            'phone_no' => 'required',
+            'role'=> 'required',
+        ]);
+        
         $user = User::where('id', $user_id)->first();
 
         $user->name = $request->name;
