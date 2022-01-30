@@ -137,7 +137,7 @@
     <div class="row py-4">
         <div class="col-md-4 pb-2">
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
-                <div class="card shadow text-white border-0 bg-success" style="height: 35rem">
+                <div class="card shadow text-white border-0 bg-success" style="height: 30rem">
                     <div class="card-body">
                         <h4 class="card-header text-center">ABOUT HUN MEMBERSHIP</h4>
                         <br>
@@ -150,10 +150,10 @@
             {{-- </a> --}}
         </div>
         <div class="col-md-4 pb-2">
-            <div class="card shadow border-0 bg-warning" style="height: 35rem">
+            <div class="card shadow border-0 bg-warning" style="height: 30rem">
                 <div class="card-body">
                     <h4 class="card-header text-center">BECOME A VENDOR</h4>
-                    <br><br>
+                    <br>
                     <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN.</p>
                     <ul class="card-text" style="text-align: justify">
                         <li>Valuable exposure in creating trustful and legitimate business of your brands.</li>
@@ -168,10 +168,10 @@
             </div>
         </div>
         <div class="col-md-4 pb-2">
-            <div class="card shadow border-0 bg-danger" style="height: 35rem">
+            <div class="card shadow border-0 bg-danger" style="height: 30rem">
                 <div class="card-body text-white">
                     <h4 class="card-header text-center">THE EXHIBITIONS</h4>
-                    <br><br>
+                    <br>
                     <p class="card-text" style="text-align: justify">
                         There are 8 upcoming exhibition, booth, programs, mentoring and etc can help growth your business and acquire information about new industry developments.
                     </p>
