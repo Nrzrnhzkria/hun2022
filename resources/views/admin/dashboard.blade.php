@@ -146,7 +146,7 @@
             },
           title: {
             display: true,
-            text: "Most Popular Coupon by Category"
+            text: "Most Upload Coupon by Category"
           }
         }
       });
