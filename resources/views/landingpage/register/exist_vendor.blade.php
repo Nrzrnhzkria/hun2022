@@ -153,7 +153,7 @@
 
                 <div class="row p-3">
 
-                    {{-- <div class="table-responsive">
+                    <div class="table-responsive">
                         <table class="table">
                             <thead>
                                 <th>#</th>
@@ -168,7 +168,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div> --}}
+                    </div>
 
 
                     {{-- <div class="col-md-6 pb-2">
