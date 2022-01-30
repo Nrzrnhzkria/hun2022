@@ -42,13 +42,13 @@
                     </thead>
                     <tbody>
                         @foreach ($vendors as $vendor)
-                        @foreach ($details as $detail)
+                        {{-- @foreach ($details as $detail) --}}
                         @foreach ($coupons as $coupon)
-                        @if ($vendor->id == $detail->user_id)
+                        {{-- @if ($vendor->id == $detail->user_id) --}}
                         @if ($coupon->vendor_id == $vendor->id)
                         <tr>
                             <th scope="row">{{ $count++ }}</th>
-                            <td>{{ $detail->company_name }}</td>
+                            {{-- <td>{{ $detail->company_name }}</td> --}}
                             <td>{{ $vendor->email }}</td>
                             <td>{{ $vendor->phone_no }}</td>
                             <td class="text-center">
@@ -56,8 +56,8 @@
                             </td>
                         </tr>        
                         @endif        
-                        @endif                           
-                        @endforeach                       
+                        {{-- @endif                           
+                        @endforeach                        --}}
                         @endforeach                     
                         @endforeach
                     </tbody>
