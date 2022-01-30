@@ -78,17 +78,26 @@
     </div>
 
     <script>
-      var xValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];
-      var yValues = [{{$automotive}}, {{$bss}}, {{$ce}}, {{$cc}}, {{$education}}, {{$entertainment}}, {{$fnd}}, {{$hnm}}, {{$hng}}, {{$lnf}}, {{$mwd}}, {{$merchant}}, {{$miscellaneous}}, {{$pcs}}, {{$estate}}, {{$travel}}];
-      var barColors = ["red", "green","blue","orange","#00aba9", "purple", "yellow", "cyan", "maroon","#b91d47","magenta", "gray", "black", "cream", "brown", "#b91d64"];
+      // var xValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];
+      // var yValues = [{{$automotive}}, {{$bss}}, {{$ce}}, {{$cc}}, {{$education}}, {{$entertainment}}, {{$fnd}}, {{$hnm}}, {{$hng}}, {{$lnf}}, {{$mwd}}, {{$merchant}}, {{$miscellaneous}}, {{$pcs}}, {{$estate}}, {{$travel}}];
+      // var barColors = ["red", "green","blue","orange","#00aba9", "purple", "yellow", "cyan", "maroon","#b91d47","magenta", "gray", "black", "cream", "brown", "#b91d64"];
       
       new Chart("myChart", {
         type: "bar",
         data: {
-          labels: xValues,
+          labels: ['Category'],
           datasets: [{
-            backgroundColor: barColors,
-            data: yValues
+            label: 'Automotive',
+            backgroundColor: "#000080",
+            data: [80]
+          }, {
+            label: 'Business Support & Supplies',
+            backgroundColor: "#d3d3d3",
+            data: [90]
+          }, {
+            label: 'Computers & Electronics',
+            backgroundColor: "#add8e6",
+            data: [45]
           }]
         },
         options: {
@@ -97,7 +106,7 @@
             },
           title: {
             display: true,
-            text: "World Wine Production 2018"
+            text: "Most Popular Coupon by Category"
           }
         }
       });
