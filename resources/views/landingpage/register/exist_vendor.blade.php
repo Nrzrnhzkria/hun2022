@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Phone No. / <em style="font-size: 10pt;">No. Telefon</em></label>
+                        <label>Phone No. / <em style="font-size: 10pt;">No. Telefon</em></label>
                         <input type="text" value="{{ $vendor->phone_no }}" class="form-control form-control-sm" name="phone_no" readonly/>
                     </div>
 
@@ -129,22 +129,22 @@
                 
                 <div class="row p-3">
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Amount / <em style="font-size: 10pt;">Jumlah</em></label>
+                        <label>Amount / <em style="font-size: 10pt;">Jumlah</em></label>
                         <input type="text" value="RM {{ $payment->amount }}" class="form-control form-control-sm" name="amount" readonly/>
                     </div>
 
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Bill ID / <em style="font-size: 10pt;">ID Bil</em></label>
+                        <label>Bill ID / <em style="font-size: 10pt;">ID Bil</em></label>
                         <input type="text" value="{{ $payment->senangpay_id }}" class="form-control form-control-sm" name="senangpay_id" readonly/>
                     </div>    
 
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Booth Name / <em style="font-size: 10pt;">Nama Gerai</em></label>
+                        <label>Booth Name / <em style="font-size: 10pt;">Nama Gerai</em></label>
                         <input type="text" value="{{ $booth_name->booth_name }}" class="form-control form-control-sm" name="booth_name" readonly/>
                     </div>   
                     
                     <div class="col-md-6 pb-2">
-                        <label for="phoneno" class="form-label">Booth Type / <em style="font-size: 10pt;">Jenis Gerai</em></label>
+                        <label>Booth Type / <em style="font-size: 10pt;">Jenis Gerai</em></label>
                         <input type="text" value="{{ $booth_type->booth_type }}" class="form-control form-control-sm" name="booth_type" readonly/>
                     </div>  
                 </div>
