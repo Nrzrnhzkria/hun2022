@@ -75,7 +75,7 @@ class MediaController extends Controller
         $media->teaser = $request->teaser;
         if($request->hasFile('img_name'))
         {
-            $media->img_name = $img_name;
+            $media->img_name = $media_image;
         }
         $media->save();
 
