@@ -27,7 +27,9 @@ class VendorController extends Controller
     // Check if ic exist
     public function check_ic(Request $request)
     {
-        if(User::where('ic_no', $request->ic_no)->exists()){
+        $check = User::where('ic_no', $request->ic_no)->first();
+
+        if(User::where('ic_no', $request->ic_no)->exists() && Membership::where('payer_id', $check->id)->first()){
 
             // dd('Update Registration');
             $vendor = User::where('ic_no', $request->ic_no)->first();
