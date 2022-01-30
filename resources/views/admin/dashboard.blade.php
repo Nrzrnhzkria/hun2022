@@ -92,7 +92,9 @@
           }]
         },
         options: {
-          legend: {display: false},
+          legend: {
+            display: true
+            },
           title: {
             display: true,
             text: "World Wine Production 2018"
