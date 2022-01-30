@@ -44,8 +44,8 @@
                         @foreach ($vendors as $vendor)
                         @foreach ($details as $detail)
                         @foreach ($payments as $payment)
-                        @if ($vendor->user_id == $detail->user_id)
-                        @if ($payment->payer_id == $vendor->user_id)
+                        @if ($vendor->id == $detail->user_id)
+                        @if ($payment->payer_id == $vendor->id)
                         <tr>
                             <th scope="row">{{ $count++ }}</th>
                             <td>{{ $detail->company_name }}</td>
