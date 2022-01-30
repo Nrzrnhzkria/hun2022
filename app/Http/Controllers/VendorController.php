@@ -544,14 +544,14 @@ class VendorController extends Controller
                 $path_5 = $values->storeAs($destination_path, $imagename);
                 $coupon_image = 'https://hariusahawannegara.com.my/storage/files/coupons' . $imagename;
 
-                // $i=1;
+                $i=1;
 
-                // Coupon::create([
-                //     'vendor_id' => $user_id,
-                //     'coupon_no' => $i++,
-                //     'img_name' => $coupon_image,
-                //     'category' => $request->category
-                // ]);
+                Coupon::create([
+                    'vendor_id' => $user_id,
+                    'coupon_no' => $i++,
+                    'img_name' => $coupon_image,
+                    'category' => $request->category
+                ]);
 
             }
 
@@ -626,7 +626,7 @@ class VendorController extends Controller
         // $coupon = Coupon::where('vendor_id', $user_id,)->first();
         // $coupon->fill($optionCoupon);
         // $request->session()->put('coupon', $coupon);
-            dd($path_5);
-        // return redirect('update-registration/'.  $user_id)->with('update','Your registration has been updated successfully.');
+            // dd($coupon);
+        return redirect('update-registration/'.  $user_id)->with('update','Your registration has been updated successfully.');
     }
 }
