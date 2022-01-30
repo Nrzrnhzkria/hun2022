@@ -10,19 +10,16 @@
                         <h5>NAVIGATION</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
-                            <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About</a></li>
+                            <li class="nav-item mb-2"><a href="/intro" class="nav-link p-0 text-muted">About</a></li>
                             <li class="nav-item mb-2"><a href="/news" class="nav-link p-0 text-muted">News</a></li>
                             <li class="nav-item mb-2"><a href="/media" class="nav-link p-0 text-muted">Media</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Works</a></li>
                             <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-muted">Contact</a></li>
                         </ul>
                     </td>
                     <td>
                         <h5>LEGAL</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Terms Of Use</a></li>
                             <li class="nav-item mb-2"><a href="/policy" class="nav-link p-0 text-muted">Privacy & Policy</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cookies</a></li>
                         </ul>
                     </td>
                     <td>
