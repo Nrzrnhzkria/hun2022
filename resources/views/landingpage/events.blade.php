@@ -11,16 +11,16 @@
         <h1 class="text-center border-bottom pt-5">Objective</h1>
 
         <div class="col-md-12 pt-3">
-            <div class="card">
+            <div class="card pb-3">
                 <img class="img-fluid" src="{{ asset('assets/img/events/agenda_1.png') }}">
             </div>
-            <div class="card">
+            <div class="card pb-3">
                 <img class="img-fluid" src="{{ asset('assets/img/events/agenda_2.png') }}">
             </div>
-            <div class="card">
+            <div class="card pb-3">
                 <img class="img-fluid" src="{{ asset('assets/img/events/agenda_3.png') }}">
             </div>
-            <div class="card">
+            <div class="card pb-3">
                 <img class="img-fluid" src="{{ asset('assets/img/events/agenda_4.png') }}">
             </div>
             <div class="card">
