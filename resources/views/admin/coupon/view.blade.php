@@ -27,7 +27,6 @@
     <div class="row">
         
         <div class="col-md-12">
-            <div class="float-right pt-3">{{ $payments->links() }}</div>
             @if(count($payments) > 0)
             <div class="table-responsive">
                 <table class="table">
@@ -66,6 +65,7 @@
             @else
               <p>There are no vendor to display.</p>
             @endif
+            <div class="float-right pt-3">{{ $payments->links() }}</div>
         </div>
     </div>
     
