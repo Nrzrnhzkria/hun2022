@@ -32,7 +32,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">Name</th>
                             <th scope="col">Role</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
@@ -41,8 +41,8 @@
                     <tbody>
                         @foreach ($users as $key => $user)
                         <tr>
-                            <th scope="row">{{ $users->firstItem() + $key }}</th>
-                            <td>{{ $user->name }}</td>
+                            {{-- <th scope="row">{{ $users->firstItem() + $key }}</th> --}}
+                            <th>{{ $user->name }}</th>
                             <td class="text-capitalize">{{ $user->role }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-user') }}/{{ $user->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
