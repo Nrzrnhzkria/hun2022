@@ -60,7 +60,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">Booth Type</th>
                             <th scope="col">Price (RM)</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
@@ -69,8 +69,8 @@
                     <tbody>
                         @foreach ($booth_details as $key => $booth_detail)
                         <tr>
-                            <th scope="row">{{ $booth_details->firstItem() + $key }}</th>
-                            <td>{{ $booth_detail->booth_type }}</td>
+                            {{-- <th scope="row">{{ $booth_details->firstItem() + $key }}</th> --}}
+                            <th>{{ $booth_detail->booth_type }}</th>
                             <td>{{ number_format($booth_detail->price) }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-booth-details') }}/{{ $booth_detail->booth_id }}/{{ $booth_detail->details_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
