@@ -98,7 +98,7 @@
                         </select> --}}
                     </div>
 
-                    <div class="col-md-6 pb-2">
+                    <div class="col-md-6 pb-4">
                         <label>Nature of Business / <em style="font-size: 10pt;">Jenis Perniagaan</em></label>
                         <input type="text" value="{{ $details->business_nature }}" class="form-control form-control-sm" name="business_nature" readonly/>
                         {{-- <select class="form-select form-select-sm" aria-label="Default select example" name="business_nature" value="{{ $details->business_nature }}">                                 
@@ -115,7 +115,7 @@
 
                     <div class="col-md-12 py-2">                     
                         <div class="table-responsive">
-                            <table class="table table-bordered table-sm">
+                            <table class="table table-sm">
                                 <thead>
                                     <th>#</th>
                                     <th>Document</th>
