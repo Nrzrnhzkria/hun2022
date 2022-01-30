@@ -139,7 +139,7 @@
             {{-- <a href="http://" class="btn btn-warning text-start p-4">  --}}
                 <div class="card shadow text-white border-0 bg-success" style="height: 30rem">
                     <div class="card-body p-4">
-                        <h4 class="text-center">BENEFITS OF HUN MEMBERS</h4>
+                        <h4 class="card-header text-center">BENEFITS OF HUN MEMBERS</h4>
                         <br>
                         <ul style="text-align: justify">
                             <li>HUN members get attend to the seminar/workshop/programs with numerous information about marketing, licensing and franchising by top notch entrepreneur.</li>
@@ -152,8 +152,8 @@
         <div class="col-md-4 pb-2">
             <div class="card shadow border-0 bg-warning" style="height: 30rem">
                 <div class="card-body text-white p-4">
-                    <h4 class="card-title text-center">BECOME A VENDOR</h4>
-                    <br>
+                    <h4 class="card-header text-center">BECOME A VENDOR</h4>
+                    <br><br>
                     <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN.</p>
                     <ul class="card-text" style="text-align: justify">
                         <li>Valuable exposure in creating trustful and legitimate business of your brands.</li>
@@ -170,7 +170,8 @@
         <div class="col-md-4 pb-2">
             <div class="card shadow border-0 bg-danger" style="height: 30rem">
                 <div class="card-body text-white p-4">
-                    <h4 class="card-title text-center">THE EXHIBITIONS</h4>
+                    <h4 class="card-header text-center">THE EXHIBITIONS</h4>
+                    <br><br>
                     <p class="card-text" style="text-align: justify">
                         There are 8 upcoming exhibition, booth, programs, mentoring and etc can help growth your business and acquire information about new industry developments.
                     </p>
