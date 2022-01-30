@@ -6,7 +6,7 @@
 
 @section('content')
 
-<div class="container">
+<div class="container py-3">
     
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
@@ -34,20 +34,6 @@
           <b class="display-6 pb-3">{{ number_format($totaluser) }}</b>
         </div>
       </div>
-      
-      {{-- <div class="col-md-4 pb-4">
-        <div class="card border-0 shadow text-center" style="height: 125px">
-          <h6 class="pt-4">Member</h6>
-          <b class="display-6 pb-3">{{ number_format($member) }}</b>
-        </div>
-      </div>
-      
-      <div class="col-md-4 pb-4">
-        <div class="card border-0 shadow text-center" style="height: 125px">
-          <h6 class="pt-4">Non-Member</h6>
-          <b class="display-6 pb-3">{{ number_format($nonmember) }}</b>
-        </div>
-      </div> --}}
       
     </div>
 
