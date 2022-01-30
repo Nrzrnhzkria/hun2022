@@ -33,7 +33,7 @@
                     </li>
                 </ul> --}}
 
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information</div>
+                <div class="fw-bold px-2 py-2" style="background-color: orange">Exhibitor Information / <em style="font-size: 10pt;">Maklumat Pempamer</em></div>
     
                 @if ($errors->any())
                     <div class="alert alert-danger">
@@ -125,7 +125,7 @@
                 
                 </div>
 
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Payment Details</div>
+                <div class="fw-bold px-2 py-2" style="background-color: orange">Payment Details / <em style="font-size: 10pt;">Maklumat Pembayaran</em></div>
                 
                 <div class="row p-3">
                     <div class="col-md-6 pb-2">
@@ -149,7 +149,7 @@
                     </div>  
                 </div>
 
-                <div class="fw-bold px-2 py-2" style="background-color: orange">Coupon Details</div>
+                <div class="fw-bold px-2 py-2" style="background-color: orange">Coupon Details / <em style="font-size: 10pt;">Maklumat Kupon</em></div>
 
                 <div class="row p-3">
 
@@ -218,7 +218,7 @@
                         <em style="font-size: 10pt;">*Every coupon are require to put company name or items name or brand on it</em>
                     </div>
 
-                    <h4 class="py-3">Uploaded Coupon</h4>
+                    <h4 class="py-3">Uploaded Coupon</h4> / <em style="font-size: 10pt;">Kupon yang Dimuat Naik</em>
 
                     @if(count($coupon) > 0)
                     @foreach ($coupon as $coupons)
@@ -241,6 +241,7 @@
                     @endforeach
                     @else
                       <p>There are no coupon to display. You can upload the coupon at <em>Choose Files</em> above.</p>
+                      <p><em style="font-size: 10pt;">Tiada kupon untuk dipaparkan. Anda boleh muat naik kupon di ruangan yang telah disediakan di atas.</em></p>
                     @endif
                     
                 </div>
