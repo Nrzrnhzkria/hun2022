@@ -9,6 +9,7 @@ use App\Models\Membership;
 use App\Models\Booth;
 use App\Models\BoothDetails;
 use App\Models\VendorDetails;
+use App\Exports\MembersExport;
 use Illuminate\Support\Facades\Hash;
 use Maatwebsite\Excel\Facades\Excel;
 
