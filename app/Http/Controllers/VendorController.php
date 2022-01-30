@@ -29,7 +29,7 @@ class VendorController extends Controller
     {
         $check = User::where('ic_no', $request->ic_no)->first();
 
-        if(User::where('ic_no', $request->ic_no)->exists() && Membership::where('payer_id', $check->id)->first()){
+        if(User::where('ic_no', $request->ic_no)->exists()){
 
             // dd('Update Registration');
             $vendor = User::where('ic_no', $request->ic_no)->first();
