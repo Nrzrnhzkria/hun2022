@@ -90,17 +90,17 @@ class VendorController extends Controller
 
         $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
         $path_1 = $request->file('product_details')->store('public/files/product_details') . $product_details;
-        $details_path = 'https://hariusahawannegara.com.my/' . $path_1;
+        $details_path = 'https://hariusahawannegara.com.my/storage/files/product_details' . $product_details;
         // $request->file('product_details')->move(public_path('assets/files/product_details') . $product_details);
 
         $ssm_image = 'file_' . uniqid() . $request->file('ssm_cert')->getClientOriginalName();
         $path_2 = $request->file('ssm_cert')->store('public/files/ssm_cert') . $ssm_image;
-        $ssm_cert = 'https://hariusahawannegara.com.my/' . $path_2;
+        $ssm_cert = 'https://hariusahawannegara.com.my/storage/files/ssm_cert' . $ssm_image;
         // $request->file('ssm_cert')->move(public_path('assets/files/ssm_cert') . $ssm_image);
 
         $vaccine_image = 'file_' . uniqid() . $request->file('vaccine_cert')->getClientOriginalName();
         $path_3 = $request->file('vaccine_cert')->store('public/files/vaccine_cert') . $vaccine_image;
-        $vaccine_cert = 'https://hariusahawannegara.com.my/' . $path_3;
+        $vaccine_cert = 'https://hariusahawannegara.com.my/storage/files/vaccine_cert' . $vaccine_image;
         // $request->file('vaccine_cert')->move(public_path('assets/files/vaccine_cert') . $vaccine_image);
         VendorDetails::create([
             'user_id' => $vendor->id,
@@ -141,7 +141,7 @@ class VendorController extends Controller
             foreach($request->file('img_name') as $values) {
                 $imagename = 'img_' . uniqid().'.'.$values->extension();
                 $path_4 = $values->store('public/files/coupons') . $imagename;
-                $coupon_image = 'https://hariusahawannegara.com.my/' . $path_4;
+                $coupon_image = 'https://hariusahawannegara.com.my/storage/files/coupons' . $imagename;
                 // $values->move(public_path('assets/files/coupons'), $imagename);
 
                 $i=1;
