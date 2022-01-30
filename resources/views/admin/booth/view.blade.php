@@ -57,6 +57,16 @@
     <div class="alert alert-info alert-block">
         <strong>{{ $message }}</strong>
     </div>
+    @endif    
+                        
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul class="px-3">
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
     @endif
     
     <div class="row">

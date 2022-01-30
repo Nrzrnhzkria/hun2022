@@ -20,7 +20,11 @@ class BoothController extends Controller
     }
 
     public function store_booth(Request $request)
-    {     
+    {             
+        $datavalidation = $request->validate([
+            'booth_name' => 'required'
+        ]);
+
         $booth = Booth::orderBy('id','desc')->first(); 
         $auto_inc = $booth->id + 1;
         $booth_id = 'BO' . 0 . $auto_inc;  
@@ -34,7 +38,11 @@ class BoothController extends Controller
     }
 
     public function edit_booth($booth_id, Request $request)
-    {
+    {                
+        $datavalidation = $request->validate([
+            'booth_name' => 'required'
+        ]);
+
         $booth = Booth::where('booth_id', $booth_id)->first();
 
         $booth->booth_name = $request->booth_name;
@@ -69,7 +77,13 @@ class BoothController extends Controller
     }
 
     public function store_booth_details($booth_id, Request $request)
-    {        
+    {            
+        $datavalidation = $request->validate([
+            'booth_type' => 'required',
+            'lot_placement' => 'required',
+            'price' => 'required'
+        ]);
+
         $booth_details = BoothDetails::orderBy('id','desc')->first(); 
         $auto_inc = $booth_details->id + 1;
         $details_id = 'BD' . 0 . 0 . $auto_inc;  
@@ -94,7 +108,13 @@ class BoothController extends Controller
     }
 
     public function edit_booth_details($booth_id, $details_id, Request $request)
-    {
+    {      
+        $datavalidation = $request->validate([
+            'booth_type' => 'required',
+            'lot_placement' => 'required',
+            'price' => 'required'
+        ]);
+        
         $booth_details = BoothDetails::where('booth_id', $booth_id)->where('details_id', $details_id)->first();
 
         $booth_details->booth_type = $request->booth_type;
