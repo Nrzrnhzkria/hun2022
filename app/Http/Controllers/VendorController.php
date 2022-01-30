@@ -90,7 +90,7 @@ class VendorController extends Controller
 
         $product_path = 'public/files/product_details';
         $path_1 = 'file_' . uniqid() . $request->file('product_details')->extension();
-        $request->file('product_details')->storeAs($destination_path, $path_1);
+        $request->file('product_details')->storeAs($product_path, $path_1);
         $product_details = 'https://hariusahawannegara.com.my/storage/files/product_details/' . $path_1;
 
         // $product_details = 'file_' . uniqid() . $request->file('product_details')->getClientOriginalName();
