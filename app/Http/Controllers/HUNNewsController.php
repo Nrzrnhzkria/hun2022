@@ -60,14 +60,22 @@ class HUNNewsController extends Controller
 
     public function edit_news($news_id, Request $request)
     {
+        $this->validate($request, [
+            'title' => 'required|string|max:100',
+            'teaser' => 'required|string|max:250',
+            'content' => 'required',
+            'img_name' => 'required',
+        ]); 
+        
         $news = HUNNews::where('id', $news_id)->first();
         $user_id = Auth::user()->id;
 
         if($request->hasFile('img_name'))
         {
-            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $img_name = 'https://hariusahawannegara.com.my/assets/img/news/' . $imagename;
-            $request->img_name->move(public_path('assets/img/news'), $imagename);
+            $news_path = 'public/admin/news';
+            $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
+            $request->file('img_name')->storeAs($news_path, $path);
+            $news_image = 'https://hariusahawannegara.com.my/storage/admin/news/' . $path;
         }
 
         $news->user_id = $user_id;
@@ -76,7 +84,7 @@ class HUNNewsController extends Controller
         $news->teaser = $request->teaser;
         if($request->hasFile('img_name'))
         {
-            $news->img_name = $img_name;
+            $news->img_name = $news_image;
         }
         $news->save();
 
