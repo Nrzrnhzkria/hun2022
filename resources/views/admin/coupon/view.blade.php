@@ -32,7 +32,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">Vendor</th>
                             <th scope="col">Email</th>
                             <th scope="col">Phone No</th>
@@ -46,8 +46,8 @@
                         @if ($vendor->id == $detail->user_id)
                         @if ($payment->payer_id == $vendor->id)
                         <tr>
-                            <th scope="row">{{ $count++ }}</th>
-                            <td>{{ $detail->company_name }}</td>
+                            {{-- <th scope="row">{{ $count++ }}</th> --}}
+                            <th>{{ $detail->company_name }}</th>
                             <td>{{ $vendor->email }}</td>
                             <td>{{ $vendor->phone_no }}</td>
                             <td class="text-center">
