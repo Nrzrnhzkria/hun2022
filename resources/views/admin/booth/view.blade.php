@@ -78,7 +78,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">Booth Name</th>
                             <th scope="col"><i class="bi bi-sliders"></i></th>
                         </tr>
@@ -86,8 +86,8 @@
                     <tbody>
                         @foreach ($booths as $key => $booth)
                         <tr>
-                            <th scope="row">{{ $booths->firstItem() + $key }}</th>
-                            <td>{{ $booth->booth_name }}</td>
+                            {{-- <th scope="row">{{ $booths->firstItem() + $key }}</th> --}}
+                            <th>{{ $booth->booth_name }}</th>
                             <td>
                                 <!-- Update trigger modal -->
                                 <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#update{{ $booth->booth_id }}">
