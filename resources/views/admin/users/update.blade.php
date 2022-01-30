@@ -18,6 +18,16 @@
                 <div class="card-body">
                     <form class="row g-3 px-3" method="POST" action="{{ url('edit-user') }}/{{ $user->id }}">
                         @csrf
+                        
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="px-3">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
 
                         <div class="row mb-3">
                         </div>  

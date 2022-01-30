@@ -181,7 +181,7 @@ class DashboardController extends Controller
             'phone_no' => 'required',
             'role'=> 'required',
         ]);
-        
+
         $user = User::where('id', $user_id)->first();
 
         $user->name = $request->name;
@@ -241,6 +241,15 @@ class DashboardController extends Controller
 
     public function edit_user($user_id, Request $request)
     {
+        $datavalidation = $request->validate([
+            'name' => 'required',
+            'email'=> 'required|unique:users,email',
+            'password'=> 'required',
+            'ic_no' => 'required',
+            'phone_no' => 'required',
+            'role'=> 'required',
+        ]);
+        
         $user = User::where('id', $user_id)->first();
 
         $user->hun_id = $request->hun_id;
