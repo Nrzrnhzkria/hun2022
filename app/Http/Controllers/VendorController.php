@@ -89,7 +89,7 @@ class VendorController extends Controller
         $vendor = User::where('ic_no', $request->ic_no)->first();
 
         $product_path = 'public/files/product_details';
-        $path_1 = 'file_' . uniqid() . $request->file('product_details')->extension();
+        $path_1 = 'file_' . uniqid().'.'.$request->file('product_details')->extension();
         $request->file('product_details')->storeAs($product_path, $path_1);
         $product_details = 'https://hariusahawannegara.com.my/storage/files/product_details/' . $path_1;
 
@@ -99,7 +99,7 @@ class VendorController extends Controller
         // // $request->file('product_details')->move(public_path('assets/files/product_details') . $product_details);
         
         $ssm_path = 'public/files/ssm_cert';
-        $path_2 = 'file_' . uniqid() . $request->file('ssm_cert')->extension();
+        $path_2 = 'file_' . uniqid().'.'.$request->file('ssm_cert')->extension();
         $request->file('ssm_cert')->storeAs($ssm_path, $path_2);
         $ssm_cert = 'https://hariusahawannegara.com.my/storage/files/ssm_cert/' . $path_2;
 
@@ -109,7 +109,7 @@ class VendorController extends Controller
         // // $request->file('ssm_cert')->move(public_path('assets/files/ssm_cert') . $ssm_image);
                 
         $vaccine_path = 'public/files/vaccine_cert';
-        $path_3 = 'file_' . uniqid() . $request->file('vaccine_cert')->extension();
+        $path_3 = 'file_' . uniqid().'.'.$request->file('vaccine_cert')->extension();
         $request->file('vaccine_cert')->storeAs($vaccine_path, $path_3);
         $vaccine_cert = 'https://hariusahawannegara.com.my/storage/files/vaccine_cert/' . $path_3;
 
