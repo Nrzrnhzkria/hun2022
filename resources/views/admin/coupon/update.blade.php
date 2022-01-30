@@ -38,7 +38,7 @@
                             @endif
                         @endforeach
                         @else
-                          <p>There are no coupon to display. You can upload the coupon at <em>Choose Files</em> above.</p>
+                          <p>There are no coupon to display.</p>
                         @endif
                         
                     </div>
