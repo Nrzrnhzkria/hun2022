@@ -113,29 +113,29 @@
                         </select> --}}
                     </div>
 
-                    <div class="col-md-12 pb-2">                     
+                    <div class="col-md-12 py-2">                     
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-bordered table-sm">
                                 <thead>
                                     <th>#</th>
-                                    <th>Document Name</th>
+                                    <th>Document</th>
                                     <th class="text-center"><i class="bi bi-sliders"></i></th>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
                                         <td>Product Details</td>
-                                        <td class="text-center"><a href="{{ $details->product_details }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td class="text-center"><a href="{{ $details->product_details }}" class="btn btn-outline-warning btn-sm"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>SSM Certificate</td>
-                                        <td class="text-center"><a href="{{ $details->ssm_cert }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td class="text-center"><a href="{{ $details->ssm_cert }}" class="btn btn-outline-warning btn-sm"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>Vaccine Certificate</td>
-                                        <td class="text-center"><a href="{{ $details->vaccine_cert }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td class="text-center"><a href="{{ $details->vaccine_cert }}" class="btn btn-outline-warning btn-sm"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                 </tbody>
                             </table>
