@@ -52,7 +52,7 @@
                             <td>{{ $vendor->email }}</td>
                             <td>{{ $vendor->phone_no }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update-coupon') }}/{{ $vendor->user_id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
+                                <a href="{{ url('update-coupon') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>        
                         @endif        
