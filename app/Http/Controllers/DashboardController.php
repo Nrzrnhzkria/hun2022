@@ -79,6 +79,18 @@ class DashboardController extends Controller
 
     public function edit_vendor($vendor_id, Request $request)
     {
+        $datavalidation = $request->validate([
+            'name' => 'required',
+            'email'=> 'required',
+            'ic_no' => 'required',
+            'phone_no' => 'required',
+            'company_name'=> 'required',
+            'designation' => 'required',
+            'nationality'=> 'required',
+            'company_address'=> 'required',
+            'business_nature' => 'required'
+        ]);
+
         $vendor = User::where('id', $vendor_id)->first();
         $details = VendorDetails::where('user_id', $vendor_id)->first();
         // $payment = Membership::where('payer_id', $vendor_id)->first();
@@ -130,6 +142,15 @@ class DashboardController extends Controller
 
     public function store_admin(Request $request)
     {
+        $datavalidation = $request->validate([
+            'name' => 'required',
+            'email'=> 'required|unique:users,email',
+            'password'=> 'required',
+            'ic_no' => 'required',
+            'phone_no' => 'required',
+            'role'=> 'required',
+        ]);
+
         User::create([
             'hun_id' => NULL,
             'name' => $request->name,
