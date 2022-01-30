@@ -28,11 +28,8 @@
                     <td>
                         <h5>SOCIAL MEDIA</h5>
                         <ul class="nav flex-column">
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Facebook</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Twitter</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Instagram</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Youtube</a></li>
-                            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Linkedin</a></li>
+                            <li class="nav-item mb-2"><a href="https://www.facebook.com/profile.php?id=100077356300724" class="nav-link p-0 text-muted">Facebook</a></li>
+                            <li class="nav-item mb-2"><a href="https://www.instagram.com/hun2022official/" class="nav-link p-0 text-muted">Instagram</a></li>
                         </ul>
                     </td>
                 </tr>
