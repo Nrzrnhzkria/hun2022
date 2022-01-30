@@ -218,7 +218,7 @@
                         <em style="font-size: 10pt;">*Every coupon are require to put company name or items name or brand on it</em>
                     </div>
 
-                    <h4 class="py-3">Uploaded Coupon</h4> / <em style="font-size: 10pt;">Kupon yang Dimuat Naik</em>
+                    <h4 class="py-3">Uploaded Coupon / <em style="font-size: 10pt;">Kupon yang Dimuat Naik</em></h4>
 
                     @if(count($coupon) > 0)
                     @foreach ($coupon as $coupons)
