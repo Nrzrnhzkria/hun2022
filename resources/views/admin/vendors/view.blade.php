@@ -32,7 +32,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">Vendor</th>
                             <th scope="col">Booth</th>
                             <th scope="col" class="text-center">Payment Status</th>
@@ -46,8 +46,8 @@
                         @if ($payment->details_id == $booth_type->details_id)
                         @if ($payment->payer_id == $vendor->user_id)
                         <tr>
-                            <th scope="row">{{ $count++ }}</th>
-                            <td>{{ $vendor->company_name }}</td>
+                            {{-- <th scope="row">{{ $count++ }}</th> --}}
+                            <th>{{ $vendor->company_name }}</th>
                             <td>{{ $booth_type->booth_type }}</td>
                             <td class="text-center">
                                 @if ( $payment->status == 'success')
