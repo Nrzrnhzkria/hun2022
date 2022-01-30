@@ -162,7 +162,7 @@
                     </ul>
 
                     <div class="col-auto text-center pt-3">
-                        <a href="registration" class="btn btn-light fw-bold"><i class="bi bi-info-circle-fill"></i> More Information</a>
+                        <a href="registration" class="btn btn-light fw-bold"><i class="bi bi-people-fill"></i> Vendor Registration</a>
                     </div>
                 </div>
             </div>
