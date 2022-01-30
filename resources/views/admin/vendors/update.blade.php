@@ -21,6 +21,16 @@
                         
                         <h4 class="border-bottom">Personal Details</h4>
                         
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="px-3">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        
                         <div class="row p-3">
 
                             <div class="col-md-6 pb-2">
