@@ -140,8 +140,8 @@
                 <div class="card shadow text-white border-0 bg-success" style="height: 29rem">
                     <h4 class="card-header text-center py-3">ABOUT HUN MEMBERSHIP</h4>
                     <div class="card-body p-4">
-                        <p class="card-text" style="text-align: justify">The benefits when you be the HUN members :</p>
-                        <ul style="text-align: justify">
+                        <p class="card-text">The benefits when you be the HUN members :</p>
+                        <ul>
                             <li>HUN members get attend to the seminar/workshop/programs with numerous information about marketing, licensing and franchising by top notch entrepreneur.</li>
                             <li>HUN members will be able to stand a chance to win amazing prizes by participating in lucky draw.</li>
                         </ul>
@@ -153,8 +153,8 @@
             <div class="card shadow border-0 bg-warning" style="height: 29rem">
                 <h4 class="card-header text-center py-3">BECOME A VENDOR</h4>
                 <div class="card-body p-4">
-                    <p class="card-text" style="text-align: justify">Learn how to get started as vendor and finding business opportunities with HUN.</p>
-                    <ul class="card-text" style="text-align: justify">
+                    <p class="card-text">Learn how to get started as vendor and finding business opportunities with HUN.</p>
+                    <ul class="card-text">
                         <li>Valuable exposure in creating trustful and legitimate business of your brands.</li>
                         <li>Build Community Networking and meet thousands of local consumers who are interested in local brand.</li>
                         <li>Business is professionally managed to take local sources to the globalization market.</li>
@@ -170,13 +170,13 @@
             <div class="card shadow text-white border-0 bg-danger" style="height: 29rem">
                 <h4 class="card-header text-center py-3">THE EXHIBITIONS</h4>
                 <div class="card-body p-4">
-                    <p class="card-text" style="text-align: justify">
+                    <p class="card-text">
                         There are 8 upcoming exhibition, booth, programs, mentoring and etc can help growth your business and acquire information about new industry developments.
                     </p>
-                    <p class="card-text" style="text-align: justify">
+                    <p class="card-text">
                         The exhibition aims to host more than 2000 booths from local and international products.
                     </p>
-                    <p class="card-text" style="text-align: justify">
+                    <p class="card-text">
                         The exhibitions which businesses and companies in a specific niche come together to showcase their brands and products or promote new business developments.
                     </p>
                 </div>
