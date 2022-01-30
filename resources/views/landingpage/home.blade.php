@@ -160,7 +160,7 @@
                         <li>Business is professionally managed to take local sources to the globalization market.</li>
                     </ul>
 
-                    <div class="col-auto text-center pt-3">
+                    <div class="col-auto text-center pt-2">
                         <a href="registration" class="btn btn-warning shadow fw-bold"><i class="bi bi-people-fill"></i> Vendor Registration</a>
                     </div>
                 </div>
