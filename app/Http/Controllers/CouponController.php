@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request; 
 use App\Models\Coupon;
 use App\Models\Membership;
-use App\Models\Vendor;
+use App\Models\User;
 use App\Models\VendorDetails;
 
 class CouponController extends Controller
@@ -22,7 +22,7 @@ class CouponController extends Controller
     public function coupon()
     {
         $payments = Membership::where('amount', '>', '51')->paginate(15);
-        $vendors = Vendor::orderBy('id', 'desc')->get();
+        $vendors = User::orderBy('id', 'desc')->get();
         $details = VendorDetails::orderBy('id', 'desc')->get();
         $count = 1;
 
