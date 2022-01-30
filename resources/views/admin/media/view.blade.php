@@ -44,7 +44,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">Title</th>
                             <th scope="col">Image</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
@@ -53,8 +53,8 @@
                     <tbody>
                         @foreach ($medias as $key => $media)
                         <tr>
-                            <th scope="row">{{ $medias->firstItem() + $key }}</th>
-                            <td>{{ $media->title }}</td>
+                            {{-- <th scope="row">{{ $medias->firstItem() + $key }}</th> --}}
+                            <th>{{ $media->title }}</th>
                             <td><img src="{{ $media->img_name }}" width="80rem"></td>
                             <td class="text-center">
                                 <a href="{{ url('update-media') }}/{{ $media->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
