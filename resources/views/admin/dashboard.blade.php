@@ -78,9 +78,9 @@
     </div>
 
     <script>
-      var xValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13"];
-      var yValues = [55, 49, 44, 24, 15, 55, 49, 44, 24, 15, 44, 24, 15];
-      var barColors = ["red", "green","blue","orange","#00aba9", "purple", "yellow", "cyan", "maroon","#b91d47","magenta","gray", "black"];
+      var xValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];
+      var yValues = [55, 49, 44, 24, 15, 55, 49, 44, 24, 15, 44, 24, 15, 44, 24, 15];
+      var barColors = ["red", "green","blue","orange","#00aba9", "purple", "yellow", "cyan", "maroon","#b91d47","magenta", "gray", "black", "cream", "brown", "#b91d64"];
       
       new Chart("myChart", {
         type: "bar",

@@ -32,7 +32,24 @@ class DashboardController extends Controller
         $nonmember = User::where('role', 'User')->count();
         $member = User::where('role', 'Member')->count();
 
-        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser', 'member', 'nonmember'));
+        $automotive = Coupon::where('category','Automotive')->count();
+        $bss = Coupon::where('category','Business Support & Supplies')->count();
+        $ce = Coupon::where('category','Computers & Electronics')->count();
+        $cc = Coupon::where('category','Construction & Contractors')->count();
+        $education = Coupon::where('category','Education')->count();
+        $entertainment = Coupon::where('category','Entertainment')->count();
+        $fnd = Coupon::where('category','Food & Dining')->count();
+        $hnm = Coupon::where('category','Health & Medicine')->count();
+        $hng = Coupon::where('category','Home & Garden')->count();
+        $lnf = Coupon::where('category','Legal & Financial')->count();
+        $mwd = Coupon::where('category','Manufacturing, Wholesale & Distribution')->count();
+        $merchant = Coupon::where('category','Merchants (Retail)')->count();
+        $miscellaneous = Coupon::where('category','Miscellaneous')->count();
+        $pcs = Coupon::where('category','Personal Care & Services')->count();
+        $estate = Coupon::where('category','Real Estate')->count();
+        $travel = Coupon::where('category','Travel & Transportation')->count();
+
+        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser', 'member', 'nonmember', 'automotive', 'bss', 'ce', 'cc', 'education', 'entertainment', 'fnd', 'hnm', 'hng', 'lnf', 'mwd', 'merchant', 'miscellaneous', 'pcs', 'estate', 'travel'));
     }
 
     public function vendors()
