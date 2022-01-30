@@ -125,17 +125,17 @@
                                     <tr>
                                         <td>1</td>
                                         <td>Product Details</td>
-                                        <td><a href="{{ $details->product_details }}" class="btn btn-warning-outline"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td><a href="{{ $details->product_details }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>SSM Certificate</td>
-                                        <td><a href="{{ $details->ssm_cert }}" class="btn btn-warning-outline"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td><a href="{{ $details->ssm_cert }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>Vaccine Certificate</td>
-                                        <td><a href="{{ $details->vaccine_cert }}" class="btn btn-warning-outline"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        <td><a href="{{ $details->vaccine_cert }}" class="btn btn-outline-warning"><i class="bi bi-eye-fill"></i> View</a></td>
                                     </tr>
                                 </tbody>
                             </table>
