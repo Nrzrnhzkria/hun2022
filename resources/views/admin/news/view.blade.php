@@ -44,7 +44,7 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col">#</th>
+                            {{-- <th scope="col">#</th> --}}
                             <th scope="col">Title</th>
                             <th scope="col">Image</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
@@ -53,8 +53,8 @@
                     <tbody>
                         @foreach ($news as $key => $new)
                         <tr>
-                            <th scope="row">{{ $news->firstItem() + $key }}</th>
-                            <td>{{ $new->title }}</td>
+                            {{-- <th scope="row">{{ $news->firstItem() + $key }}</th> --}}
+                            <th>{{ $new->title }}</th>
                             <td><img src="{{ $new->img_name }}" width="80rem"></td>
                             <td class="text-center">
                                 <a href="{{ url('update-news') }}/{{ $new->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
