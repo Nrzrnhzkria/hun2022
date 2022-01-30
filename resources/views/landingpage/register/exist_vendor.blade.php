@@ -112,6 +112,35 @@
                             <option value="Limited liability partnership">Limited liability partnership</option>
                         </select> --}}
                     </div>
+
+                    <div class="col-md-12 pb-2">                     
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <th>#</th>
+                                    <th>Document Name</th>
+                                    <th><i class="bi bi-sliders"></i></th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Product Details</td>
+                                        <td><a href="{{ $details->product_details }}" class="btn btn-warning-outline"><i class="bi bi-eye-fill"></i> View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>SSM Certificate</td>
+                                        <td><a href="{{ $details->ssm_cert }}" class="btn btn-warning-outline"><i class="bi bi-eye-fill"></i> View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Vaccine Certificate</td>
+                                        <td><a href="{{ $details->vaccine_cert }}" class="btn btn-warning-outline"><i class="bi bi-eye-fill"></i> View</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 
                 </div>
 
@@ -152,49 +181,6 @@
                 @endif
 
                 <div class="row p-3">
-
-                    <div class="table-responsive">
-                        <table class="table">
-                            <thead>
-                                <th>#</th>
-                                <th>Document Name</th>
-                                <th>File Link</th>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Product Details</td>
-                                    <td><a href="{{ $details->product_details }}">Download</a></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>SSM Certificate</td>
-                                    <td><a href="{{ $details->ssm_cert }}">Download</a></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Vaccine Certificate</td>
-                                    <td><a href="{{ $details->vaccine_cert }}">Download</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-
-                    {{-- <div class="col-md-6 pb-2">
-                        <label for="formFile" class="form-label">Details of Displayed Product:</label>
-                        <input class="form-control form-control-sm" type="file" name="product_details" value="{{ $details->product_details }}" id="formFile">
-                    </div>
-
-                    <div class="col-md-6 pb-2">
-                        <label for="formFile" class="form-label">SSM Certificate:</label>
-                        <input class="form-control form-control-sm" type="file" name="ssm_cert" value="{{ $details->ssm_cert }}" id="formFile">
-                    </div>
-
-                    <div class="col-md-6 pb-2">
-                        <label for="formFile" class="form-label">Vaccine Certificate:</label>
-                        <input class="form-control form-control-sm" type="file" name="vaccine_cert" value="{{ $details->vaccine_cert }}" id="formFile">
-                    </div> --}}
 
                     <div class="col-md-6 pb-2">
                         <label for="formFile" class="form-label">Coupon Category / <em style="font-size: 10pt;">Kategori Kupon</em></label>
