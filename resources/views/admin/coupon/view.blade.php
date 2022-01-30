@@ -41,24 +41,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($vendors as $vendor)
+                        @foreach ($details as $detail)
                         @foreach ($coupons as $coupon)
-                        {{-- @foreach ($vendors as $vendor) --}}
-                        {{-- @foreach ($details as $detail) --}}
-                        {{-- @if ($vendor->id == $detail->user_id) --}}
-                        {{-- @if ($coupon->vendor_id == $vendor->id) --}}
+                        @if ($vendor->id == $detail->user_id)
+                        @if ($coupon->vendor_id == $vendor->id)
                         <tr>
                             <th scope="row">{{ $count++ }}</th>
-                            {{-- <td>{{ $detail->company_name }}</td> --}}
-                            <td>{{ $coupon->id }}</td>
-                            {{-- <td>{{ $vendor->phone_no }}</td>
+                            <td>{{ $detail->company_name }}</td>
+                            <td>{{ $vendor->email }}</td>
+                            <td>{{ $vendor->phone_no }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-coupon') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
-                            </td> --}}
+                            </td>
                         </tr>        
-                        {{-- @endif         --}}
-                        {{-- @endif                           
-                        @endforeach                        --}}
-                        {{-- @endforeach                      --}}
+                        @endif        
+                        @endif                           
+                        @endforeach                       
+                        @endforeach                     
                         @endforeach
                     </tbody>
                 </table>
