@@ -11,20 +11,45 @@
         <h1 class="text-center border-bottom pt-5">Objective</h1>
         
         <div class="col-md-12 pt-3">
-            <div class="card shadow border-0" style="background-color: orange">
-                <div class="card-body p-4">
+            <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
+               
+                1. National Entrepreneur Day HUN 2022 for the first time conducted/commencing/premiering in Malaysia and will be annual celebration for entrepreneurs
+            
+            </div>
+            <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
 
-                    <ol class="fw-bold">
-                        <li class="pb-2">National Entrepreneur Day HUN 2022 for the first time conducted/commencing/premiering in Malaysia and will be annual celebration for entrepreneurs</li>
-                        <li class="pb-2">Introducing local entrepreneur brands to all Malaysians</li>
-                        <li class="pb-2">Nominate Special Award to productive entrepreneurs that deserve recognition for their success</li>
-                        <li class="pb-2">Entrepreneurial knowledge sharing about business from entrepreneurs to visitors</li>
-                        <li class="pb-2">Establish a wide network amongst entrepreneurs in upholding the economic globalization</li>
-                        <li class="pb-2">Set up as milestone for Malaysians citizen to cultivate interest in develop into an entrepreneur</li>
-                        <li class="pb-2">Gather entrepreneurship in Malaysia from  government ministry government agencies, corporate, private NGOs and individuals</li>
-                        <li class="pb-2">Gather Malaysian entrepreneurs in online and offline businesses platform during the National Entrepreneur Day Fiesta (HUN) 2022</li>
-                    </ol>
-                </div>
+                2. Introducing local entrepreneur brands to all Malaysians
+            
+            </div>
+            <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
+
+                3. Nominate Special Award to productive entrepreneurs that deserve recognition for their success
+             
+            </div>
+            <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
+
+                4. Entrepreneurial knowledge sharing about business from entrepreneurs to visitors
+                       
+            </div>
+            <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
+
+                5. Establish a wide network amongst entrepreneurs in upholding the economic globalization
+           
+            </div>
+            <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
+
+                6. Set up as milestone for Malaysians citizen to cultivate interest in develop into an entrepreneur
+              
+            </div>
+            <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
+
+                7. Gather entrepreneurship in Malaysia from  government ministry government agencies, corporate, private NGOs and individuals
+             
+            </div>
+            <div class="card shadow border-0 p-4 mb-3" style="background-color: orange">
+
+                8. Gather Malaysian entrepreneurs in online and offline businesses platform during the National Entrepreneur Day Fiesta (HUN) 2022
+                   
             </div>
         </div>
     </div>
