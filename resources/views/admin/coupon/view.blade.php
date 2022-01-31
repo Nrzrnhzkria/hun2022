@@ -42,9 +42,9 @@
                     <tbody>
                         @foreach ($vendors as $vendor)
                         @foreach ($details as $detail)
-                        @foreach ($payments as $payment)
+                        {{-- @foreach ($payments as $payment) --}}
                         @if ($vendor->id == $detail->user_id)
-                        @if ($payment->payer_id == $vendor->id)
+                        {{-- @if ($payment->payer_id == $vendor->id) --}}
                         <tr>
                             {{-- <th scope="row">{{ $count++ }}</th> --}}
                             <th>{{ $detail->company_name }}</th>
