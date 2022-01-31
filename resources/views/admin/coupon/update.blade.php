@@ -5,12 +5,12 @@
 @endsection
 
 @section('content')
-<style>
+{{-- <style>
 .card:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);    
     transform: scale(1.01);
 }
-</style>
+</style> --}}
 
 <div class="container">
 
