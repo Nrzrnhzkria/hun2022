@@ -26,9 +26,8 @@ class BoothController extends Controller
         ]);
 
         $booth = Booth::orderBy('id','desc')->first(); 
-        // $auto_inc = $booth->id + 1;
-        // $booth_id = 'BO' . 0 . $auto_inc;   
-        $booth_id =  'BO'. 0 . 0 . 1;
+        $auto_inc = $booth->id + 1;
+        $booth_id = 'BO' . 0 . $auto_inc;  
 
         Booth::create([
             'booth_id' => $booth_id,
@@ -86,9 +85,9 @@ class BoothController extends Controller
         ]);
 
         $booth_details = BoothDetails::orderBy('id','desc')->first(); 
-        // $auto_inc = $booth_details->id + 1;
-        // $details_id = 'BD' . 0 . 0 . $auto_inc;  
-        $details_id =  'BD'. 0 . 0 . 1;
+        $auto_inc = $booth_details->id + 1;
+        $details_id = 'BD' . 0 . 0 . $auto_inc;  
+        // $details_id =  'BD'. 0 . 0 . 1;
 
         BoothDetails::create([
             'details_id' => $details_id,
