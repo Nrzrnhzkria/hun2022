@@ -23,10 +23,10 @@
             <a href="{{ url('news') }}/{{ $new->id }}" class="text-dark text-decoration-none">
                 <div class="card shadow mb-3">
                     <div class="row g-0">
-                        <div class="col-md-1">
+                        <div class="col-md-2">
                             <img src="{{ $new->img_name }}" class="img-fluid rounded-start" alt="...">
                         </div>
-                        <div class="col-md-11">
+                        <div class="col-md-10">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $new->title }}</h5>
                                 <p class="card-text">{{ $new->teaser}}</p>
