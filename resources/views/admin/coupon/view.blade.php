@@ -54,8 +54,8 @@
                                 <a href="{{ url('update-coupon') }}/{{ $vendor->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
                         </tr>        
-                        @endif        
-                        {{-- @endif                           
+                        {{-- @endif        
+                        @endif                           
                         @endforeach                        
                         @endforeach--}}                     
                         @endforeach
