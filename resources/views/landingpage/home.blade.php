@@ -114,7 +114,7 @@
                     <td>
                         <div class="col-md-3">
                             {{-- <a href="/news" class="text-dark text-decoration-none"> --}}
-                            <div class="card" style="width: 16.5rem;">
+                            <div class="card" style="width: 16.5rem; height: 20rem;">
                                 <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                 <h5 class="card-title">{{ $new->title }}</h5>
