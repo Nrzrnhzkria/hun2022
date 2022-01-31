@@ -223,14 +223,16 @@
                         <div class="col-md-4">
                             <div class="card mb-3">
                                 <div class="row g-0">
-                                  <div class="col-md-4">
-                                    <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
-                                  </div>
-                                  <div class="col-md-8">
-                                    <div class="card-body py-0">
-                                      <p class="fw-bold pt-2">{{ $coupons->category }}</p>
-                                    </div>
-                                  </div>
+                                    <a href="{{ $coupons->img_name }}" class="text-dark text-decoration-none">
+                                        <div class="col-md-4">
+                                            <img src="{{ $coupons->img_name }}" class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                            <p class="fw-bold pt-2">{{ $coupons->category }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
