@@ -243,8 +243,8 @@ class DashboardController extends Controller
     {
         $datavalidation = $request->validate([
             'name' => 'required',
-            'email'=> 'required|unique:users,email',
-            'password'=> 'required',
+            // 'email'=> 'required|unique:users,email',
+            // 'password'=> 'required',
             'ic_no' => 'required',
             'phone_no' => 'required',
             'role'=> 'required',
@@ -254,8 +254,8 @@ class DashboardController extends Controller
 
         $user->hun_id = $request->hun_id;
         $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = Hash::make($request['password']);
+        // $user->email = $request->email;
+        // $user->password = Hash::make($request['password']);
         $user->phone_no = $request->phone_no;
         $user->ic_no = $request->ic_no;
         $user->role = $request->role;
