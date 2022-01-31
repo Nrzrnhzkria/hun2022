@@ -55,8 +55,8 @@
                             </td>
                         </tr>        
                         @endif        
-                        @endif                           
-                        @endforeach                       
+                        {{-- @endif                           
+                        @endforeach                        --}}
                         @endforeach                     
                         @endforeach
                     </tbody>
