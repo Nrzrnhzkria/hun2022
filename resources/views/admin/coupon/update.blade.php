@@ -23,6 +23,7 @@
                             @if ($vendor->id == $coupon->vendor_id)
                             <div class="col-md-4">
                                 <div class="card mb-3">
+                                    <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
                                     <div class="row g-0">
                                       <div class="col-md-4">
                                         <img src="{{ $coupon->img_name }}" class="img-fluid rounded-start" alt="...">
@@ -33,6 +34,7 @@
                                         </div>
                                       </div>
                                     </div>
+                                    </a>
                                 </div>
                             </div>
                             @endif
