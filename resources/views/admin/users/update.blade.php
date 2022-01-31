@@ -32,14 +32,14 @@
                         <div class="row mb-3">
                         </div>  
 
-                        {{-- @if ($user->hun_id == null)
+                        @if ($user->hun_id == null)
                             
-                        @else --}}
+                        @else
                             <div class="row mb-3">
                                 <label for="hun_id" class="col-md-4 col-form-label text-md-end">HUN ID</label>
 
                                 <div class="col-md-6">
-                                    <input id="hun_id" type="text" class="form-control @error('hun_id') is-invalid @enderror" name="hun_id" value="{{ $user->hun_id }}" required autocomplete="hun_id">
+                                    <input id="hun_id" type="text" class="form-control @error('hun_id') is-invalid @enderror" name="hun_id" value="{{ $user->hun_id }}" required autocomplete="hun_id" readonly>
                 
                                     @error('hun_id')
                                         <span class="invalid-feedback" role="alert">
@@ -48,7 +48,7 @@
                                     @enderror
                                 </div>
                             </div>    
-                        {{-- @endif --}}
+                        @endif
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
@@ -68,7 +68,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}" required autocomplete="email" readonly>
             
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
