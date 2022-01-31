@@ -110,11 +110,11 @@
         <table class="table table-borderless">
             <tbody>
                 <tr>
-                @foreach ($news->take(4) as $new)
+                @foreach ($news->take(3) as $new)
                     <td>
                         <div class="col-md-3">
                             {{-- <a href="/news" class="text-dark text-decoration-none"> --}}
-                            <div class="card shadow" style="width: 16.5rem;">
+                            <div class="card shadow" style="width: 20rem;">
                                 <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
                                 <div class="card-body">
                                 <h5 class="card-title">{{ $new->title }}</h5>
