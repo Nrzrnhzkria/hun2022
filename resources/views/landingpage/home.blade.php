@@ -196,7 +196,7 @@
         </div>
     </div>
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="brand-carousel owl-carousel">
             <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png">
             <img src="https://i.postimg.cc/pdMQjC5Q/brand-2.png">
@@ -205,7 +205,7 @@
             <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png">
             <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png">
         </div>
-    </div>
+    </div> --}}
     
 </div>
 
