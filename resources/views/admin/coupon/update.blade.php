@@ -5,6 +5,12 @@
 @endsection
 
 @section('content')
+<style>
+.card:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);    
+    transform: scale(1.01);
+}
+</style>
 
 <div class="container">
 
@@ -22,7 +28,7 @@
                         @foreach ($coupons as $coupon)
                             @if ($vendor->id == $coupon->vendor_id)
                             <div class="col-md-4">
-                                <div class="card mb-3">
+                                <div class="card shadow mb-3">
                                     <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
                                     <div class="row g-0">
                                       <div class="col-md-4">
