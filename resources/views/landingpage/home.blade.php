@@ -117,11 +117,11 @@
                             <div class="card" style="width: 16.5rem;">
                                 <img src="{{ $new->img_name }}" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                <h5 class="card-title pb-4">{{ $new->title }}</h5>
-                                {{-- <p class="card-text">{{ $new->teaser}}</p> --}}
-                                <div class="text-end">
-                                    <a href="{{ url('news') }}/{{ $new->id }}" class="btn btn-warning btn-sm fw-bold">See More >></a>
+                                    <h5 class="card-title">{{ $new->title }}</h5>
+                                    {{-- <p class="card-text">{{ $new->teaser}}</p> --}}
                                 </div>
+                                <div class="card-footer">
+                                    <a href="{{ url('news') }}/{{ $new->id }}" class="btn btn-warning btn-sm fw-bold">See More >></a>
                                 </div>
                             </div>
                             {{-- </a> --}}
