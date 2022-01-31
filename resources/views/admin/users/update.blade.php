@@ -32,9 +32,9 @@
                         <div class="row mb-3">
                         </div>  
 
-                        @if ($user->hun_id == null)
+                        {{-- @if ($user->hun_id == null)
                             
-                        @else
+                        @else --}}
                             <div class="row mb-3">
                                 <label for="hun_id" class="col-md-4 col-form-label text-md-end">HUN ID</label>
 
@@ -48,7 +48,7 @@
                                     @enderror
                                 </div>
                             </div>    
-                        @endif
+                        {{-- @endif --}}
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
