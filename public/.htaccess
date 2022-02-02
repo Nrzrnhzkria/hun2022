@@ -5,6 +5,12 @@
 
     RewriteEngine On
 
+    RewriteCond %{HTTP_HOST} ^www\.hariusahawannegara\.com$
+    RewriteRule ^/?$ "http\:\/\/hariusahawannegara\.com\/" [R=301,L]
+
+    RewriteCond %{HTTP_HOST} !^www.hariusahawannegara.com$ [NC]
+    RewriteRule ^(.*)$ http://www.hariusahawannegara.com/$1 [L,R=301]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
