@@ -2,17 +2,18 @@
     <footer class="row py-5 my-5 border-top">
         <div class="col-md-2 text-center pb-3">
             <a href="/"><img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="60rem"></a>
-
-            <h5>SECRETARIAT</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">No 42B, Jalan Eko Botani 3/2, Taman Eko Botani, 79100 Iskandar Puteri, Johor</p></li>
-                <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">Tel: +60 7-509 9897</p></li>
-                <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">Email: <br> jivan@shekhinah.my <br> chris@shekhinah.my </a></li>
-            </ul>
         </div>
         <div class="col-md-10 pb-3">
             <table class="table table-borderless">
                 <tr>
+                    <td>
+                        <h5>SECRETARIAT</h5>
+                        <ul class="nav flex-column">
+                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">No 42B, Jalan Eko Botani 3/2, Taman Eko Botani, 79100 Iskandar Puteri, Johor</p></li>
+                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">Tel: +60 7-509 9897</p></li>
+                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">Email: <br> jivan@shekhinah.my <br> chris@shekhinah.my </a></li>
+                        </ul>
+                    </td>
                     <td>
                         <h5>NAVIGATION</h5>
                         <ul class="nav flex-column">
