@@ -1,7 +1,7 @@
 <div class="container">
     <footer class="row py-5 my-5 border-top">
         <div class="col-md-2 text-center pb-3">
-            <a href="/"><img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="" width="60rem"></a>
+            <a href="/"><img class="img-fluid" src="{{ asset('assets/img/hun.png') }}" alt="logo-hun" width="60rem"></a>
         </div>
         <div class="col-md-3 pb-3">
             <table class="table table-borderless">
