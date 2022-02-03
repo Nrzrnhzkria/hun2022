@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Home
+    Hari Usahawan Negara
 @endsection
 
 @section('content')
