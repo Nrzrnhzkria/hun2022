@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\HUNNews;
 use App\Models\Media;
+use App\Models\Booth;
+use App\Models\BoothDetails;
 
 class HomeController extends Controller
 {
@@ -95,7 +97,12 @@ class HomeController extends Controller
 
     public function booth()
     {
-        return view('landingpage.booth');
+        $booth = Booth::orderBy('id', 'desc')->get();
+        $booth_details = BoothDetails::orderBy('id', 'desc')->get();
+
+        $count = 1;
+
+        return view('landingpage.booth', compact('booth', 'booth_details', 'count'));
     }
 
 }
