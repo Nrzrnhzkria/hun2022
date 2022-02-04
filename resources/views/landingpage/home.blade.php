@@ -170,7 +170,6 @@
 
                     <div class="col-auto text-center pt-2">
                         <a href="/booth-information" class="btn btn-warning shadow fw-bold"><i class="bi bi-info-circle-fill"></i> Booth Information</a>
-                        {{-- <a href="/registration" class="btn btn-warning shadow fw-bold"><i class="bi bi-people-fill"></i> Vendor Registration</a> --}}
                     </div>
                 </div>
             </div>

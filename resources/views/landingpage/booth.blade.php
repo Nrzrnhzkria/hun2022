@@ -43,7 +43,12 @@
                     </table>
                 </div>
             @endforeach
+            
+            <div class="col-auto text-center pt-2">
+                <a href="/registration" class="btn btn-warning fw-bold"><i class="bi bi-people-fill"></i> Register Now</a>
+            </div>
         </div>
+        
     </div>
 </div>
 
