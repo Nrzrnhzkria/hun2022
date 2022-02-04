@@ -31,7 +31,7 @@ Route::get('media', 'HomeController@media');
 Route::get('media/{media_id}', 'HomeController@readmedia');
 Route::get('contact', 'HomeController@contact');
 Route::get('policy', 'HomeController@policy');
-Route::get('booth', 'HomeControllerbooth');
+Route::get('booth', 'HomeController@booth');
 
 /* ------------------------------------------------------------------------------------ //
 | Vendor Registration
