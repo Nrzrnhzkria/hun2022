@@ -11,7 +11,7 @@
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><p class="nav-link p-0 text-muted text-break">No 30-2, Jalan 9/23a, Off Jalan Usahawan, 53200 Setapak, Kuala Lumpur.</p></li>
                             <li class="nav-item mb-2"><p class="nav-link p-0 text-muted">Tel: 03 8311 4141</p></li>
-                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted text-break">Email: Info.hun22@gmail.com/dahniaga@gmail.com </p></li>
+                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted text-break">Email: <br> Info.hun22@gmail.com <br> dahniaga@gmail.com </p></li>
                         </ul>
                     </td>
                 </tr>
