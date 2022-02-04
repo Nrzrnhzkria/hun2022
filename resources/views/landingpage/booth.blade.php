@@ -12,7 +12,7 @@
 
         <div class="col-md-12 pt-3">
             <div class="card mb-3">
-                <img class="img-fluid" src="{{ asset('assets/img/events/booth2.jpg') }}">
+                <img class="img-fluid" src="{{ asset('assets/img/booth.jpg') }}">
             </div>
         </div>
     </div>
