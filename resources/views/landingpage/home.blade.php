@@ -165,7 +165,7 @@
                     </ul>
 
                     <div class="col-auto text-center pt-2">
-                        <a href="/booth-information" class="btn btn-dark shadow fw-bold"><i class="bi bi-info-circle-fill"></i> Booth Information</a>
+                        <a href="/booth-information" class="btn btn-outline-dark shadow fw-bold"><i class="bi bi-info-circle-fill"></i> Booth Information</a>
                     </div>
                 </div>
             </div>
