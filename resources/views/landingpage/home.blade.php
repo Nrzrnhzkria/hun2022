@@ -93,9 +93,6 @@
                     <img src="{{ asset('assets/img/slider01.jpg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('assets/img/TRUCK-1.png') }}" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
                     <img src="{{ asset('assets/img/bonanza.jpeg') }}" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
