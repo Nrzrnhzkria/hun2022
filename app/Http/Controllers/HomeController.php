@@ -93,4 +93,9 @@ class HomeController extends Controller
         return view('landingpage.policy');
     }
 
+    public function booth()
+    {
+        return view('landingpage.booth');
+    }
+
 }
