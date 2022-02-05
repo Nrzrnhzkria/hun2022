@@ -14,7 +14,7 @@
             <div class="card px-4 py-4">
                 <div class="row pb-4">
                     <div class="col-md-12 text-center">        
-                        <img class="img-fluid" src="{{ $media->img_name }}" style="width:15rem; height:15rem" alt="">
+                        <img class="img-fluid" src="{{ $media->img_name }}" alt="">
                     </div>
                 </div>
 
