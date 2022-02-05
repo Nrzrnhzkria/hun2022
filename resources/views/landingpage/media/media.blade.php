@@ -18,7 +18,6 @@
     <div class="row px-2">
         <h1 class="text-center border-bottom pt-5">Media</h1>
         
-        <div class="col-md-12 pt-3">
         @foreach ($medias as $media)
             <a href="{{ url('media') }}/{{ $media->id }}" class="text-dark text-decoration-none">  
                 <div class="card shadow mb-3" style="width: 18rem;">
@@ -43,7 +42,6 @@
                 </div> --}}
             </a>
         @endforeach
-        </div>
     </div>
 </div>
 
