@@ -658,7 +658,8 @@ class VendorController extends Controller
     //----------------------------------- Update Pending Payment -----------------------------------//
     public function update_payment($user_id, Request $request){
   
-        return view('landingpage.register.pending_payment');
+        $payment = Membership::where('payer_id', $user_id)->first();
+        return view('landingpage.register.pending_payment', compact('payment'));
 
     }
 
