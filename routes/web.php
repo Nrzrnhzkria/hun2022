@@ -53,6 +53,8 @@ Route::post('choose-booth/store', 'VendorController@store_booth');
 // Existing Vendor
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
 Route::post('exist-registration/store/{user_id}', 'VendorController@store_update');
+// Update Pending Payment
+Route::get('update-payment/{user_id}', 'VendorController@update_payment');
 
 Route::get('membership', 'TransactionController@create_bill');
 Route::get('membership-status', 'TransactionController@payment_status');

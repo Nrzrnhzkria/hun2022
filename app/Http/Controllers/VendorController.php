@@ -28,16 +28,18 @@ class VendorController extends Controller
     public function check_ic(Request $request)
     {
         $check = User::where('ic_no', $request->ic_no)->first();
+        $payment = Membership::where('payer_id', $check->id)->first();
 
-        if(User::where('ic_no', $request->ic_no)->exists() && Membership::where('payer_id', $check->id)->first()){
+        if(User::where('ic_no', $request->ic_no)->exists() && $payment->status == 'success'){
 
-            // dd('Update Registration');
-            $vendor = User::where('ic_no', $request->ic_no)->first();
-            return redirect('update-registration/' . $vendor->id);
+            return redirect('update-registration/' . $check->id);
 
+        }elseif(User::where('ic_no', $request->ic_no)->exists() && $payment->status == 'failed' ||  $payment->status == NULL){
+            
+            return redirect('update-payment/' . $check->id);
+            
         }else{
 
-            // dd('New Registration');
             return redirect('new-registration/' . $request->ic_no);
 
         }
@@ -652,4 +654,12 @@ class VendorController extends Controller
             // dd($coupon);
         return redirect('update-registration/'.  $user_id)->with('update','Your registration has been updated successfully.');
     }
+
+    //----------------------------------- Update Pending Payment -----------------------------------//
+    public function update_payment($user_id, Request $request){
+  
+        return view('landingpage.register.pending_payment');
+
+    }
+
 }
