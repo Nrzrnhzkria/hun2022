@@ -39,7 +39,7 @@
 
     <div class="row pb-4">
       <div class="col-md-8">
-        <div class="card border-0 bg-transparent text-center" style="height: 22rem">
+        <div class="card border-0 bg-transparent text-center" style="height: 40rem">
           <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
         </div>
       </div>
