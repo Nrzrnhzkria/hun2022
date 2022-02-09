@@ -26,12 +26,8 @@
                             <p style="font-size: 10pt; color:#202020; text-align: left;"><em>Ex.: 91042409**** / A********</em></p>
                         </div>
                         <div class="col-md-12">
-                            <div class="text-start">
-                                <a href="/booth-information">Booth Information</a>
-                            </div>
-                            <div class="text-end">
-                                <button type="submit" class="btn btn-warning fw-bold">Next</button>
-                            </div>
+                            <a href="/booth-information" class="text-start"><i class="bi bi-info-circle-fill"></i> Booth Information</a>
+                            <button type="submit" class="btn btn-warning text-end fw-bold">Next</button>
                         </div>
                     </form>
                 </div>
