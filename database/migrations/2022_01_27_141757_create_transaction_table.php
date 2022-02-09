@@ -16,7 +16,7 @@ class CreateTransactionTable extends Migration
         Schema::create('membership', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('payer_id');
-            $table->foreign('payer_id')->references('id')->on('users');  
+            $table->foreign('payer_id')->references('id')->on('users')->onDelete('cascade');  
             $table->smallInteger('amount'); 
             $table->string('status')->nullable();
             $table->string('senangpay_id'); 

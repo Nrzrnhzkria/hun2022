@@ -16,9 +16,9 @@ class CreateSeminarAttendanceTable extends Migration
         Schema::create('seminar_attendance', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('seminar_id');
-            $table->foreign('seminar_id')->references('id')->on('seminar_qr');
+            $table->foreign('seminar_id')->references('id')->on('seminar_qr')->onDelete('cascade');
             $table->string('status'); 
             $table->time('time_in')->nullable();
             $table->timestamps();

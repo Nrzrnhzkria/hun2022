@@ -16,7 +16,7 @@ class CreateHunNewsTable extends Migration
         Schema::create('hun_news', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('title');  
             $table->longText('content'); 
             $table->longText('teaser')->nullable(); 

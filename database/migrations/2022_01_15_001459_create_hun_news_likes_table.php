@@ -16,9 +16,9 @@ class CreateHunNewsLikesTable extends Migration
         Schema::create('hun_news_likes', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('news_id');
-            $table->foreign('news_id')->references('id')->on('hun_news');
+            $table->foreign('news_id')->references('id')->on('hun_news')->onDelete('cascade');
             $table->timestamps();
         });
     }
