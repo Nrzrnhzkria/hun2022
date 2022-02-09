@@ -271,14 +271,14 @@ class DashboardController extends Controller
 
     public function destroy_user($user_id){
 
-        $coupon = Coupon::where('id', $user_id);
-        $news = HUNNews::where('id', $user_id);
-        $newslikes = HUNNewsLikes::where('id', $user_id);
-        $media = Media::where('id', $user_id);
-        $membership = Membership::where('id', $user_id);
-        $redeem = Redeem::where('id', $user_id);
-        $attendance = SeminarAttendance::where('id', $user_id);
-        $vendor_details = VendorDetails::where('id', $user_id);
+        $coupon = Coupon::where('vendor_id', $user_id);
+        $news = HUNNews::where('user_id', $user_id);
+        $newslikes = HUNNewsLikes::where('user_id', $user_id);
+        $media = Media::where('user_id', $user_id);
+        $membership = Membership::where('payer_id', $user_id);
+        $redeem = Redeem::where('user_id', $user_id);
+        $attendance = SeminarAttendance::where('user_id', $user_id);
+        $vendor_details = VendorDetails::where('user_id', $user_id);
         $user = User::where('id', $user_id);
         
         $coupon->delete();
