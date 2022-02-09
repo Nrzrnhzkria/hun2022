@@ -195,7 +195,7 @@
         <div class="col-md-6 text-center pt-5">
             <h3>DOWNLOAD HUN22 OFFICIAL <br> MOBILE APP</h3>
             <p>Available in Apple App Store and Google Playstore</p>
-            <a href="#"><img class="img-fluid" src="{{ asset('assets/img/appstore.png') }}" width="23.5%"></a>
+            <a href="https://apps.apple.com/my/app/hari-usahawan-negara-hun/id1608371924"><img class="img-fluid" src="{{ asset('assets/img/appstore.png') }}" width="23.5%"></a>
             <a href="https://play.google.com/store/apps/details?id=my.hariusahawannegara.com"><img class="img-fluid" src="{{ asset('assets/img/playstore.png') }}" width="28%"></a>
         </div>
     </div>
