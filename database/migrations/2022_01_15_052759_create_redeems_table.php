@@ -16,7 +16,7 @@ class CreateRedeemsTable extends Migration
         Schema::create('redeems', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('coupon_id');
             $table->foreign('coupon_id')->references('id')->on('coupon');
             $table->timestamps();

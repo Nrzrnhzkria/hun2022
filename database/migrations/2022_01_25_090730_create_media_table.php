@@ -16,7 +16,7 @@ class CreateMediaTable extends Migration
         Schema::create('media', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->string('title');  
             $table->longText('content'); 
             $table->longText('teaser')->nullable(); 
