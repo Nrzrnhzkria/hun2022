@@ -28,13 +28,12 @@ class VendorController extends Controller
     public function check_ic(Request $request)
     {
         $check = User::where('ic_no', $request->ic_no)->first();
-        $payment = Membership::where('payer_id', $check->id)->first();
 
-        if(User::where('ic_no', $request->ic_no)->exists() && $payment->status == 'success'){
+        if(User::where('ic_no', $request->ic_no)->exists() && Membership::where('payer_id', $check->id)->where('status', 'success')->first()){
 
             return redirect('update-registration/' . $check->id);
 
-        }elseif(User::where('ic_no', $request->ic_no)->exists() && $payment->status == 'failed' ||  $payment->status == NULL){
+        }elseif(User::where('ic_no', $request->ic_no)->exists() && Membership::where('payer_id', $check->id)->where('status', 'failed')->orWhere('status', NULL)->first()){
             
             return redirect('update-payment/' . $check->id);
             
