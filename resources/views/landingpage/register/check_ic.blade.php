@@ -25,8 +25,13 @@
                             <input type="text" class="form-control" name="ic_no" placeholder="without '-'" maxlength="12" required="" >
                             <p style="font-size: 10pt; color:#202020; text-align: left;"><em>Ex.: 91042409**** / A********</em></p>
                         </div>
-                        <div class="col-md-12 text-end">
-                            <button type="submit" class="btn btn-warning fw-bold">Next</button>
+                        <div class="col-md-12">
+                            <div class="text-start">
+                                <a href="/booth-information">Booth Information</a>
+                            </div>
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-warning fw-bold">Next</button>
+                            </div>
                         </div>
                     </form>
                 </div>
