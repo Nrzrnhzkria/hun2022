@@ -138,7 +138,19 @@
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                        Are you sure you want to delete this admin ?
+                                        <p>Are you sure you want to delete this admin ?</p>
+                                        <p>This table may be affected after deletion :</p>
+                                        <ul>
+                                            <li>Coupon</li>
+                                            <li>HUN News</li>
+                                            <li>HUN News Likes</li>
+                                            <li>Media</li>
+                                            <li>Membership</li>
+                                            <li>Redeem</li>
+                                            <li>Seminar Attendance</li>
+                                            <li>User</li>
+                                            <li>Vendor Details</li>
+                                        </ul>
                                         </div>
                                         <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
