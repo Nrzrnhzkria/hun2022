@@ -5,7 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Coupon;
+use App\Models\HUNNews;
+use App\Models\HUNNewsLikes;
+use App\Models\Media;
 use App\Models\Membership;
+use App\Models\Redeem;
+use App\Models\SeminarAttendance;
 use App\Models\Booth;
 use App\Models\BoothDetails;
 use App\Models\VendorDetails;
@@ -196,9 +201,27 @@ class DashboardController extends Controller
     }
 
     public function destroy_admin($user_id){
+
+        $coupon = Coupon::where('vendor_id', $user_id);
+        $news = HUNNews::where('user_id', $user_id);
+        $newslikes = HUNNewsLikes::where('user_id', $user_id);
+        $media = Media::where('user_id', $user_id);
+        $membership = Membership::where('payer_id', $user_id);
+        $redeem = Redeem::where('user_id', $user_id);
+        $attendance = SeminarAttendance::where('user_id', $user_id);
+        $vendor_details = VendorDetails::where('user_id', $user_id);
         $user = User::where('id', $user_id);
         
+        $coupon->delete();
+        $news->delete();
+        $newslikes->delete();
+        $media->delete();
+        $membership->delete();
+        $redeem->delete();
+        $attendance->delete();
+        $vendor_details->delete();
         $user->delete();
+        
         return redirect('admins')->with('deleteuser','User has been deleted successfully.');
     }
 
@@ -265,9 +288,28 @@ class DashboardController extends Controller
     }
 
     public function destroy_user($user_id){
+
+        $coupon = Coupon::where('vendor_id', $user_id);
+        $news = HUNNews::where('user_id', $user_id);
+        $newslikes = HUNNewsLikes::where('user_id', $user_id);
+        $media = Media::where('user_id', $user_id);
+        $membership = Membership::where('payer_id', $user_id);
+        $redeem = Redeem::where('user_id', $user_id);
+        $attendance = SeminarAttendance::where('user_id', $user_id);
+        $vendor_details = VendorDetails::where('user_id', $user_id);
         $user = User::where('id', $user_id);
         
+        $coupon->delete();
+        $news->delete();
+        $newslikes->delete();
+        $media->delete();
+        $membership->delete();
+        $redeem->delete();
+        $attendance->delete();
+        $vendor_details->delete();
         $user->delete();
+
         return redirect('users')->with('deleteuser','User has been deleted successfully.');
+
     }
 }

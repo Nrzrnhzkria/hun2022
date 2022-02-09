@@ -30,7 +30,7 @@
                             {{-- <th scope="col">#</th> --}}
                             <th scope="col">HUN ID</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Role</th>
+                            <th scope="col">Email</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
@@ -40,7 +40,7 @@
                             {{-- <th scope="row">{{ $members->firstItem() + $key }}</th> --}}
                             <th>{{ $member->hun_id }}</th>
                             <td>{{ $member->name }}</td>
-                            <td class="text-capitalize">{{ $member->role }}</td>
+                            <td>{{ $member->email }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-user') }}/{{ $member->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
