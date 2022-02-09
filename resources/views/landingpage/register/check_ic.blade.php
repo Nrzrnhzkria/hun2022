@@ -27,7 +27,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-6 text-start">                                    
-                                <a href="/booth-information" class="btn btn-link"><i class="bi bi-info-circle-fill"></i> Booth Information</a>
+                                <a href="/booth-information" class="btn btn-link pl-0"><i class="bi bi-info-circle-fill"></i> Booth Information</a>
                             </div>
                             <div class="col-md-6 text-end"> 
                                 <button type="submit" class="btn btn-warning fw-bold">Next</button>
