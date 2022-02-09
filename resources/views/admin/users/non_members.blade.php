@@ -43,7 +43,7 @@
                         <tr>
                             {{-- <th scope="row">{{ $users->firstItem() + $key }}</th> --}}
                             <th>{{ $user->name }}</th>
-                            <td class="text-capitalize">{{ $user->email }}</td>
+                            <td>{{ $user->email }}</td>
                             <td class="text-center">
                                 <a href="{{ url('update-user') }}/{{ $user->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                             </td>
