@@ -39,13 +39,15 @@
 
     <div class="row pb-4">
       <div class="col-md-8">
-        <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+        <div class="card border-0 bg-transparent text-center" style="height: 22rem">
+          <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+        </div>
       </div>
       <div class="col-md-4">
         <div class="card border-0 shadow text-center" style="height: 22rem">
           <h6 class="pt-4">HUN Membership</h6>
           <canvas id="memberChart" style="width:100%; max-width:600px; height:55%; max-height:800px;"></canvas>
-          <div class="table-responsive p-2">
+          <div class="table-responsive p-2 pt-3">
             <table class="table table-borderless table-sm">
               <tr>
                 <td class="text-end">Members</td>
