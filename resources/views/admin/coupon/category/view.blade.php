@@ -24,7 +24,7 @@
                         </div>
                         <form action="{{ url('store-category') }}" method="POST"> 
                             @csrf
-                            <div class="form-group row px-4">
+                            <div class="form-group row px-4 pb-2">
                                 <label for="name" class="col-sm-4 col-form-label">Category Name</label>
                                 <div class="col-sm-8">
                                 <input type="text" class="form-control" name="category_name" placeholder="Entrepreneur Booth" required>
