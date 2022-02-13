@@ -83,7 +83,6 @@
                             <th>{{ $category->category_name }}</th>
                             <td>{{ $category->img_name }}</td>
                             <td class="text-center">
-                                <a href="{{ url('update-category') }}/{{ $category->id }}" class="btn btn-dark"><i class="bi bi-chevron-right"></i></a>
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#updateCategory{{ $category->id }}">
                                     <i class="bi bi-chevron-right"></i>
@@ -110,7 +109,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12 text-end p-4">
-                                                    <a href="{{ url('delete-category') }}/{{ $category->id }}" class="btn btn-outline-danger">Delete</a>
+                                                    <a href="{{ url('delete-category') }}/{{ $category->id }}" class="btn btn-outline-danger"><i class="bi bi-archive-fill"></i> Delete</a>
                                                     <button type="submit" class="btn btn-success"> <i class="bi bi-save"></i> Save</button>
                                                 </div>
                                             </form>
