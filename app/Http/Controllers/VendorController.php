@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\VendorDetails;
 use App\Models\Coupon;
+use App\Models\CouponCategories;
 use App\Models\Membership;
 use App\Models\Booth;
 use App\Models\BoothDetails;
@@ -52,10 +53,11 @@ class VendorController extends Controller
 
         $booth = Booth::orderBy('id', 'desc')->get();
         $booth_details = BoothDetails::orderBy('id', 'desc')->get();
+        $categories = CouponCategories::orderBy('id', 'desc')->get();
 
         $count = 1;
 
-        return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'count', 'vendor_ic'));
+        return view('landingpage.register.new_vendor', compact('booth', 'booth_details', 'count', 'vendor_ic', 'categories'));
     }
 
     public function store_vendor($get_ic, Request $request){
