@@ -95,13 +95,6 @@ class CouponController extends Controller
         return redirect('view-category')->with('addcategory','Category has been created successfully.');
     }
 
-    public function update_category($category_id)
-    {        
-        $category = CouponCategories::where('id', $category_id)->first();
-
-        return view('admin.coupon.update', compact('vendor', 'coupons')); 
-    }
-
     public function edit_category($category_id, Request $request)
     {
         $category = CouponCategories::where('id', $category_id)->first();
