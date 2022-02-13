@@ -80,6 +80,11 @@ Route::get('coupon', 'CouponController@coupon');
 Route::get('update-coupon/{vendor_id}', 'CouponController@update_coupon');
 // Route::post('edit-coupon/{vendor_id}', 'CouponController@edit_coupon');
 Route::get('delete-coupon/{coupon_id}', 'CouponController@destroy_coupon');
+Route::get('view-category', 'CouponController@category');
+Route::get('create-category', 'CouponController@create_category');
+Route::get('update-category/{category_id}', 'CouponController@update_category');
+Route::post('edit-category/{category_id}', 'CouponController@edit_category');
+Route::get('delete-category/{category_id}', 'CouponController@destroy_category');
 // Media Management
 Route::get('admin-media', 'MediaController@media');
 Route::get('create-media', 'MediaController@create_media');

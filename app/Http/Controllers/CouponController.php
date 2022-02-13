@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request; 
 use App\Models\Coupon;
+use App\Models\CouponCategories;
 use App\Models\Membership;
 use App\Models\User;
 use App\Models\VendorDetails;
@@ -65,5 +66,47 @@ class CouponController extends Controller
         
         $coupons->delete();
         return redirect('coupon')->with('deletecoupon','Coupon has been deleted successfully.');
+    }
+
+    public function category()
+    {
+        $categories = CouponCategories::orderBy('id', 'asc')->paginate(15);
+
+        return view('admin.coupon.category.view', compact('categories'));
+    }
+
+    public function update_category($category_id)
+    {        
+        $category = CouponCategories::where('id', $category_id)->first();
+
+        return view('admin.coupon.update', compact('vendor', 'coupons')); 
+    }
+
+    public function edit_category($category_id, Request $request)
+    {
+        $category = CouponCategories::where('id', $category_id)->first();
+
+        if($request->hasFile('img_name'))
+        {
+            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+            $img_name = 'https://hariusahawannegara.com.my/assets/img/coupon_categories/' . $imagename;
+            $request->img_name->move(public_path('assets/img/coupon_categories'), $imagename);
+        }
+
+        $category->category_name = $request->category_name;
+        if($request->hasFile('img_name'))
+        {
+            $category->img_name = $img_name;
+        }
+        $category->save();
+
+        return redirect('view-category')->with('updatecategory','Category has been updated successfully.'); 
+    }
+
+    public function destroy_category($category_id){
+        $category = Coupon::where('id', $category_id);
+        
+        $category->delete();
+        return redirect('view-category')->with('deletecategory','Category has been deleted successfully.');
     }
 }
