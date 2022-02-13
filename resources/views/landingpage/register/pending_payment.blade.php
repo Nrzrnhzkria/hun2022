@@ -15,7 +15,7 @@
             </div>
             <p>Click button below if you wish to proceed the payment</p>
             <hr>
-            <a href="https://toyyibpay.com/{{ $payment->toyyib_billcode }}" class="btn btn-lg btn-warning">Proceed >></a>
+            <a href="https://toyyibpay.com/{{ $payment->toyyib_billcode }}" class="btn btn-lg btn-warning fw-bold">Proceed</a>
         {{-- <p> Please feel free to contact us and show the <b>Bill ID</b> if you wish to proceed the payment, thank you.</p> --}}
         </div>
     </div>
