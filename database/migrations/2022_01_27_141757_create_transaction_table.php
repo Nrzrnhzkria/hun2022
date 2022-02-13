@@ -22,6 +22,7 @@ class CreateTransactionTable extends Migration
             $table->string('senangpay_id'); 
             $table->string('booth_id')->nullable();
             $table->string('details_id')->nullable();
+            $table->string('toyyib_billcode')->nullable();
             $table->timestamps();
         });
     }

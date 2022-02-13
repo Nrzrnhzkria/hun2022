@@ -240,11 +240,14 @@ class VendorController extends Controller
         // return $response;
         $status = request()->status_id;
         $bill_id = request()->order_id;
+        $toyyib_billcode = request()->billcode;
+
         $payment = Membership::where('senangpay_id', $bill_id)->first();
 
         if($status == 1){
             
             $payment->status = 'success';
+            $payment->toyyib_billcode = $toyyib_billcode;
             $payment->save();
 
             return view('landingpage.register.success');
@@ -252,6 +255,7 @@ class VendorController extends Controller
         }else{
 
             $payment->status = 'failed';
+            $payment->toyyib_billcode = $toyyib_billcode;
             $payment->save();
 
             return view('landingpage.register.failed');

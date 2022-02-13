@@ -13,9 +13,11 @@ class Transaction extends Model
 
     protected $fillable = [
         'payer_id',
-        'coupon_id',
         'vendor_id',
         'amount',
         'senangpay_id', 
+        'booth_id',
+        'details_id',
+        'toyyib_billcode', 
     ];
 }
