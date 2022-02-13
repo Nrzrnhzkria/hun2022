@@ -53,7 +53,7 @@ class VendorController extends Controller
 
         $booth = Booth::orderBy('id', 'desc')->get();
         $booth_details = BoothDetails::orderBy('id', 'desc')->get();
-        $categories = CouponCategories::orderBy('id', 'desc')->get();
+        $categories = CouponCategories::orderBy('id', 'asc')->get();
 
         $count = 1;
 
