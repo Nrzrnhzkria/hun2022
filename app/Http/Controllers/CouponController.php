@@ -82,18 +82,17 @@ class CouponController extends Controller
             'img_name' => 'required'
         ]);
 
-        dd($request->img_name);
-        // $category_path = 'public/admin/coupon_categories';
-        // $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
-        // $request->file('img_name')->storeAs($category_path, $path);
-        // $category_image = 'https://hariusahawannegara.com.my/storage/admin/coupon_categories/' . $path;
+        $category_path = 'public/admin/coupon_categories';
+        $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
+        $request->file('img_name')->storeAs($category_path, $path);
+        $category_image = 'https://hariusahawannegara.com.my/storage/admin/coupon_categories/' . $path;
 
-        // CouponCategories::create([
-        //     'category_name' => $request->category_name,
-        //     'img_name' => $request->$category_image
-        // ]);
+        CouponCategories::create([
+            'category_name' => $request->category_name,
+            'img_name' => $request->$category_image
+        ]);
 
-        // return redirect('view-category')->with('addcategory','Category has been created successfully.');
+        return redirect('view-category')->with('addcategory','Category has been created successfully.');
     }
 
     public function update_category($category_id)
