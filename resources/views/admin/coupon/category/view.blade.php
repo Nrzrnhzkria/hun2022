@@ -27,7 +27,7 @@
                             <div class="form-group row px-4 pb-2">
                                 <label for="name" class="col-sm-4 col-form-label">Category Name</label>
                                 <div class="col-sm-8">
-                                <input type="text" class="form-control" name="category_name" placeholder="Entrepreneur Booth" required>
+                                <input type="text" class="form-control" name="category_name" placeholder="Category Name" required>
                                 </div>
                             </div>
                             <div class="form-group row px-4">
