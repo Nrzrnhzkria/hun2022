@@ -521,6 +521,7 @@ class VendorController extends Controller
         $details = VendorDetails::where('user_id', $user_id)->first();
         $payment = Membership::where('payer_id', $user_id)->first();
         $coupon = Coupon::where('vendor_id', $user_id)->get();
+        $categories = CouponCategories::orderBy('id', 'asc')->get();
 
         $booth_id = $payment->booth_id;
         $details_id = $payment->details_id;
@@ -531,7 +532,7 @@ class VendorController extends Controller
         // $details = $request->session()->get('vendor_details');
         // $coupon = $request->session()->get('coupon');
   
-        return view('landingpage.register.exist_vendor', compact('vendor', 'details', 'payment', 'coupon', 'booth_name', 'booth_type'));
+        return view('landingpage.register.exist_vendor', compact('vendor', 'details', 'payment', 'coupon', 'categories', 'booth_name', 'booth_type'));
     }
 
     public function store_update($user_id, Request $request)
