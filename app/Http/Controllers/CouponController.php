@@ -75,6 +75,26 @@ class CouponController extends Controller
         return view('admin.coupon.category.view', compact('categories'));
     }
 
+    public function store_category(Request $request)
+    {             
+        $datavalidation = $request->validate([
+            'category_name' => 'required',
+            'img_name' => 'required'
+        ]);
+
+        $category_path = 'public/admin/coupon_categories';
+        $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
+        $request->file('img_name')->storeAs($category_path, $path);
+        $category_image = 'https://hariusahawannegara.com.my/storage/admin/coupon_categories/' . $path;
+
+        CouponCategories::create([
+            'category_name' => $request->category_name,
+            'img_name' => $request->$category_image
+        ]);
+
+        return redirect('view-category')->with('addcategory','Category has been created successfully.');
+    }
+
     public function update_category($category_id)
     {        
         $category = CouponCategories::where('id', $category_id)->first();
