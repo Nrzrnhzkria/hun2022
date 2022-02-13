@@ -117,7 +117,7 @@ class CouponController extends Controller
     }
 
     public function destroy_category($category_id){
-        $category = Coupon::where('id', $category_id);
+        $category = CouponCategories::where('id', $category_id);
         
         $category->delete();
         return redirect('view-category')->with('deletecategory','Category has been deleted successfully.');
