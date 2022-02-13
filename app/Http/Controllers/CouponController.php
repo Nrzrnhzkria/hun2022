@@ -82,7 +82,7 @@ class CouponController extends Controller
             'img_name' => 'required'
         ]);
 
-        dd($request->file('img_name'));
+        dd($request->img_name);
         // $category_path = 'public/admin/coupon_categories';
         // $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
         // $request->file('img_name')->storeAs($category_path, $path);
