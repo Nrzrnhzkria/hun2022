@@ -86,8 +86,8 @@
                 {{-- @for($i=$count; $i<=$totalbanners; $i++)
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $i }}" aria-label="Slide {{ ++$count }}"></button>
                 @endfor --}}
-                @foreach ($banners as $banner)
-                    @if ($banner[0])
+                @foreach ($banners as $key => $banner)
+                    @if ($key == 0)
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     @else
                         @for($i=$count; $i<=$totalbanners; $i++)
