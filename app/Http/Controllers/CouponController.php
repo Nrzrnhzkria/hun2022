@@ -100,21 +100,27 @@ class CouponController extends Controller
     {
         $category = CouponCategories::where('id', $category_id)->first();
 
-        if($request->hasFile('img_name'))
-        {
-            $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
-            $img_name = 'https://hariusahawannegara.com.my/assets/img/coupon_categories/' . $imagename;
-            $request->img_name->move(public_path('assets/img/coupon_categories'), $imagename);
-        }
+        dd($category);
 
-        $category->category_name = $request->category_name;
-        if($request->hasFile('img_name'))
-        {
-            $category->img_name = $img_name;
-        }
-        $category->save();
+        // if($request->hasFile('img_name'))
+        // {
+        //     $category_path = 'public/admin/coupon_categories';
+        //     $path = 'img_' . uniqid().'.'.$request->file('img_name')->extension();
+        //     $request->file('img_name')->storeAs($category_path, $path);
+        //     $category_image = 'https://hariusahawannegara.com.my/storage/admin/coupon_categories/' . $path;
+        //     // $imagename = 'img_' . uniqid().'.'.$request->img_name->extension();
+        //     // $img_name = 'https://hariusahawannegara.com.my/assets/img/coupon_categories/' . $imagename;
+        //     // $request->img_name->move(public_path('assets/img/coupon_categories'), $imagename);
+        // }
 
-        return redirect('view-category')->with('updatecategory','Category has been updated successfully.'); 
+        // $category->category_name = $request->category_name;
+        // if($request->hasFile('img_name'))
+        // {
+        //     $category->img_name = $category_image;
+        // }
+        // $category->save();
+
+        // return redirect('view-category')->with('updatecategory','Category has been updated successfully.'); 
     }
 
     public function destroy_category($category_id){
