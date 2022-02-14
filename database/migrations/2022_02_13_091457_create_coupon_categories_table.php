@@ -17,6 +17,7 @@ class CreateCouponCategoriesTable extends Migration
             $table->id();
             $table->string('category_name'); 
             $table->string('img_name'); 
+            $table->timestamps();
         });
     }
 
