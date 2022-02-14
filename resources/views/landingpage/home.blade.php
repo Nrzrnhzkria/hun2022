@@ -81,10 +81,7 @@
 <div class="container py-4">
 
     <div class="row pb-4">
-        @foreach ($banners as $banner)
-            <img src="{{ $banner->img_name }}" class="d-block w-100" alt="banner">
-        @endforeach
-        {{-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -105,7 +102,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div> --}}
+        </div>
     </div>
 
     <div class="row py-4">        
