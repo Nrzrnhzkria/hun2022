@@ -94,7 +94,7 @@
                   <div class="carousel-inner">
                     @foreach($banners as $slider)
                     <div class="item image {{ $loop->first ? ' active' : '' }}">
-                      <img src="{{ $banner->img_name }}" alt="slider" title="Image Slideshow">
+                      <img src="{{ $slider->img_name }}" alt="slider" title="Image Slideshow">
                     </div>
                     @endforeach
                   </div>
