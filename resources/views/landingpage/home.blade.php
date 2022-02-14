@@ -90,7 +90,9 @@
                     @if ($key == 0)
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                     @else
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $count++ }}" aria-label="Slide {{ ++$count }}"></button>
+                        @for($i=$count; $i<=$totalbanners; $i++)
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $i++ }}" aria-label="Slide {{ ++$i }}"></button>
+                        @endfor
                     @endif
                 @endforeach
                 {{-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> --}}
