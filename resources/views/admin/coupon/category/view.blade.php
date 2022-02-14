@@ -76,7 +76,7 @@
                     <thead class="table-dark">
                         <tr>
                             <th scope="col">Category</th>
-                            <th scope="col">Image</th>
+                            <th scope="col" class="text-center">Image</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
@@ -84,7 +84,7 @@
                         @foreach ($categories as $category)
                         <tr>
                             <th>{{ $category->category_name }}</th>
-                            <td>
+                            <td class="text-center">
                                 @if ($category->img_name == null)
                                     <p>No Image</p>                                  
                                 @else
