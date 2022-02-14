@@ -116,11 +116,11 @@ class CouponController extends Controller
         {
             $category->img_name = $category_image;
         }
-        // $category->save();
+        $category->save();
 
-        dd($category);
+        // dd($category);
 
-        // return redirect('view-category')->with('updatecategory','Category has been updated successfully.'); 
+        return redirect('view-category')->with('updatecategory','Category has been updated successfully.'); 
     }
 
     public function destroy_category($category_id){
