@@ -85,10 +85,10 @@
                         <tr>
                             <th>{{ $category->category_name }}</th>
                             <td>
-                                @if ($category->has('img_name'))
-                                    <img src="{{ $category->img_name }}" height="50rem" alt="coupon_category"></td>                                    
+                                @if ($category->img_name == null)
+                                    <p>No Image</p>                                  
                                 @else
-                                    <p>No Image</p>
+                                    <img src="{{ $category->img_name }}" height="50rem" alt="coupon_category"></td>  
                                 @endif
                             <td class="text-center">
                                 <!-- Button trigger modal -->
