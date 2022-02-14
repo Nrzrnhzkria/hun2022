@@ -30,8 +30,8 @@ class HomeController extends Controller
     {
         $news = HUNNews::orderBy('id', 'desc')->get();
         $banners = Banner::orderBy('id', 'desc')->get();
-        dd($banners);
-        // return view('landingpage.home', compact('news', 'banners'));
+        
+        return view('landingpage.home', compact('news', 'banners'));
     }
 
     public function preface()
