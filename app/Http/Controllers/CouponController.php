@@ -87,7 +87,7 @@ class CouponController extends Controller
         $request->file('img_name')->storeAs($category_path, $path);
         $category_image = 'https://hariusahawannegara.com.my/storage/admin/coupon_categories/' . $path;
 
-        dd($request->$category_image);
+        dd($category_image);
         // CouponCategories::create([
         //     'category_name' => $request->category_name,
         //     'img_name' => $request->$category_image
