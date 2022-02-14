@@ -84,7 +84,12 @@
                         @foreach ($categories as $category)
                         <tr>
                             <th>{{ $category->category_name }}</th>
-                            <td><img src="{{ $category->img_name }}" height="50rem" alt="coupon_category"></td>
+                            <td>
+                                @if ($category->has('img_name'))
+                                    <img src="{{ $category->img_name }}" height="50rem" alt="coupon_category"></td>                                    
+                                @else
+                                    <p>No Image</p>
+                                @endif
                             <td class="text-center">
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#updateCategory{{ $category->id }}">
