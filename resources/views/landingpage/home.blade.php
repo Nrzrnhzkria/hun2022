@@ -81,38 +81,11 @@
 <div class="container py-4">
 
     <div class="row pb-4">
-        <div class="group-home-slideshow">
-            <div class="home-slideshow-inner col-sm-12">
-              <div class="home-slideshow">
-                <div id="home_main-slider" class="carousel slide">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                      @foreach($banners as $photo)
-                          <li data-target="#home_main-slider" data-slide-to="{{ $loop->index }}" class="{{ $loop->first ? 'active' : '' }}"></li>
-                      @endforeach
-                  </ol>
-                  <div class="carousel-inner">
-                    @foreach($banners as $slider)
-                    <div class="item image {{ $loop->first ? ' active' : '' }}">
-                      <img src="{{ $slider->img_name }}" alt="slider" title="Image Slideshow">
-                    </div>
-                    @endforeach
-                  </div>
-                  <a class="left carousel-control" href="#home_main-slider" data-slide="prev">
-                    <span class="icon-prev"></span>
-                  </a>
-                  <a class="right carousel-control" href="#home_main-slider" data-slide="next">
-                    <span class="icon-next"></span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        {{-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 {{-- @for($i=$count; $i<=$totalbanners; $i++)
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $i }}" aria-label="Slide {{ ++$count }}"></button>
-                @endfor 
+                @endfor --}}
                 @foreach ($banners as $key => $banner)
                     @if ($key == 0)
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -120,7 +93,7 @@
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $count++ }}" aria-label="Slide {{ ++$count }}"></button>
                     @endif
                 @endforeach
-                {{-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> 
+                {{-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> --}}
             </div>
             <div class="carousel-inner">
                 @foreach ($banners as $key => $banner)
@@ -137,7 +110,7 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
-        </div> --}}
+        </div>
     </div>
 
     <div class="row py-4">        
