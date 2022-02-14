@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\HUNNews;
 use App\Models\Media;
+use App\Models\Banner;
 use App\Models\Booth;
 use App\Models\BoothDetails;
 
@@ -28,7 +29,9 @@ class HomeController extends Controller
     public function home()
     {
         $news = HUNNews::orderBy('id', 'desc')->get();
-        return view('landingpage.home', compact('news'));
+        $banners = Banner::orderBy('id', 'desc')->get();
+
+        return view('landingpage.home', compact('news', 'banners'));
     }
 
     public function preface()
