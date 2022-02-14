@@ -60,6 +60,11 @@ Route::post('membership-callback', 'TransactionController@callback');
 | Admin Panel
 */
 Route::get('dashboard', 'DashboardController@dashboard');
+// Banner Management
+Route::get('banners', 'BannerController@banners');
+Route::get('create-banner', 'BannerController@create_banner');
+Route::post('store-banner', 'BannerController@store_banner');
+Route::get('delete-banner/{news_id}', 'BannerController@destroy_banner');
 // Booth Management
 Route::get('booth', 'BoothController@booth');
 Route::post('store-booth', 'BoothController@store_booth');
