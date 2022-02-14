@@ -29,7 +29,7 @@ class HomeController extends Controller
     public function home()
     {
         $news = HUNNews::orderBy('id', 'desc')->get();
-        $banners = Banner::orderBy('id', 'desc')->get();
+        $banners = Banner::orderBy('id', 'asc')->get();
         $totalbanners = Banner::orderBy('id', 'desc')->count();
         $count = 1;
 
