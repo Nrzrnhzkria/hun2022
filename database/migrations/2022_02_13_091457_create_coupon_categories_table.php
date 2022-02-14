@@ -16,6 +16,7 @@ class CreateCouponCategoriesTable extends Migration
         Schema::create('coupon_categories', function (Blueprint $table) {
             $table->id();
             $table->string('category_name'); 
+            $table->string('img_name'); 
         });
     }
 
