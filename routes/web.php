@@ -78,7 +78,6 @@ Route::get('delete-booth-details/{booth_id}/{details_id}', 'BoothController@dest
 // Coupon Management
 Route::get('coupon', 'CouponController@coupon');
 Route::get('update-coupon/{vendor_id}', 'CouponController@update_coupon');
-// Route::post('edit-coupon/{vendor_id}', 'CouponController@edit_coupon');
 Route::get('delete-coupon/{coupon_id}', 'CouponController@destroy_coupon');
 Route::get('view-category', 'CouponController@category');
 Route::post('store-category', 'CouponController@store_category');
