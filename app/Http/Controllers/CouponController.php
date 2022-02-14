@@ -90,7 +90,7 @@ class CouponController extends Controller
         // dd($category_image);
         CouponCategories::create([
             'category_name' => $request->category_name,
-            'img_name' => $category_image
+            'img_name' => $category_image,
         ]);
 
         return redirect('view-category')->with('addcategory','Category has been created successfully.');
