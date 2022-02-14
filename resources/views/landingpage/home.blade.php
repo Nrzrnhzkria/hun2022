@@ -88,8 +88,8 @@
                 @endfor
             </div>
             <div class="carousel-inner">
-                @foreach ($banners as $banner)
-                    <div class="carousel-item">
+                @foreach ($banners as $key => $banner)
+                    <div class="carousel-item{{ $key == 0 ? ' active' : '' }}">
                         <img src="{{ $banner->img_name }}" class="d-block w-100" alt="banner">
                     </div>
                 @endforeach
