@@ -31,7 +31,7 @@ class HomeController extends Controller
         $news = HUNNews::orderBy('id', 'desc')->get();
         $banners = Banner::orderBy('id', 'desc')->get();
         $totalbanners = Banner::orderBy('id', 'desc')->count();
-        $count = 0;
+        $count = 1;
 
         return view('landingpage.home', compact('news', 'banners' , 'totalbanners', 'count'));
     }
