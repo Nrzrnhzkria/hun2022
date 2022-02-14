@@ -83,9 +83,13 @@
     <div class="row pb-4">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                @for($i=$count; $i<=$totalbanners; $i++)
+                {{-- @for($i=$count; $i<=$totalbanners; $i++)
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{ $i }}" aria-label="Slide {{ ++$count }}"></button>
-                @endfor
+                @endfor --}}
+                
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                {{-- <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> --}}
             </div>
             <div class="carousel-inner">
                 @foreach ($banners as $key => $banner)
