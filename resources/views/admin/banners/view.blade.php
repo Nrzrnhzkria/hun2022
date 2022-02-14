@@ -63,16 +63,14 @@
                 <table class="table">
                     <thead class="table-dark">
                         <tr>
-                            <th scope="col" class="text-center">Banner</th>
+                            <th scope="col">Banner</th>
                             <th scope="col" class="text-center"><i class="bi bi-sliders"></i></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($banners as $banner)
                         <tr>
-                            <td class="text-center">
-                                <img src="{{ $banner->img_name }}" height="50rem" alt="banner">
-                            </td>  
+                            <td><img src="{{ $banner->img_name }}" height="50rem" alt="banner"></td>  
                             <td class="text-center">
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $banner->id }}"><i class="bi bi-trash"></i></button>
