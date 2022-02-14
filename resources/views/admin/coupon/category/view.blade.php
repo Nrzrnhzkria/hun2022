@@ -97,7 +97,7 @@
                                             <div class="modal-header border-bottom-0">
                                                 <h5 class="modal-title" id="exampleModalLabel">Update Category</h5>
                                             </div>
-                                            <form action="{{ url('store-category') }}/{{ $category->id }}" method="POST" enctype="multipart/form-data"> 
+                                            <form action="{{ url('edit-category') }}/{{ $category->id }}" method="POST" enctype="multipart/form-data"> 
                                                 @csrf
                                                 <div class="form-group row px-4 pb-2">
                                                     <label for="name" class="col-sm-4 col-form-label">Category Name</label>
