@@ -44,18 +44,14 @@ Route::post('new-registration/store/{get_ic}', 'VendorController@store_vendor');
 Route::get('payment/{get_ic}', 'VendorController@create_bill');
 Route::get('payment-status', 'VendorController@payment_status');
 Route::post('payment-callback', 'VendorController@callback');
-// Route::post('new-registration/store', 'VendorController@store');
 Route::get('choose-booth', 'VendorController@booth');
 Route::post('choose-booth/store', 'VendorController@store_booth');
-// Route::get('payment', 'VendorController@create_bill');
-// Route::get('payment-status', 'VendorController@payment_status');
-// Route::post('payment-callback', 'VendorController@callback');
 // Existing Vendor
 Route::get('update-registration/{user_id}', 'VendorController@update_register');
 Route::post('exist-registration/store/{user_id}', 'VendorController@store_update');
 // Update Pending Payment
 Route::get('update-payment/{user_id}', 'VendorController@update_payment');
-
+// Test Membership Payment
 Route::get('membership', 'TransactionController@create_bill');
 Route::get('membership-status', 'TransactionController@payment_status');
 Route::post('membership-callback', 'TransactionController@callback');
