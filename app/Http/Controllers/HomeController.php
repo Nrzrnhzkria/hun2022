@@ -32,9 +32,7 @@ class HomeController extends Controller
         $banners = Banner::orderBy('id', 'asc')->get();
         $count = 1;
 
-        dd($banners);
-
-        // return view('landingpage.home', compact('news', 'banners' ,'count'));
+        return view('landingpage.home', compact('news', 'banners' ,'count'));
     }
 
     public function preface()
