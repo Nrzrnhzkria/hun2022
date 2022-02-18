@@ -27,6 +27,10 @@
                         </div>
                         @endif
 
+                        <div class="col-md-12 text-center mb-3">
+                            <img src="{{ $qr->img_name }}" width="300rem">
+                        </div>
+
                         <div class="row mb-3">
                             <label for="seminar_name" class="col-md-4 col-form-label text-md-end">Seminar Name</label>
 
