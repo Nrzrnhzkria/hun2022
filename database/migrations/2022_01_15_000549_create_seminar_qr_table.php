@@ -23,6 +23,7 @@ class CreateSeminarQrTable extends Migration
             $table->time('time_end');
             $table->smallInteger('max_participant'); 
             $table->smallInteger('registered_participant')->default('0'); 
+            $table->string('img_name')->nullable(); 
             $table->timestamps();
         });
     }

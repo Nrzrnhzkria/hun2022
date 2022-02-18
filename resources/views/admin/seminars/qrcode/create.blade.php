@@ -14,7 +14,7 @@
         <div class="col-md-8">
             <div class="card p-3">
                 <div class="card-body">
-                    <form method="POST" action="{{ url('store-qr') }}">
+                    <form method="POST" action="{{ url('store-qr') }}" enctype="multipart/form-data">
                         @csrf
                         
                         @if ($errors->any())
@@ -120,6 +120,20 @@
                                 <input id="time_end" type="time" class="form-control @error('time_end') is-invalid @enderror" name="time_end" required>
 
                                 @error('time_end')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="img_name" class="col-md-4 col-form-label text-md-end">Upload Image</label>
+
+                            <div class="col-md-6">
+                                <input id="img_name" type="text" class="form-control @error('img_name') is-invalid @enderror" name="img_name" type="file" id="formFile" required>
+                                
+                                @error('img_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

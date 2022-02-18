@@ -21,7 +21,8 @@ class SeminarQR extends Model
         'time_start',
         'time_end', 
         'max_participant',
-        'registered_participant'
+        'registered_participant',
+        'img_name'
     ];
 
     public static function insertDB(Request $request){
