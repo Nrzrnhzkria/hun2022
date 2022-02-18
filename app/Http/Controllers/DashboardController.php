@@ -123,11 +123,21 @@ class DashboardController extends Controller
         $vendordetails = VendorDetails::where('user_id', $vendor_id);
         $coupon = Coupon::where('vendor_id', $vendor_id);
         $member = Membership::where('payer_id', $vendor_id);
+        $news = HUNNews::where('user_id', $vendor_id);
+        $newslikes = HUNNewsLikes::where('user_id', $vendor_id);
+        $media = Media::where('user_id', $vendor_id);
+        $redeem = Redeem::where('user_id', $vendor_id);
+        $attendance = SeminarAttendance::where('user_id', $vendor_id);
         
         $vendor->delete();
         $vendordetails->delete();
         $coupon->delete();
         $member->delete();
+        $news->delete();
+        $newslikes->delete();
+        $media->delete();
+        $redeem->delete();
+        $attendance->delete();
 
         return redirect('vendors')->with('deletevendor','Vendor has been deleted successfully.');
     }
