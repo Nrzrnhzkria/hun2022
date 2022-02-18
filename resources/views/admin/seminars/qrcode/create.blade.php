@@ -131,7 +131,7 @@
                             <label for="img_name" class="col-md-4 col-form-label text-md-end">Upload Image</label>
 
                             <div class="col-md-6">
-                                <input id="img_name" type="text" class="form-control @error('img_name') is-invalid @enderror" name="img_name" type="file" id="formFile" required>
+                                <input id="img_name" class="form-control @error('img_name') is-invalid @enderror" name="img_name" type="file" id="formFile" required>
                                 
                                 @error('img_name')
                                     <span class="invalid-feedback" role="alert">
