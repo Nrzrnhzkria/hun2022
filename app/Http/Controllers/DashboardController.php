@@ -129,8 +129,6 @@ class DashboardController extends Controller
         $redeem = Redeem::where('user_id', $vendor_id);
         $attendance = SeminarAttendance::where('user_id', $vendor_id);
         
-        $vendor->delete();
-        $vendordetails->delete();
         $coupon->delete();
         $member->delete();
         $news->delete();
@@ -138,6 +136,8 @@ class DashboardController extends Controller
         $media->delete();
         $redeem->delete();
         $attendance->delete();
+        $vendordetails->delete();
+        $vendor->delete();
 
         return redirect('vendors')->with('deletevendor','Vendor has been deleted successfully.');
     }
