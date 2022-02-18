@@ -32,6 +32,20 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="img_name" class="col-md-4 col-form-label text-md-end">Change Image</label>
+
+                            <div class="col-md-6">
+                                <input id="img_name" class="form-control @error('img_name') is-invalid @enderror" name="img_name" type="file" id="formFile" required>
+                                
+                                @error('img_name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="seminar_name" class="col-md-4 col-form-label text-md-end">Seminar Name</label>
 
                             <div class="col-md-6">
@@ -122,20 +136,6 @@
                                 <input id="time_end" type="time" class="form-control @error('time_end') is-invalid @enderror" name="time_end" value="{{ $qr->time_end }}" required>
 
                                 @error('time_end')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="img_name" class="col-md-4 col-form-label text-md-end">Upload Image</label>
-
-                            <div class="col-md-6">
-                                <input id="img_name" class="form-control @error('img_name') is-invalid @enderror" name="img_name" type="file" id="formFile" required>
-                                
-                                @error('img_name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
