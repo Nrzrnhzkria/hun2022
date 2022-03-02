@@ -52,7 +52,7 @@ class DashboardController extends Controller
         $estate = Coupon::where('category','Real Estate')->count();
         $travel = Coupon::where('category','Travel & Transportation')->count();
 
-        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser', 'member', 'nonmember', 'automotive', 'bss', 'ce', 'cc', 'education', 'entertainment', 'fnd', 'hnm', 'hng', 'lnf', 'mwd', 'merchant', 'miscellaneous', 'pcs', 'estate', 'travel'));
+        return view('admin.dashboard', compact('totalcoupon', 'totalvendor', 'totaluser', 'member', 'nonmember', 'automotive', 'bss', 'ce', 'cc', 'education', 'entertainment', 'fnd', 'hnm', 'hng', 'lnf', 'mwd', 'merchant', 'estate', 'travel'));
     }
 
     public function vendors()
