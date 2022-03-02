@@ -10,13 +10,23 @@
                         <h5>SECRETARIAT</h5>
                         <ul class="nav flex-column">
                             <li class="nav-item mb-2"><p class="nav-link p-0 text-muted text-break">No 30-2, Jalan 9/23a, Off Jalan Usahawan, 53200 Setapak, Kuala Lumpur.</p></li>
-                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted text-break">Tel:    <br> 03 - 4141 8311 (Office) 
-                                                                                                            <br> 011 - 1061 2950 (DPUKM Admin HUN) 
-                                                                                                            <br> 019 - 716 9628 (DPUKM DAH 2 Secretariat)
-                                                                                                            <br> 010 - 421 3816 (DPUKM Mohd Shahrin)
-                                                                                                        </p>
-                                                                                                    </li>
-                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted text-break">Email: <br> Info.hun22@gmail.com <br> dahniaga@gmail.com </p></li>
+                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted text-break">Tel:    
+                                                                                                        <ul>
+                                                                                                            <li>03 - 4141 8311 (Office)</li>
+                                                                                                            <li>011 - 1061 2950 (DPUKM Admin HUN)</li>
+                                                                                                            <li>019 - 716 9628 (DPUKM DAH 2 Secretariat)</li>
+                                                                                                            <li>010 - 421 3816 (DPUKM Mohd Shahrin)</li>
+
+                                                                                                        </ul>
+                                                                                                    </p>
+                                                                                                </li>
+                            <li class="nav-item mb-2"><p class="nav-link p-0 text-muted text-break">Email: 
+                                                                                                        <ul>
+                                                                                                            <li>Info.hun22@gmail.com</li>
+                                                                                                            <li>dahniaga@gmail.com</li>
+                                                                                                        </ul>
+                                                                                                    </p>
+                                                                                                </li>
                         </ul>
                     </td>
                 </tr>
