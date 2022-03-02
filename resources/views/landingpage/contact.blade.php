@@ -18,8 +18,11 @@
                 <br>53200 Setapak, 
                 <br>Kuala Lumpur.</h3>
                 <br>
-                <h5>Tel : 03 - 4141 8311</h5>
-                <h5>Mobile : 019 - 716 9628 / 013 - 292 2950</h5>
+                <h5>Office : 03 - 4141 8311</h5>
+                <h5>DPUKM Admin HUN : 011 - 1061 2950</h5>
+                <h5>DPUKM DAH 2 Secretariat : 019 - 716 9628</h5>
+                <h5>DPUKM Mohd Shahrin : 010 - 421 3816</h5>
+                <br>
                 <h5>Email : info.hun22@gmail.com</h5>
             </div>
 
