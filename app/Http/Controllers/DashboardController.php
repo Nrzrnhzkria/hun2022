@@ -288,7 +288,7 @@ class DashboardController extends Controller
         $user->hun_id = $request->hun_id;
         $user->name = $request->name;
         // $user->email = $request->email;
-        $user->password = Hash::make($request['password']);
+        // $user->password = Hash::make($request['password']);
         $user->phone_no = $request->phone_no;
         $user->ic_no = $request->ic_no;
         $user->role = $request->role;
