@@ -63,86 +63,82 @@
       </div>
     </div>
 
-    <script>
-      // var xValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16"];
-      // var yValues = [{{$automotive}}, {{$bss}}, {{$ce}}, {{$cc}}, {{$education}}, {{$entertainment}}, {{$fnd}}, {{$hnm}}, {{$hng}}, {{$lnf}}, {{$mwd}}, {{$merchant}}, {{$miscellaneous}}, {{$pcs}}, {{$estate}}, {{$travel}}];
-      // var barColors = ["red", "green","blue","orange","#00aba9", "purple", "yellow", "cyan", "maroon","#b91d47","magenta", "gray", "black", "cream", "brown", "#b91d64"];
-      
-      new Chart("myChart", {
-        type: "bar",
-        data: {
-          labels: ['Category'],
-          datasets: [{
-            label: 'Automotive',
-            backgroundColor: "#000080",
-            data: [{{$automotive}}]
-          }, {
-            label: 'Business Support & Supplies',
-            backgroundColor: "#d3d3d3",
-            data: [{{$bss}}]
-          }, {
-            label: 'Computers & Electronics',
-            backgroundColor: "#add8e6",
-            data: [{{$ce}}]
-          }, {
-            label: 'Construction & Contractors',
-            backgroundColor: "red",
-            data: [{{$cc}}]
-          }, {
-            label: 'Education',
-            backgroundColor: "green",
-            data: [{{$education}}]
-          },{
-            label: 'Entertainment',
-            backgroundColor: "orange",
-            data: [{{$entertainment}}]
-          }, {
-            label: 'Food & Dining',
-            backgroundColor: "#00aba9",
-            data: [{{$fnd}}]
-          }, {
-            label: 'Health & Medicine',
-            backgroundColor: "purple",
-            data: [{{$hnm}}]
-          }, {
-            label: 'Home & Garden',
-            backgroundColor: "yellow",
-            data: [{{$hng}}]
-          }, {
-            label: 'Legal & Financial',
-            backgroundColor: "cyan",
-            data: [{{$lnf}}]
-          },{
-            label: 'Manufacturing, Wholesale & Distribution',
-            backgroundColor: "maroon",
-            data: [{{$mwd}}]
-          }, {
-            label: 'Merchants (Retail)',
-            backgroundColor: "#b91d47",
-            data: [{{$merchant}}]
-          }, {
-            label: 'Real Estate',
-            backgroundColor: "black",
-            data: [{{$estate}}]
-          }, {
-            label: 'Travel & Transportation',
-            backgroundColor: "brown",
-            data: [{{$travel}}]
-          }]
+<script>
+  new Chart("myChart", {
+    type: "bar",
+    data: {
+      labels: ['Category'],
+      datasets: [{
+        label: 'Automotive',
+        backgroundColor: "#000080",
+        data: [{{$automotive}}]
+      }, {
+        label: 'Business Support & Supplies',
+        backgroundColor: "#d3d3d3",
+        data: [{{$bss}}]
+      }, {
+        label: 'Computers & Electronics',
+        backgroundColor: "#add8e6",
+        data: [{{$ce}}]
+      }, {
+        label: 'Construction & Contractors',
+        backgroundColor: "red",
+        data: [{{$cc}}]
+      }, {
+        label: 'Education',
+        backgroundColor: "green",
+        data: [{{$education}}]
+      },{
+        label: 'Entertainment',
+        backgroundColor: "orange",
+        data: [{{$entertainment}}]
+      }, {
+        label: 'Food & Dining',
+        backgroundColor: "#00aba9",
+        data: [{{$fnd}}]
+      }, {
+        label: 'Health & Medicine',
+        backgroundColor: "purple",
+        data: [{{$hnm}}]
+      }, {
+        label: 'Home & Garden',
+        backgroundColor: "yellow",
+        data: [{{$hng}}]
+      }, {
+        label: 'Legal & Financial',
+        backgroundColor: "cyan",
+        data: [{{$lnf}}]
+      },{
+        label: 'Manufacturing, Wholesale & Distribution',
+        backgroundColor: "maroon",
+        data: [{{$mwd}}]
+      }, {
+        label: 'Merchants (Retail)',
+        backgroundColor: "#b91d47",
+        data: [{{$merchant}}]
+      }, {
+        label: 'Real Estate',
+        backgroundColor: "black",
+        data: [{{$estate}}]
+      }, {
+        label: 'Travel & Transportation',
+        backgroundColor: "brown",
+        data: [{{$travel}}]
+      }]
+    },
+    options: {
+      legend: {
+        display: true,
+        position: 'bottom',
+        align: 'start'
         },
-        options: {
-          legend: {
-            display: true,
-            position: 'bottom',
-            align: 'start'
-            },
-          title: {
-            display: true,
-            text: "Total Uploaded Coupon by Category"
-          }
-        }
-      });
-      </script>
+      title: {
+        display: true,
+        text: "Total Uploaded Coupon by Category"
+      }
+    }
+  });
+</script>
 
 {{-- Members chart --}}
 <script>
