@@ -117,8 +117,10 @@ class SeminarQRController extends Controller
     }
 
     public function destroy_qr($qr_id){
+        $seminar = SeminarAttendance::where('seminar_id', $qr_id);
         $qr = SeminarQR::where('id', $qr_id);
         
+        $seminar->delete();
         $qr->delete();
         return redirect('qrcode')->with('deleteqr','Seminar has been deleted successfully.');
     }
