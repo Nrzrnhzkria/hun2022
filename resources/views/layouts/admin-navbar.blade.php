@@ -23,7 +23,7 @@
                 @else
                 @endif
 
-                @if(Auth::user()->role == 'Superadmin' || Auth::user()->role == 'Admin' )
+                @if(Auth::user()->role == 'Superadmin')
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="/booth">Booth</a>
                 </li>
