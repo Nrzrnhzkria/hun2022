@@ -121,14 +121,6 @@
             backgroundColor: "#b91d47",
             data: [{{$merchant}}]
           }, {
-            label: 'Miscellaneous',
-            backgroundColor: "magenta",
-            data: [{{$miscellaneous}}]
-          }, {
-            label: 'Personal Care & Services',
-            backgroundColor: "gray",
-            data: [{{$pcs}}]
-          }, {
             label: 'Real Estate',
             backgroundColor: "black",
             data: [{{$estate}}]

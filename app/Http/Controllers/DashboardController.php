@@ -49,8 +49,6 @@ class DashboardController extends Controller
         $lnf = Coupon::where('category','Legal & Financial')->count();
         $mwd = Coupon::where('category','Manufacturing, Wholesale & Distribution')->count();
         $merchant = Coupon::where('category','Merchants (Retail)')->count();
-        $miscellaneous = Coupon::where('category','Miscellaneous')->count();
-        $pcs = Coupon::where('category','Personal Care & Services')->count();
         $estate = Coupon::where('category','Real Estate')->count();
         $travel = Coupon::where('category','Travel & Transportation')->count();
 
