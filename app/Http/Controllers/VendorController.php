@@ -38,6 +38,10 @@ class VendorController extends Controller
             
             return redirect('update-payment/' . $check->id);
             
+        }elseif(User::where('ic_no', $request->ic_no)->exists()){
+            
+            return redirect('new-registration/' . $request->ic_no);
+            
         }else{
 
             return redirect('new-registration/' . $request->ic_no);
