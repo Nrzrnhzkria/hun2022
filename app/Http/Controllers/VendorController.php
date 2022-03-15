@@ -67,6 +67,7 @@ class VendorController extends Controller
     public function store_vendor($get_ic, Request $request){
 
         $booth_details = BoothDetails::where('details_id', $request->details_id)->first();
+        $vendor = User::where('ic_no', $request->ic_no)->first();
 
         $datavalidation = $request->validate([
             'name' => 'required',
@@ -85,15 +86,28 @@ class VendorController extends Controller
             'vaccine_cert' => 'required|mimes:docx,csv,pdf,png,jpeg|max:1024'
         ]);
 
-        User::create([
-            'hun_id' => NULL,
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->ic_no),
-            'phone_no' => $request->phone_no,
-            'ic_no' => $request->ic_no,
-            'role' => 'Vendor',
-        ]);        
+        if(User::where('ic_no', $request->ic_no)->exists()){
+
+            $vendor->name = $request->name;
+            $vendor->email = $request->email;
+            $vendor->phone_no = $request->phone_no;
+            $vendor->ic_no = $request->ic_no;
+            $vendor->save();
+
+        }else{
+
+            User::create([
+                'hun_id' => NULL,
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->ic_no),
+                'phone_no' => $request->phone_no,
+                'ic_no' => $request->ic_no,
+                'role' => 'Vendor',
+            ]); 
+
+        }
+               
 
         $vendor = User::where('ic_no', $request->ic_no)->first();
 
