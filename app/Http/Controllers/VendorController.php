@@ -31,20 +31,20 @@ class VendorController extends Controller
         $check = User::where('ic_no', $request->ic_no)->first();
 
         if(User::where('ic_no', $request->ic_no)->exists() && Membership::where('payer_id', $check->id)->where('status', 'success')->first()){
-            dd('Payment Success');
-            // return redirect('update-registration/' . $check->id);
+            // dd('Payment Success');
+            return redirect('update-registration/' . $check->id);
 
         }elseif(User::where('ic_no', $request->ic_no)->exists() && Membership::where('payer_id', $check->id)->doesntExist()){
-            dd('IC exist but not as vendor');
-            // return redirect('new-registration/' . $request->ic_no);
+            // dd('IC exist but not as vendor');
+            return redirect('new-registration/' . $request->ic_no);
             
         }elseif(User::where('ic_no', $request->ic_no)->exists() && Membership::where('payer_id', $check->id)->where('status', 'failed')->orWhere('status', NULL)->first()){
-            dd('Payment Pending');
-            // return redirect('update-payment/' . $check->id);
+            // dd('Payment Pending');
+            return redirect('update-payment/' . $check->id);
             
         }else{
-            dd('New IC');
-            // return redirect('new-registration/' . $request->ic_no);
+            // dd('New IC');
+            return redirect('new-registration/' . $request->ic_no);
 
         }
     }
