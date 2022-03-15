@@ -104,7 +104,7 @@
                     <div class="col-md-6 pb-2">
                         <label for="phoneno" class="form-label">Phone No. / <em style="font-size: 10pt;">No. Telefon</em><span class="text-danger">*</span></label>
                         <input type="text" value="+60{{ $vendor->phone_no ?? '' }}" class="form-control form-control-sm" name="phone_no" required/>
-                        <em style="font-size: 10pt;">Please include +60</em>
+                        <em style="font-size: 10pt;">Please include the country code. E.g. +60</em>
                     </div>
 
                     <div class="col-md-6 pb-2">
