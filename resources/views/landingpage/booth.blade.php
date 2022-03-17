@@ -12,7 +12,25 @@
 
         <div class="col-md-12 pt-3">
             <div class="card mb-3">
-                <img class="img-fluid" src="{{ asset('assets/img/booth.jpg') }}">
+                <img class="img-fluid" src="{{ asset('assets/img/layout/1.png') }}">
+            </div>
+            <div class="card mb-3">
+                <img class="img-fluid" src="{{ asset('assets/img/layout/2.png') }}">
+            </div>
+            <div class="card mb-3">
+                <img class="img-fluid" src="{{ asset('assets/img/layout/3.png') }}">
+            </div>
+            <div class="card mb-3">
+                <img class="img-fluid" src="{{ asset('assets/img/layout/4.png') }}">
+            </div>
+            <div class="card mb-3">
+                <img class="img-fluid" src="{{ asset('assets/img/layout/5.png') }}">
+            </div>
+            <div class="card mb-3">
+                <img class="img-fluid" src="{{ asset('assets/img/layout/6.png') }}">
+            </div>
+            <div class="card mb-3">
+                <img class="img-fluid" src="{{ asset('assets/img/layout/7.png') }}">
             </div>
         </div>
 
