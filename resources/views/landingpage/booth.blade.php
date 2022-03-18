@@ -10,7 +10,7 @@
     <div class="row px-2">
         <h1 class="text-center border-bottom pt-5">Booth</h1>
 
-        <div class="col-md-12 pt-3">
+        <div class="col-md-8 offset-md-2 pt-3">
             <div class="card mb-3">
                 <img class="img-fluid" src="{{ asset('assets/img/layout/1.png') }}">
             </div>
