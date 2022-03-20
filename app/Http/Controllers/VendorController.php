@@ -190,9 +190,9 @@ class VendorController extends Controller
 
         $data = array(
             // 'userSecretKey' => config('toyyibpay.key'),
-            'categoryCode' => config('toyyibpay.category'),
+            // 'categoryCode' => config('toyyibpay.category'),
             'userSecretKey' => 'a25txcs8-x59p-adcl-xwz7-1d3grr2p6c1p',
-            // 'categoryCode' => 'vokse6qd',
+            'categoryCode' => 'vokse6qd',
             'billName' => 'HUN Vendor Registration',
             'billDescription' => $booth_name->booth_name . ' - ' . $booth_type->booth_type,
             'billPriceSetting' => 1,
