@@ -189,9 +189,9 @@ class VendorController extends Controller
         $amount = ($payment->amount)*100;
 
         $data = array(
-            'userSecretKey' => config('toyyibpay.key'),
+            // 'userSecretKey' => config('toyyibpay.key'),
             'categoryCode' => config('toyyibpay.category'),
-            // 'userSecretKey' => 'a25txcs8-x59p-adcl-xwz7-1d3grr2p6c1p',
+            'userSecretKey' => 'a25txcs8-x59p-adcl-xwz7-1d3grr2p6c1p',
             // 'categoryCode' => 'vokse6qd',
             'billName' => 'HUN Vendor Registration',
             'billDescription' => $booth_name->booth_name . ' - ' . $booth_type->booth_type,
@@ -211,7 +211,7 @@ class VendorController extends Controller
             'billChargeToCustomer' => 2
         );
 
-        $url = 'https://toyyibpay.com/index.php/api/createBill';
+        $url = 'https://dev.toyyibpay.com/index.php/api/createBill';
         $response = Http::asForm()->post($url, $data);
         $bill_code = $response->json()[0]['BillCode'];
 
