@@ -37,7 +37,6 @@
                                       </div>
                                       <div class="col-md-8">
                                         <div class="card-body py-0">
-                                            <div class="row g-0">
                                             <p class="fw-bold pt-2">{{ $coupon->category }}</p>
                                             <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $vendor->id }}"><i class="bi bi-trash"></i></button>
                                             <!-- Modal -->
@@ -62,7 +61,6 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
                                             </div>
                                         </div>
                                       </div>
