@@ -8,6 +8,7 @@ use App\Models\CouponCategories;
 use App\Models\Membership;
 use App\Models\User;
 use App\Models\VendorDetails;
+use App\Models\Redeem;
 
 class CouponController extends Controller
 {
