@@ -29,39 +29,39 @@
                             @if ($vendor->id == $coupon->vendor_id)
                             <div class="col-md-4">
                                 <div class="card shadow mb-3">
-                                    <div class="col-md-2">
-                                        <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $vendor->id }}"><i class="bi bi-trash"></i></button>
-                                        <!-- Modal -->
-                                        <div class="modal fade" id="exampleModal{{ $vendor->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-centered">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLabel">Delete Confirmation</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p>Are you sure you want to delete this coupon ?</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                                <a class="btn btn-danger" href="{{ url('delete-coupon') }}/{{ $coupon->id }}">Delete</a>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
                                     <div class="row g-0">
-                                      <div class="col-md-4">
-                                        <img src="{{ $coupon->img_name }}" class="img-fluid rounded-start" alt="...">
-                                      </div>
-                                      <div class="col-md-8">
-                                        <div class="card-body py-0">
-                                          <p class="fw-bold pt-2">{{ $coupon->category }}</p>
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $vendor->id }}"><i class="bi bi-trash"></i></button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="exampleModal{{ $vendor->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Delete Confirmation</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Are you sure you want to delete this coupon ?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                    <a class="btn btn-danger" href="{{ url('delete-coupon') }}/{{ $coupon->id }}">Delete</a>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                      </div>
+                                        <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
+                                        <div class="col-md-4">
+                                            <img src="{{ $coupon->img_name }}" class="img-fluid rounded-start" alt="...">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card-body py-0">
+                                            <p class="fw-bold pt-2">{{ $coupon->category }}</p>
+                                            </div>
+                                        </div>
+                                        </a>
                                     </div>
-                                    </a>
                                 </div>
                             </div>
                             @endif
