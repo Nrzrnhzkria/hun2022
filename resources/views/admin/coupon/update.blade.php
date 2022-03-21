@@ -29,7 +29,7 @@
                             @if ($vendor->id == $coupon->vendor_id)
                             <div class="col-md-4">
                                 <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn-primary">
+                                    <button type="button" class="btn btn-outline-dark m-0">
                                         <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
                                             <div class="row g-0">
                                               <div class="col-md-4">
