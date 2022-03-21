@@ -29,9 +29,6 @@
                             @if ($vendor->id == $coupon->vendor_id)
                             <div class="col-md-4">
                                 <div class="card shadow mb-3">
-                                    <div class="col-md-2">
-                                        
-                                    </div>
                                     <div class="row g-0">
                                       <div class="col-md-4">
                                         <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
