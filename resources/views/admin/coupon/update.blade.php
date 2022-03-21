@@ -33,7 +33,7 @@
                                         <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
                                             <div class="row g-0">
                                               <div class="col-md-4">
-                                                <img src="{{ $coupon->img_name }}" class="img-fluid rounded-start" style="height: 100%; width: 100%" alt="...">
+                                                <img src="{{ $coupon->img_name }}" class="img-fluid rounded-start" style="height: 100%" alt="coupon">
                                               </div>
                                               <div class="col-md-8">
                                                 <div class="card-body py-0">
