@@ -39,9 +39,11 @@ class CouponController extends Controller
     }
 
     public function destroy_coupon($coupon_id){
-        $coupons = Coupon::where('id', $coupon_id);
+        $redeem = Redeem::where('coupon_id', $coupon_id);
+        $coupon = Coupon::where('id', $coupon_id);
         
-        $coupons->delete();
+        $redeem->delete();
+        $coupon->delete();
         return redirect('coupon')->with('deletecoupon','Coupon has been deleted successfully.');
     }
 
