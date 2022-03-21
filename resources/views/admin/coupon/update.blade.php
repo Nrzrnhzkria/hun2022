@@ -29,9 +29,7 @@
                             @if ($vendor->id == $coupon->vendor_id)
                             <div class="col-md-4">
                                 <div class="card shadow mb-3">
-                                    <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
-                                    <div class="row g-0">
-                                      <div class="col-md-2">
+                                    <div class="col-md-2">
                                         <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $vendor->id }}"><i class="bi bi-trash"></i></button>
                                         <!-- Modal -->
                                         <div class="modal fade" id="exampleModal{{ $vendor->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -51,11 +49,13 @@
                                             </div>
                                             </div>
                                         </div>
-                                      </div>
+                                    </div>
+                                    <a href="{{ $coupon->img_name }}" class="text-dark text-decoration-none">
+                                    <div class="row g-0">
                                       <div class="col-md-4">
                                         <img src="{{ $coupon->img_name }}" class="img-fluid rounded-start" alt="...">
                                       </div>
-                                      <div class="col-md-6">
+                                      <div class="col-md-8">
                                         <div class="card-body py-0">
                                           <p class="fw-bold pt-2">{{ $coupon->category }}</p>
                                         </div>
